@@ -40,8 +40,8 @@ post = "/blog/:year/:month/:day/:slug/"
     url = "/blog/"
     weight = 2
     [[menu.nav]]
-    name = "SwiftUI"
-    url = "/swiftui/"
+    name = "Guides"
+    url = "/guides/"
     weight = 3
   [[menu.nav]]
     name = "Tags"
