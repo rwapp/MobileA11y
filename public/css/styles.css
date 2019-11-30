@@ -78,12 +78,6 @@ a {
   outline-offset: 2px;
 }
 
-/* Katex math typesetting */
-.katex * {
-    margin-top: 0;
-    background-color: transparent;
-}
-
 /* Fix for IE :( */
 [tabindex="-1"]:focus,
 div:not([tabindex]):focus {
@@ -436,18 +430,6 @@ caption {
     margin-top: 0.5rem;
 }
 
-/* Disqus Comments */
-#disqus-container {
-  text-align: center;
-}
-#disqus-button {
-  width: 100%;
-  padding: 0.25em 0.75em;
-}
-#disqus-comments {
-  display: none; 
-}
-
 /* Pattern lists */
 .patterns-list {
     list-style: none;
@@ -457,10 +439,23 @@ caption {
     font-size: 1.25rem;
     line-height: 1.6;
 }
-.patterns-list li + li {
+.list-post {
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: 2px solid;
+}
+.blog-roll-meta-data
+ {
+    margin-top: 12px;
+}
+.blog-description {
+    margin-top: 12px;
+}
+.blog-roll-meta-data .tags {
+    margin-top: 12px;
+}
+.blog-roll-meta-data i {
+    margin-top: 0px;
 }
 .patterns-list a {
     border: 0;

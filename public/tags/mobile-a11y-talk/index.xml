@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mobile A11y Talk on Mobile A11y</title>
+    <link>https://mobilea11y.com/tags/mobile-a11y-talk/</link>
+    <description>Recent content in Mobile A11y Talk on Mobile A11y</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 08 Oct 2019 07:30:56 +0000</lastBuildDate>
+    
+	<atom:link href="https://mobilea11y.com/tags/mobile-a11y-talk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mobile A11y Talk: Accessibility without the &#39;V&#39; Word</title>
+      <link>https://mobilea11y.com/blog/without-the-v-word/</link>
+      <pubDate>Tue, 08 Oct 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/without-the-v-word/</guid>
+      <description>I was honoured in 2019 to be able to give my first full conference talk at CodeMobile. I was then lucky enough to be able to repeat that talk at NSLondon, NSManchester, and SWMobile meetups.
+As an iOS developer, I know accessibility is important for a huge range of people. But at times I think I can treat it like an afterthought. Accessibility Without the ‘V’ Word covers a skill I think we as software engineers would benefit from developing - empathy towards our users.</description>
+    </item>
+    
+  </channel>
+</rss>
