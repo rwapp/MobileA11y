@@ -1,0 +1,19 @@
+---
+title: "A11y is not accessible"
+description: "We often abreviate accessibility to a11y. A11y isn't an accessible word - here's why I use it."
+date: 2019-11-28T07:30:56Z
+---
+
+Accessibility is a long word. It's not the simplest of words to read or to spell, so it seems like a word that would be a good candidate for abbreviation. The common abbreviation of accessibility is a11y. We take the A and Y from the beginning and end of accessibility, and 11 for the number of letters in between. This abbreviation also creates a pleasing homophone for ‘ally.’
+
+The irony of this abbreviation is that a11y isn’t accessible. Using jargon in this way can be a fail for [WCAG guideline 3.1.3](https://www.w3.org/WAI/GL/UNDERSTANDING-WCAG20/meaning-idioms.html). Some people with disabilities such as autism can struggle to understand non-literal language. Dyslexia can make some characters difficult to distinguish, and mixing letters and numbers in this way can exacerbate this. Screen readers often won’t understand how to pronounce non-common words and abbreviations, so the pronunciation of a11y can vary. When writing we should generally avoid domain-specific jargon where possible, especially where there there is a common alternative like accessibility.
+
+So for general use, I recommend against using a11y, yet I’ve named this site with this acronym. There are a few reasons I made this decision. Firstly, WCAG 3.1.1 does permit domain-specific jargon so long as it we define it. So, take this post as a definition. Additionally, I expect most people who have found this site will have found it because they are specifically looking for something accessibility related. Secondly, if I had to register a domain for every possible misspelling of accessibility, my registrar bill would be considerably higher.
+
+Aside from this, I believe in this context, that a11y is not only a justifiable choice but the better choice. Social media is a great illustration of this. Take a look at the Twitter hashtag for  [#accessibility](https://twitter.com/hashtag/accessibility).  At the time of writing, the top 5 tweets cover accessibility for parks, bathrooms, video games, trams, and the coliseum. All by people who are reporting their personal experiences. The word accessibility is quite general and is often used by people to research and share accessible experiences. This is an invaluable service for people with specific requirements who often find certain real-world or digital experiences don’t live up to the standards they expect.
+
+That is not the purpose of this blog, and to use the tag ‘accessibility’ would create noise in that space and potentially be confusing. I don’t want to inadvertently imply to screen reader users that this blog will contain tips on using their screen reader. This is not my aim and would be a waste of time for anyone who came here for that purpose.
+
+Take a look at the Twitter hashtag for [#A11y](https://twitter.com/hashtag/A11Y). The first 5 tweets here at the time of writing are discussing accessible fonts, the state of accessible websites, Tim Berners-Lee’s accessibility guidelines, audio descriptions for online video, and how to create accessible data visualisations. By being less accessible, the word a11y denotes a more technical approach to accessibility, not necessarily from those who use accessibility tools, but those who create them.
+
+That's why I choose to use the word a11y here, and why I choose the hashtag #a11y on social media. And I’d recommend you do the same to avoid creating noise for people looking to improve their personal accessible experience.
