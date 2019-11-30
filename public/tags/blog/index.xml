@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Mobile A11y</title>
+    <link>https://mobilea11y.com/tags/blog/</link>
+    <description>Recent content in Blog on Mobile A11y</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 28 Nov 2019 07:30:56 +0000</lastBuildDate>
+    
+	<atom:link href="https://mobilea11y.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A11y is not accessible</title>
+      <link>https://mobilea11y.com/blog/inaccessible-a11y/</link>
+      <pubDate>Thu, 28 Nov 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/inaccessible-a11y/</guid>
+      <description>Accessibility is a long word. It&amp;rsquo;s not the simplest of words to read or to spell, so it seems like a word that would be a good candidate for abbreviation. The common abbreviation of accessibility is a11y. We take the A and Y from the beginning and end of accessibility, and 11 for the number of letters in between. This abbreviation also creates a pleasing homophone for ‘ally.’
+The irony of this abbreviation is that a11y isn’t accessible.</description>
+    </item>
+    
+    <item>
+      <title>Baking Digital Inclusion Into Your Mobile Apps</title>
+      <link>https://mobilea11y.com/blog/baking-digital-inclusion-into-your-mobile-apps/</link>
+      <pubDate>Thu, 25 Jul 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/baking-digital-inclusion-into-your-mobile-apps/</guid>
+      <description>I was asked by Capital One to contribute an accessibility piece to the Capital One Tech Medium. The blog, titled Baking Digital Inclusion Into Your Mobile Apps, briefly covers what we mean by disability and what we can do to make our mobile apps work better for everyone.</description>
+    </item>
+    
+    <item>
+      <title>What The European Accessibility Act (Might) Mean for Mobile Development</title>
+      <link>https://mobilea11y.com/blog/european-accessibility-act/</link>
+      <pubDate>Mon, 24 Jun 2019 07:32:16 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/european-accessibility-act/</guid>
+      <description>The European Accessibility Act, or EAA is due to become law in Europe later this year, and it defines some specific requirements for mobile. In fact, its the first accessibility legislation that I’m aware of, anywhere, that explicitly covers mobile apps.
+Since 2012 the European Union has been working on standardising accessibility legislation across Europe. The ultimate aim is to both improve the experience for those who need to use assistive technology, but also to simplify the rules business need to follow on accessibility.</description>
+    </item>
+    
+  </channel>
+</rss>

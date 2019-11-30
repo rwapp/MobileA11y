@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SwiftUI on Mobile A11y</title>
+    <link>https://mobilea11y.com/swiftui/</link>
+    <description>Recent content in SwiftUI on Mobile A11y</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 06 Nov 2019 07:30:56 +0000</lastBuildDate>
+    
+	<atom:link href="https://mobilea11y.com/swiftui/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SwiftUI Accessibility</title>
+      <link>https://mobilea11y.com/swiftui/swiftui-accessibility/</link>
+      <pubDate>Wed, 06 Nov 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/swiftui/swiftui-accessibility/</guid>
+      <description>Accessibility is important. We can take that as a given. But as iOS devs we&amp;rsquo;re not always sure how to make the most of the accessibility tools that Apple have provided us.
+We&amp;rsquo;re lucky as iOS developers that we work on such a forward-thinking accessibility platform. Many people consider Apple&amp;rsquo;s focus on accessibility for iOS as the driver for other technology vendors to include accessibility features as standard. To the point that we now consider accessibility an expected part of any digital platform.</description>
+    </item>
+    
+    <item>
+      <title>SwiftUI Accessibility: Semantic Views</title>
+      <link>https://mobilea11y.com/swiftui/swiftui-semantic-views/</link>
+      <pubDate>Tue, 29 Oct 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/swiftui/swiftui-semantic-views/</guid>
+      <description>Semantic views are not new to SwiftUI, but changes in SwiftUI mean creating them is simple. Semantic views are not so much a language feature. They&amp;rsquo;re more a technique for manipulating the accessible user interface and improving the experience for assistive technology users.
+A what view? A semantic view is not one view, but a collection of views grouped together because they have meaning (or semantic) together. Take a look at this iOS table view cell from the files app.</description>
+    </item>
+    
+    <item>
+      <title>SwiftUI Accessibility: User Settings</title>
+      <link>https://mobilea11y.com/swiftui/swiftui-settings/</link>
+      <pubDate>Sun, 27 Oct 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/swiftui/swiftui-settings/</guid>
+      <description>SwiftUI allows us to read environmental values that might affect how we want to present ­­our UI. Things like size classes and locale for example. We also get the ability to read some of the user&amp;rsquo;s chosen accessibility settings allowing us to make decisions that will best fit with your customer&amp;rsquo;s preference.
+Why? Before we cover what these options are and how to detect them I think it&amp;rsquo;s important to briefly cover why we need to detect them.</description>
+    </item>
+    
+    <item>
+      <title>SwiftUI Accessibility: Attributes</title>
+      <link>https://mobilea11y.com/swiftui/swiftui-attributes/</link>
+      <pubDate>Fri, 18 Oct 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/swiftui/swiftui-attributes/</guid>
+      <description>When a customer enables an assistive technology to navigate your app the interface that technology navigates isn&amp;rsquo;t exactly the same as the one visible on the screen. They&amp;rsquo;re navigating a modified version that iOS creates especially for assistive technology. This is known as the accessibility tree or accessible user interface.
+iOS does an incredible job at creating the AUI for you from your SwiftUI code. We can help iOS in creating this by tweaking some element&amp;rsquo;s accessibility attributes.</description>
+    </item>
+    
+    <item>
+      <title>SwiftUI Accessibility: Traits</title>
+      <link>https://mobilea11y.com/swiftui/swiftui-traits/</link>
+      <pubDate>Fri, 18 Oct 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/swiftui/swiftui-traits/</guid>
+      <description>Accessibility traits are a group of attributes on a SwiftUI element. They inform assistive technologies how to interact with the element or present it to your customer. Each element has a selection of default traits, but you might need to change these as you create your UI.
+In SwiftUI there are two modifiers to use for traits, .accessibility(addTraits: ) and .accessibility(removeTraits: ) which add or remove traits respectively. Each modifier takes as its argument either a single accessibility trait or a set of traits.</description>
+    </item>
+    
+    <item>
+      <title>SwiftUI Accessibility: Accessible User Interface</title>
+      <link>https://mobilea11y.com/swiftui/swiftui-aui/</link>
+      <pubDate>Wed, 09 Oct 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/swiftui/swiftui-aui/</guid>
+      <description>Take a look at your app. Notice the collection of buttons, text, images, and other controls you can see and interact with that make up your app’s user interface. When one of your customers navigates your app with Voice Control, Switch Control, VoiceOver, or any other assistive technology, this isn’t the interface they’re using. Instead, iOS creates a version of your interface for assistive technology to use. This interface is generally known as the accessibility tree.</description>
+    </item>
+    
+    <item>
+      <title>SwiftUI Accessibility: Sort Priority</title>
+      <link>https://mobilea11y.com/swiftui/swiftui-sort-priority/</link>
+      <pubDate>Wed, 02 Oct 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/swiftui/swiftui-sort-priority/</guid>
+      <description>Assistive technology, such as VoiceOver, works in natural reading direction. In English, and most other languages, this means top left through to the bottom right. Mostly this is the right decision for assistive technology to make. This is the order anyone not using assistive technology would experience your app. Sometimes though, we make designs that don&amp;rsquo;t read in this way. By using the .accessibility(sortPriority: ) modifier we can set the order in which assistive technology accesses elements.</description>
+    </item>
+    
+    <item>
+      <title>SwiftUI Accessibility - Named Controls</title>
+      <link>https://mobilea11y.com/swiftui/swiftui-controls/</link>
+      <pubDate>Thu, 26 Sep 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/swiftui/swiftui-controls/</guid>
+      <description>One big accessibility improvement in SwiftUI comes in the form of named controls. Nearly all controls and some non-interactive views (see Images) can take a Text view as part of their view builder. The purpose of this is to tie the meaning to the control.
+Toggle(isOn: $updates) { Text(&amp;quot;Send me updates&amp;quot;) }  Imagine a UIKit layout with a UISwitch control. We&amp;rsquo;d most likely right align the switch, and provide a text label to the left.</description>
+    </item>
+    
+    <item>
+      <title>SwiftUI Accessibility: Dynamic Type</title>
+      <link>https://mobilea11y.com/swiftui/swiftui-dynamic-type/</link>
+      <pubDate>Wed, 18 Sep 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/swiftui/swiftui-dynamic-type/</guid>
+      <description>Like all accessibility features, Dynamic Type is about customisability. Many of your customers, and maybe even you, are using Dynamic Type without even considering it an accessibility feature. Dynamic type allows iOS users to set the text to a size that they find comfortable to read. This may mean making it a little larger so it’s easier to read for those of us who haven’t yet accepted we might need glasses.</description>
+    </item>
+    
+    <item>
+      <title>SwiftUI Accessibility: Images</title>
+      <link>https://mobilea11y.com/swiftui/swiftui-images/</link>
+      <pubDate>Wed, 11 Sep 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/swiftui/swiftui-images/</guid>
+      <description>Images in SwiftUI are accessible by default. This is the opposite of what we&amp;rsquo;d experience in UIKit, where images are not accessible unless you set isAccessibilityElement to true.
+Sometimes making images not accessible to VoiceOver is the right decision. Like when using a glyph as a redundant way of conveying meaning alongside text. An example of this would be displaying a warning triangle next to the text ‘Error’ or a tick next to ‘success’.</description>
+    </item>
+    
+  </channel>
+</rss>
