@@ -3,6 +3,8 @@ title: "About Mobile A11y"
 description: "What this site's aim is. Who I am and what I do."
 slug: "About Mobile A11y"
 date: 2019-11-16T07:30:56Z
+tags:
+- Mobile A11y
 ---
 
 ## About Mobile A11y

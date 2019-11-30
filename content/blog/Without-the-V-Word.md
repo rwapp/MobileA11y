@@ -3,8 +3,8 @@ title: "Mobile A11y Talk: Accessibility without the 'V' Word"
 description: "Watch the video and download the slides."
 date: 2019-10-08T07:30:56Z
 tags:
-- Talks
-- Mobile A11y Talks
+- Talk
+- Mobile A11y Talk
 - Video
 - Mobile
 - iOS

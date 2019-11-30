@@ -3,7 +3,11 @@ title: What The European Accessibility Act (Might) Mean for Mobile Development
 date: 2019-06-24T07:32:16Z
 description: "European Accessibility Act is the first accessibility legislation that I’m aware of, anywhere, that explicitly covers mobile apps."
 slug: "European Accessibility Act"
-tags: ["Accessibility", "Regulation"]
+tags: 
+- Regulation
+- Mobile
+- Blog
+- Mobile A11y Blog
 ---
 
 The [European Accessibility Act](https://ec.europa.eu/social/main.jsp?catId=1202#navItem-1), or EAA is due to become law in Europe later this year, and it defines some specific requirements for mobile. In fact, its the first accessibility legislation that I’m aware of, anywhere, that explicitly covers mobile apps.
