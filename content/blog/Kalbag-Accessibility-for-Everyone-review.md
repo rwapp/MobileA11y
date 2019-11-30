@@ -1,0 +1,15 @@
+---
+title: "Review: Accessibility for Everyone - Laura Kalbag"
+description: "Laura's short intro to web accessibility is also available as an audio book"
+date: 2019-11-30T07:30:56Z
+tags:
+- Web
+---
+
+Laura's introduction to web accessibility jumped out to me because it's available as an audiobook. Being dyslexic I struggle to read, so prefer to listen to audiobooks where available. Unfortunately, most technical books aren't available as audiobooks for a couple of potentially obvious reasons. Hearing code or descriptions of diagrams and illustrations read aloud may not be the best experience for an audiobook. As such, this book choses to leave those out of the audio version. For this review, I also purchased the eBook version. Having illustrations available there did make it feel like I had lost out by reading the audiobook version. Screen readers do their best to convey information when greeted with diagrams and other non-text content, and I wonder if more could have been done here to convey this information in an audio format. That said, I am grateful Laura took the time to record an audio version, as in all honesty, I wouldn't have completed this book up otherwise. This is not an indictment of Laura or her book, simply that I struggle to read a full book.
+
+Laura's book is very much an introduction, at 160 pages there's no deep discussion of the topics raised. But this makes it an ideal book to pick up for any web developer looking to improve their accessibility skills without wanting the minute decisions behind every one of the several hundred (or more) WCAG success criteria. Instead, this book will guide you through the general principals of web accessibility. It also covers why web accessibility is important to your users, product and your business. Laura takes a pragmatic approach, understanding that the highest levels of accessibility are not always cost effective or appropriate for every product. Instead, the book sets benchmarks for the levels of accessibility we should be adding. The ebook edition includes a comprehensive resources section full of links to tools and articles that cover much of accessibility and disability. This gives you the option to jump in deeper when you're ready.
+
+Like most of the books available on digital accessibility, Accessibility for Everyone focuses on web accessibility. This does mean many of the specifics do not apply to mobile. But the general principals do. This book does provide some very useful advice for making accessible experiences in any technology stack. For example, I found sections on user testing, research, and feedback invaluable. Chapters on accessibility law and guidelines, and disabilities and impairments are general and educational.
+
+Accessibility for Everyone (2017) by [Laura Kalbag](https://twitter.com/laurakalbag) is published by [A Book Apart](https://abookapart.com/products/accessibility-for-everyone) and is available as an ebook or paperback directly from them. The audiobook version is available from [Audible](https://www.audible.com/pd/Accessibility-for-Everyone-Audiobook/B07G24HLXS).
