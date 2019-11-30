@@ -18,9 +18,9 @@ post = "/blog/:year/:month/:day/:slug/"
   description = """A blog about making mobile more accessible for all.
   Edited by [Rob Whitaker](https://twitter.com/RobRWAPP)"""
    author = "Rob Whitaker"
-  homeMetaContent = "A blog about making mobile more accessible for all. "
+  homeMetaContent = "A blog about making mobile more accessible for all."
   
-  footer = """Twitter: [@MobileA11y](https://twitter.com/MobileA11y). Email: [a11y@rwapp.co.uk](mailto:a11y@rwapp.co.uk).
+  footer = """Twitter: [@MobileA11y](https://twitter.com/MobileA11y). Email: [a11y@mobilea11y.com](mailto:a11y@mobilea11y.com).
   
   Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme)."""
 
