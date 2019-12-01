@@ -9,7 +9,7 @@ tags:
 
 Design Meets Disability was recommended to me by accessibility consultant [Jon Gibbins](https://twitter.com/dotjay) while we were sharing a long train journey through mid-Wales. We were talking, amongst many things, about our love for Apple products and their design.
 
-I am a hearing aid wearer, my aid is two-tone grey. A sort of dark tope grey above, and a darker, almost gun-metal grey below. There’s a clear tube into my ear. This is fine, I don’t hate it. It's certainly better than the nowhere close to anyone’s actual skin colour weird pinky-toupe colour of older style aids. But, why is the tube clear? I didn’t make the design decision here, but I think we can safely assume it's clear to hide the tube. But why would I want to hide it?
+I am a hearing aid wearer, my aid is two-tone grey. A sort of dark taupe grey above, and a darker, almost gun-metal grey below. There’s a clear tube into my ear. This is fine, I don’t hate it. It's certainly better than the nowhere close to anyone’s actual skin colour weird pinky-taupe colour of older style aids. But, why is the tube clear? I didn’t make the design decision here, but I think we can safely assume it's clear to hide the tube. But why would I want to hide it?
 
 ![My grey hearing aid](/images/aid.jpg)
 
