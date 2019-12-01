@@ -1,6 +1,6 @@
 ---
 title: "A11y is not accessible"
-description: "We often abreviate accessibility to a11y. A11y isn't an accessible word - here's why I use it."
+description: "We often abbreviate accessibility to a11y. A11y isn't an accessible word - here's why I use it."
 date: 2019-11-28T07:30:56Z
 tags: 
 - Mobile A11y

@@ -39,19 +39,23 @@ post = "/blog/:year/:month/:day/:slug/"
     name = "Blog"
     url = "/blog/"
     weight = 2
-    [[menu.nav]]
+  [[menu.nav]]
     name = "Guides"
     url = "/guides/"
     weight = 3
   [[menu.nav]]
+    name = "Resources"
+    url = "/resources/"
+    weight = 4
+  [[menu.nav]]
     name = "Tags"
     url = "/tags/"
-    weight = 4
+    weight = 5
   [[menu.nav]]
     name = "About"
     url = "/about-mobile-a11y/"
-    weight = 5
+    weight = 6
   [[menu.nav]]
     name = "RSS"
     url = "/index.xml"
-    weight = 6
+    weight = 7

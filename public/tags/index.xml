@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 30 Nov 2019 07:30:56 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Dec 2019 07:30:56 +0000</lastBuildDate>
     
 	<atom:link href="https://mobilea11y.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Resources</title>
+      <link>https://mobilea11y.com/tags/resources/</link>
+      <pubDate>Sun, 01 Dec 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/tags/resources/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Book</title>

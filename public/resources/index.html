@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">
+  <link rel="canonical" href="https://mobilea11y.com/resources/">
 
   
 
@@ -36,7 +36,7 @@
 
   
   
-  <title>SwiftUI Accessibility: Accessible User Interface | Mobile A11y</title>
+  <title>Resources | Mobile A11y</title>
 </head>
 
   <body>
@@ -199,7 +199,7 @@
       
       
       
-      <a href="/resources/" >
+      <a href="/resources/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -254,57 +254,152 @@
         <div>
           
   <main id="main">
-    <h1>SwiftUI Accessibility: Accessible User Interface</h1>
+    <h1>Resources</h1>
     
 
-<p>Take a look at your app. Notice the collection of buttons, text, images, and other controls you can see and interact with that make up your app’s user interface. When one of your customers navigates your app with Voice Control, Switch Control, VoiceOver, or any other assistive technology, this isn’t the interface they’re using. Instead, iOS creates a version of your interface for assistive technology to use. This interface is generally known as the accessibility tree. Apple often refers to this as your app’s Accessible User Interface. For brevity and consistency in this article, I’ll refer to it as the AUI</p>
+<p>This is a personally curated list of resources I have used and think others may find helpful too. I&rsquo;m always looking for new high quality mobile accessibility and inclusion resources, please share them with me via <a href="mailto:a11y@mobilea11y.com">email</a> or <a href="https://twitter.com/MobileA11y">Twitter</a>.</p>
 
-<p><img src="/images/swiftui-aui-weather.PNG" alt="Navigating the Weather app with switch control enabled highlights an hour's weather report" /></p>
+<h2 id="code">Code</h2>
 
-<p>Your app’s AUI contains information about what elements are in your visual interface, what order they’re in, and how your users can interact with them. Your customer’s chosen assistive technology will then decide how to use this information. For example, Voice Control and Switch Control help people to interact with your app, so will only access interactive elements. Speak Screen is only concerned with reading content, so will only access elements that aren’t interactable.</p>
+<ul>
+<li><p><strong><a href="https://kristina.io/adopting-voice-control/">Adopting Voice Control</a></strong><br/>
+A great, concise, overview on how best to adopt iOS 13&rsquo;s Voice Control feature from <a href="https://twitter.com/krstnfx">Kristina Fox</a></p></li>
 
-<p>Whenever we change an accessibility property, such as changing the sort order, we’re not changing anything on the visual interface. These are direct changes to the AUI for assistive technology to consume.</p>
+<li><p><strong><a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/iPhoneAccessibility/Introduction/Introduction.html">Apple Accessibility Programming Guide for iOS</a></strong><br/>
+No longer updated, but the general principles are still valid.</p></li>
 
-<h3 id="uikit">UIKit</h3>
+<li><p><strong><a href="https://developer.android.com/guide/topics/ui/accessibility/apps">Android: Make apps more accessible</a></strong><br/>
+Google&rsquo;s guide to improving accessibility on Android</p></li>
 
-<p>The concept of an accessibility tree, or AUI, is not new to SwiftUI. UIKit has had one since iPhone OS 3, and it’s been on the web since way before that. If you’re a Chrome user, you can see the accessibility tree for this page by visiting <a href="chrome://accessibility/">chrome://accessibility/</a>. The difference between SwiftUI and UIKit is how iOS creates the AUI. UIKit has a couple of features that mean your AUI can sometimes be less than perfect.</p>
+<li><p><strong><a href="http://www.pauljadam.com/iosvsandroida11y/">iOS vs. Android Accessibility</a></strong><br>
+Now slightly out of date, <a href="https://twitter.com/pauljadam">Paul J. Adam&rsquo;s</a> guide and comparison of iOS and Android accessibility features and how they work for developers is still a good reference.</p></li>
 
-<p>In UIKit iOS builds your visual interface from code or from Interface Builder files. iOS will then generate an AUI from the screen that iOS has drawn. The accessibility API then combines this with any accessibility modifications you have made in code. This step is lossy. The Accessibility API has to make a lot of assumptions about what you intended the experience to be. Apple has done a ton of work in making those assumptions for you, and the majority of them are great. But when you’re creating custom controls or complex UI, iOS won’t always make the right decision.</p>
+<li><p><strong><a href="https://developer.apple.com/documentation/uikit/accessibility/uiaccessibility">UIAccessibility Reference</a></strong><br>
+Apple&rsquo;s developer documentation for the UIAccessibility protocol.</p></li>
 
-<p>Additionally, if you change your interface by adding or removing elements without presenting a new screen, the Accessibility API has no way of knowing something has changed. This means you can be presenting elements in your AUI that no longer exist visually, and new visual elements won’t be present in your AUI.</p>
+<li><p><strong><a href="https://useyourloaf.com/blog/using-a-custom-font-with-dynamic-type/">Using A Custom Font With Dynamic Type</a></strong><br/>
+<a href="https://twitter.com/kharrison">Keith Harrison</a> from <a href="https://useyourloaf.com">Use Your Loaf</a> has a great article on supporting dynamic type and how to do this with a custom font. Dynamic type is now an expected essential for any iOS app, and there&rsquo;s no excuse for not including it.</p></li>
 
-<p>Some fundamental design choices Apple have made in SwiftUI have made a great improvement in these areas. Including an entire class of accessibility bugs that are no longer possible.</p>
+<li><p><strong><a href="https://swiftwithmajid.com/2019/09/10/accessibility-in-swiftui/">Accessibility in SwiftUI</a></strong><br/>
+<a href="https://twitter.com/mecid">Majid Jabrayilov</a> has a great introduction to some of the changes that make SwiftUI a better choice for accessible apps. He&rsquo;s also covered <a href="https://swiftwithmajid.com/2019/10/16/localization-in-swiftui/">localisation</a> and <a href="https://swiftwithmajid.com/2019/10/09/dynamic-type-in-swiftui/">dynamic type</a> in SwiftUI.</p></li>
 
-<h3 id="declarative">Declarative</h3>
+<li><p><strong><a href="https://medium.com/better-programming/realtime-video-closed-captioning-in-swiftui-4022ba85c803">Realtime Video Closed Captioning in SwiftUI</a></strong><br/>
+I haven&rsquo;t actually tried this out, i&rsquo;m always a little skeptical of real-time captions, as they&rsquo;re often not accurate. As someone who is hard of hearing I use captions to fill in the gaps, and when they&rsquo;re not right I loose all meaning. That said, this looks pretty magical.</p></li>
+</ul>
 
-<p>Our first issue with UIKit is the lossy step of generating an AUI. Because SwiftUI is declarative, we’re separating <em>what</em> we want to display from <em>how</em> we want to display it. Our SwiftUI code containing our <code>Text()</code>, <code>Button()</code>, <code>Image()</code>, and other elements is the *what&amp;. The <em>how</em> is then left to iOS, TVOS, macOS, and WatchOS. This means each platform can make decisions to tailor your interface for itself.</p>
+<h2 id="tools">Tools</h2>
 
-<p>The AUI is just another platform on this list. It can interpret the same code as your visual interface does, and then make a few small decisions about how best to present it in an accessible form. This completely skips the lossy AUI generation step and requires less intervention as a developer.</p>
+<ul>
+<li><p><strong><a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a></strong><br/>
+A PC and Mac application from <a href="https://www.paciellogroup.com">The Paciello Group</a> to determine the contract ratio between colours, and their conformance with WCAG.</p></li>
 
-<h3 id="in-sync">In Sync</h3>
+<li><p><strong><a href="http://www.hemingwayapp.com">Hemmingway App</a></strong><br/>
+Hemmingway is an online grammar checker that highlights difficult to understand sentences and provides a reading grade for your written content.</p></li>
 
-<p>Our second problem with UIKit comes when we change the visual interface without the AUI knowing. It is possible to fix this in UIKit by calling UIAccessibility.post(notification: .layoutChanged) or UIAccessibility.post(notification: .screenChanged) for larger changes. But this requires us as developers to know where these errors are likely to occur and adds dev and testing effort.</p>
+<li><p><strong><a href="https://opendyslexic.org">Open Dyslexic</a></strong><br/>
+A open-source, pay-what-you-like dyslexia friendly font</p></li>
+</ul>
 
-<p>With SwiftUI this category of bug is completely eliminated. Because SwiftUI views are structs, and because structs are value types, when some state changes on a SwiftUI view, the struct is re-created. This struct creation triggers the simultaneous redraw of the screen and AUI update. This means your AUI can never be out of sync with what’s visible on the screen.</p>
+<h2 id="guides">Guides</h2>
 
-<p><img src="/images/swiftui-aui-diagram.png" alt="Diagram of the SwiftUI view creation process." /></p>
+<ul>
+<li><p><strong><a href="https://github.com/UKHomeOffice/posters/tree/master/accessibility/dos-donts">Accessibility Dos and Don&rsquo;ts</a></strong><br/>
+Posters produced by the UK Government with simple dos &amp; don&rsquo;ts for digital accessibility. Ironically in an inaccessible bitmap format, but still a great place to get started.</p></li>
 
-<p>Both of these improvements require no developer effort aside from using SwiftUI. This makes adopting SwiftUI the simplest and most impactful decision you can make right now to improve accessibility for your customers.</p>
+<li><p><strong><a href="https://twitter.com/aimeegamble/status/1193491265788223488">Handling Gender in Software</a></strong><br/>
+A twitter thread from <a href="https://twitter.com/aimeegamble">Aimee Gamble-Milner</a> covering some good and bad examples of handling gender and sexuality in software.</p></li>
 
-<hr />
+<li><p><strong><a href="https://www.w3.org/WAI/standards-guidelines/mobile/">Mobile Accessibility at W3C</a></strong><br/>
+The mobile accessibility initiative at W3C.</p></li>
 
-<p>Thanks for reading. This story is part of a series on SwiftUI Accessibility. Check out my other guides in this series:</p>
+<li><p><strong><a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines 2.1</a></strong><br/>
+Wherever you are in the world, if you have some form of accessibility regulation governing what you build, the chances are its based around WCAG. WCAG are written for web, so need a little translation to make them work for mobile. They&rsquo;re also seemingly endless, and a dry read. But they are the backbone of everything we try to achieve in accessibility, so are worth a cursory glance at the least.</p></li>
 
-<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-semantic-views/">SwiftUI Accessibility: Semantic Views</a></p>
+<li><p><strong><a href="http://www.plainenglish.co.uk/free-guides.html">Plain English Campaign Guides</a></strong><br/>
+The Plain English Campaign works to remove jargon from written language. They have a range of free guides on their website that provide tips on how to avoid jargon and unnecessary complexity while keeping your language engaging.</p></li>
+
+<li><p><strong><a href="https://www.apple.com/uk/accessibility/">Apple Accessibility</a></strong><br/>
+Apple&rsquo;s customer-facing accessibility website with details on the system accessibility features on all of their platforms. Some of these you get for free, some you have to opt in to, and others you have to work with. Its worth taking a look through and familiarising yourself with the features available, and checking how they work with your app.</p></li>
+</ul>
+
+<h2 id="design">Design</h2>
+
+<ul>
+<li><p><strong><a href="https://material.io/design/usability/accessibility.html">Material Design Accessibility</a></strong><br/>
+Google&rsquo;s guidelines for ensuring accessibility with Material Design projects.</p></li>
+
+<li><p><strong><a href="https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/accessibility/">Apple Human Interface Guidelines: Accessibility</a></strong><br/>
+Apple&rsquo;s set of best practices for creating accessible apps.</p></li>
+
+<li><p><strong><a href="https://inclusivedesignprinciples.org">inclusive Design Principles</a></strong><br/>
+The guiding principles of the inclusive design movement. A short introduction to creating designs that work better for everyone.</p></li>
+
+<li><p><strong><a href="https://www.microsoft.com/design/inclusive/">Microsoft Inclusive Design 101</a></strong><br/>
+Microsoft&rsquo;s design team are all in with supporting inclusive design. Their inclusive design page features a bunch of guides for different areas of inclusive design in software.</p></li>
+</ul>
+
+<h2 id="anxiety-mental-health">Anxiety &amp; Mental Health</h2>
+
+<ul>
+<li><p><strong><a href="https://www.designpatternsformentalhealth.org">Design Patterns for Mental Health</a></strong><br/>
+While we often see &lsquo;the end is nigh&rsquo; headlines about how technology is affecting our mental health. Unfortunately there seems to be very little research an guidance on what we can actually do to improve digital experiences for those with mental health issues. This list, while incomplete, ia a great resource.</p></li>
+
+<li><p><strong><a href="https://developer.paciellogroup.com/blog/2018/08/a-web-of-anxiety-accessibility-for-people-with-anxiety-and-panic-disorders-part-1/">A web of anxiety: accessibility for people with anxiety and panic disorders</a></strong><br/>
+<a href="https://twitter.com/davidofyork">David Swallow</a> gives us this in-depth, two part blog post on software patterns that can trigger anxiety disorders. unfortunately many of these will look very familiar. <a href="https://developer.paciellogroup.com/blog/2018/11/a-web-of-anxiety-accessibility-for-people-with-anxiety-and-panic-disorders-part-2/">Part 2</a>.</p></li>
+</ul>
+
+<h2 id="research">Research</h2>
+
+<ul>
+<li><strong><a href="https://www.lloydsbank.com/banking-with-us/whats-happening/consumer-digital-index.asp">UK Consumer Digital Index</a></strong><br/>
+Every year the UK Government and Lloyds Bank produce a survey of the UK&rsquo;s digital skills. The survey provides a huge range of statistics, covering age, gender, disability, digital disadvantage, and others.</li>
+</ul>
+
+<h2 id="podcasts">Podcasts</h2>
+
+<ul>
+<li><strong><a href="https://www.36seconds.org">36 Seconds That Changed Everything: How the iPhone Learned To Talk</a></strong><br/>
+An incredible audio documentary from <a href="https://twitter.com/shelly">Shelly Brisbin</a> covering the announcement of VoiceOver for the iPhone. For me the first <sup>1</sup>&frasl;<sub>2</sub> about the iPhone not being accessible is more telling than the result of Apple adding accessibility features.</li>
+</ul>
+
+<h2 id="talks">Talks</h2>
+
+<ul>
+<li><p><strong><a href="https://www.youtube.com/watch?v=Zi9ury3Setg">Who&rsquo;s Design is it Anyway: Helen Joy</a></strong><br/>
+<a href="https://twitter.com/LittleHelli">Helen Joy</a> is a UX consultant who works with UK government systems and has a great talk on remembering who you&rsquo;re creating software for.</p></li>
+
+<li><p><strong><a href="https://www.youtube.com/watch?v=xI5qEJ39KMc">So you can Sleep at Night: Ethics in IT: Jonathan Rothwell &amp; Steve Freeman</a></strong><br/>
+An in-depth talk around ethics in software, contains no answers, just difficult questions.</p></li>
+
+<li><p><strong><a href="https://www.youtube.com/watch?v=M7GOoZMMrnY">Inclusive and Accessible App Development: Kaya Thomas</a></strong><br/>
+<a href="https://twitter.com/kthomas901">Kaya Thomas</a> covers iOS&rsquo; UIAccessibility protocol and why accessibility is essential.</p></li>
+
+<li><p><strong><a href="https://accessibility.scot/design-without-empathy/">Design Without Empathy: Matt May</a></strong><br/>
+Inclusive Design head at Adobe, <a href="https://twitter.com/mattmay/">Matt May</a> tells us why using empathy when considering accessibility can cause more harm than good. Personally I think empathy is still important, but we need to use it as a motivation, not as a justification.</p></li>
+
+<li><p><strong><a href="https://developer.apple.com/videos/frameworks/accessibility">WWDC Videos</a></strong><br/>
+Apple&rsquo;s WWDC sessions on accessibility are consistently great. Each year the standard accessibility talk gives a great overview of what you should be doing, and a few others going into more detail in some areas. You can watch all of them above, and there&rsquo;s also an extra talk on <a href="https://developer.apple.com/videos/play/wwdc2019/403/">localisation</a>.</p></li>
+</ul>
+
+<h2 id="meetups">Meetups</h2>
+
+<ul>
+<li><p><strong><a href="https://www.meetup.com/London-Accessibility-Meetup/">London Accessibility Meetup</a></strong><br/>
+A monthly meetup in London covering all areas of accessibility. Usually includes a captioned livestream.</p></li>
+
+<li><p><strong><a href="https://www.accessibilitynottingham.co.uk">Accessibility Nottingham</a></strong><br/>
+A monthly meetup in Nottingham covering all areas of accessibility. Usually includes a captioned livestream.</p></li>
+</ul>
+
+<h2 id="twitter">Twitter</h2>
+
+<ul>
+<li><p><strong><a href="https://twitter.com/MobileA11y">Mobile A11y Twitter</a></strong><br/>
+The Mobile A11y Twitter account retweets mobile accessibility resources as well as updates from the site.</p></li>
+
+<li><p><strong><a href="https://twitter.com/mobilea11y/following">Mobile A11y Following</a></strong> <br/>
+Check out the Mobile A11y Twitter account following for recommendations for good mobile accessibility tweeters.</p></li>
+</ul>
 
   </main>
 

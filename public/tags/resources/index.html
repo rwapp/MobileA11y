@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">
+  <link rel="canonical" href="https://mobilea11y.com/tags/resources/">
 
   
 
@@ -36,7 +36,7 @@
 
   
   
-  <title>SwiftUI Accessibility: Accessible User Interface | Mobile A11y</title>
+  <title>Resources | Mobile A11y</title>
 </head>
 
   <body>
@@ -199,7 +199,7 @@
       
       
       
-      <a href="/resources/" >
+      <a href="/resources/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -212,7 +212,7 @@
       
       
       
-      <a href="/tags/" >
+      <a href="/tags/" aria-current="page">
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -254,58 +254,50 @@
         <div>
           
   <main id="main">
-    <h1>SwiftUI Accessibility: Accessible User Interface</h1>
+    <h1>Resources</h1>
+    <div>
+      
+    </div>
+    <ul class="patterns-list">
     
-
-<p>Take a look at your app. Notice the collection of buttons, text, images, and other controls you can see and interact with that make up your app’s user interface. When one of your customers navigates your app with Voice Control, Switch Control, VoiceOver, or any other assistive technology, this isn’t the interface they’re using. Instead, iOS creates a version of your interface for assistive technology to use. This interface is generally known as the accessibility tree. Apple often refers to this as your app’s Accessible User Interface. For brevity and consistency in this article, I’ll refer to it as the AUI</p>
-
-<p><img src="/images/swiftui-aui-weather.PNG" alt="Navigating the Weather app with switch control enabled highlights an hour's weather report" /></p>
-
-<p>Your app’s AUI contains information about what elements are in your visual interface, what order they’re in, and how your users can interact with them. Your customer’s chosen assistive technology will then decide how to use this information. For example, Voice Control and Switch Control help people to interact with your app, so will only access interactive elements. Speak Screen is only concerned with reading content, so will only access elements that aren’t interactable.</p>
-
-<p>Whenever we change an accessibility property, such as changing the sort order, we’re not changing anything on the visual interface. These are direct changes to the AUI for assistive technology to consume.</p>
-
-<h3 id="uikit">UIKit</h3>
-
-<p>The concept of an accessibility tree, or AUI, is not new to SwiftUI. UIKit has had one since iPhone OS 3, and it’s been on the web since way before that. If you’re a Chrome user, you can see the accessibility tree for this page by visiting <a href="chrome://accessibility/">chrome://accessibility/</a>. The difference between SwiftUI and UIKit is how iOS creates the AUI. UIKit has a couple of features that mean your AUI can sometimes be less than perfect.</p>
-
-<p>In UIKit iOS builds your visual interface from code or from Interface Builder files. iOS will then generate an AUI from the screen that iOS has drawn. The accessibility API then combines this with any accessibility modifications you have made in code. This step is lossy. The Accessibility API has to make a lot of assumptions about what you intended the experience to be. Apple has done a ton of work in making those assumptions for you, and the majority of them are great. But when you’re creating custom controls or complex UI, iOS won’t always make the right decision.</p>
-
-<p>Additionally, if you change your interface by adding or removing elements without presenting a new screen, the Accessibility API has no way of knowing something has changed. This means you can be presenting elements in your AUI that no longer exist visually, and new visual elements won’t be present in your AUI.</p>
-
-<p>Some fundamental design choices Apple have made in SwiftUI have made a great improvement in these areas. Including an entire class of accessibility bugs that are no longer possible.</p>
-
-<h3 id="declarative">Declarative</h3>
-
-<p>Our first issue with UIKit is the lossy step of generating an AUI. Because SwiftUI is declarative, we’re separating <em>what</em> we want to display from <em>how</em> we want to display it. Our SwiftUI code containing our <code>Text()</code>, <code>Button()</code>, <code>Image()</code>, and other elements is the *what&amp;. The <em>how</em> is then left to iOS, TVOS, macOS, and WatchOS. This means each platform can make decisions to tailor your interface for itself.</p>
-
-<p>The AUI is just another platform on this list. It can interpret the same code as your visual interface does, and then make a few small decisions about how best to present it in an accessible form. This completely skips the lossy AUI generation step and requires less intervention as a developer.</p>
-
-<h3 id="in-sync">In Sync</h3>
-
-<p>Our second problem with UIKit comes when we change the visual interface without the AUI knowing. It is possible to fix this in UIKit by calling UIAccessibility.post(notification: .layoutChanged) or UIAccessibility.post(notification: .screenChanged) for larger changes. But this requires us as developers to know where these errors are likely to occur and adds dev and testing effort.</p>
-
-<p>With SwiftUI this category of bug is completely eliminated. Because SwiftUI views are structs, and because structs are value types, when some state changes on a SwiftUI view, the struct is re-created. This struct creation triggers the simultaneous redraw of the screen and AUI update. This means your AUI can never be out of sync with what’s visible on the screen.</p>
-
-<p><img src="/images/swiftui-aui-diagram.png" alt="Diagram of the SwiftUI view creation process." /></p>
-
-<p>Both of these improvements require no developer effort aside from using SwiftUI. This makes adopting SwiftUI the simplest and most impactful decision you can make right now to improve accessibility for your customers.</p>
-
-<hr />
-
-<p>Thanks for reading. This story is part of a series on SwiftUI Accessibility. Check out my other guides in this series:</p>
-
-<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-semantic-views/">SwiftUI Accessibility: Semantic Views</a></p>
-
+      <li class="list-post">
+        <h2 class="blog-roll-title">
+          <a href="https://mobilea11y.com/resources/">
+            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
+              <use xlink:href="#bookmark"></use>
+            </svg>
+            Resources
+          </a>
+        </h2>
+        <div class="blog-roll-meta-data">
+          <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
+            
+            Dec 1, 2019
+          <span>|</span>
+          
+          &nbsp;<i class="fa fa-clock-o"></i>&nbsp;6&nbsp;minutes
+          
+          <p class="blog-description">
+            A collection of online resources for improving mobile accessibility.
+          </p>
+          
+            <div class="tags">
+              <ul class="blog-roll-tags" aria-label="tags">
+                
+                  <li>
+                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
+                      <use xlink:href="#tag"></use>
+                    </svg>
+                    <a href="https://mobilea11y.com/tags/resources">Resources</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+        </div>
+      </li>        
+    
+    </ul>
   </main>
 
           <div class="social-heading">
