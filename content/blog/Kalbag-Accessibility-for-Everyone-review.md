@@ -4,6 +4,8 @@ description: "Laura's short intro to web accessibility is also available as an a
 date: 2019-11-30T07:30:56Z
 tags:
 - Web
+- Book
+- Review
 ---
 
 Laura's introduction to web accessibility jumped out to me because it's available as an audiobook. Being dyslexic I struggle to read, so prefer to listen to audiobooks where available. Unfortunately, most technical books aren't available as audiobooks for a couple of potentially obvious reasons. Hearing code or descriptions of diagrams and illustrations read aloud may not be the best experience for an audiobook. As such, this book choses to leave those out of the audio version. For this review, I also purchased the eBook version. Having illustrations available there did make it feel like I had lost out by reading the audiobook version. Screen readers do their best to convey information when greeted with diagrams and other non-text content, and I wonder if more could have been done here to convey this information in an audio format. That said, I am grateful Laura took the time to record an audio version, as in all honesty, I wouldn't have completed this book up otherwise. This is not an indictment of Laura or her book, simply that I struggle to read a full book.
