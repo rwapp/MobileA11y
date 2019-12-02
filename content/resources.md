@@ -118,7 +118,7 @@ Every year the UK Government and Lloyds Bank produce a survey of the UK's digita
 ## Testing
 
 * **[New in iOS 13 Accessibility – Voice Control and More](https://www.deque.com/blog/new-in-ios-13-accessibility-voice-control-and-more/)**<br/>
-This post from Deque is ostensibly about the new accessibility features in iOS 13, but most interestingly is the ways Voice Control can be leveraged for faster, comprehensive accessibility testing.
+This post from Deque is ostensibly about the new accessibility features in iOS 13. For me the most interesting part is the ways Voice Control can be leveraged for faster, comprehensive accessibility testing.
 
 * **[Auditing your App with the Accessibility Inspector: Kilo Loco](https://www.youtube.com/watch?v=sqGSYGHJMVM)**<br/>
 [Kilo](https://twitter.com/Kilo_Loco) introduces us to Xcode's Accessibility Inspector, or 'the little naked guy who wants to give you a hug.' How to run it on your app, and how to understand what its telling you.
