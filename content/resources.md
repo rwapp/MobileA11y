@@ -163,7 +163,7 @@ A eulogy for brogramming.
 [Elaine](https://twitter.com/elainedbatista) gives us an in depth look at making our iOS aps work with voice. Elaine covers both talking to our apps, and our apps talking to us.
 
 * **[How to build an app for everyone: Novall Khan](https://vimeo.com/362163043)**<br/>
-An overview of iOS' UIAccessibility protocol features.
+An overview of iOS' UIAccessibility protocol features from [Novall Khan](https://twitter.com/novallkhan).
 
 ## Meetups
 
