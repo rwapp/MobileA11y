@@ -123,6 +123,11 @@ This post from Deque is ostensibly about the new accessibility features in iOS 1
 * **[Auditing your App with the Accessibility Inspector: Kilo Loco](https://www.youtube.com/watch?v=sqGSYGHJMVM)**<br/>
 [Kilo](https://twitter.com/Kilo_Loco) introduces us to Xcode's Accessibility Inspector, or 'the little naked guy who wants to give you a hug.' How to run it on your app, and how to understand what its telling you.
 
+* **[AppleVis App Directory](https://www.applevis.com/apps)**<br/>
+AppleVis is a community of blind and vision impaired Apple users, their site is a wealth of information for both users and developers. One of the most useful resources is the AppleVis app directory. Users submit apps they have used and provide them a rating and a recommendation. If you're looking to find out how VoiceOver users really experience your app, this is a good starting point.
+
+* **[AppleVis Bug Tracker](https://www.applevis.com/bugs)**<br/>
+AppleVis also maintain their own bug tracker of Apple system software. Unfortunately, like many developer-facing Apple bugs, accessibility bugs can sometimes languish. This database provides a list of accessibility bugs that have been submitted as radars. Many including detailed reproduction steps.
 
 
 ## Tweets
@@ -133,11 +138,16 @@ Short tips from Twitter
 * **[Using unusual unicode characters](https://twitter.com/kentcdodds/status/1083073242330361856)**<br/>
 
 
-
 ## Podcasts
 
 * **[36 Seconds That Changed Everything: How the iPhone Learned To Talk](https://www.36seconds.org)**<br/>
 An incredible audio documentary from [Shelly Brisbin](https://twitter.com/shelly) covering the announcement of VoiceOver for the iPhone. For me the first 1/2 about the iPhone not being accessible is more telling than the result of Apple adding accessibility features.
+
+* **[AppleVis Podcast](https://www.applevis.com/podcasts)**<br/>
+An Apple-focussed tech podcast, much like any other, the only difference being the hosts have visual impairments
+
+* **[Accessible Podcast](https://www.accessible.fm)**<br>
+A podcast about accessibility in tech, focussing on Apple.
 
 ## Talks
 
@@ -164,6 +174,7 @@ A eulogy for brogramming.
 
 * **[How to build an app for everyone: Novall Khan](https://vimeo.com/362163043)**<br/>
 An overview of iOS' UIAccessibility protocol features from [Novall Khan](https://twitter.com/novallkhan).
+
 
 ## Meetups
 
