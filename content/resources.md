@@ -79,6 +79,15 @@ The Plain English Campaign works to remove jargon from written language. They ha
 * **[Apple Accessibility](https://www.apple.com/uk/accessibility/)**<br/>
 Apple's customer-facing accessibility website with details on the system accessibility features on all of their platforms. Some of these you get for free, some you have to opt in to, and others you have to work with. Its worth taking a look through and familiarising yourself with the features available, and checking how they work with your app.
 
+* **[BBC Mobile Accessibility Guidelines](https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile)**<br/>
+This guide covers [design](https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/user-experience), [coding](https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/developers), and [content](https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile/editors) for iOS, Android and mobile web. Including sections on testing.
+
+* **[Android: Basic Android AccessibilityTutorial](https://codelabs.developers.google.com/codelabs/basic-android-accessibility/#0)**<br/>
+A tutorial from Google with sample code that takes you through improving some common accessibility pitfalls.
+
+* **[Orange Mobile Accessibility Guidelines](https://a11y-guidelines.orange.com/mobile_EN/index.html)**<br/>
+A nice set of code examples for iOS and Android in Java, Kotlin, Objective-C and Swift. Guides on design & testing too.
+
 
 ## Design
 
@@ -129,8 +138,15 @@ AppleVis is a community of blind and vision impaired Apple users, their site is 
 * **[AppleVis Bug Tracker](https://www.applevis.com/bugs)**<br/>
 AppleVis also maintain their own bug tracker of Apple system software. Unfortunately, like many developer-facing Apple bugs, accessibility bugs can sometimes languish. This database provides a list of accessibility bugs that have been submitted as radars. Many including detailed reproduction steps.
 
+* **[The Paciello Group Mobile Testing Guide (PDF)](https://developer.paciellogroup.com/downloads/TPG_Mobile_Testing_Guide.pdf)**<br/>
+Easy to follow guide on manual testing for accessibility tools on iOS and Android.
+
+* **[Android Accessibility Scanner](https://support.google.com/accessibility/android/answer/6376570?hl=en#)**<br/>
+Android's own accessibility testing app available free from the Play store.
+
 
 ## Tweets
+
 Short tips from Twitter
 
 * **[The Language of accessibility](https://twitter.com/sebsilbermann/status/1183351930267078656)**<br/>
