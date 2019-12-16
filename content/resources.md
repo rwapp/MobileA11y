@@ -176,8 +176,8 @@ An in-depth talk around ethics in software, contains no answers, just difficult 
 * **[Inclusive and Accessible App Development: Kaya Thomas](https://www.youtube.com/watch?v=M7GOoZMMrnY)**<br/>
 [Kaya Thomas](https://twitter.com/kthomas901) covers iOS' UIAccessibility protocol and why accessibility is essential.
 
-* **[Design Without Empathy: Matt May](https://accessibility.scot/design-without-empathy/)**<br/>
-Inclusive Design head at Adobe, [Matt May](https://twitter.com/mattmay/) tells us why using empathy when considering accessibility can cause more harm than good. Personally I think empathy is still important, but we need to use it as a motivation, not as a justification.
+* **[Empathy Reifies Disability Stigmas: Liz Jackson](https://vimeo.com/319388683)**<br/>
+[Liz Jackson](https://twitter.com/elizejackson) gives us this passionate and thought-provoking talk about how empathy is often the wrong motivation for accessibility advocacy. 
 
 * **[WWDC Accessibility Videos](https://developer.apple.com/videos/frameworks/accessibility)**<br/>
 Apple's WWDC sessions on accessibility are consistently great. Each year the standard accessibility talk gives a great overview of what you should be doing, and a few others going into more detail in some areas. You can watch all of them above, and there's also an extra talk on [localisation](https://developer.apple.com/videos/play/wwdc2019/403/).
