@@ -3,8 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mobilea11y.com/blog/</loc>
+    <lastmod>2019-12-16T07:30:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mobilea11y.com/tags/ios/</loc>
+    <lastmod>2019-12-16T07:30:56+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mobilea11y.com/</loc>
-    <lastmod>2019-12-01T07:30:56+00:00</lastmod>
+    <lastmod>2019-12-16T07:30:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mobilea11y.com/tags/</loc>
+    <lastmod>2019-12-16T07:30:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mobilea11y.com/tags/testing/</loc>
+    <lastmod>2019-12-16T07:30:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mobilea11y.com/blog/xcui/</loc>
+    <lastmod>2019-12-16T07:30:56+00:00</lastmod>
   </url>
   
   <url>
@@ -15,16 +40,6 @@
   <url>
     <loc>https://mobilea11y.com/resources/</loc>
     <lastmod>2019-12-01T07:30:56+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mobilea11y.com/tags/</loc>
-    <lastmod>2019-12-01T07:30:56+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mobilea11y.com/blog/</loc>
-    <lastmod>2019-11-30T07:30:56+00:00</lastmod>
   </url>
   
   <url>
@@ -70,11 +85,6 @@
   <url>
     <loc>https://mobilea11y.com/about-mobile-a11y/</loc>
     <lastmod>2019-11-16T07:30:56+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mobilea11y.com/tags/ios/</loc>
-    <lastmod>2019-11-06T07:30:56+00:00</lastmod>
   </url>
   
   <url>
