@@ -11,9 +11,17 @@ For a while now I’ve been looking at possibilities for automated accessibility
 
 These tests are all part of an open source library I created called A11yUITests, available on [GitHub](https://github.com/rwapp/A11yUITests). You can pull this library in using Cocoapods and use these tests in a friendly way. I document them here to help you change and adapt them for your own use. And to spark discussion on how valid these tests are, and how we can improve upon them.
 
-In creating these tests I've followed [WCAG](https://www.w3.org/TR/WCAG21/) guidelines and [Apple's recommendations on accessibility](https://developer.apple.com/accessibility/). For inspiration, I've researched Deque's commercial iOS Accessibility testing tool [WorldSpace Attest](https://www.deque.com/tools/worldspace-attest-ios/) and Android's [Espresso accessibility checks](https://developer.android.com/training/testing/espresso/accessibility-checking) library. 
+In creating these tests I've followed [WCAG](https://www.w3.org/TR/WCAG21/) guidelines and [Apple's recommendations on accessibility](https://developer.apple.com/accessibility/). For inspiration, I've researched Deque's commercial iOS Accessibility testing tool [WorldSpace Attest](https://www.deque.com/tools/worldspace-attest-ios/) and Android's [Espresso accessibility checks](https://developer.android.com/training/testing/espresso/accessibility-checking) library.
 
-## Tests
+## Any XCUITest is an Accessibility Test
+
+XCUITests uses your app's accessibility tree, this means any well-written XCUITest is an accessibility test. Many XCUITest suites I've seen make one mistake though. When you're finding an element on screen, always use the element's label, not the accessibility identifier. The identifier is designed to help you with XCUITests, but it doesn't guarantee your content has been set to the element. By finding an element by its label, you're looking for exactly the same string that VoiceOver will read and Voice Control users will speak.
+
+```swift
+let button = XCUIApplication.buttons["My button"]
+```
+
+## Accessibility Tests
 
 I've identified 12 accessibility issues I think it's possible to test for using XCUI. At the time of writing, 10 of these feature in [A11yUITests](http://mobilea11y.com/blog/a11yuitests/), but the others have branches and should be merged after some tweaks. There are a few other areas I'd really love to test for, like accessibility traits, but as of writing, XCUI can't check these.
 
