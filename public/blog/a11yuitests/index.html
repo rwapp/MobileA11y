@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/tags/resources/">
+  <link rel="canonical" href="https://mobilea11y.com/blog/a11yuitests/">
 
   
 
@@ -36,7 +36,7 @@
 
   
   
-  <title>Resources | Mobile A11y</title>
+  <title>A11yUITests: An XCUI Testing library for accessibility | Mobile A11y</title>
 </head>
 
   <body>
@@ -199,7 +199,7 @@
       
       
       
-      <a href="/resources/" aria-current="page">
+      <a href="/resources/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -212,7 +212,7 @@
       
       
       
-      <a href="/tags/" aria-current="page">
+      <a href="/tags/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -254,101 +254,67 @@
         <div>
           
   <main id="main">
-    <h1>Resources</h1>
-    <div>
-      
-    </div>
-    <ul class="patterns-list">
+    <h1>A11yUITests: An XCUI Testing library for accessibility</h1>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/blog/a11yuitests/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            A11yUITests: An XCUI Testing library for accessibility
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
-          <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
-            
-            Dec 17, 2019
-          <span>|</span>
-          
-          &nbsp;<i class="fa fa-clock-o"></i>&nbsp;2&nbsp;minutes
-          
-          <p class="blog-description">
-            A open source library of accessibility tests for XCUI Testing.
-          </p>
-          
-            <div class="tags">
-              <ul class="blog-roll-tags" aria-label="tags">
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/resources">Resources</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/ios">iOS</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/testing">Testing</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-        </div>
-      </li>        
-    
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/resources/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Resources
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
-          <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
-            
-            Dec 1, 2019
-          <span>|</span>
-          
-          &nbsp;<i class="fa fa-clock-o"></i>&nbsp;8&nbsp;minutes
-          
-          <p class="blog-description">
-            A collection of online resources for improving mobile accessibility.
-          </p>
-          
-            <div class="tags">
-              <ul class="blog-roll-tags" aria-label="tags">
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/resources">Resources</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-        </div>
-      </li>        
-    
-    </ul>
+
+<p><a href="https://github.com/rwapp/A11yUITests">A11yUITests</a> is an extension to XCTestCase that adds tests for common accessibility issues that can be run as part of an XCUITest suite. I&rsquo;ve written a detailed discussion of the <a href="https://mobilea11y.com/guides/xcui/">tests available</a> if you&rsquo;re interested in changing/implementing these tests yourself. Alternatively, follow this quick start guide.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<h3 id="adding-a11yuitests">Adding A11yUITests</h3>
+
+<p>I&rsquo;m assuming you&rsquo;re already familiar with cocoapods, if not, <a href="https://cocoapods.org">cocoapods.org</a> has a good introduction. There is one minor difference here compared to most cocoapods, we&rsquo;re not including this pod in our app, but our app&rsquo;s test bundle. This means your podfile will look something like this.</p>
+
+<pre><code class="language-ruby">target 'MyAwesomeApp' do
+    target 'MyAwesomeApp_Tests' do
+        pod 'A11yUITests'
+    end
+end
+</code></pre>
+
+<h3 id="starting-a-new-test-suite">Starting a New Test Suite</h3>
+
+<h4 id="setting-up-testing">Setting Up Testing</h4>
+
+<p>In Xcode, create a new suite of UI Tests from File &gt; New &gt; Target and choose UI Testing Bundle. On the next screen ensure the app you&rsquo;re looking to test is selected under &lsquo;Target to be Tested.&rsquo; Xcode will generate an example XCTestCase subclass for you, we&rsquo;ll use this in the &lsquo;your first test&rsquo; step.</p>
+
+<h4 id="your-first-test">Your First Test</h4>
+
+<p>Add <code>import A11yUITests</code> at the top of your XCTestCase subclass.</p>
+
+<p>Write a new test function beginning with the word test</p>
+
+<pre><code class="language-swift">import A11yUITests
+import XCTest
+
+class AwesomeTests: XCTestCase {
+    func testAccessibility() {   
+
+    }
+}
+</code></pre>
+
+<p>Place your cursor inside the braces and press the record button in the bottom left of Xcode&rsquo;s editor window. This will launch the app and record your interactions. Navigate to the screen where you want to check accessibility, and Xcode will write the steps into your test in code.</p>
+
+<p><img src="/images/xcui-record.png" alt="Xcode's record button" /></p>
+
+<p>After this generated code, add <code>a11yCheckAllOnScreen()</code>. This command will then run A11yUITests&rsquo; full suite on your screen.</p>
+
+<h3 id="existing-ui-test-suites">Existing UI Test Suites</h3>
+
+<p>Add <code>import A11yUITests</code> into the XCTestCase subclass where you want to add accessibility checks.</p>
+
+<p>Pepper <code>a11yCheckAllOnScreen()</code> calls around when you navigate to a new screen or make a major change to a screen.</p>
+
+<h2 id="customising-test-suites">Customising Test Suites</h2>
+
+<p>For more detail, see the <a href="https://github.com/rwapp/A11yUITests/blob/master/README.md">A11yUITests Readme</a>. There are 4 provided test suites, but you can build your own if you find some tests don&rsquo;t quite work for you.</p>
+
+<p>You can do this by creating an array of <code>A11yTests</code> enum values. Run your chosen suite by passing your array along with the elements you want to test to <code>a11y(tests: [A11yTests], on elements: [XCUIElement])</code>. You can get all elements on screen with the following.</p>
+
+<pre><code class="language-swift"> let elements = XCUIApplication().descendants(matching: .any).allElementsBoundByAccessibilityElement
+</code></pre>
+
   </main>
 
           <div class="social-heading">
