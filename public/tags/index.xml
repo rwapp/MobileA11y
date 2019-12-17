@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 16 Dec 2019 07:30:56 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Dec 2019 07:30:56 +0000</lastBuildDate>
     
 	<atom:link href="https://mobilea11y.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,27 +14,27 @@
     <item>
       <title>iOS</title>
       <link>https://mobilea11y.com/tags/ios/</link>
-      <pubDate>Mon, 16 Dec 2019 07:30:56 +0000</pubDate>
+      <pubDate>Tue, 17 Dec 2019 07:30:56 +0000</pubDate>
       
       <guid>https://mobilea11y.com/tags/ios/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Testing</title>
-      <link>https://mobilea11y.com/tags/testing/</link>
-      <pubDate>Mon, 16 Dec 2019 07:30:56 +0000</pubDate>
+      <title>Resources</title>
+      <link>https://mobilea11y.com/tags/resources/</link>
+      <pubDate>Tue, 17 Dec 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/tags/testing/</guid>
+      <guid>https://mobilea11y.com/tags/resources/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Resources</title>
-      <link>https://mobilea11y.com/tags/resources/</link>
-      <pubDate>Sun, 01 Dec 2019 07:30:56 +0000</pubDate>
+      <title>Testing</title>
+      <link>https://mobilea11y.com/tags/testing/</link>
+      <pubDate>Tue, 17 Dec 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/tags/resources/</guid>
+      <guid>https://mobilea11y.com/tags/testing/</guid>
       <description></description>
     </item>
     

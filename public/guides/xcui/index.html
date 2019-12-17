@@ -259,7 +259,7 @@
 
 <p>For a while now I’ve been looking at possibilities for automated accessibility testing on iOS. Unfortunately, I’ve not found any option so far that I’m happy with. I am a big fan of Apple’s XCUI Test framework. Although it has its limitations, I believe there’s scope for creating valid accessibility tests using this framework. Over the last few months I’ve been trying things out, and here’s what I’ve come up with.</p>
 
-<p>These tests are all part of an open source library I created called A11yUITests, available on <a href="https://github.com/rwapp/A11yUITests">GitHub</a>. You can pull this library in using Cocoapods and use these tests in a friendly way. I document them here to help you change and adapt them for your own use. And to spark discussion on how valid these tests are, and how we can improve upon them.</p>
+<p>These tests are all part of an open source library I created called <a href="https://mobilea11y.com/blog/a11yuitests/">A11yUITests</a>, available on <a href="https://github.com/rwapp/A11yUITests">GitHub</a>. You can pull this library in using Cocoapods and use these tests in a friendly way. I document them here to help you change and adapt them for your own use. And to spark discussion on how valid these tests are, and how we can improve upon them.</p>
 
 <p>In creating these tests I&rsquo;ve followed <a href="https://www.w3.org/TR/WCAG21/">WCAG</a> guidelines and <a href="https://developer.apple.com/accessibility/">Apple&rsquo;s recommendations on accessibility</a>. For inspiration, I&rsquo;ve researched Deque&rsquo;s commercial iOS Accessibility testing tool <a href="https://www.deque.com/tools/worldspace-attest-ios/">WorldSpace Attest</a> and Android&rsquo;s <a href="https://developer.android.com/training/testing/espresso/accessibility-checking">Espresso accessibility checks</a> library.</p>
 
@@ -274,7 +274,7 @@
 
 <p>I&rsquo;ve identified 12 accessibility issues I think it&rsquo;s possible to test for using XCUI. At the time of writing, 10 of these feature in <a href="http://mobilea11y.com/blog/a11yuitests/">A11yUITests</a>, but the others have branches and should be merged after some tweaks. There are a few other areas I&rsquo;d really love to test for, like accessibility traits, but as of writing, XCUI can&rsquo;t check these.</p>
 
-<h3 id="minimum-size">Minimum size</h3>
+<h3 id="minimum-size">Minimum Size</h3>
 
 <p>This test is not based on anything other than a rough guess that any accessible element smaller than 18px square is probably too small. I&rsquo;ve seen some smaller text, like caption styles, fail for this, and I think you could argue either way whether that is a genuine failure or not.</p>
 
@@ -282,7 +282,7 @@
 XCTAssert(element.frame.size.width &gt;= 18)
 </code></pre>
 
-<h2 id="valid-accessibility-label">Valid Accessibility Label</h2>
+<h3 id="valid-accessibility-label">Valid Accessibility Label</h3>
 
 <p>I based this test on <a href="https://www.w3.org/TR/WCAG21/#text-alternatives">WCAG 2.1 Guideline 1.1 Text Alternatives</a>. This test is valid for any accessible element, whether that&rsquo;s a control, image, or text. I chose to check the accessibility label had a minimum of 2 characters, as 1 is most likely meaningless. Checking if the string is empty might work better for your app.</p>
 
