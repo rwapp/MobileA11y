@@ -43,6 +43,21 @@ A quick tutorial on creating iOS semantic views.
 * **[Deaf Can Code](https://apps.apple.com/gb/app/deaf-can-code/id1485133152)**<br/>
 Video tutorials in American Sign Language for creating iOS apps.
 
+* **[Audiograph](https://github.com/Tantalum73/Audiograph)**<br/>
+Audiograph is an iOS library for adding audio representations to charts.
+
+* **[iOS Accessibility: Getting Started](https://www.raywenderlich.com/6827616-ios-accessibility-getting-started)**<br/>
+The always fantastic Ray Wenderlich team give us this detailed getting started guide on iOS accessibility.
+
+* **[Android Accessibility – The Missing Manual](http://www.last-child.com/android-a11y-missing-manual/)**<br/>
+A detailed introduction to Android accessibility.
+
+* **[Exposing hidden actions on Android](https://ataulm.com/2019/05/09/exposing-hidden-actions-on-android/)**<br>
+A tutorial on adding accessibility actions to Android views.
+
+* **[KeyboardKit](https://github.com/douglashill/KeyboardKit)**<br/>
+[Douglas Hill](https://twitter.com/qdoug) built this library to add common keyboard commands, such as page down, arrow key navigation, and more, to iOS.
+
 
 ## Tools
 
@@ -109,6 +124,10 @@ Microsoft's design team are all in with supporting inclusive design. Their inclu
 * **[Why Shortcuts Matter for Accessibility](https://www.macstories.net/stories/why-shortcuts-matter-for-accessibility/?utm_campaign=iOS%2BDev%2BWeekly&utm_medium=email&utm_source=iOS%2BDev%2BWeekly%2BIssue%2B375)**<br/>
 How automation on iOS makes a huge difference for accessibility users.
 
+* **[The business case for accessibility](https://www.deque.com/blog/the-business-case-for-accessibility/)**<br/>
+Sometimes getting accessibility prioritized in a business can be difficult, this article should help you make the case for why it's important right now.
+
+
 ## Anxiety & Mental Health
 
 * **[Design Patterns for Mental Health](https://www.designpatternsformentalhealth.org)**<br/>
@@ -138,12 +157,20 @@ AppleVis is a community of blind and vision impaired Apple users, their site is 
 * **[AppleVis Bug Tracker](https://www.applevis.com/bugs)**<br/>
 AppleVis also maintain their own bug tracker of Apple system software. Unfortunately, like many developer-facing Apple bugs, accessibility bugs can sometimes languish. This database provides a list of accessibility bugs that have been submitted as radars. Many including detailed reproduction steps.
 
+* **[iOS Accessibility Testing for Devs using Voice Control](https://www.youtube.com/watch?v=72YySyRkRh4)**<br/>
+A short video from [Deque](https://www.deque.com) on how to quickly use iOS 13's Voice Control feature to do accessibility testing.
+
 * **[The Paciello Group Mobile Testing Guide (PDF)](https://developer.paciellogroup.com/downloads/TPG_Mobile_Testing_Guide.pdf)**<br/>
 Easy to follow guide on manual testing for accessibility tools on iOS and Android.
 
 * **[Android Accessibility Scanner](https://support.google.com/accessibility/android/answer/6376570?hl=en#)**<br/>
 Android's own accessibility testing app available free from the Play store.
 
+* **[A11yUITests](https://github.com/rwapp/A11yUITests)**<br/>
+An iOS library for XCUITests to add automated accessibility checks.
+
+* **[UBKAccessibilityKit](https://github.com/NAB/UBKAccessibilityKit)**<br/>
+An iOS library you can include in your testing apps to detect accessibility issues. 
 
 ## Tweets
 
@@ -152,6 +179,12 @@ Short tips from Twitter
 * **[The Language of accessibility](https://twitter.com/sebsilbermann/status/1183351930267078656)**<br/>
 
 * **[Using unusual unicode characters](https://twitter.com/kentcdodds/status/1083073242330361856)**<br/>
+
+
+## Books
+
+* **[Developing Accessible iOS Apps](https://www.amazon.co.uk/gp/product/B082MCNRSK/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B082MCNRSK&linkCode=as2&tag=mobilea11y-21&linkId=d4d0f9a7280b432f30b43e2c27b24401)**<br/>
+[Daniel Devesa](https://twitter.com/dadederk) has written this comprehensive guide to building accessible iOS apps.
 
 
 ## Podcasts
@@ -193,6 +226,9 @@ An overview of iOS' UIAccessibility protocol features from [Novall Khan](https:/
 
 
 ## Meetups
+
+* **[Accessibility and Inclusive Design Meetup Groups](https://www.lireo.com/accessibility-inclusive-design-in-person-groups/)**<br/>
+A big list of accessibility and inclusive design meetups throughout the world.
 
 * **[London Accessibility Meetup](https://www.meetup.com/London-Accessibility-Meetup/)**<br/>
 A monthly meetup in London covering all areas of accessibility. Usually includes a captioned livestream.
