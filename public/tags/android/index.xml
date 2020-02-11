@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Android on Mobile A11y</title>
+    <link>https://mobilea11y.com/tags/android/</link>
+    <description>Recent content in Android on Mobile A11y</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 11 Feb 2020 07:30:56 +0000</lastBuildDate>
+    
+	<atom:link href="https://mobilea11y.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android Live Regions</title>
+      <link>https://mobilea11y.com/blog/android-live-regions/</link>
+      <pubDate>Tue, 11 Feb 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/android-live-regions/</guid>
+      <description>Live Regions are one of my favourite accessibility features on Android. They&amp;rsquo;re a super simple solution to a common accessibility problem that people with visual impairments can stumble across.
+Say you have a game app, really any type of game. Your user interacts with the play area, and as they do, their score increases or decreases depending on your customer&amp;rsquo;s actions. In this example, the score display is separate to the element your customer is interacting with.</description>
+    </item>
+    
+  </channel>
+</rss>

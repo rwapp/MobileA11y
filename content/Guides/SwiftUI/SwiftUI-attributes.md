@@ -47,7 +47,7 @@ Buttons don't have an accessibility value by default. But if your text is long, 
 
 VoiceOver reads an element's accessibility hint last after a short pause. Use the hint to give extra information on what the result of performing this element's action will be. But only if this consequence is not immediately obvious from the element's accessibility label. Many VoiceOver users disable or skip over hints and only use them if they find an element confusing at first. Because of this, you should use a hint to provide extra context, and not be a required part of your interface.
 
-The hint attributre is optional, and not set for you by iOS. Set an accessibility hint on an element using the modifier `.accessibility(hint: Text("Sends your message."))`.
+The hint attribute is optional, and not set for you by iOS. Set an accessibility hint on an element using the modifier `.accessibility(hint: Text("Sends your message."))`.
 
 In their guidance on writing good accessibility hints, Apple suggests imagining describing the controls action to a friend. You might tell your friend "tapping the send button sends your message". But assuming you set up your accessibility traits and label correctly, repeating the information that this element is a button and that it's called "_send_" is redundant. So, your hint would be "_Sends your message._" Avoid "_Send your message._" as this sounds like an instruction, rather than guidance. Hints should begin with a capital letter and end with a full stop.
 
