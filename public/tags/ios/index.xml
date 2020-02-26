@@ -6,10 +6,20 @@
     <description>Recent content in iOS on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 17 Dec 2019 07:30:56 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2020 07:30:56 +0000</lastBuildDate>
     
 	<atom:link href="https://mobilea11y.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A11y Box iOS</title>
+      <link>https://mobilea11y.com/blog/a11y-box-ios/</link>
+      <pubDate>Wed, 26 Feb 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/a11y-box-ios/</guid>
+      <description>iOS&amp;rsquo; UIAccessibility API is huge. I like to think I know it pretty well, but I&amp;rsquo;m always being surprised by discovering features I previously had no idea about. Like many things on iOS, the documentation for UIAccessibility is not always complete, even for parts of the API that have been around for years.
+In an attempt to help spread the knowledge of some of the awesome things UIAccessibility is capable of, I&amp;rsquo;ve created A11y Box for iOS.</description>
+    </item>
     
     <item>
       <title>A11yUITests: An XCUI Testing library for accessibility</title>

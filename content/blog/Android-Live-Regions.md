@@ -4,6 +4,9 @@ description: "A one line addition makes a massive difference to dynamic screens 
 date: 2020-02-11T07:30:56Z
 tags:
 - Android
+- Blog
+- Mobile A11y Blog
+- Mobile
 ---
 
 Live Regions are one of my favourite accessibility features on Android. They're a super simple solution to a common accessibility problem that people with visual impairments can stumble across.
