@@ -6,6 +6,7 @@ tags:
 - Resources
 - iOS
 - Testing
+- Mobile
 ---
 
 [A11yUITests](https://github.com/rwapp/A11yUITests) is an extension to XCTestCase that adds tests for common accessibility issues that can be run as part of an XCUITest suite. I've written a detailed discussion of the [tests available](https://mobilea11y.com/guides/xcui/) if you're interested in changing/implementing these tests yourself. Alternatively, follow this quick start guide.

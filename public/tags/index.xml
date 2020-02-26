@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 11 Feb 2020 07:30:56 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2020 07:30:56 +0000</lastBuildDate>
     
 	<atom:link href="https://mobilea11y.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blog</title>
+      <link>https://mobilea11y.com/tags/blog/</link>
+      <pubDate>Wed, 26 Feb 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iOS</title>
+      <link>https://mobilea11y.com/tags/ios/</link>
+      <pubDate>Wed, 26 Feb 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mobile A11y Blog</title>
+      <link>https://mobilea11y.com/tags/mobile-a11y-blog/</link>
+      <pubDate>Wed, 26 Feb 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/tags/mobile-a11y-blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Resources</title>
+      <link>https://mobilea11y.com/tags/resources/</link>
+      <pubDate>Wed, 26 Feb 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/tags/resources/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Android</title>
@@ -21,20 +57,11 @@
     </item>
     
     <item>
-      <title>iOS</title>
-      <link>https://mobilea11y.com/tags/ios/</link>
-      <pubDate>Tue, 17 Dec 2019 07:30:56 +0000</pubDate>
+      <title>Mobile</title>
+      <link>https://mobilea11y.com/tags/mobile/</link>
+      <pubDate>Tue, 11 Feb 2020 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/tags/ios/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Resources</title>
-      <link>https://mobilea11y.com/tags/resources/</link>
-      <pubDate>Tue, 17 Dec 2019 07:30:56 +0000</pubDate>
-      
-      <guid>https://mobilea11y.com/tags/resources/</guid>
+      <guid>https://mobilea11y.com/tags/mobile/</guid>
       <description></description>
     </item>
     
@@ -75,38 +102,11 @@
     </item>
     
     <item>
-      <title>Blog</title>
-      <link>https://mobilea11y.com/tags/blog/</link>
-      <pubDate>Thu, 28 Nov 2019 07:30:56 +0000</pubDate>
-      
-      <guid>https://mobilea11y.com/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Mobile A11y</title>
       <link>https://mobilea11y.com/tags/mobile-a11y/</link>
       <pubDate>Thu, 28 Nov 2019 07:30:56 +0000</pubDate>
       
       <guid>https://mobilea11y.com/tags/mobile-a11y/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mobile A11y Blog</title>
-      <link>https://mobilea11y.com/tags/mobile-a11y-blog/</link>
-      <pubDate>Thu, 28 Nov 2019 07:30:56 +0000</pubDate>
-      
-      <guid>https://mobilea11y.com/tags/mobile-a11y-blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mobile</title>
-      <link>https://mobilea11y.com/tags/mobile/</link>
-      <pubDate>Wed, 06 Nov 2019 07:30:56 +0000</pubDate>
-      
-      <guid>https://mobilea11y.com/tags/mobile/</guid>
       <description></description>
     </item>
     
