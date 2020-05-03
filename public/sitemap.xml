@@ -3,6 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mobilea11y.com/blog/</loc>
+    <lastmod>2020-05-03T10:30:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mobilea11y.com/tags/blog/</loc>
+    <lastmod>2020-05-03T10:30:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mobilea11y.com/tags/ios/</loc>
+    <lastmod>2020-05-03T10:30:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mobilea11y.com/blog/attributed-accessibility-labels/</loc>
+    <lastmod>2020-05-03T10:30:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mobilea11y.com/</loc>
+    <lastmod>2020-05-03T10:30:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mobilea11y.com/tags/mobile-a11y-blog/</loc>
+    <lastmod>2020-05-03T10:30:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mobilea11y.com/tags/</loc>
+    <lastmod>2020-05-03T10:30:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mobilea11y.com/blog/writing-great-labels/</loc>
+    <lastmod>2020-05-03T09:30:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mobilea11y.com/blog/when-to-use-accessibility-labels/</loc>
+    <lastmod>2020-05-03T08:30:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mobilea11y.com/blog/ios-accessibility-labels/</loc>
+    <lastmod>2020-05-03T07:30:56+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mobilea11y.com/blog/a11y-box-android/</loc>
     <lastmod>2020-04-26T07:30:56+00:00</lastmod>
   </url>
@@ -13,42 +63,12 @@
   </url>
   
   <url>
-    <loc>https://mobilea11y.com/blog/</loc>
-    <lastmod>2020-04-26T07:30:56+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mobilea11y.com/tags/blog/</loc>
-    <lastmod>2020-04-26T07:30:56+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mobilea11y.com/</loc>
-    <lastmod>2020-04-26T07:30:56+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mobilea11y.com/tags/mobile-a11y-blog/</loc>
-    <lastmod>2020-04-26T07:30:56+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mobilea11y.com/tags/resources/</loc>
     <lastmod>2020-04-26T07:30:56+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mobilea11y.com/tags/</loc>
-    <lastmod>2020-04-26T07:30:56+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mobilea11y.com/blog/a11y-box-ios/</loc>
-    <lastmod>2020-02-26T07:30:56+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mobilea11y.com/tags/ios/</loc>
     <lastmod>2020-02-26T07:30:56+00:00</lastmod>
   </url>
   
