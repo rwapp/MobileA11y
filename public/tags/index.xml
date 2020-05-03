@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 26 Apr 2020 07:30:56 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2020 10:30:56 +0000</lastBuildDate>
     
 	<atom:link href="https://mobilea11y.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Blog</title>
+      <link>https://mobilea11y.com/tags/blog/</link>
+      <pubDate>Sun, 03 May 2020 10:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iOS</title>
+      <link>https://mobilea11y.com/tags/ios/</link>
+      <pubDate>Sun, 03 May 2020 10:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mobile A11y Blog</title>
+      <link>https://mobilea11y.com/tags/mobile-a11y-blog/</link>
+      <pubDate>Sun, 03 May 2020 10:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/tags/mobile-a11y-blog/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Android</title>
@@ -21,38 +48,11 @@
     </item>
     
     <item>
-      <title>Blog</title>
-      <link>https://mobilea11y.com/tags/blog/</link>
-      <pubDate>Sun, 26 Apr 2020 07:30:56 +0000</pubDate>
-      
-      <guid>https://mobilea11y.com/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mobile A11y Blog</title>
-      <link>https://mobilea11y.com/tags/mobile-a11y-blog/</link>
-      <pubDate>Sun, 26 Apr 2020 07:30:56 +0000</pubDate>
-      
-      <guid>https://mobilea11y.com/tags/mobile-a11y-blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Resources</title>
       <link>https://mobilea11y.com/tags/resources/</link>
       <pubDate>Sun, 26 Apr 2020 07:30:56 +0000</pubDate>
       
       <guid>https://mobilea11y.com/tags/resources/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>iOS</title>
-      <link>https://mobilea11y.com/tags/ios/</link>
-      <pubDate>Wed, 26 Feb 2020 07:30:56 +0000</pubDate>
-      
-      <guid>https://mobilea11y.com/tags/ios/</guid>
       <description></description>
     </item>
     

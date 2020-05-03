@@ -461,6 +461,36 @@ caption {
     border: 0;
 }
 
+.book-footer {
+    border: 0.1rem solid;
+    border-radius: 0.3rem;
+    display: table;
+}
+
+.book-footer:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.book-thumbnail {
+    width: 25%;
+    padding: 15px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.book-thumbnail a {
+    border: none;
+}
+
+.book-details {
+    display: table-cell;
+    vertical-align: middle;
+    width: 75%;
+    padding: 15px;
+}
+
 /* Tags */
 .tags {
     margin-top: 0;

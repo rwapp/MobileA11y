@@ -6,10 +6,51 @@
     <description>Recent content in Blog on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 26 Apr 2020 07:30:56 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2020 10:30:56 +0000</lastBuildDate>
     
 	<atom:link href="https://mobilea11y.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>iOS Attributed Accessibility Labels</title>
+      <link>https://mobilea11y.com/blog/attributed-accessibility-labels/</link>
+      <pubDate>Sun, 03 May 2020 10:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/attributed-accessibility-labels/</guid>
+      <description>Attributed accessibility labels are an incredible tool for making some next-level accessible experiences. They let you tell VoiceOver not just what to speak, but how to say it too.
+Using the accessibilityAttributedLabel property you can provide an NSAttributedString to VoiceOver, much the same way you would provide an NSAttributedString to a label&amp;rsquo;s attributedText property to display a string with an underline or character colour for example. The difference here is that all of our attributes are instructions for VoiceOver.</description>
+    </item>
+    
+    <item>
+      <title>Writing Great iOS Accessibility Labels</title>
+      <link>https://mobilea11y.com/blog/writing-great-labels/</link>
+      <pubDate>Sun, 03 May 2020 09:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/writing-great-labels/</guid>
+      <description>A good accessibility label lets your customer know exactly what a control does in as few words as possible, without having to rely on implied context.
+Don&amp;rsquo;t Add the Element Type iOS already knows your button is a button and your image is an image, it does this using an accessibility trait. If you label your button as &amp;lsquo;Play button&amp;rsquo; your VoiceOver customers will hear &amp;lsquo;Play button. Button.&amp;rsquo;
+Keep it Succinct Don&amp;rsquo;t frustrate your customer by adding too much information to your labels.</description>
+    </item>
+    
+    <item>
+      <title>When to use Accessibility Labels</title>
+      <link>https://mobilea11y.com/blog/when-to-use-accessibility-labels/</link>
+      <pubDate>Sun, 03 May 2020 08:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/when-to-use-accessibility-labels/</guid>
+      <description>There&amp;rsquo;s a few circumstances when you&amp;rsquo;ll want to set your own accessibility label, such as&amp;hellip;
+ An interactive element that you haven&amp;rsquo;t given a text value to, such as an image button. An interactive element with a long visual label. An interactive element with a short visual label that takes context from your design. A control or view you have created yourself or built by combining elements. Images of text.</description>
+    </item>
+    
+    <item>
+      <title>iOS Accessibility Labels</title>
+      <link>https://mobilea11y.com/blog/ios-accessibility-labels/</link>
+      <pubDate>Sun, 03 May 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/ios-accessibility-labels/</guid>
+      <description>This blog was inspired by Jeff Watkins&amp;rsquo; series of blogs on UIButton. UIButton is a fundamental part of building interfaces on iOS. So much so, that it probably doesn&amp;rsquo;t get the love it deserves. But it&amp;rsquo;s also really powerful and customisable when used correctly.
+Accessibility labels on iOS I feel are very similar. They&amp;rsquo;re fundamental to how accessibility works on iOS, yet I think they suffer from a few PR issues.</description>
+    </item>
     
     <item>
       <title>A11y Box Android</title>
