@@ -267,7 +267,7 @@
 is the best app on the App Store!&quot;)
 
 
-let range = NSRange(location: 12, length: 4) 
+let range = attributedString.string.range(of: &quot;best&quot;)
 attributedString.addAttributes([. accessibilitySpeechPitch: 1.5], range: range)
 appDescription?.accessibilityAttributedLabel = attributedString
 </code></pre>
@@ -290,7 +290,12 @@ appDescription?.accessibilityAttributedLabel = attributedString
 
 <p>Homonyms are another good example. In the <a href="https://apps.apple.com/gb/app/bbc-sounds/id1380676511">BBC Sounds</a> app, users are offered the opportunity to listen to &lsquo;live radio&rsquo;. unfortunately, VoiceOver appears to be instructing the user to &lsquo;liv radio&rsquo;. This can be fixed using the <code>.accessibilitySpeechIPANotation</code> attribute and providing an IPA string, such as this example:</p>
 
-<pre><code>liveRadio.accessibilityAttributedLabel = NSMutableAttributedString(string: &quot;[līv] radio&quot;, attributes: [.accessibilitySpeechIPANotation: true])
+<pre><code>let attributedString = NSMutableAttributedString(string: &quot;Live radio&quot;)
+
+
+let range = attributedString.string.range(of: &quot;Live&quot;)
+attributedString.addAttributes([.accessibilitySpeechIPANotation: &quot;līv&quot;], range: range)
+liveRadio?.accessibilityAttributedLabel = attributedString
 </code></pre>
 
 <h2 id="punctuation">Punctuation</h2>

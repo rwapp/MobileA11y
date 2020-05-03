@@ -19,7 +19,7 @@ let attributedString = NSMutableAttributedString(string: "This
 is the best app on the App Store!")
 
 
-let range = NSRange(location: 12, length: 4) 
+let range = attributedString.string.range(of: "best")
 attributedString.addAttributes([. accessibilitySpeechPitch: 1.5], range: range)
 appDescription?.accessibilityAttributedLabel = attributedString
 ```
@@ -43,7 +43,12 @@ Words you use commonly in your app that have a specific domain meaning are anoth
 Homonyms are another good example. In the [BBC Sounds](https://apps.apple.com/gb/app/bbc-sounds/id1380676511) app, users are offered the opportunity to listen to 'live radio'. unfortunately, VoiceOver appears to be instructing the user to 'liv radio'. This can be fixed using the `.accessibilitySpeechIPANotation` attribute and providing an IPA string, such as this example:
 
 ```
-liveRadio.accessibilityAttributedLabel = NSMutableAttributedString(string: "[līv] radio", attributes: [.accessibilitySpeechIPANotation: true])
+let attributedString = NSMutableAttributedString(string: "Live radio")
+
+
+let range = attributedString.string.range(of: "Live")
+attributedString.addAttributes([.accessibilitySpeechIPANotation: "līv"], range: range)
+liveRadio?.accessibilityAttributedLabel = attributedString
 ```
 
 ## Punctuation
