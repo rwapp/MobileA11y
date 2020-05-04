@@ -17,7 +17,7 @@ iOS already knows your button is a button and your image is an image, it does th
 ### Keep it Succinct
 
 Don't frustrate your customer by adding too much information to your labels. There's no need to describe photos in detail for example, just let people know what the subject of the photo is.
-Take another look at the Spotify example from the [post on when to use accessibility labels](blog/when-to-use-accessibility-labels/). Here our customer knows they're on the player screen for Beyoncé's 'Pray You Catch Me', so none of the labels include the name of the track. The pause button doesn't say 'Pause Pray You Catch Me by Beyoncé', but simply 'pause'. Use a single word wherever you can.
+Take another look at the Spotify example from the [post on when to use accessibility labels](/blog/when-to-use-accessibility-labels/). Here our customer knows they're on the player screen for Beyoncé's 'Pray You Catch Me', so none of the labels include the name of the track. The pause button doesn't say 'Pause Pray You Catch Me by Beyoncé', but simply 'pause'. Use a single word wherever you can.
 
 ![Play controls for Spotify showing accessibility labels](/images/PlayerControlsLabels.jpeg)
 
