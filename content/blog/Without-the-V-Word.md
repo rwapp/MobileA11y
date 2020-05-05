@@ -16,4 +16,8 @@ As an iOS developer, I know accessibility is important for a huge range of peopl
 
 YouTube hosts the [SWMobile talk](https://www.youtube.com/watch?v=Nv6YKcFtzv8) and the [CodeMobile talk](https://www.youtube.com/watch?v=majvme8fMvE) and I thank both groups for recording and uploading them.
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Nv6YKcFtzv8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/majvme8fMvE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Each version of the talk was slightly different, but if you would like to follow along grab the [CodeMobile slides](/resources/Without-The-V-Word.key).

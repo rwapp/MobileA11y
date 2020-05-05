@@ -6,10 +6,20 @@
     <description>Recent content in Mobile A11y Talk on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 08 Oct 2019 07:30:56 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Apr 2020 07:30:56 +0000</lastBuildDate>
     
 	<atom:link href="https://mobilea11y.com/tags/mobile-a11y-talk/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mobile A11y Talk: Accessibility in SwiftUI</title>
+      <link>https://mobilea11y.com/blog/swiftui-talk/</link>
+      <pubDate>Sun, 12 Apr 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/swiftui-talk/</guid>
+      <description>I was supposed to be attending the 2020 CSUN Assistive Technology conference to present a couple of talks, unfortunately with COVID-19 starting to take hold at that time, I wasn&amp;rsquo;t able to attend. In lieu of attending I decided to record one of the talks I was scheduled to present on Accessibility in SwiftUI.
+SwiftUI is Apple&amp;rsquo;s new paradigm for creating user interfaces on Apple platforms, and it has a bunch of new approaches that really help create more accessible experiences.</description>
+    </item>
     
     <item>
       <title>Mobile A11y Talk: Accessibility without the &#39;V&#39; Word</title>
