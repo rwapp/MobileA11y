@@ -17,12 +17,12 @@ jobs:
             htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
             --empty-alt-ignore --disable-external
     
-   - deploy:
-          name: deploy to AWS
-          command: |
-            if [ "${CIRCLE_BRANCH}" = "master" ]; then
-              aws s3 sync $HUGO_BUILD_DIR \
-              s3://a11ystaging --delete
-            else
-              echo "Not master branch, dry run only"
-            fi
+        - deploy:
+            name: deploy to AWS
+            command: |
+                if [ "${CIRCLE_BRANCH}" = "master" ]; then
+                  aws s3 sync $HUGO_BUILD_DIR \
+                  s3://a11ystaging --delete
+                else
+                  echo "Not master branch, dry run only"
+                fi
