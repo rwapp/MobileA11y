@@ -1,5 +1,7 @@
 version: 2.1
 jobs:
+  orbs:
+    aws-cli: circleci/aws-cli@1.0.0
   build:
     docker:
         - image: cibuilds/hugo:latest
@@ -10,8 +12,6 @@ jobs:
         - run: apk update && apk add git
         - checkout
         - run: git submodule sync && git submodule update --init
-        - run: apk add --update python python-dev py-pip build-base
-        - run: pip install awscli
         - run: HUGO_ENV=production hugo --minify -v -d $HUGO_BUILD_DIR
         - run: |
             htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
