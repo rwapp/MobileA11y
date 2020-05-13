@@ -13,8 +13,7 @@ workflows:
   main:
     jobs:
       - hugo/build:
-          html-proofer: false
-          source: /
+          html-proofer: true
           version: '0.55'
       - deploy:
           filters:
