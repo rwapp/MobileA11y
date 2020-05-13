@@ -1,6 +1,4 @@
-version: 2.1
-orbs:
-    aws-cli: circleci/aws-cli@1.0.0
+version: 2.0
 jobs:
   build:
     docker:
@@ -10,9 +8,17 @@ jobs:
         HUGO_BUILD_DIR: ~/hugo/public
     steps:
         - run: apk update && apk add git
+        
         - checkout
+        
         - run: git submodule sync && git submodule update --init
+        
+        - run: |
+            apk add --update python python-dev py-pip build-base
+            pip install awscli
+        
         - run: HUGO_ENV=production hugo --minify -v -d $HUGO_BUILD_DIR
+        
         - run: |
             htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html \
             --empty-alt-ignore --disable-external
