@@ -16,7 +16,6 @@ workflows:
           html-proofer: true
           source: /
           version: '0.55'
-          hugo-extra-flags: 'minify'
       - deploy:
           filters:
             branches:
