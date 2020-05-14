@@ -3,13 +3,15 @@ jobs:
     docker:
       - image: cibuilds/base
     steps:
-            - aws-s3/sync:
-               from: bucket
-               to: 's3://a11ystaging'
-               arguments: | # Optional arguments
-                  --acl public-read \
-                  --cache-control "max-age=86400"
-               overwrite: true
+      - hugo/build
+         hugo-extra-flags: '--minify'
+      - aws-s3/sync:
+          from: bucket
+          to: 's3://a11ystaging'
+          arguments: | # Optional arguments
+             --acl public-read \
+             --cache-control "max-age=86400"
+          overwrite: true
 
   
 orbs:
