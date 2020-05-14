@@ -2,9 +2,9 @@ jobs:
   deploy:
     docker:
       - image: cibuilds/base
-  steps:
-    - checkout
-    - aws-s3/sync:
+    steps:
+      - checkout
+      - aws-s3/sync:
            from: bucket
            to: 's3://a11ystaging'
            arguments: | # Optional arguments
