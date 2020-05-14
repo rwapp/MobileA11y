@@ -8,13 +8,13 @@ jobs:
       - run: ls -lah my-site
 orbs:
   hugo: circleci/hugo@0.2
+  aws-s3: circleci/aws-s3@x.y.z
 version: 2.1
 workflows:
   main:
     jobs:
       - hugo/build:
           html-proofer: true
-          hugo-extra-flags: '--minify'
           version: '0.70'
       - deploy:
           filters:
@@ -22,3 +22,12 @@ workflows:
               only: master
           requires:
             - hugo/build
+          steps:
+            - checkout
+            - aws-s3/sync:
+               from: bucket
+               to: 's3://a11ystaging'
+               arguments: | # Optional arguments
+                  --acl public-read \
+                  --cache-control "max-age=86400"
+               overwrite: true # default is false
