@@ -5,16 +5,18 @@ jobs:
     steps:
       - checkout
       - aws-s3/sync:
+           aws-access-key-id: AWS_ACCESS_KEY_S3
+           aws-secret-access-key: AWS_SECRET_ACCESS_KEY_S3
            from: ./public
            to: 's3://a11ystaging'
-           arguments: | # Optional arguments
+           arguments: |
              --acl public-read \
              --cache-control "max-age=86400"
-           overwrite: true # default is false
+           overwrite: true
 
   
 orbs:
-  hugo: circleci/hugo@0.2
+  hugo: circleci/hugo@0.5.2
   aws-s3: circleci/aws-s3@1.0.15
 version: 2.1
 workflows:
