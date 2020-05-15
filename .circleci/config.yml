@@ -5,7 +5,7 @@ jobs:
     steps:
       - checkout
       - aws-s3/sync:
-           from: bucket
+           from: ./public
            to: 's3://a11ystaging'
            arguments: | # Optional arguments
              --acl public-read \
