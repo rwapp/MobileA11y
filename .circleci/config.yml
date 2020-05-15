@@ -5,8 +5,8 @@ jobs:
     steps:
       - checkout
       - aws-s3/sync:
-            aws-access-key-id: AWS_ACCESS_KEY_S3
-            aws-secret-access-key: AWS_SECRET_ACCESS_KEY_S3
+           aws-access-key-id: AWS_ACCESS_KEY_S3
+           aws-secret-access-key: AWS_SECRET_ACCESS_KEY_S3
            from: ./public
            to: 's3://a11ystaging'
            arguments: |
