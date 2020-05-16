@@ -6,7 +6,7 @@ jobs:
       - checkout
       - aws-s3/sync:
            from: ./public
-           to: 's3://mobilea11y.com'
+           to: 's3://a11ystaging'
            arguments: |
              --acl public-read \
              --cache-control "max-age=86400"
@@ -23,6 +23,7 @@ workflows:
       - hugo/build:
           html-proofer: true
           version: '0.70'
+          destination: ./public
       - deploy:
           filters:
             branches:
