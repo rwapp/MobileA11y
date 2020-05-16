@@ -6,7 +6,7 @@ jobs:
       - checkout
       - aws-s3/sync:
            from: ./public
-           to: 's3://a11ystaging'
+           to: 's3://mobilea11y.com'
            arguments: |
              --acl public-read \
              --cache-control "max-age=86400"
