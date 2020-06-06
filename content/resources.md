@@ -219,6 +219,9 @@ An iOS library you can include in your testing apps to detect accessibility issu
 * **[AccessibilitySnapshot](https://github.com/cashapp/AccessibilitySnapshot)**<br/>
 AccessibilitySnapshot is a third approach to automated accessibility testing on iOS. Accessibility elements are highlighted in screenshots, with their accessibility values listed in the order they appear to your users. This doesn't tell you when you have an issue, but lets you quickly visually tell if everything is as you expect, and know when something changes.
 
+* **[Setup iPhone or iPad for iOS mobile Accessibility testing](https://www.youtube.com/watch?v=Ca1H6wF348g)**<br/>
+[Aaron Stephenson](https://twitter.com/azzoor) gives us this video showing how to prepare an iPhone for accessibility testing. It's all great stuff, especially the Macintosh Classic in the background, but the showstealer here is Aaron's use of NFC tags to toggle personas.
+
 
 ### Cross Platform
 
