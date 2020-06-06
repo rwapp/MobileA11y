@@ -6,10 +6,21 @@
     <description>Recent content on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 03 May 2020 10:30:56 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2020 07:30:56 +0000</lastBuildDate>
     
 	<atom:link href="https://mobilea11y.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Accessibility Review: Daily Dictionary - Screen changes</title>
+      <link>https://mobilea11y.com/blog/daily-dictionary/</link>
+      <pubDate>Sat, 16 May 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/daily-dictionary/</guid>
+      <description>The Accessibility Review series uses real world apps to provide examples of common accessibility issues and provide tips on how to fix them. Each of the developers has kindly volunteered their app to be tested.
+Daily Dictionary is an app from Benjamin Mayo providing a new word every day with definitions and real-world uses designed to help increase your vocabulary.
+Assessing the app, I noticed Benjamin has made a design decision around presenting the app’s settings.</description>
+    </item>
     
     <item>
       <title>iOS Attributed Accessibility Labels</title>
@@ -118,8 +129,7 @@ Getting Started Adding A11yUITests I&amp;rsquo;m assuming you&amp;rsquo;re alrea
       
       <guid>https://mobilea11y.com/resources/</guid>
       <description>This is a personally curated list of resources I have used and think others may find helpful too. I&amp;rsquo;m always looking for new high quality mobile accessibility and inclusion resources to add here. Please share any you find with me via email or Twitter.
-Code  Adopting Voice Control A great, concise, overview on how best to adopt iOS 13&amp;rsquo;s Voice Control feature from Kristina Fox
- Apple Accessibility Programming Guide for iOS No longer updated, but the general principles are still valid.</description>
+Code Android  Android Developers: Build more accessible apps Android&amp;rsquo;s developer documentation for Accessibility, including design, building &amp;amp; testing. With videos, code samples, and documentation.</description>
     </item>
     
     <item>
