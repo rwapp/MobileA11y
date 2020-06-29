@@ -6,10 +6,19 @@
     <description>Recent content in Mobile on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 12 Apr 2020 07:30:56 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2020 07:30:56 +0000</lastBuildDate>
     
 	<atom:link href="https://mobilea11y.com/tags/mobile/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>iOS 14: Custom Accessibility Content</title>
+      <link>https://mobilea11y.com/blog/custom-accessibility-content/</link>
+      <pubDate>Mon, 29 Jun 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/custom-accessibility-content/</guid>
+      <description>Each year at WWDC Xcode Santa brings us exciting new APIs to play with, and this year our accessibility present is Customized Accessibility Content. This API flew under the radar a little, I’m told this is because it&amp;rsquo;s so new there wasn’t even time for inclusion at WWDC. But this new feature helps to solve a difficult question when designing a VoiceOver interface - where is the balance between too much and too little content.</description>
+    </item>
     
     <item>
       <title>Mobile A11y Talk: Accessibility in SwiftUI</title>
