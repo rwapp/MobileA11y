@@ -27,7 +27,7 @@ Apple has implemented this feature in Photos for iOS 14. and it provides a great
 
 ![VoiceOver focusing on a photo](/images/customcontent-photonav.PNG)
 
-But phots have a ton of metadata aside from the date alone that helps us discover if we have the image we’re looking for. This is where our custom content comes in. Using the VoiceOver rotor control I can switch to More Content.
+But photos have a ton of metadata aside from the date alone that helps us discover if we have the image we’re looking for. This is where our custom content comes in. Using the VoiceOver rotor control I can switch to More Content.
 
 ![VoiceOver rotor showing More Content](/images/customcontent-rotor.jpeg)
 
