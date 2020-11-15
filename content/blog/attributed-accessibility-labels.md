@@ -15,12 +15,13 @@ Using the `accessibilityAttributedLabel` property you can provide an `NSAttribut
 In the below example, we're adding a pitch change to the word 'best' where in displayed text we might add a bold attribute to add emphasis. This means that your VoiceOver users will get a comparable experience to sighted users rather than a cut down one. This is the ultimate aim of digital accessibility. Create a comparable, inclusive interaction with your users, regardless of their abilities. Always ensure your text is localised and perform proper range calculations in your code, rather than hard coding everything as I am in this example.
 
 ```
-let attributedString = NSMutableAttributedString(string: "This
-is the best app on the App Store!")
-
+let attributedString = NSMutableAttributedString(string: "This is the best app on the App Store!")
 
 let range = attributedString.string.range(of: "best")
-attributedString.addAttributes([. accessibilitySpeechPitch: 1.5], range: range)
+attributedString.addAttributes([.accessibilitySpeechPitch: 1.5], 
+                                range: NSRange(range!, 
+                                               in: attributedString.string))
+
 appDescription?.accessibilityAttributedLabel = attributedString
 ```
 
@@ -45,9 +46,11 @@ Homonyms are another good example. In the [BBC Sounds](https://apps.apple.com/gb
 ```
 let attributedString = NSMutableAttributedString(string: "Live radio")
 
-
 let range = attributedString.string.range(of: "Live")
-attributedString.addAttributes([.accessibilitySpeechIPANotation: "līv"], range: range)
+attributedString.addAttributes([.accessibilitySpeechIPANotation: "līv"],
+                                range: NSRange(range!, 
+                                               in: attributedString.string))
+
 liveRadio?.accessibilityAttributedLabel = attributedString
 ```
 
