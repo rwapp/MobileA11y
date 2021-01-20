@@ -6,10 +6,29 @@
     <description>Recent content in iOS on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 29 Jun 2020 07:30:56 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Jan 2021 07:30:56 +0000</lastBuildDate>
     
 	<atom:link href="https://mobilea11y.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Quick Win - Image Descriptions</title>
+      <link>https://mobilea11y.com/quick-wins/image-descriptions/</link>
+      <pubDate>Tue, 19 Jan 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/quick-wins/image-descriptions/</guid>
+      <description>Images are a major part of our apps. They add meaning and interest, they give your app character and context. The adage is that a picture is worth a thousand words. But if you can&amp;rsquo;t see the image clearly, how do you know what those words are?
+If you aren&amp;rsquo;t providing image descriptions in your app many of your users will be missing out on the experience you&amp;rsquo;ve crafted. The result can be an app thats missing that spark an character, or worse an app thats just meaningless and unusable.</description>
+    </item>
+    
+    <item>
+      <title>Quick Win - Text Contrast</title>
+      <link>https://mobilea11y.com/quick-wins/text-contrast/</link>
+      <pubDate>Tue, 19 Jan 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/quick-wins/text-contrast/</guid>
+      <description>How many shades of grey do you use in your app? OK, maybe thats a bit cruel towards designers, grey is a great colour, but the problem with grey is that it can be deceptively difficult to distinguish from a background. And this problem is not just limited to greys - lighter colours too can blend into the background. This effect can be heightened too for people who have blurred or obscured vision, or one of many forms of colour blindness.</description>
+    </item>
     
     <item>
       <title>iOS 14: Custom Accessibility Content</title>

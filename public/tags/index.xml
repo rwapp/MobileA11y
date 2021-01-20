@@ -6,15 +6,33 @@
     <description>Recent content in Tags on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 29 Jun 2020 07:30:56 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Jan 2021 07:30:56 +0000</lastBuildDate>
     
 	<atom:link href="https://mobilea11y.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Android</title>
+      <link>https://mobilea11y.com/tags/android/</link>
+      <pubDate>Tue, 19 Jan 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://mobilea11y.com/tags/blog/</link>
+      <pubDate>Tue, 19 Jan 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>iOS</title>
       <link>https://mobilea11y.com/tags/ios/</link>
-      <pubDate>Mon, 29 Jun 2020 07:30:56 +0000</pubDate>
+      <pubDate>Tue, 19 Jan 2021 07:30:56 +0000</pubDate>
       
       <guid>https://mobilea11y.com/tags/ios/</guid>
       <description></description>
@@ -23,9 +41,27 @@
     <item>
       <title>Mobile</title>
       <link>https://mobilea11y.com/tags/mobile/</link>
-      <pubDate>Mon, 29 Jun 2020 07:30:56 +0000</pubDate>
+      <pubDate>Tue, 19 Jan 2021 07:30:56 +0000</pubDate>
       
       <guid>https://mobilea11y.com/tags/mobile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mobile A11y Blog</title>
+      <link>https://mobilea11y.com/tags/mobile-a11y-blog/</link>
+      <pubDate>Tue, 19 Jan 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/tags/mobile-a11y-blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quick Win</title>
+      <link>https://mobilea11y.com/tags/quick-win/</link>
+      <pubDate>Tue, 19 Jan 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/tags/quick-win/</guid>
       <description></description>
     </item>
     
@@ -35,33 +71,6 @@
       <pubDate>Sun, 28 Jun 2020 07:30:56 +0000</pubDate>
       
       <guid>https://mobilea11y.com/tags/accessibility-review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Blog</title>
-      <link>https://mobilea11y.com/tags/blog/</link>
-      <pubDate>Sun, 03 May 2020 10:30:56 +0000</pubDate>
-      
-      <guid>https://mobilea11y.com/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mobile A11y Blog</title>
-      <link>https://mobilea11y.com/tags/mobile-a11y-blog/</link>
-      <pubDate>Sun, 03 May 2020 10:30:56 +0000</pubDate>
-      
-      <guid>https://mobilea11y.com/tags/mobile-a11y-blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Android</title>
-      <link>https://mobilea11y.com/tags/android/</link>
-      <pubDate>Sun, 26 Apr 2020 07:30:56 +0000</pubDate>
-      
-      <guid>https://mobilea11y.com/tags/android/</guid>
       <description></description>
     </item>
     
