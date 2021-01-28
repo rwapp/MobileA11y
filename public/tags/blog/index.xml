@@ -6,10 +6,29 @@
     <description>Recent content in Blog on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 19 Jan 2021 07:30:56 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Jan 2021 07:30:56 +0000</lastBuildDate>
     
 	<atom:link href="https://mobilea11y.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Quick Win - Support Dark Mode</title>
+      <link>https://mobilea11y.com/quick-wins/dark-mode/</link>
+      <pubDate>Thu, 28 Jan 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/quick-wins/dark-mode/</guid>
+      <description>Many people don&amp;rsquo;t realise dark mode is an accessibility feature. It&amp;rsquo;s often just considered a nice to have, a cool extra feature that power users will love. But dark mode is also a valuable accessibility feature. Some types of visual impairment can make it painful to look at bright colours, or large blocks of white might wash over the black text. Some people with dyslexia or Irlen&amp;rsquo;s Syndrome can struggle to read black text on a white background.</description>
+    </item>
+    
+    <item>
+      <title>Quick Win - Support Landscape</title>
+      <link>https://mobilea11y.com/quick-wins/landscape/</link>
+      <pubDate>Thu, 28 Jan 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/quick-wins/landscape/</guid>
+      <description>If you have a regulatory requirement to provide accessibility in your app (spoiler, you do) the chances are it will say you have a requirement to reach WCAG AA. While this is likely meaningless to anyone other an accessibility professionals, in short it means you are providing the minimum level of accessibility features required to make your app usable by the majority of people.
+This post is about one such requirement, the jazzily titled Success Criterion 1.</description>
+    </item>
     
     <item>
       <title>Quick Win - Image Descriptions</title>
