@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/tags/quick-win/">
+  <link rel="canonical" href="https://mobilea11y.com/quick-wins/landscape/">
 
   
 
@@ -36,7 +36,7 @@
 
   
   
-  <title>Quick Win | Mobile A11y</title>
+  <title>Quick Win - Support Landscape | Mobile A11y</title>
 </head>
 
   <body>
@@ -225,7 +225,7 @@
       
       
       
-      <a href="/tags/" aria-current="page">
+      <a href="/tags/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -267,301 +267,38 @@
         <div>
           
   <main id="main">
-    <h1>Quick Win</h1>
-    <div>
-      
+    <h1>Quick Win - Support Landscape</h1>
+    <p>If you have a regulatory requirement to provide accessibility in your app (spoiler, you do) the chances are it will say you have a requirement to reach <a href="https://www.w3.org/TR/WCAG21/">WCAG AA</a>. While this is likely meaningless to anyone other an accessibility professionals, in short it means you are providing the minimum level of accessibility features required to make your app usable by the majority of people.</p>
+
+<p>This post is about one such requirement, the jazzily titled <a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html">Success Criterion 1.3.4</a>. 1.3.4 is often overlooked, I&rsquo;ve see it forgotten by accessibility auditors, overlooked by testers, removed by engineers, and ignored by designers. Yet this feature is one that is already enabled by default in your app. One that you have to choose to disable. For both Android and iOS when you create a new app, the app supports landscape mode out of the box, and all you need to do to continue supporting it is to build robust interfaces, and not disable it. Yet often one of the first things developers do when creating a new app is to disable landscape modes.</p>
+
+<p>I get it, most apps probably do work and look best in portrait, and the majority of your users probably will never want to use landscape. But accessibility is about providing the flexibility for your customers to use your software the way that is most comfortable for them, not the way you&rsquo;re forcing them to because it makes your development work easier.</p>
+
+<p>Landscape allows more characters per line, ideal for larger text sizes. It makes on screen keyboards bigger meaning the keys are easier to see and easier to hit. Some users may have their device locked or secured in position, such as a wheelchair mount, or a stand for if the user can&rsquo;t easily hold or manually manipulate their device. All these categories of people will appreciate you leaving this default option available to them.</p>
+
+<p>So next time you start an app, don&rsquo;t disable landscape. And if you have already disabled it, consider re-enabling landscape orientations by checking these settings.</p>
+
+<p>In Android check your activities don&rsquo;t include the following property.
+<code>android:screenOrientation=&quot;portrait&quot;</code></p>
+
+<p>For iOS check your app target&rsquo;s general settings and ensure the landscape checkboxes are enabled.</p>
+
+<p><img src="/images/LandscapeCheckbox.png" alt="Xcode checkboxes for device orientation." /></p>
+
+<p>If your app wasn&rsquo;t built with landscape in mind it&rsquo;s now worth checking your app&rsquo;s screens in a landscape orientation. If your interfaces were built in a robust manner using the correct constraints, stacks and layouts then your app should just work. But you might find some components that need a little updating so they know how to correctly display in this new orientation. Check for overlapping elements, or elements that haven&rsquo;t expanded as far as they should.</p>
+
+    <div class="book-footer">
+    <div class="book-thumbnail">
+
+            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
+        
+        </div>
+    <div class="book-details">
+    <p>
+        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+    </p>
     </div>
-    <ul class="patterns-list">
-    
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/quick-wins/landscape/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Quick Win - Support Landscape
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
-          <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
-            
-            Jan 28, 2021
-          <span>|</span>
-          
-          &nbsp;<i class="fa fa-clock-o"></i>&nbsp;3&nbsp;minutes
-          
-          <p class="blog-description">
-            If your images are missing descriptions those without vision won&#39;t be getting the full experience of your app.
-          </p>
-          
-            <div class="tags">
-              <ul class="blog-roll-tags" aria-label="tags">
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/ios">iOS</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/android">Android</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/mobile">Mobile</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/mobile-a11y-blog">Mobile A11y Blog</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/blog">Blog</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/quick-win">Quick Win</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-        </div>
-      </li>        
-    
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/quick-wins/dark-mode/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Quick Win - Support Dark Mode
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
-          <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
-            
-            Jan 28, 2021
-          <span>|</span>
-          
-          &nbsp;<i class="fa fa-clock-o"></i>&nbsp;2&nbsp;minutes
-          
-          <p class="blog-description">
-            You might think its a cool extra, but Dark Mode, like all accessibility features, is about flexibility for your users.
-          </p>
-          
-            <div class="tags">
-              <ul class="blog-roll-tags" aria-label="tags">
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/ios">iOS</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/android">Android</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/mobile">Mobile</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/mobile-a11y-blog">Mobile A11y Blog</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/blog">Blog</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/quick-win">Quick Win</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-        </div>
-      </li>        
-    
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/quick-wins/text-contrast/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Quick Win - Text Contrast
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
-          <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
-            
-            Jan 19, 2021
-          <span>|</span>
-          
-          &nbsp;<i class="fa fa-clock-o"></i>&nbsp;2&nbsp;minutes
-          
-          <p class="blog-description">
-            Is the text in your app clear enough for everyone to read it?
-          </p>
-          
-            <div class="tags">
-              <ul class="blog-roll-tags" aria-label="tags">
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/ios">iOS</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/android">Android</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/mobile">Mobile</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/mobile-a11y-blog">Mobile A11y Blog</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/blog">Blog</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/quick-win">Quick Win</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-        </div>
-      </li>        
-    
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/quick-wins/image-descriptions/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Quick Win - Image Descriptions
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
-          <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
-            
-            Jan 19, 2021
-          <span>|</span>
-          
-          &nbsp;<i class="fa fa-clock-o"></i>&nbsp;2&nbsp;minutes
-          
-          <p class="blog-description">
-            If your images are missing descriptions those without vision won&#39;t be getting the full experience of your app.
-          </p>
-          
-            <div class="tags">
-              <ul class="blog-roll-tags" aria-label="tags">
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/ios">iOS</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/android">Android</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/mobile">Mobile</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/mobile-a11y-blog">Mobile A11y Blog</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/blog">Blog</a>
-                  </li>
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/quick-win">Quick Win</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-        </div>
-      </li>        
-    
-    </ul>
+</div>
   </main>
 
           
