@@ -6,10 +6,19 @@
     <description>Recent content in Blog on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 28 Jan 2021 07:30:56 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Feb 2021 07:30:56 +0000</lastBuildDate>
     
 	<atom:link href="https://mobilea11y.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Quick Win - Start UI Testing</title>
+      <link>https://mobilea11y.com/quick-wins/ui-testing/</link>
+      <pubDate>Wed, 03 Feb 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/quick-wins/ui-testing/</guid>
+      <description>I&amp;rsquo;ll admit, adding UI testing to an app that currently doesn&amp;rsquo;t have it included is probably stretching the definition of quick win, but the aim here isn&amp;rsquo;t 100% coverage - not right away anyway. Start small and add to your test suite as you gain confidence. Even a small suite of crucial happy-path UI tests will help to ensure and persist accessibility in your app. And the more you get comfortable with UI tests the more accessible your apps will become, because an app that is easy to test is also great for accessibility.</description>
+    </item>
     
     <item>
       <title>Quick Win - Support Dark Mode</title>
