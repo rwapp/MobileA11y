@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/about-mobile-a11y/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/about-mobile-a11y/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,52 +284,46 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>About Mobile A11y</h1>
-    
-
-<h2 id="about-mobile-a11y">About Mobile A11y</h2>
-
+    <h2 id="about-mobile-a11y">About Mobile A11y</h2>
 <p>Mobile A11y is a collection of blogs and resources about how we as mobile developers can improve accessibility on mobile devices. From time to time the blog might also touch on related topics such as digital inclusion, and other topics around ethics in technology. The site is aimed at mobile developers and is written by a mobile developer. I hope this means other mobile developers will find the content relatable and engaging, and you’ll find learning about mobile accessibility along with me helpful.</p>
-
 <p>This site isn’t aimed at accessibility users, so you’re unlikely to find information on how to use tools like VoiceOver and TalkBack. For iOS users looking to know more about using accessibility tools, you might consider  <a href="https://twitter.com/shelly">Shelly Brisbin&rsquo;s</a> <a href="http://www.iosaccessbook.com">iOS Access for All</a>.</p>
-
 <h2 id="about-rob-whitaker">About Rob Whitaker</h2>
-
 <p><a href="https://twitter.com/RobRWAPP">Rob</a> is an iOS mobile developer currently working for Capital One in the UK. Rob is passionate about making great mobile experiences that work for everyone.</p>
-
 <p>Rob lives in the middle of the UK where he enjoys views over a national park when the weather is bad, and getting out into the national park when the weather is good. Rob lives with his wife (human) and daughter (dog).</p>
-
 <h2 id="paid-content">Paid Content</h2>
-
 <p>I will not include any user tracking advertising on this site.</p>
-
 <p>I may choose to include some paid for sponsored messages or posts if I feel the sponsor is suitable. If I do choose to do this I will always make it clear from the start that this element is paid for. I reserve the right to remove the sponsored content and repay any money if I later determine the sponsor has acted unethically. If you might be interested in sponsoring an element of the site drop me an <a href="mailto:rw@rwapp.co.uk">email</a>.</p>
-
 <p>I may include partner links to 3rd party paid products or services which provide me with a small referral. If I do choose to do this I will always mark these links with a (£), and provide a non-referral alternative.</p>
-
 <p>If you really appreciate the work I have done, you can always drop me a small amount of <a href="https://paypal.me/rwapp">pizza money 🍕</a>.</p>
-
 <h2 id="privacy-policy">Privacy Policy</h2>
-
 <p>I don’t currently keep any data from any visitors to this website. This includes no cookies, no user tracking, no anonymous stats, etc. I don’t have any plans to add this currently, but I may choose to add the minimum possible anonymous statistics in future. If I do choose to do this I’ll commit to doing this in the way that is most respectful of your privacy.</p>
-
 <p>If you choose to contact me through <a href="mailto:rw@rwapp.co.uk">email</a>, <a href="https://twitter.com/MobileA11y">twitter</a>, or any other means, then I’ll keep andy details you send me for the purpose of replying to you.</p>
 
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -323,7 +340,8 @@
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -333,11 +351,6 @@
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -347,7 +360,6 @@
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -358,11 +370,28 @@
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/guides/swiftui/swiftui-settings/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,175 +284,115 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>SwiftUI Accessibility: User Settings</h1>
-    
-
-<p>SwiftUI allows us to read environmental values that might affect how we want to present ­­our UI. Things like size classes and locale for example. We also get the ability to read some of the user&rsquo;s chosen accessibility settings allowing us to make decisions that will best fit with your customer&rsquo;s preference.</p>
-
+    <p>SwiftUI allows us to read environmental values that might affect how we want to present ­­our UI. Things like size classes and locale for example. We also get the ability to read some of the user&rsquo;s chosen accessibility settings allowing us to make decisions that will best fit with your customer&rsquo;s preference.</p>
 <h2 id="why">Why?</h2>
-
 <p>Before we cover what these options are and how to detect them I think it&rsquo;s important to briefly cover why we need to detect them. There&rsquo;s a few dos and don&rsquo;ts worth consideration.</p>
-
-<h3 id="don-t-creep-on-accessibility-customers">Don&rsquo;t – Creep on accessibility customers</h3>
-
+<h3 id="dont--creep-on-accessibility-customers">Don&rsquo;t – Creep on accessibility customers</h3>
 <p>The percentage of your customers with one or more of these options selected is going to be small. This makes these settings an easy choice for fingerprinting. In fact, some accessibility experts argue we <a href="https://tink.uk/thoughts-on-screen-reader-detection/">shouldn&rsquo;t allow software to detect these settings at all</a>. While I&rsquo;m not sold on that argument, you must respect your users as an individual.
 I wince every time I see someone who uses a wheelchair referred to as a &lsquo;<em>wheelchair</em>.&rsquo; The person is not a wheelchair. The person is an individual who just happens to use a specific tool to help with their mobility. If you detect one of your customers is using VoiceOver and record this as personal information you&rsquo;re doing the digital equivalent. It&rsquo;s pretty hard to argue this kind of fingerprinting is not immoral, so please, don&rsquo;t even try.</p>
-
-<h3 id="do-keep-anonymous-stats">Do – keep anonymous stats</h3>
-
+<h3 id="do--keep-anonymous-stats">Do – keep anonymous stats</h3>
 <p>What is important is keeping anonymous stats. Record percentages for your customers who have different settings or assistive technologies enabled. This will help your design teams creating designs that work best for your customers. It will also help your business prioritise accessibility work.</p>
-
-<h3 id="don-t-make-a-new-interface">Don&rsquo;t – make a new interface</h3>
-
+<h3 id="dont--make-a-new-interface">Don&rsquo;t – make a new interface</h3>
 <p>It can be tempting to make wholesale changes to an interface when you detect certain settings or assistive technologies. This is a somewhat paternalistic approach that can come across as patronising. More than this though, it&rsquo;s liable to create a ghettoisation of accessibility experiences. Your accessibility-specific experience is liable to have less testing and fewer updates. If you feel your interface would be significantly improved for accessibility users by nuking it, then you probably need to nuke it for everyone. Any changes you make as a result of your customer changing one of these setting should be nothing more than a tweak.</p>
-
-<h3 id="do-respect-your-customer-s-choices">Do – respect your customer&rsquo;s choices</h3>
-
+<h3 id="do--respect-your-customers-choices">Do – respect your customer&rsquo;s choices</h3>
 <p>If your customer has chosen to enable reduce motion, that&rsquo;s because they get a benefit from that setting. So if you&rsquo;re using animation in your app, you should consider whether you might be better to cut it out with this setting enabled. It might only be a small number of people who use this setting, but the feeling of being valued when a user notices you&rsquo;ve listened to their choice is equal to the feeling that you don&rsquo;t care when your customer notices you haven&rsquo;t.</p>
-
 <h2 id="swiftui-environment-properties">SwiftUI Environment properties</h2>
-
 <p>There are two ways of detecting settings, which one you can use depends on what setting you&rsquo;re looking for. I&rsquo;m unclear why some use the SwiftUI environment and others don&rsquo;t. My best guess is that Apple will migrate others to the SwiftUI environment in future versions.
 Firstly, we can use the <code>@Environment</code> property wrapper, and provide the key path we want to observe. We then assign this to a var we can use in our view. For example, if we wanted to determine our users differentiate without colour setting, we&rsquo;d ask SwiftUI to set this to a <code>differentiateWithoutColor</code> variable.</p>
-
-<pre><code class="language-swift">@Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
-</code></pre>
-
-<p>In practical terms, we then would want to change the appearance of our UI based on our knowledge of our customer&rsquo;s setting. If we wanted to determine whether to use a transparent background, we can do something like this.</p>
-
-<pre><code class="language-swift">struct ContentView: View {
-   @Environment(\.accessibilityReduceTransparency) var reduceTransparency
-   var body: some View {
-      Text(&quot;Some text&quot;)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">@Environment(<span style="color:#960050;background-color:#1e0010">\</span>.accessibilityDifferentiateWithoutColor) <span style="color:#66d9ef">var</span> differentiateWithoutColor
+</code></pre></div><p>In practical terms, we then would want to change the appearance of our UI based on our knowledge of our customer&rsquo;s setting. If we wanted to determine whether to use a transparent background, we can do something like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">ContentView</span>: View {
+   @Environment(<span style="color:#960050;background-color:#1e0010">\</span>.accessibilityReduceTransparency) <span style="color:#66d9ef">var</span> reduceTransparency
+   <span style="color:#66d9ef">var</span> body: some View {
+      Text(<span style="color:#e6db74">&#34;Some text&#34;</span>)
          .padding()
-         .background(Color(.sRGB, red: 255, green: 0, blue: 0, opacity: reduceTransparency ? 1.0 : 0.8))
+         .background(Color(.sRGB, red: <span style="color:#ae81ff">255</span>, green: <span style="color:#ae81ff">0</span>, blue: <span style="color:#ae81ff">0</span>, opacity: reduceTransparency ? <span style="color:#ae81ff">1.0</span> : <span style="color:#ae81ff">0.8</span>))
     }
 }
-</code></pre>
-
-<p>Here are some user settings you might want to listen to, and how you might want to adjust your SwiftUI views to accommodate them.</p>
-
+</code></pre></div><p>Here are some user settings you might want to listen to, and how you might want to adjust your SwiftUI views to accommodate them.</p>
 <h3 id="sizecategory">sizeCategory</h3>
-
 <p>Returns a <code>ContentSizeCategory</code> enum value describing your customer&rsquo;s chosen text size. <a href="https://twitter.com/mecid">Majid Jabrayilov</a> has a great post on how you might use this to <a href="https://mecid.github.io/2019/10/09/dynamic-type-in-swiftui/">re-arrange your layout</a> based on this value.</p>
-
 <h3 id="legibilityweight">legibilityWeight</h3>
-
 <p>An enum returning <code>.bold</code> if your user has chosen bold text, <code>.regular</code> if not. There&rsquo;s no need to add a <code>.bold()</code> modifier to your text if the this returns <code>.bold</code>, SwiftUI does this for us.</p>
-
 <h3 id="accessibilitydifferentiatewithoutcolor">accessibilityDifferentiateWithoutColor</h3>
-
 <p>If your customer has this set to true you should consider using shapes and/or extra text labels if your UI conveys information in colour.</p>
-
 <h3 id="accessibilityreducetransparency">accessibilityReduceTransparency</h3>
-
 <p>If this is true you should remove any transparency from backgrounds.</p>
-
 <h3 id="accessibilityenabled">accessibilityEnabled</h3>
-
 <p>A Boolean that tells your view if VoiceOver, Voice Control, or Switch Control is enabled, but not which one. To determine which assistive technology is enabled you can query the UIAccessibility API. <code>.isVoiceOverRunning</code> or <code>.isSwitchControlRunning</code> for VoiceOver and Switch Control respectively. There doesn&rsquo;t appear to be a nice way to check for Voice Control but <code>accessibilityEnabled == true &amp;&amp; !UIAccessibility.isVoiceOverRunning &amp;&amp; !UIAccessibility.isSwitchControlRunning</code> seems to work ok. Obvisouly though, this relies on this property not reporting for any other types of assistive tech.</p>
-
 <h3 id="accessibilityinvertcolors">accessibilityInvertColors</h3>
-
 <p>A Boolean value to determine if invert colours is enabled. This appears to be somewhat unreliable at the moment, from my testing it appears to only report smart invert, not classic invert.</p>
-
 <h3 id="accessibilityreducemotion">accessibilityReduceMotion</h3>
-
 <p>A Boolean value that tells us if our user has asked for animation to be minimal. If this is true you should consider slowing, reducing, or removing any non-essential animation.</p>
-
 <h3 id="colorschemecontrast">colorSchemeContrast</h3>
-
 <p>An enum that returns <code>.increased</code> if your customer has Increase Contrast enabled. With this setting, you should check your text has around <a href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast7">7:1</a> contrast ratio with your background.</p>
-
 <h3 id="uiaccessibility-properties">UIAccessibility properties</h3>
-
 <p>The second, less SwiftUI-like method is to query the UIAccessibility API. These values are set on the creation of your view and are not updated when your customer changes the setting or when the view is redrawn.
 If we wanted to know if our user has on/off labels enabled for their switches, we&rsquo;d use the following.</p>
-
-<pre><code class="language-swift">var onOffLabels = UIAccessibility.isOnOffSwitchLabelsEnabled
-</code></pre>
-
-<p>Alternatively, if you query UIAccessibility in place. This makes your code a little less clean, but the value returned will always be the current status at the time your view is (re)drawn, even if this changes while your view is visible.</p>
-
-<pre><code class="language-swift">Text(&quot;\(UIAccessibility.isVoiceOverRunning ? &quot;Voice Over is running&quot; : &quot;Voice Over is not running&quot;)&quot;)
-</code></pre>
-
-<p>Unfortunately, we don&rsquo;t get an update when these settings change as we do with <code>@Environment</code> properties. But using combine it&rsquo;s possible to <a href="https://medium.com/flawless-app-stories/problem-solving-with-combine-swift-4751885fda77">set up publishers</a> for <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names">NotificationCentre events</a> for many of these settings.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">var</span> onOffLabels = UIAccessibility.isOnOffSwitchLabelsEnabled
+</code></pre></div><p>Alternatively, if you query UIAccessibility in place. This makes your code a little less clean, but the value returned will always be the current status at the time your view is (re)drawn, even if this changes while your view is visible.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Text(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">\(</span>UIAccessibility.isVoiceOverRunning ? <span style="color:#e6db74">&#34;Voice Over is running&#34;</span> : <span style="color:#e6db74">&#34;Voice Over is not running&#34;</span><span style="color:#e6db74">)</span><span style="color:#e6db74">&#34;</span>)
+</code></pre></div><p>Unfortunately, we don&rsquo;t get an update when these settings change as we do with <code>@Environment</code> properties. But using combine it&rsquo;s possible to <a href="https://medium.com/flawless-app-stories/problem-solving-with-combine-swift-4751885fda77">set up publishers</a> for <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names">NotificationCentre events</a> for many of these settings.</p>
 <h3 id="isvoiceoverrunning">isVoiceOverRunning</h3>
-
 <p>A Boolean returning true if VoiceOver is currently enabled.</p>
-
 <h3 id="isclosedcaptioningenabled">isClosedCaptioningEnabled</h3>
-
 <p>A Boolean value that returns true if your user has requested captions on video content. With this setting enabled you should force captions on all video and audio content in your app.</p>
-
 <h3 id="isguidedaccessenabled">isGuidedAccessEnabled</h3>
-
 <p><a href="https://support.apple.com/en-us/HT202612">Guided access</a> allows users to disable some device functions or to lock the device to a single app. This is useful for people with more severe learning difficulties, motor issues, or cognitive impairments, who might leave an app unintentionally and become distressed by this. It&rsquo;s often also used in retail situations to lock down devices. If you have created your app for either of these markets it&rsquo;s worth listening to this setting so you can make it clear when guided access is not yet activated.</p>
-
 <h3 id="isgrayscaleenabled">isGrayscaleEnabled</h3>
-
 <p>This Boolean value returns true if your customer has grayscale enabled. You might want to change to higher contrast colours if your customer has chosen this setting. Although if you feel you need to do this perhaps your colours aren&rsquo;t high contrast enough already. You&rsquo;ll also probably want to make the same changes as with <code>accessibilityDifferentiateWithoutColor</code>.</p>
-
 <h3 id="isvideoautoplayenabled">isVideoAutoplayEnabled</h3>
-
 <p>Auto-playing video can be an annoyance, but to many people with attention or anxiety disorders, they can make an app unusable. They can also get in the way for non-sighted or low vision people who don&rsquo;t know a video has started. If this returns false you should only trigger video as a direct result of user interaction.</p>
-
 <h3 id="isswitchcontrolrunning">isSwitchControlRunning</h3>
-
 <p>Returns true if <a href="https://support.apple.com/en-us/HT201370">switch control</a> is running.</p>
-
 <h3 id="isspeakselectionenabled">isSpeakSelectionEnabled</h3>
-
 <p>Returns true if speak selection is enabled. This doesn&rsquo;t mean speak selection has been triggered.</p>
-
 <h3 id="isspeakscreenenabled">isSpeakScreenEnabled</h3>
-
 <p>Returns true if speak screen is enabled. This doesn&rsquo;t mean speak screen has been triggered.</p>
-
 <h3 id="isshaketoundoenabled">isShakeToUndoEnabled</h3>
-
 <p>People with motor issues may struggle with the shake to undo gesture. Either because they trigger it unintentionally, or because they can&rsquo;t perform the motion required. If this returns true you should add or increase the prominence of undo controls where needed.</p>
-
 <h3 id="isassistivetouchrunning">isAssistiveTouchRunning</h3>
-
 <p><a href="https://support.apple.com/en-us/HT202658">Assistive touch</a> doesn&rsquo;t alter the navigation of your app, but there are a couple of considerations you might want to make if this property returns true. Firstly, this tool is designed for people with reduced motion, so if this option is enabled you might want to offer alternatives to any multi-finger gestures your app uses. Additionally, Assistive Touch adds a small overlay onto the screen. Your user can move this around the edge of the screen to avoid clashing with content and controls. But if your app makes use of regular gestures from the edge of the screen, remember this assistive touch control may obscure these.</p>
-
 <h3 id="isonoffswitchlabelsenabled">isOnOffSwitchLabelsEnabled</h3>
-
 <p>This property returns true if your customer has asked for switch controls to be labelled with I for on and O for off. For standard toggles, you don&rsquo;t need to do anything here. But if you have designed your own toggle appearance it&rsquo;s important to listen to this. This setting is a primitive version of <code>accessibilityDifferentiateWithoutColor</code>, but that doesn&rsquo;t mean you can ignore this option.</p>
-
-<hr />
-
+<hr>
 <p>Thanks for reading. This story is part of a series on SwiftUI Accessibility. Check out my other guides in this series:</p>
-
-<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><br/>
+<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><!-- raw HTML omitted -->
 <a href="https://mobilea11y.com/guides/swiftui/swiftui-semantic-views/">SwiftUI Accessibility: Semantic Views</a></p>
 
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -446,7 +409,8 @@ If we wanted to know if our user has on/off labels enabled for their switches, w
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -456,11 +420,6 @@ If we wanted to know if our user has on/off labels enabled for their switches, w
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -470,7 +429,6 @@ If we wanted to know if our user has on/off labels enabled for their switches, w
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -481,11 +439,28 @@ If we wanted to know if our user has on/off labels enabled for their switches, w
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

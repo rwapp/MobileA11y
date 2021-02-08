@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/quick-wins/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/quick-wins/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,31 +284,47 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
-  <main id="main">
-    <h1>Quick Wins</h1>
-    <div>
+<main id="main">
+  <h1>Quick Wins</h1>
+  
+      <div>
       <p>Accessibility can seem daunting. It&rsquo;s a huge subject and, much like any area of software development, no one can know everything and everyone is always a learner. Don&rsquo;t let that put you off, making a small improvement is better than no improvements at all.</p>
-
 <p>These short guides give you a starting point to fix some of the most common accessibility mistakes that happen in mobile apps.</p>
 
     </div>
-    <ul class="patterns-list">
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/quick-wins/ui-testing/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Quick Win - Start UI Testing
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+  
+  <input
+    id="search"
+    type="text"
+    placeholder="Filter page by title, description or tag"
+    aria-label="Filter page by title, description or tag"
+  />
+  
+  <ul class="patterns-list" id="list">
+    
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/quick-wins/ui-testing/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          Quick Win - Start UI Testing
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Feb 3, 2021
@@ -296,7 +335,7 @@
           <p class="blog-description">
             Any well written Espresso or XCUI test can be an accessibility test.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -345,19 +384,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/quick-wins/landscape/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Quick Win - Support Landscape
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/quick-wins/landscape/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          Quick Win - Support Landscape
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Jan 28, 2021
@@ -368,7 +411,7 @@
           <p class="blog-description">
             Landscape orientation is enabled by default when you start a new app, so don&#39;t take this accessibility feature away from your users.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -417,19 +460,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/quick-wins/dark-mode/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Quick Win - Support Dark Mode
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/quick-wins/dark-mode/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          Quick Win - Support Dark Mode
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Jan 28, 2021
@@ -440,7 +487,7 @@
           <p class="blog-description">
             You might think its a cool extra, but Dark Mode, like all accessibility features, is about flexibility for your users.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -489,19 +536,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/quick-wins/text-contrast/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Quick Win - Text Contrast
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/quick-wins/text-contrast/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          Quick Win - Text Contrast
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Jan 19, 2021
@@ -512,7 +563,7 @@
           <p class="blog-description">
             Is the text in your app clear enough for everyone to read it?
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -561,19 +612,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/quick-wins/image-descriptions/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Quick Win - Image Descriptions
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/quick-wins/image-descriptions/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          Quick Win - Image Descriptions
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Jan 19, 2021
@@ -584,7 +639,7 @@
           <p class="blog-description">
             If your images are missing descriptions those without vision won&#39;t be getting the full experience of your app.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -633,11 +688,10 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-    </ul>
-  </main>
+  </ul>
+</main>
 
           
           <div class="social-heading">
@@ -650,7 +704,8 @@
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -660,11 +715,6 @@
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -674,7 +724,6 @@
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -685,11 +734,28 @@
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/guides/swiftui/swiftui-sort-priority/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,108 +284,99 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>SwiftUI Accessibility: Sort Priority</h1>
-    
-
-<p>Assistive technology, such as VoiceOver, works in natural reading direction. In English, and most other languages, this means top left through to the bottom right. Mostly this is the right decision for assistive technology to make. This is the order anyone not using assistive technology would experience your app. Sometimes though, we make designs that don&rsquo;t read in this way.
+    <p>Assistive technology, such as VoiceOver, works in natural reading direction. In English, and most other languages, this means top left through to the bottom right. Mostly this is the right decision for assistive technology to make. This is the order anyone not using assistive technology would experience your app. Sometimes though, we make designs that don&rsquo;t read in this way.
 By using the <code>.accessibility(sortPriority: )</code> modifier we can set the order in which assistive technology accesses elements. To achieve this, you must group elements in a stack (<code>HStack</code>, <code>VStack</code> or <code>ZStack</code>). Then use the <code>.accessibilityElement(children: .contain)</code> modifier. The higher the number we give to <code>.accessibility(sortPriority: )</code>, the earlier VoiceOver will focus on the item. This means an element with a priority of 2 comes before priority 1, and so on.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">VStack {
 
-<pre><code class="language-swift">VStack {
-
-   Text(&quot;Read this last&quot;)
-      .accessibility(sortPriority: 0)
+   Text(<span style="color:#e6db74">&#34;Read this last&#34;</span>)
+      .accessibility(sortPriority: <span style="color:#ae81ff">0</span>)
       
-   Text(&quot;Read this first&quot;)
-      .accessibility(sortPriority: 2)
+   Text(<span style="color:#e6db74">&#34;Read this first&#34;</span>)
+      .accessibility(sortPriority: <span style="color:#ae81ff">2</span>)
       
-   Text(&quot;Read this second&quot;)
-      .accessibility(sortPriority: 1)
+   Text(<span style="color:#e6db74">&#34;Read this second&#34;</span>)
+      .accessibility(sortPriority: <span style="color:#ae81ff">1</span>)
       
 }
 .accessibilityElement(children: .contain)
-</code></pre>
-
-<p><img src="/images/SwiftUI-textorder.png" alt="" /></p>
-
+</code></pre></div><p><img src="/images/SwiftUI-textorder.png" alt=""></p>
 <p>One example of using this might be captioning a large image. In SwiftUI <a href="https://rwapp.co.uk/2019/09/11/SwiftUI-Images/">images are accessible by default</a>. This doesn&rsquo;t mean we should focus on the image as the first element - the title is usually more meaningful. Here, we&rsquo;d set the sort priority of the image to 0 so it receives focus after VoiceOver has read the title and caption.</p>
-
-<pre><code class="language-swift">VStack {
-   Image(&quot;shuttle&quot;)
-      .accessibility(sortPriority: 0)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">VStack {
+   Image(<span style="color:#e6db74">&#34;shuttle&#34;</span>)
+      .accessibility(sortPriority: <span style="color:#ae81ff">0</span>)
       
-   Text(&quot;Shuttle&quot;)
+   Text(<span style="color:#e6db74">&#34;Shuttle&#34;</span>)
       .font(.largeTitle)
-      .accessibility(sortPriority: 2)
+      .accessibility(sortPriority: <span style="color:#ae81ff">2</span>)
       
-   Text(&quot;This is an image of a shuttle on the launch pad&quot;)
-      .accessibility(sortPriority: 1)
+   Text(<span style="color:#e6db74">&#34;This is an image of a shuttle on the launch pad&#34;</span>)
+      .accessibility(sortPriority: <span style="color:#ae81ff">1</span>)
       
 }
 .accessibilityElement(children: .contain)
-</code></pre>
-
-<p><img src="/images/swiftui-largeshuttle.png" alt="" /></p>
-
+</code></pre></div><p><img src="/images/swiftui-largeshuttle.png" alt=""></p>
 <p>Another use of this could be a custom stepper control. We&rsquo;d want VoiceOver to focus on the value first to orientate your user and inform them which value they&rsquo;re starting with. Then VoiceOver should follow with the decrease and increase buttons. We&rsquo;d achieve this like this:</p>
-
-<pre><code class="language-swift">HStack {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">HStack {
 
    Button(action: {
-      self.value -= 1
+      <span style="color:#66d9ef">self</span>.value <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
    }) {
-      Text(&quot;Decrease&quot;)
+      Text(<span style="color:#e6db74">&#34;Decrease&#34;</span>)
    }
-   .accessibility(sortPriority: 1)
+   .accessibility(sortPriority: <span style="color:#ae81ff">1</span>)
    
    Text(String(value))
-      .accessibility(sortPriority: 2)
+      .accessibility(sortPriority: <span style="color:#ae81ff">2</span>)
       
    Button(action: {
-      self.value += 1
+      <span style="color:#66d9ef">self</span>.value <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
    }) {
-      Text(&quot;Increase&quot;)
+      Text(<span style="color:#e6db74">&#34;Increase&#34;</span>)
    }
    
 }
 .accessibilityElement(children: .contain)
-</code></pre>
-
-<p><img src="/images/SwiftUI-stepper.png" alt="" /></p>
-
+</code></pre></div><p><img src="/images/SwiftUI-stepper.png" alt=""></p>
 <h3 id="contain">.Contain</h3>
-
 <p>As of October 2019, the sort priority only works for elements inside a stack where the stack has the modifier of <code>.accessibilityElement(children: .contain)</code>. I don&rsquo;t believe this is intentional, hopefully, future releases of SwiftUI will drop this requirement.</p>
-
-<hr />
-
+<hr>
 <p>Thanks for reading. This story is part of a series on SwiftUI Accessibility. Check out my other guides in this series:</p>
-
-<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><br/>
+<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><!-- raw HTML omitted -->
 <a href="https://mobilea11y.com/guides/swiftui/swiftui-semantic-views/">SwiftUI Accessibility: Semantic Views</a></p>
 
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -379,7 +393,8 @@ By using the <code>.accessibility(sortPriority: )</code> modifier we can set th
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -389,11 +404,6 @@ By using the <code>.accessibility(sortPriority: )</code> modifier we can set th
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -403,7 +413,6 @@ By using the <code>.accessibility(sortPriority: )</code> modifier we can set th
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -414,11 +423,28 @@ By using the <code>.accessibility(sortPriority: )</code> modifier we can set th
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

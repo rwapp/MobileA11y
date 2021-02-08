@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/tags/ios/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/tags/ios/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,28 +284,41 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
-  <main id="main">
-    <h1>iOS</h1>
-    <div>
-      
-    </div>
-    <ul class="patterns-list">
+<main id="main">
+  <h1>iOS</h1>
+  
+  
+  <input
+    id="search"
+    type="text"
+    placeholder="Filter page by title, description or tag"
+    aria-label="Filter page by title, description or tag"
+  />
+  
+  <ul class="patterns-list" id="list">
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/quick-wins/ui-testing/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Quick Win - Start UI Testing
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/quick-wins/ui-testing/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          Quick Win - Start UI Testing
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Feb 3, 2021
@@ -293,7 +329,7 @@
           <p class="blog-description">
             Any well written Espresso or XCUI test can be an accessibility test.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -342,19 +378,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/quick-wins/landscape/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Quick Win - Support Landscape
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/quick-wins/landscape/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          Quick Win - Support Landscape
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Jan 28, 2021
@@ -365,7 +405,7 @@
           <p class="blog-description">
             Landscape orientation is enabled by default when you start a new app, so don&#39;t take this accessibility feature away from your users.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -414,19 +454,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/quick-wins/dark-mode/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Quick Win - Support Dark Mode
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/quick-wins/dark-mode/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          Quick Win - Support Dark Mode
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Jan 28, 2021
@@ -437,7 +481,7 @@
           <p class="blog-description">
             You might think its a cool extra, but Dark Mode, like all accessibility features, is about flexibility for your users.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -486,19 +530,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/quick-wins/text-contrast/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Quick Win - Text Contrast
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/quick-wins/text-contrast/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          Quick Win - Text Contrast
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Jan 19, 2021
@@ -509,7 +557,7 @@
           <p class="blog-description">
             Is the text in your app clear enough for everyone to read it?
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -558,19 +606,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/quick-wins/image-descriptions/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Quick Win - Image Descriptions
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/quick-wins/image-descriptions/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          Quick Win - Image Descriptions
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Jan 19, 2021
@@ -581,7 +633,7 @@
           <p class="blog-description">
             If your images are missing descriptions those without vision won&#39;t be getting the full experience of your app.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -630,19 +682,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/blog/custom-accessibility-content/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            iOS 14: Custom Accessibility Content
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/blog/custom-accessibility-content/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          iOS 14: Custom Accessibility Content
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Jun 29, 2020
@@ -653,7 +709,7 @@
           <p class="blog-description">
             A new accessibility feature for iOS 14 lets you provide all the information your customer could need while reducing noise.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -674,19 +730,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/blog/attributed-accessibility-labels/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            iOS Attributed Accessibility Labels
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/blog/attributed-accessibility-labels/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          iOS Attributed Accessibility Labels
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             May 3, 2020
@@ -697,7 +757,7 @@
           <p class="blog-description">
             Creating a next-level experience for your assistive technology customers with attributed accessibility labels
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -725,19 +785,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/blog/writing-great-labels/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Writing Great iOS Accessibility Labels
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/blog/writing-great-labels/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          Writing Great iOS Accessibility Labels
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             May 3, 2020
@@ -748,7 +812,7 @@
           <p class="blog-description">
             Tips for writing the most effective accessibility labels.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -776,19 +840,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/blog/when-to-use-accessibility-labels/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            When to use Accessibility Labels
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/blog/when-to-use-accessibility-labels/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          When to use Accessibility Labels
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             May 3, 2020
@@ -799,7 +867,7 @@
           <p class="blog-description">
             When to, and when not to, set your own accessibility labels.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -827,19 +895,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/blog/ios-accessibility-labels/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            iOS Accessibility Labels
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/blog/ios-accessibility-labels/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          iOS Accessibility Labels
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             May 3, 2020
@@ -850,7 +922,7 @@
           <p class="blog-description">
             All you could ever want to know about accessibility labels on iOS
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -878,19 +950,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/blog/swiftui-talk/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Mobile A11y Talk: Accessibility in SwiftUI
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/blog/swiftui-talk/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          Mobile A11y Talk: Accessibility in SwiftUI
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Apr 12, 2020
@@ -901,7 +977,7 @@
           <p class="blog-description">
             Watch the video and download the slides.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -943,19 +1019,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/blog/a11y-box-ios/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            A11y Box iOS
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/blog/a11y-box-ios/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          A11y Box iOS
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Feb 26, 2020
@@ -966,7 +1046,7 @@
           <p class="blog-description">
             An open-source example of iOS&#39; Accessability API
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -1001,19 +1081,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/blog/a11yuitests/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            A11yUITests: An XCUI Testing library for accessibility
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/blog/a11yuitests/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          A11yUITests: An XCUI Testing library for accessibility
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Dec 17, 2019
@@ -1024,7 +1108,7 @@
           <p class="blog-description">
             A open source library of accessibility tests for XCUI Testing.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -1059,19 +1143,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/guides/xcui/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            XCUITests for accessibility
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/guides/xcui/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          XCUITests for accessibility
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Dec 16, 2019
@@ -1082,7 +1170,7 @@
           <p class="blog-description">
             Checking your iOS app&#39;s accessibility with automated tests.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -1103,19 +1191,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            SwiftUI Accessibility
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/guides/swiftui/swiftui-accessibility/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          SwiftUI Accessibility
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Nov 6, 2019
@@ -1126,7 +1218,7 @@
           <p class="blog-description">
             Accessibility is important, but why is it important to think about it now when SwiftUI is so new? And what are the innovations that make SwiftUI such a great improvement?
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -1154,19 +1246,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/guides/swiftui/swiftui-semantic-views/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            SwiftUI Accessibility: Semantic Views
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/guides/swiftui/swiftui-semantic-views/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          SwiftUI Accessibility: Semantic Views
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Oct 29, 2019
@@ -1177,7 +1273,7 @@
           <p class="blog-description">
             Semantic views are possibly the most powerful a11y tool a dev has, and SwiftUI makes them super simple.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -1205,19 +1301,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            SwiftUI Accessibility: User Settings
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/guides/swiftui/swiftui-settings/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          SwiftUI Accessibility: User Settings
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Oct 27, 2019
@@ -1228,7 +1328,7 @@
           <p class="blog-description">
             SwiftUI allows us to read values that might affect how we want to present ­­our UI. Including our customer&#39;s accessibility choices.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -1256,19 +1356,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            SwiftUI Accessibility: Traits
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/guides/swiftui/swiftui-traits/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          SwiftUI Accessibility: Traits
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Oct 18, 2019
@@ -1279,7 +1383,7 @@
           <p class="blog-description">
             Accessibility traits are incredibly powerful. They’re a group of attributes that tell assistive technology how to treat your UI. Get them wrong and you’ll make your interface frustrating
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -1314,19 +1418,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            SwiftUI Accessibility: Attributes
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/guides/swiftui/swiftui-attributes/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          SwiftUI Accessibility: Attributes
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Oct 18, 2019
@@ -1337,7 +1445,7 @@
           <p class="blog-description">
             Accessibility traits are incredibly powerful. They’re a group of attributes that tell assistive technology how to treat your UI. Get them wrong and you’ll make your interface frustrating
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -1372,19 +1480,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            SwiftUI Accessibility: Accessible User Interface
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/guides/swiftui/swiftui-aui/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          SwiftUI Accessibility: Accessible User Interface
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Oct 9, 2019
@@ -1395,7 +1507,7 @@
           <p class="blog-description">
             The AUI or accessibility tree is how assistive technologies control your app. SwiftUI has some great improvements to this experience. It’s all free if you adopt SwiftUI.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -1430,19 +1542,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/blog/iphreaks-podcast/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Podcast: iPhreaks - iOS Accessibility
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/blog/iphreaks-podcast/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          Podcast: iPhreaks - iOS Accessibility
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Oct 9, 2019
@@ -1453,7 +1569,7 @@
           <p class="blog-description">
             I discuss why accessibility is important and how we can improve it on iOS.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -1481,19 +1597,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/blog/without-the-v-word/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            Mobile A11y Talk: Accessibility without the &#39;V&#39; Word
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/blog/without-the-v-word/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          Mobile A11y Talk: Accessibility without the &#39;V&#39; Word
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Oct 8, 2019
@@ -1504,7 +1624,7 @@
           <p class="blog-description">
             Watch the video and download the slides.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -1546,19 +1666,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            SwiftUI Accessibility: Sort Priority
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/guides/swiftui/swiftui-sort-priority/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          SwiftUI Accessibility: Sort Priority
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Oct 2, 2019
@@ -1569,7 +1693,7 @@
           <p class="blog-description">
             Sometimes VoiceOver&#39;s natural order is not the one that makes the most sense for your app. SwiftUI lets you change that.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -1604,19 +1728,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            SwiftUI Accessibility - Named Controls
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/guides/swiftui/swiftui-controls/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          SwiftUI Accessibility - Named Controls
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Sep 26, 2019
@@ -1627,7 +1755,7 @@
           <p class="blog-description">
             All controls in SwiftUI can take a Text element as part of their builder. This makes controlling your app with VoiceOver or VoiceControl way easier.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -1662,19 +1790,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            SwiftUI Accessibility: Dynamic Type
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/guides/swiftui/swiftui-dynamic-type/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          SwiftUI Accessibility: Dynamic Type
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Sep 18, 2019
@@ -1685,7 +1817,7 @@
           <p class="blog-description">
             SwiftUI makes some nice improvements on Dynamics Type- it’s supported by default. But we need to do a few things to support fully.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -1713,19 +1845,23 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-      <li class="list-post">
-        <h2 class="blog-roll-title">
-          <a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">
-            <svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false">
-              <use xlink:href="#bookmark"></use>
-            </svg>
-            SwiftUI Accessibility: Images
-          </a>
-        </h2>
-        <div class="blog-roll-meta-data">
+    <li class="list-post">
+      <h2 class="blog-roll-title">
+        <a href="/guides/swiftui/swiftui-images/">
+          <svg
+            class="bookmark"
+            aria-hidden="true"
+            viewBox="0 0 40 50"
+            focusable="false"
+          >
+            <use xlink:href="#bookmark"></use>
+          </svg>
+          SwiftUI Accessibility: Images
+        </a>
+      </h2>
+      <div class="blog-roll-meta-data">
           <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
             
             Sep 11, 2019
@@ -1736,7 +1872,7 @@
           <p class="blog-description">
             There’s some important changes to image accessibility in SwiftUI, if you’re not expecting them you could be making a bad experience for your VoiceOver customers.
           </p>
-          
+                    
             <div class="tags">
               <ul class="blog-roll-tags" aria-label="tags">
                 
@@ -1771,11 +1907,10 @@
               </ul>
             </div>
           
-        </div>
-      </li>        
+    </li>
     
-    </ul>
-  </main>
+  </ul>
+</main>
 
           
           <div class="social-heading">
@@ -1788,7 +1923,8 @@
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -1798,11 +1934,6 @@
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -1812,7 +1943,6 @@
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -1823,11 +1953,28 @@
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/blog/ios-accessibility-labels/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/blog/ios-accessibility-labels/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,60 +284,39 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>iOS Accessibility Labels</h1>
-    
-
-<p>This blog was inspired by <a href="https://twitter.com/jeffwatkins">Jeff Watkins&rsquo;</a> <a href="https://jeffwatkins.dev/articles/dressing-up-your-uibutton">series</a> of <a href="https://jeffwatkins.dev/articles/constraints-and-uibutton">blogs</a> on <a href="https://jeffwatkins.dev/articles/nobody-loves-uibutton">UIButton</a>. UIButton is a fundamental part of building interfaces on iOS. So much so, that it probably doesn&rsquo;t get the love it deserves. But it&rsquo;s also really powerful and customisable when used correctly.</p>
-
+    <p>This blog was inspired by <a href="https://twitter.com/jeffwatkins">Jeff Watkins'</a> <a href="https://jeffwatkins.dev/articles/dressing-up-your-uibutton">series</a> of <a href="https://jeffwatkins.dev/articles/constraints-and-uibutton">blogs</a> on <a href="https://jeffwatkins.dev/articles/nobody-loves-uibutton">UIButton</a>. UIButton is a fundamental part of building interfaces on iOS. So much so, that it probably doesn&rsquo;t get the love it deserves. But it&rsquo;s also really powerful and customisable when used correctly.</p>
 <p>Accessibility labels on iOS I feel are very similar. They&rsquo;re fundamental to how accessibility works on iOS, yet I think they suffer from a few PR issues. Firstly, Apple has done such a good job with them that we often don&rsquo;t give the humble accessibility label the consideration it deserves, instead relying on the Apple default behaviour. Secondly, they&rsquo;re just some text, right? Who can get excited about just a boring old label? Well, I&rsquo;m sure this won&rsquo;t surprise you, but I can.</p>
-
-<h2 id="what-s-an-accessibility-label">What&rsquo;s an Accessibility Label?</h2>
-
+<h2 id="whats-an-accessibility-label">What&rsquo;s an Accessibility Label?</h2>
 <p>When iOS presents your app&rsquo;s interface to assistive technologies such as VoiceOver, Voice Control or Switch Control, it&rsquo;s not passing your app&rsquo;s screen, but a representation of the screen in what&rsquo;s known as an accessibility tree, or accessible user interface as Apple often call it. Your customer&rsquo;s chosen assistive technology will then handle how to present your interface in the way that best suits your customer. But assistive technologies need something to present, and their first port of call is your element&rsquo;s accessibility label. VoiceOver will read it, braille displays will display it, and Voice Control will listen for it.</p>
-
 <h2 id="it-just-works">It Just Works</h2>
-
-<p>Here&rsquo;s the first cool thing about accessibility labels on iOS. You don&rsquo;t need to think about them. All of iOS&rsquo; inbuilt controls will work out what their accessibility label is from the content you&rsquo;ve given it. Mostly this will be the control&rsquo;s <code>text</code> value. Set this and you&rsquo;re done.</p>
-
+<p>Here&rsquo;s the first cool thing about accessibility labels on iOS. You don&rsquo;t need to think about them. All of iOS' inbuilt controls will work out what their accessibility label is from the content you&rsquo;ve given it. Mostly this will be the control&rsquo;s <code>text</code> value. Set this and you&rsquo;re done.</p>
 <p>I&rsquo;m not letting you get out of this post that easily though. Because although this behaviour is great, don&rsquo;t think this absolves you of your responsibility for accessibility in your app. Most of the time this behaviour is fine, but why settle for fine when you make your app&rsquo;s experience awesome?</p>
-
 <h2 id="setting-your-own">Setting Your Own</h2>
-
 <p>Sometimes you&rsquo;ll need to specify an accessibility label yourself instead of relying on iOS to figure this out for you. Fortunately, doing that is just as simple as setting a <code>text</code> value. In code, you set the element&rsquo;s <code>accessibilityLabel</code> property in UIKit, for SwiftUI use the <code>.accessibility(label: )</code> modifier. And in Interface Builder look out for the Accessibility section in the Identity Inspector pane.</p>
-
 <pre><code>// Setting an accessibility label to 'My accessibility label' in UIKit
 myButton.accessibilityLabel = &quot;My accessibility label&quot;
-</code></pre>
-
-<pre><code>// Setting an accessibility label to 'My accessibility label' in SwiftUI
+</code></pre><pre><code>// Setting an accessibility label to 'My accessibility label' in SwiftUI
 Button(action: {}) {
     Text(&quot;Button&quot;)
 }.accessibility(label: Text(&quot;My accessibility label&quot;))
-</code></pre>
-
-<p><img src="/images/IdentityInspector.png" alt="Accessibility Identity Inspector" /></p>
-
+</code></pre><p><img src="/images/IdentityInspector.png" alt="Accessibility Identity Inspector"></p>
 <p>It&rsquo;s important to remember that assistive technologies will only pick up your accessibility label if the element is visible to them. Again, Apple has made some sensible default choices on their UI elements for this value, but if you need to set an element to be visible or hidden to accessibility use the Accessibility Enabled checkbox in the screenshot above. Or for UIKit, <code>isAccessibilityElement</code> and the <code>.accessibility(hidden: )</code> modifier in SwiftUI, both of these take a Boolean argument.</p>
-
 <pre><code>// Hiding an image to assistive technologies in SwiftUI
 Image(&quot;Image&quot;)
     .accessibility(hidden: true)
-</code></pre>
-
-<pre><code>// Revealing an image to assistive technologies in UIKit
+</code></pre><pre><code>// Revealing an image to assistive technologies in UIKit
 myImage.isAccessibilityElement = true
-</code></pre>
-
-<h2 id="next-up">Next Up</h2>
-
+</code></pre><h2 id="next-up">Next Up</h2>
 <p>The next blog in this series is <a href="/blog/when-to-use-accessibility-labels/">When to use Accessibility Labels</a></p>
-
 <ul>
 <li><a href="/blog/ios-accessibility-labels/">iOS Accessibility Labels</a></li>
 <li><a href="/blog/when-to-use-accessibility-labels/">When to use Accessibility Labels</a></li>
@@ -324,13 +326,20 @@ myImage.isAccessibilityElement = true
 
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -347,7 +356,8 @@ myImage.isAccessibilityElement = true
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -357,11 +367,6 @@ myImage.isAccessibilityElement = true
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -371,7 +376,6 @@ myImage.isAccessibilityElement = true
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -382,11 +386,28 @@ myImage.isAccessibilityElement = true
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

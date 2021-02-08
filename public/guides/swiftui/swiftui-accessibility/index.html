@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/guides/swiftui/swiftui-accessibility/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,63 +284,61 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>SwiftUI Accessibility</h1>
     <p><a href="https://medium.com/capital-one-tech/baking-digital-inclusion-accessibility-into-your-mobile-apps-f0f5d03d9f49">Accessibility is important</a>. We can take that as a given. But as iOS devs we&rsquo;re not always sure how to make the most of the accessibility tools that Apple have provided us.</p>
-
 <p>We&rsquo;re lucky as iOS developers that we work on such a forward-thinking accessibility platform. Many people consider Apple&rsquo;s focus on accessibility for iOS as the driver for other technology vendors to include accessibility features as standard. To the point that we now consider accessibility an expected part of any digital platform. This was not the case before 2009.</p>
-
 <p>In <a href="https://twitter.com/shelly">Shelly Brisbin&rsquo;s</a> fantastic audio documentary <a href="https://www.36seconds.org">36 Seconds that Changed Everything: How the iPhone Learned To Talk</a> she outlines what it meant to blind and partially sighted people to be locked out of the early iPhones.</p>
-
 <blockquote>
-<p>I was sad because I felt, &lsquo;here&rsquo;s another time we&rsquo;re going to be left out&rsquo;. Eventually, someone&rsquo;s going to make a special blindness-specific iDevice. It&rsquo;ll be three versions old. It&rsquo;ll cost four times as much, and we&rsquo;ll just keep buying it, cuz it&rsquo;s the only option that we have.
-<div style="text-align: right">– Steve Sawczyn</div></p>
-
-<p>For the first time in 20 years, Apple had built a product I couldn&rsquo;t use. I&rsquo;m fairly sure I cried about that.
-<div style="text-align: right">– Shelly Brisbin</div></p>
+<p>I was sad because I felt, &lsquo;here&rsquo;s another time we&rsquo;re going to be left out&rsquo;. Eventually, someone&rsquo;s going to make a special blindness-specific iDevice. It&rsquo;ll be three versions old. It&rsquo;ll cost four times as much, and we&rsquo;ll just keep buying it, cuz it&rsquo;s the only option that we have.</p>
 </blockquote>
-
+<!-- raw HTML omitted -->
+<blockquote>
+<p>For the first time in 20 years, Apple had built a product I couldn&rsquo;t use. I&rsquo;m fairly sure I cried about that.</p>
+</blockquote>
+<!-- raw HTML omitted -->
 <p>Being locked out is the reality for many of your customers if you don&rsquo;t consider accessibility right from the start. Accessibility in UIKit is indeed world-class, but it will only ever be an add-on.</p>
-
 <p>This time around, with SwiftUI, Apple has taken the chance to re-think how some of their accessibility tools work for developers, and they&rsquo;ve baked in accessibility right from the very beginning. Apple&rsquo;s accessibility teams have been an integral part of some of the decisions that have shaped SwiftUI. You can see this throughout your SwiftUI code. Like the way <a href="https://rwapp.co.uk/2019/09/11/SwiftUI-Images/">images are now accessible by default</a>. How <a href="https://rwapp.co.uk/2019/09/26/SwiftUI-Controls/">controls are now all linked to text names</a>. And how <a href="https://rwapp.co.uk/2019/09/18/SwiftUI-dynamic-type/">dynamic type is now the default</a>. This is exactly why I believe this guide to SwiftUI accessibility is important right now. Let&rsquo;s follow Apple&rsquo;s lead and make accessibility a first-class citizen in our apps.</p>
-
 <p>The biggest change, that will make the most impact for your users requires no work from you at all aside from adopting SwiftUI. That is down to how SwiftUI generates its accessibility tree or <a href="https://rwapp.co.uk/2019/10/09/SwiftUI-AUI/">accessible user interface</a>. Meaning your assistive technology users will always get the experience you intended.</p>
-
 <p>Tweaking your accessible experience is still possible in areas where your UI doesn&rsquo;t quite work for assistive technology users. Accessibility <a href="https://rwapp.co.uk/2019/10/15/SwiftUI-attributes/">attributes</a> and <a href="https://rwapp.co.uk/2019/10/18/SwiftUI-Traits/">traits</a> can still be set on every view in a way that should feel familiar from UIKit. But SwiftUI&rsquo;s improvements for setting the <a href="https://rwapp.co.uk/2019/10/02/SwiftUI-Sort-Priority/">accessibility sort priority</a> and creating <a href="https://rwapp.co.uk/2019/10/29/SwiftUI-Semantic-Views/">semantic views</a> make these techniques so simple there&rsquo;s really no reason not to use them.</p>
-
 <p>Sometimes we make the mistake of thinking about accessibility as something for other people. But accessibility is all about customisation. We all like to make changes to our device to make it work better for us, like every developer&rsquo;s favourite: dark mode. So it&rsquo;s also essential to <a href="https://rwapp.co.uk/2019/10/27/SwiftUI-Settings/">listen to your customer&rsquo;s preferences</a> for accessibility settings and decide how your app should respond. This will give all your customers the best possible experience.</p>
-
 <p>I can&rsquo;t wait to start using your accessible SwiftUI apps. If you&rsquo;re unsure of the best way to improve accessibility for your app, feel free to <a href="https://twitter.com/RobRWAPP">reach out</a>.</p>
-
-<hr />
-
+<hr>
 <p>Thanks for reading. This story is part of a series on SwiftUI Accessibility. Check out my other guides in this series:</p>
-
-<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><br/>
+<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><!-- raw HTML omitted -->
 <a href="https://mobilea11y.com/guides/swiftui/swiftui-semantic-views/">SwiftUI Accessibility: Semantic Views</a></p>
 
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -334,7 +355,8 @@
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -344,11 +366,6 @@
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -358,7 +375,6 @@
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -369,11 +385,28 @@
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/guides/swiftui/swiftui-images/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/guides/swiftui/swiftui-images/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,81 +284,64 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>SwiftUI Accessibility: Images</h1>
-    
-
-<p>Images in SwiftUI are accessible by default. This is the opposite of what we&rsquo;d experience in UIKit, where images are not accessible unless you set <code>isAccessibilityElement</code> to true.</p>
-
+    <p>Images in SwiftUI are accessible by default. This is the opposite of what we&rsquo;d experience in UIKit, where images are not accessible unless you set <code>isAccessibilityElement</code> to true.</p>
 <p>Sometimes making images not accessible to VoiceOver is the right decision. Like when using a glyph as a redundant way of conveying meaning alongside text. An example of this would be displaying a warning triangle next to the text ‘Error’ or a tick next to ‘success’. If these images were accessible your VoiceOver users would hear the word ‘error’ twice and have to swipe between each one. This makes navigation longer and frustrating for your customer.</p>
-
-<p><img src="/images/swiftui-error.png" alt="error message" /></p>
-
+<p><img src="/images/swiftui-error.png" alt="error message"></p>
 <p>If images are a large part of your UI then making them not accessible can be confusing and frustrating to VoiceOver customers. Low vision users will often still be able to tell there is content on the screen, and will attempt to discover it by moving their finger over the area. If the image is not accessible to VoiceOver all your user will hear is an irritating ‘dunk’. This can lead VoiceOver users to assume your app is not accessible at all, and is a big turn-off.</p>
-
 <p>Making images accessible by default helps to provide a more comparable experience for assistive technology users. But the main reason Apple have made this change is because of a new iOS 13 feature. VoiceOver in iOS 13 will now use CoreML to determine the content of your image and will describe the image to your VoiceOver user.</p>
-
 <p>Because of this change, there are a couple of considerations you need to bear in mind when coding images in SwiftUI.</p>
-
 <h3 id="image-names">Image names</h3>
-
 <p>Because your image is accessible, VoiceOver needs some content to announce. Most of the time the only readable content you provide is the file name of the image.</p>
-
-<pre><code class="language-swift">Image(&quot;shuttle&quot;)
-</code></pre>
-
-<p>This is fine if you call your image image <code>Space shuttle</code>, but if your image is called <code>164234main_image_feature_713_ys_full</code> then what your customer hears is useless and frustrating. Image, like most SwiftUI elements, can take a Text value providing a friendlier string to read to your user.</p>
-
-<pre><code class="language-swift">Image(&quot;164234main_image_feature_713_ys_full&quot;, label: Text(&quot;Shuttle&quot;))
-</code></pre>
-
-<h3 id="decorative-images">Decorative images</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Image(<span style="color:#e6db74">&#34;shuttle&#34;</span>)
+</code></pre></div><p>This is fine if you call your image image <code>Space shuttle</code>, but if your image is called <code>164234main_image_feature_713_ys_full</code> then what your customer hears is useless and frustrating. Image, like most SwiftUI elements, can take a Text value providing a friendlier string to read to your user.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Image(<span style="color:#e6db74">&#34;164234main_image_feature_713_ys_full&#34;</span>, label: Text(<span style="color:#e6db74">&#34;Shuttle&#34;</span>))
+</code></pre></div><h3 id="decorative-images">Decorative images</h3>
 <p>Sometimes it’s not appropriate for an image to be accessible. For example, providing an error icon next to the text ‘error’. If this image was accessible your VoiceOver user would hear ‘Error’ (swipe) ‘Error’. This duplication adds time and effort in navigation for VoiceOver users. In this instance it’s better to use the Image initializer decorative, this will display your image the same as above, but it is now hidden to VoiceOver.</p>
-
-<pre><code class="language-swift">Image(decorative: &quot;Error&quot;)
-</code></pre>
-
-<p><img src="/images/swiftui-error.png" alt="error message" /></p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Image(decorative: <span style="color:#e6db74">&#34;Error&#34;</span>)
+</code></pre></div><p><img src="/images/swiftui-error.png" alt="error message"></p>
 <h3 id="system-images">System Images</h3>
-
 <p>System images are a great new feature in iOS 13, Apple provides a suite of common system glyphs such as info circles and share icons that you can use as icons in your app. You can browse the full collection by downloading the SF Symbols app from the Apple Developer website.
 In my opinion, Apple has implemented the accessibility wrong for these images. Like all images in SwiftUI, these system glyphs are accessible by default. As these are system images they have names like ‘keyboard.chevron.compact.down’ and ‘questionmark.video.fill’. These are the names that VoiceOver will read and are meaningless to your customers. Apple should mark these images as not accessible by default, or at least have an initializer option to add a friendly name. Unless and until Apple makes a change like this, you will need to add the <code>.accessibility(hidden: true)</code> modifier to any system images you are using.</p>
-
-<pre><code class="language-swift">Image(systemName: &quot;exclamationmark.triangle.fill&quot;)
-   .accessibility(hidden: true)
-</code></pre>
-
-<hr />
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Image(systemName: <span style="color:#e6db74">&#34;exclamationmark.triangle.fill&#34;</span>)
+   .accessibility(hidden: <span style="color:#66d9ef">true</span>)
+</code></pre></div><hr>
 <p>Thanks for reading. This story is part of a series on SwiftUI Accessibility. Check out my other guides in this series:</p>
-
-<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><br/>
+<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><!-- raw HTML omitted -->
 <a href="https://mobilea11y.com/guides/swiftui/swiftui-semantic-views/">SwiftUI Accessibility: Semantic Views</a></p>
 
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -352,7 +358,8 @@ In my opinion, Apple has implemented the accessibility wrong for these images. L
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -362,11 +369,6 @@ In my opinion, Apple has implemented the accessibility wrong for these images. L
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -376,7 +378,6 @@ In my opinion, Apple has implemented the accessibility wrong for these images. L
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -387,11 +388,28 @@ In my opinion, Apple has implemented the accessibility wrong for these images. L
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

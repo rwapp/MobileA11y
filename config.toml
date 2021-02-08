@@ -19,7 +19,6 @@ post = "/blog/:year/:month/:day/:slug/"
   Edited by [Rob Whitaker](https://twitter.com/RobRWAPP)"""
    author = "Rob Whitaker"
   homeMetaContent = "A blog about making mobile more accessible for all."
-  
   footer = """Twitter: [@MobileA11y](https://twitter.com/MobileA11y). Email: [a11y@mobilea11y.com](mailto:a11y@mobilea11y.com).
   
   Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme)."""
@@ -29,6 +28,7 @@ post = "/blog/:year/:month/:day/:slug/"
   codePenUser = "someUser"
   katex = true
   readingTime = true
+  search = true
 
   [menu]
   [[menu.nav]]

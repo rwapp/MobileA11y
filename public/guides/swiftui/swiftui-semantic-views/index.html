@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/guides/swiftui/swiftui-semantic-views/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/guides/swiftui/swiftui-semantic-views/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,117 +284,94 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>SwiftUI Accessibility: Semantic Views</h1>
-    
-
-<p>Semantic views are not new to SwiftUI, but changes in SwiftUI mean creating them is simple. Semantic views are not so much a language feature. They&rsquo;re more a technique for manipulating the <a href="https://rwapp.co.uk/2019/10/09/SwiftUI-AUI/">accessible user interface</a> and improving the experience for assistive technology users.</p>
-
-<h2 id="a-what-view">A what view?</h2>
-
+    <p>Semantic views are not new to SwiftUI, but changes in SwiftUI mean creating them is simple. Semantic views are not so much a language feature. They&rsquo;re more a technique for manipulating the <a href="https://rwapp.co.uk/2019/10/09/SwiftUI-AUI/">accessible user interface</a> and improving the experience for assistive technology users.</p>
+<h2 id="a-whatview">A what view?</h2>
 <p>A semantic view is not one view, but a collection of views grouped together because they have meaning (or semantic) together. Take a look at this iOS table view cell from the files app.</p>
-
-<p><img src="/images/swiftui-semanticview.png" alt="VoiceOver highlighting a table cell with the title MyPlaygroud" /></p>
-
+<p><img src="/images/swiftui-semanticview.png" alt="VoiceOver highlighting a table cell with the title MyPlaygroud"></p>
 <p>I have enabled VoiceOver, and have navigated down the list to a swift playgrounds file. VoiceOver reads &ldquo;MyPlayground. 16th of July two thousand and nineteen. 606 bytes. In iCloud.&rdquo; All this information is made up from two labels and a button: the cell title &ldquo;MyPlayground&rdquo;, the subtitle including the date and size, and the iCloud download button. But VoiceOver reads them all together without me needing to navigate each element.
 iOS does this for us automatically in table views by grouping the cell&rsquo;s content into the cell and presenting the cell to VoiceOver as one semantic view. This makes navigation simpler by reducing swipes. It also provides more context for each item. If we heard &ldquo;MyPlayground.&rdquo; <em>swipe</em> &ldquo;16th of July two thousand and nineteen. 606 bytes.&rdquo; How can we be certain what the date and size refer to?</p>
-
 <h2 id="stacks">Stacks</h2>
-
 <p>Semantic views in SwiftUI start with stacks. This makes perfect sense because stacks are how we visually group elements, so why shouldn&rsquo;t we use these to group accessibility elements too? Stacks aren&rsquo;t accessibility elements by default because on their own they have no value we can convey to our user. By adding a modifier we can make the stack take on the accessibility <a href="https://rwapp.co.uk/2019/10/15/SwiftUI-attributes/">attributes</a> and <a href="https://rwapp.co.uk/2019/10/18/SwiftUI-Traits/">traits</a> of the elements they contain.
 For this example, we&rsquo;re going to use this stack. It contains a title, subtitle, and an image that acts as a button.</p>
-
-<p><img src="/images/swiftui-mars.png" alt="Title: Mars. Subtitle: The Red Planet. Heart image." /></p>
-
+<p><img src="/images/swiftui-mars.png" alt="Title: Mars. Subtitle: The Red Planet. Heart image."></p>
 <p>Here&rsquo;s the code used to create it.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">HStack {
+   VStack (alignment: .leading, spacing: <span style="color:#ae81ff">10</span>) {
 
-<pre><code class="language-swift">HStack {
-   VStack (alignment: .leading, spacing: 10) {
-
-      Text(&quot;Mars&quot;)
+      Text(<span style="color:#e6db74">&#34;Mars&#34;</span>)
          .foregroundColor(.white)
          .font(.largeTitle)
-      Text(&quot;The Red Planet&quot;)
+      Text(<span style="color:#e6db74">&#34;The Red Planet&#34;</span>)
          .foregroundColor(.white)
          .font(.subheadline)
    }
    .padding()
    
-   Image(systemName: self.liked ? &quot;heart.fill&quot; : &quot;heart&quot;)
+   Image(systemName: <span style="color:#66d9ef">self</span>.liked ? <span style="color:#e6db74">&#34;heart.fill&#34;</span> : <span style="color:#e6db74">&#34;heart&#34;</span>)
       .padding()
       .foregroundColor(.pink)
       .font(.title)
-      .onTapGesture { self.tappedLiked() }
+      .onTapGesture { <span style="color:#66d9ef">self</span>.tappedLiked() }
       .accessibility(addTraits: .isButton)
 }
-.background(Color.black.opacity(0.7))
+.background(Color.black.opacity(<span style="color:#ae81ff">0.7</span>))
 .padding()
-</code></pre>
-
-<h2 id="accessibilityelement">.accessibilityElement</h2>
-
-<p>The current behaviour for VoiceOver on this stack is to read &ldquo;Mars.&rdquo; <em>Swipe</em>. &ldquo;The Red Planet.&rsquo; <em>Swipe</em>. &ldquo;Button. Image.&rdquo; That&rsquo;s fine, but really this stack has only one purpose: to introduce the screen and allow our user to like this planet. So if we group this together for accessibility customers, it&rsquo;s going to be simpler and clearer. We can do this using the <code>.accessibilityElement(children: )</code> modifier. There are 3 arguments we can pass to this modifier.</p>
-
+</code></pre></div><h2 id="accessibilityelement">.accessibilityElement</h2>
+<p>The current behaviour for VoiceOver on this stack is to read &ldquo;Mars.&rdquo; <em>Swipe</em>. &ldquo;The Red Planet.' <em>Swipe</em>. &ldquo;Button. Image.&rdquo; That&rsquo;s fine, but really this stack has only one purpose: to introduce the screen and allow our user to like this planet. So if we group this together for accessibility customers, it&rsquo;s going to be simpler and clearer. We can do this using the <code>.accessibilityElement(children: )</code> modifier. There are 3 arguments we can pass to this modifier.</p>
 <h3 id="contain">.contain</h3>
-
 <p>The <code>.contain</code> argument is the default behaviour. It tells the stack that all accessibility elements within the stack should be treated as individual elements for assistive technology. This produces the result &ldquo;Mars.&rdquo; <em>Swipe</em>. &ldquo;The Red Planet.&rdquo; <em>Swipe</em>. &ldquo;Button. Image.&rdquo;</p>
-
 <h3 id="combine">.combine</h3>
-
 <p><code>.combine</code> takes all the accessibility properties from inside the stack and combines them into one set of properties. These properties are then added to the stack. The individual elements in the stack are then hidden from assistive technologies.
 If we add <code>.accessibilityElement(children: .combine)</code> to our stack above, the result in VoiceOver is &ldquo;Mars. Newline. The Red Planet. Button. Image.&rdquo;</p>
-
 <h3 id="ignore">.ignore</h3>
-
 <p>The <code>.ignore</code> property tells assistive technology to ignore any accessibility elements within this stack. Ignore will turn your stack into a focusable element for assistive technology, but no content will be read. This means we can add our own accessibility attributes and traits to the stack view for VoiceOver to read, replacing the attributes of the child elements.</p>
-
 <p>For the stack above we want to add the following modifiers.</p>
-
-<pre><code class="language-swift">.accessibilityElement(children: .ignore)
-.accessibility(label: Text(&quot;Mars. The Red Planet. Like.&quot;))
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">.accessibilityElement(children: .ignore)
+.accessibility(label: Text(<span style="color:#e6db74">&#34;Mars. The Red Planet. Like.&#34;</span>))
 .accessibility(addTraits: .isButton)
-</code></pre>
-
-<p>This causes VoiceOver to read &ldquo;Mars. The Red Planet. Like. Button&rdquo;.</p>
-
+</code></pre></div><p>This causes VoiceOver to read &ldquo;Mars. The Red Planet. Like. Button&rdquo;.</p>
 <p>This is not the same behaviour as using the modifier <code>.accessibility(hidden: true)</code>. This modifier will remove the stack and all elements within it from the accessible user interface. Adding accessibility attributes along with the hidden modifier would be pointless.</p>
-
 <h2 id="accessibilityaction">.accessibilityAction</h2>
-
 <p>There&rsquo;s one more thing we need to add. While our <code>.accessibilityElement(children: .combine / .ignore)</code> changes above are telling assistive technologies our stack is a button, the stack doesn&rsquo;t have an action when activated. For that, we need to tell our accessibility user interface that our stack has an accessibility action that can only be activated with assistive technology. We do this with the <code>.accessibilityAction</code> modifier. This modifier takes a trailing closure where we can call the same code as our button.</p>
-
-<pre><code class="language-swift">.accessibilityAction { self.tappedLiked() }
-</code></pre>
-
-<hr />
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">.accessibilityAction { <span style="color:#66d9ef">self</span>.tappedLiked() }
+</code></pre></div><hr>
 <p>Thanks for reading. This story is part of a series on SwiftUI Accessibility. Check out my other guides in this series:</p>
-
-<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><br/>
+<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><!-- raw HTML omitted -->
 <a href="https://mobilea11y.com/guides/swiftui/swiftui-semantic-views/">SwiftUI Accessibility: Semantic Views</a></p>
 
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -388,7 +388,8 @@ If we add <code>.accessibilityElement(children: .combine)</code> to our stack 
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -398,11 +399,6 @@ If we add <code>.accessibilityElement(children: .combine)</code> to our stack 
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -412,7 +408,6 @@ If we add <code>.accessibilityElement(children: .combine)</code> to our stack 
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -423,11 +418,28 @@ If we add <code>.accessibilityElement(children: .combine)</code> to our stack 
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>
