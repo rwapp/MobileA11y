@@ -6,11 +6,7 @@
     <description>Recent content on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 03 Feb 2021 07:30:56 +0000</lastBuildDate>
-    
-	<atom:link href="https://mobilea11y.com/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 03 Feb 2021 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Quick Win - Start UI Testing</title>
       <link>https://mobilea11y.com/quick-wins/ui-testing/</link>
@@ -126,7 +122,7 @@ Keep it Succinct Don&amp;rsquo;t frustrate your customer by adding too much info
       
       <guid>https://mobilea11y.com/blog/when-to-use-accessibility-labels/</guid>
       <description>There&amp;rsquo;s a few circumstances when you&amp;rsquo;ll want to set your own accessibility label, such as&amp;hellip;
- An interactive element that you haven&amp;rsquo;t given a text value to, such as an image button. An interactive element with a long visual label. An interactive element with a short visual label that takes context from your design. A control or view you have created yourself or built by combining elements. Images of text.</description>
+ An interactive element that you haven&amp;rsquo;t given a text value to, such as an image button. An interactive element with a long visual label. An interactive element with a short visual label that takes context from your design. A control or view you have created yourself or built by combining elements. Images of text.  Elements Without a text value Take the controls for a music player as an example.</description>
     </item>
     
     <item>
@@ -135,7 +131,7 @@ Keep it Succinct Don&amp;rsquo;t frustrate your customer by adding too much info
       <pubDate>Sun, 03 May 2020 07:30:56 +0000</pubDate>
       
       <guid>https://mobilea11y.com/blog/ios-accessibility-labels/</guid>
-      <description>This blog was inspired by Jeff Watkins&amp;rsquo; series of blogs on UIButton. UIButton is a fundamental part of building interfaces on iOS. So much so, that it probably doesn&amp;rsquo;t get the love it deserves. But it&amp;rsquo;s also really powerful and customisable when used correctly.
+      <description>This blog was inspired by Jeff Watkins&#39; series of blogs on UIButton. UIButton is a fundamental part of building interfaces on iOS. So much so, that it probably doesn&amp;rsquo;t get the love it deserves. But it&amp;rsquo;s also really powerful and customisable when used correctly.
 Accessibility labels on iOS I feel are very similar. They&amp;rsquo;re fundamental to how accessibility works on iOS, yet I think they suffer from a few PR issues.</description>
     </item>
     
@@ -165,7 +161,7 @@ SwiftUI is Apple&amp;rsquo;s new paradigm for creating user interfaces on Apple 
       <pubDate>Wed, 26 Feb 2020 07:30:56 +0000</pubDate>
       
       <guid>https://mobilea11y.com/blog/a11y-box-ios/</guid>
-      <description>iOS&amp;rsquo; UIAccessibility API is huge. I like to think I know it pretty well, but I&amp;rsquo;m always being surprised by discovering features I previously had no idea about. Like many things on iOS, the documentation for UIAccessibility is not always complete, even for parts of the API that have been around for years.
+      <description>iOS&#39; UIAccessibility API is huge. I like to think I know it pretty well, but I&amp;rsquo;m always being surprised by discovering features I previously had no idea about. Like many things on iOS, the documentation for UIAccessibility is not always complete, even for parts of the API that have been around for years.
 In an attempt to help spread the knowledge of some of the awesome things UIAccessibility is capable of, I&amp;rsquo;ve created A11y Box for iOS.</description>
     </item>
     
@@ -205,7 +201,8 @@ Getting Started Adding A11yUITests I&amp;rsquo;m assuming you&amp;rsquo;re alrea
       
       <guid>https://mobilea11y.com/resources/</guid>
       <description>This is a personally curated list of resources I have used and think others may find helpful too. I&amp;rsquo;m always looking for new high quality mobile accessibility and inclusion resources to add here. Please share any you find with me via email or Twitter.
-Code Android  Android Developers: Build more accessible apps Android&amp;rsquo;s developer documentation for Accessibility, including design, building &amp;amp; testing. With videos, code samples, and documentation.</description>
+Code Android   Android Developers: Build more accessible appsAndroid&amp;rsquo;s developer documentation for Accessibility, including design, building &amp;amp; testing. With videos, code samples, and documentation.
+  Android: Make apps more accessibleGoogle&amp;rsquo;s guide to improving accessibility on Android</description>
     </item>
     
     <item>
@@ -341,7 +338,7 @@ As an iOS developer, I know accessibility is important for a huge range of peopl
       
       <guid>https://mobilea11y.com/guides/swiftui/swiftui-controls/</guid>
       <description>One big accessibility improvement in SwiftUI comes in the form of named controls. Nearly all controls and some non-interactive views (see Images) can take a Text view as part of their view builder. The purpose of this is to tie the meaning to the control.
-Toggle(isOn: $updates) { Text(&amp;quot;Send me updates&amp;quot;) }  Imagine a UIKit layout with a UISwitch control. We&amp;rsquo;d most likely right align the switch, and provide a text label to the left.</description>
+Toggle(isOn: $updates) { Text(&amp;#34;Send me updates&amp;#34;) } Imagine a UIKit layout with a UISwitch control. We&amp;rsquo;d most likely right align the switch, and provide a text label to the left.</description>
     </item>
     
     <item>
@@ -379,7 +376,7 @@ Sometimes making images not accessible to VoiceOver is the right decision. Like 
       
       <guid>https://mobilea11y.com/blog/european-accessibility-act/</guid>
       <description>The European Accessibility Act, or EAA is due to become law in Europe later this year, and it defines some specific requirements for mobile. In fact, its the first accessibility legislation that I’m aware of, anywhere, that explicitly covers mobile apps.
-Since 2012 the European Union has been working on standardising accessibility legislation across Europe. The ultimate aim is to both improve the experience for those who need to use assistive technology, but also to simplify the rules business need to follow on accessibility.</description>
+ Since 2012 the European Union has been working on standardising accessibility legislation across Europe. The ultimate aim is to both improve the experience for those who need to use assistive technology, but also to simplify the rules business need to follow on accessibility.</description>
     </item>
     
   </channel>

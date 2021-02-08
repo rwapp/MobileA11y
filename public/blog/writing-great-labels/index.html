@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/blog/writing-great-labels/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/blog/writing-great-labels/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,77 +284,49 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>Writing Great iOS Accessibility Labels</h1>
-    
-
-<p>A good accessibility label lets your customer know exactly what a control does in as few words as possible, without having to rely on implied context.</p>
-
-<h3 id="don-t-add-the-element-type">Don&rsquo;t Add the Element Type</h3>
-
+    <p>A good accessibility label lets your customer know exactly what a control does in as few words as possible, without having to rely on implied context.</p>
+<h3 id="dont-add-the-element-type">Don&rsquo;t Add the Element Type</h3>
 <p>iOS already knows your button is a button and your image is an image, it does this using an accessibility trait. If you label your button as &lsquo;Play button&rsquo; your VoiceOver customers will hear &lsquo;Play button. Button.&rsquo;</p>
-
 <h3 id="keep-it-succinct">Keep it Succinct</h3>
-
 <p>Don&rsquo;t frustrate your customer by adding too much information to your labels. There&rsquo;s no need to describe photos in detail for example, just let people know what the subject of the photo is.
 Take another look at the Spotify example from the <a href="/blog/when-to-use-accessibility-labels/">post on when to use accessibility labels</a>. Here our customer knows they&rsquo;re on the player screen for Beyoncé&rsquo;s &lsquo;Pray You Catch Me&rsquo;, so none of the labels include the name of the track. The pause button doesn&rsquo;t say &lsquo;Pause Pray You Catch Me by Beyoncé&rsquo;, but simply &lsquo;pause&rsquo;. Use a single word wherever you can.</p>
-
-<p><img src="/images/PlayerControlsLabels.jpeg" alt="Play controls for Spotify showing accessibility labels" /></p>
-
+<p><img src="/images/PlayerControlsLabels.jpeg" alt="Play controls for Spotify showing accessibility labels"></p>
 <h3 id="capitalise-the-first-character">Capitalise the First Character</h3>
-
 <p>This allows VoiceOver to read the label with the correct inflection.</p>
-
-<h3 id="don-t-end-with-a-period">Don&rsquo;t End with a Period</h3>
-
+<h3 id="dont-end-with-a-period">Don&rsquo;t End with a Period</h3>
 <p>Your control&rsquo;s label is a label, not a sentence, so there is no need to end it with a period. This rule excludes blocks of text.</p>
-
 <h3 id="localise-it">Localise it</h3>
-
 <p>Ideally, you&rsquo;ll localise your app into as many languages as practical. This will help you sell in different markets, but more than that, it allows your customers to use your app in the language they are most comfortable with. If you do localise your app, remember to localise your accessibility labels too.</p>
-
 <h3 id="keep-it-current">Keep it Current</h3>
-
 <p>Sometimes our on-screen elements will change their behaviours throughout the life of the screen. Perhaps you have a button that acts as a toggle, or a shopping cart&rsquo;s payment button might include the total value of the cart. It&rsquo;s important that if your element does change state such as this that you update the accessibility label at the same time. Otherwise, you&rsquo;ll be lying to your users.</p>
-
 <h2 id="not-just-for-voiceover">Not Just for VoiceOver</h2>
-
 <p>It can be a common trap to fall into, thinking that accessibility labels are just for VoiceOver, but they&rsquo;re also used for Voice Control and Braille displays too. This gives us a few other requirements.</p>
-
 <h3 id="voice-control">Voice Control</h3>
-
 <p>For anything your customer interacts with, the accessibility label should be short enough they can easily say it, repeatedly if needed. And intuitive enough they can figure out what to say without having to ask iOS to tell them by saying &lsquo;show names&rsquo;.
 But you can specify alternatives for Voice Control using the <code>accessibilityUserInputLabels</code> property. This property takes an array of localised strings that Voice Control will listen for to toggle this control. Your label, the one displayed by Voice Control should be first, followed by any alternatives. Unfortunately, this functionality is not currently available in SwiftUI.</p>
-
 <pre><code>// Giving alternative utterances for Voice Control to listen to for this button in UIKit.
 buyButton.accessibilityUserInputLabels = [&quot;Buy&quot;, &quot;Pay&quot;, &quot;Purchase&quot;]
-</code></pre>
-
-<h3 id="braille">Braille</h3>
-
+</code></pre><h3 id="braille">Braille</h3>
 <p>For your users who have a Braille display, the accessibility label is the text that is presented to them. This can be a problem if you have forced your accessibility label into a format that means VoiceOver reads it better but will look weird if displayed. I&rsquo;ve seen this as an issue for reference numbers for example.</p>
-
 <p>Let&rsquo;s say you are building a shopping app, and when your customer makes an order, you present them with a reference number for that order. Your label displays &lsquo;1234&rsquo;. But VoiceOver reads &lsquo;one thousand two hundred and thirty-four&rsquo;. This is a bad experience for your VoiceOver customers, so the quick fix here is to add a space between each digit. This is a really bad option for Braille customers, as this then takes up a huge amount of space on their display. In Braille each number begins with a numerical indicator character. So &lsquo;1234&rsquo; takes up 5 Braille characters. &lsquo;1 2 3 4&rsquo; however, takes up 12. Many Braille displays can render around 14 characters.</p>
-
 <p>The best option to fix this would be to use an attributed accessibility label. We&rsquo;ll cover those in the next post.</p>
-
 <h2 id="sources">Sources</h2>
-
 <ul>
 <li>Apple <a href="https://developer.apple.com/videos/play/wwdc2019/254/">Writing Great Accessibility Labels</a></li>
 <li>Apple <a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/iPhoneAccessibility/Making_Application_Accessible/Making_Application_Accessible.html">Accessibility Programming Guide for iOS</a>.</li>
 <li><a href="https://twitter.com/krstnfx">Kristina Fox</a> <a href="https://kristina.io/adopting-voice-control/">Adopting Voice Control</a></li>
 </ul>
-
 <h2 id="next-up">Next Up</h2>
-
 <p>The next blog in this series is <a href="/blog/attributed-accessibility-labels/">iOS Attributed Accessibility Labels</a></p>
-
 <ul>
 <li><a href="/blog/ios-accessibility-labels/">iOS Accessibility Labels</a></li>
 <li><a href="/blog/when-to-use-accessibility-labels/">When to use Accessibility Labels</a></li>
@@ -341,13 +336,20 @@ buyButton.accessibilityUserInputLabels = [&quot;Buy&quot;, &quot;Pay&quot;, &quo
 
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -364,7 +366,8 @@ buyButton.accessibilityUserInputLabels = [&quot;Buy&quot;, &quot;Pay&quot;, &quo
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -374,11 +377,6 @@ buyButton.accessibilityUserInputLabels = [&quot;Buy&quot;, &quot;Pay&quot;, &quo
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -388,7 +386,6 @@ buyButton.accessibilityUserInputLabels = [&quot;Buy&quot;, &quot;Pay&quot;, &quo
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -399,11 +396,28 @@ buyButton.accessibilityUserInputLabels = [&quot;Buy&quot;, &quot;Pay&quot;, &quo
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

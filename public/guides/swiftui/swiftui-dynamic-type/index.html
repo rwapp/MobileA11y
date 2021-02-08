@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/guides/swiftui/swiftui-dynamic-type/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,97 +284,75 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>SwiftUI Accessibility: Dynamic Type</h1>
-    
-
-<p>Like all accessibility features, Dynamic Type is about customisability. Many of your customers, and maybe even you, are using Dynamic Type without even considering it an accessibility feature. Dynamic type allows iOS users to set the text to a size that they find comfortable to read. This may mean making it a little larger so it’s easier to read for those of us who haven’t yet accepted we might need glasses. Or it could mean ramping it right up for people with low vision. Or taking the text size down for extra content and privacy.
+    <p>Like all accessibility features, Dynamic Type is about customisability. Many of your customers, and maybe even you, are using Dynamic Type without even considering it an accessibility feature. Dynamic type allows iOS users to set the text to a size that they find comfortable to read. This may mean making it a little larger so it’s easier to read for those of us who haven’t yet accepted we might need glasses. Or it could mean ramping it right up for people with low vision. Or taking the text size down for extra content and privacy.
 Like many accessibility features on iOS, Dynamic Type support has been greatly improved in SwiftUI. There are a few things you should do (and not do) to make the most of it.</p>
-
 <h2 id="do">Do</h2>
-
 <h3 id="nothing">Nothing</h3>
-
 <p>SwiftUI supports dynamic type by default and is multi-line by default. So if you add <code>Text(&quot;Some text&quot;)</code> to your view, you’re done.</p>
-
 <h3 id="text-styles">Text Styles</h3>
-
 <p>Text is body style by default, which makes it great for the majority of uses. But any app with a single text style is going to look pretty boring. Fortunately, Apple provides a selection of <a href="https://developer.apple.com/documentation/uikit/uifonttextstyle">11 type styles</a> for you to use. Each of these styles supports dynamic type, and adjusts the <a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/typography/">size, leading and trailing</a> for you as needed. Using too many type styles can lead to your app looking messy and inconsistent. If you find these 11 aren’t enough, it might be worth taking another look at your designs.</p>
-
-<p><img src="/images/DynamicTextSizes.png" alt="Dynamic text sizes" /></p>
-
+<p><img src="/images/DynamicTextSizes.png" alt="Dynamic text sizes"></p>
 <p>You can choose your required text style using the modifier <code>.font(.headline)</code> to set your text to the headline style. The full list of tyoe styles can be found in <a href="https://developer.apple.com/documentation/uikit/uifonttextstyle">Apple&rsquo;s developer documentation</a>.</p>
-
 <h3 id="custom-fonts">Custom Fonts</h3>
-
 <p>Apple’s built-in Dynamic Type text styles all use the default San Francisco font. SF is a great font for iOS, but to make your app stand out you need a custom font.
 Some devs have told me they don’t support Dynamic Type in their app because it doesn’t support custom fonts. This isn’t the case, <a href="https://twitter.com/kharrison">Keith Harrison</a> over at <a href="https://useyourloaf.com">Use Your Loaf</a> has a <a href="https://useyourloaf.com/blog/using-a-custom-font-with-dynamic-type/">great post on using custom fonts with Dynamic Type</a> in UIKit that I highly recommend.
 Unfortunately, these methods won’t work for us in SwiftUI. Custom font support for dynamic type in SwiftUI needs some improvement from the current version. There is however, a simple way we can leverage some of the built-in text style’s dynamic type support. By adding a helper method, we can get the current point size for our desired text style.</p>
-
-<pre><code class="language-swift"> func textSize(textStyle: UIFont.TextStyle) -&gt; CGFloat {
-    return UIFont.preferredFont(forTextStyle: textStyle).pointSize
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">textSize</span>(textStyle: UIFont.TextStyle) -&gt; CGFloat {
+    <span style="color:#66d9ef">return</span> UIFont.preferredFont(forTextStyle: textStyle).pointSize
  }
-</code></pre>
-
-<p>Then we can use the custom font modifier to apply this to our text.</p>
-
-<pre><code class="language-swift"> .font(.custom(&quot;MyCustomFont&quot;, size: textSize(textStyle: .headline)))
-</code></pre>
-
-<p><img src="/images/CustomFont.png" alt="Custom font" /></p>
-
+</code></pre></div><p>Then we can use the custom font modifier to apply this to our text.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"> .font(.custom(<span style="color:#e6db74">&#34;MyCustomFont&#34;</span>, size: textSize(textStyle: .headline)))
+</code></pre></div><p><img src="/images/CustomFont.png" alt="Custom font"></p>
 <p>The downside of this approach is this fixes the text size until the screen is redrawn. So if your customer changes their dynamic type size your text won&rsquo;t change until this screen is recreated.</p>
-
-<h2 id="don-t">Don&rsquo;t</h2>
-
+<h2 id="dont">Don&rsquo;t</h2>
 <h3 id="line-limit">Line Limit</h3>
-
 <p>It’s possible to limit the number of lines your text wraps to using the modifier <code>.lineLimit(1)</code>. Meaning if your text requires more lines it will end in an ellipsis. This is a poor choice as your users with the largest text sizes are likely to lose the full meaning. As a rule, your UI should be able to accommodate whatever text content at whatever size its provided with. If you find your screen or control can’t handle this, it&rsquo;s worth taking another look at your design, or how you’ve built it.</p>
-
-<p><img src="/images/SingleLine.png" alt="Truncated text" /></p>
-
+<p><img src="/images/SingleLine.png" alt="Truncated text"></p>
 <h3 id="fixed-sizes">Fixed sizes</h3>
-
 <p>There are two ways of fixing a font size. <code>.font(.system(size: 17))</code> or <code>.font(.custom(&quot;MyCustomFont&quot;, size: 17))</code>. please don’t be tempted to use these. If your customer has chosen to set their preferred text size, either for accessibility reasons, or because they like it that way, it’s pretty arrogant as an app developer to ignore this – at least, that’s how your customer will see it.</p>
-
-<p><img src="/images/FixedSize.png" alt="Fixed text size" /></p>
-
+<p><img src="/images/FixedSize.png" alt="Fixed text size"></p>
 <p>As with the line limit, if you find your screen or control doesn’t work with larger fonts re-visit the design or how you&rsquo;ve built it. Sometimes it&rsquo;s not possible to support larger text sizes for certain controls. See iOS’ standard tab bar for example. In these situations, we can add a function that calls our dynamic size function above, and provides a maximum value. This allows your text to scale down, but limits how large it can become.</p>
-
-<pre><code class="language-swift"> func textSizeForThisOneSpecificUse() -&gt; CGFloat {
-    return fmin(textSize(textStyle: .body), 28.0)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">textSizeForThisOneSpecificUse</span>() -&gt; CGFloat {
+    <span style="color:#66d9ef">return</span> fmin(textSize(textStyle: .body), <span style="color:#ae81ff">28.0</span>)
  }
-</code></pre>
-
-<hr />
-
+</code></pre></div><hr>
 <p>Thanks for reading. This story is part of a series on SwiftUI Accessibility. Check out my other guides in this series:</p>
-
-<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><br/>
+<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><!-- raw HTML omitted -->
 <a href="https://mobilea11y.com/guides/swiftui/swiftui-semantic-views/">SwiftUI Accessibility: Semantic Views</a></p>
 
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -368,7 +369,8 @@ Unfortunately, these methods won’t work for us in SwiftUI. Custom font support
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -378,11 +380,6 @@ Unfortunately, these methods won’t work for us in SwiftUI. Custom font support
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -392,7 +389,6 @@ Unfortunately, these methods won’t work for us in SwiftUI. Custom font support
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -403,11 +399,28 @@ Unfortunately, these methods won’t work for us in SwiftUI. Custom font support
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

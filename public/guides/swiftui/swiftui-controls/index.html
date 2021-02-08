@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/guides/swiftui/swiftui-controls/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,68 +284,60 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>SwiftUI Accessibility - Named Controls</h1>
     <p>One big accessibility improvement in SwiftUI comes in the form of named controls. Nearly all controls and some non-interactive views (<a href="https://rwapp.co.uk/2019/09/11/SwiftUI-Images/">see Images</a>) can take a Text view as part of their view builder. The purpose of this is to tie the meaning to the control.</p>
-
-<pre><code class="language-swift">Toggle(isOn: $updates) {
-    Text(&quot;Send me updates&quot;)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Toggle(isOn: <span style="color:#960050;background-color:#1e0010">$</span>updates) {
+    Text(<span style="color:#e6db74">&#34;Send me updates&#34;</span>)
 }
-</code></pre>
-
-<p>Imagine a UIKit layout with a UISwitch control. We&rsquo;d most likely right align the switch, and provide a text label to the left. Something like this.</p>
-
-<p><img src="/images/swiftui-toggle.png" alt="Send me updates label left with a switch control right" /></p>
-
+</code></pre></div><p>Imagine a UIKit layout with a UISwitch control. We&rsquo;d most likely right align the switch, and provide a text label to the left. Something like this.</p>
+<p><img src="/images/swiftui-toggle.png" alt="Send me updates label left with a switch control right"></p>
 <p>Visually this makes perfect sense. The control follows natural reading direction from the label so we know they&rsquo;re connected. This isn&rsquo;t clear when using some assistive technologies like VoiceOver, Braille keyboards, and Voice Control. For these technologies, there is no link between the separate elements. Remember, VoiceOver users are unlikely to have the benefit of inferring relation by following the visual layout of your UI.</p>
-
-<p>For this UI, VoiceOver will read <em>&lsquo;Send me updates.&rsquo;</em> Your user will then swipe, and VoiceOver will read <em>&lsquo;Toggle. Off.&rsquo;</em> Your VoiceOver user cannot know you intend a connection. They also have no way of knowing what the consequence of toggling this switch would be. Consider the layout below.</p>
-
-<p><img src="/images/swiftui-hzcontrols.png" alt="Vertically aligned labels &amp; toggles. The first option is 'Charge me $1m', the second 'send me updates'" /></p>
-
-<p>The VoiceOver interaction here is exactly the same as above. Because VoiceOver reads in natural direction, both labels will be read before the switches are reached. Your user will hear <em>&lsquo;Send me updates.&rsquo;</em> (swipe) <em>&lsquo;Toggle. Off.&rsquo;</em> Except if they switch the toggle, we&rsquo;ll charge them a bunch of money, and we won&rsquo;t send them the updates they wanted.</p>
-
+<p>For this UI, VoiceOver will read <em>&lsquo;Send me updates.'</em> Your user will then swipe, and VoiceOver will read <em>&lsquo;Toggle. Off.'</em> Your VoiceOver user cannot know you intend a connection. They also have no way of knowing what the consequence of toggling this switch would be. Consider the layout below.</p>
+<p><img src="/images/swiftui-hzcontrols.png" alt="Vertically aligned labels & toggles. The first option is &lsquo;Charge me $1m&rsquo;, the second &lsquo;send me updates&rsquo;"></p>
+<p>The VoiceOver interaction here is exactly the same as above. Because VoiceOver reads in natural direction, both labels will be read before the switches are reached. Your user will hear <em>&lsquo;Send me updates.'</em> (swipe) <em>&lsquo;Toggle. Off.'</em> Except if they switch the toggle, we&rsquo;ll charge them a bunch of money, and we won&rsquo;t send them the updates they wanted.</p>
 <p>Named controls exclude this ambiguity. Because SwiftUI is explicit about the link between the control and the label it can present them as such to assistive technology. This not only provides a clear consequence for activating the control. Grouping also reduces the number of swipes required, making navigation quicker and easier.</p>
-
 <p>These labels also double up as the friendly names used for Voice Control. Without a name for the control, a Voice Control user would have to ask iOS to overlay a grid and say <em>&lsquo;tap 20&rsquo;</em>. This means unnecessary commands spoken by your customer. Additionally, covering a large proportion of your screen covered with numbers is not a great experience.</p>
-
-<p><img src="/images/swiftui-grid.jpeg" alt="Toggle control overlayed by a numbered grid" /></p>
-
-<p>With a properly named control, the only Voice Control command required to activate the switch is <em>&lsquo;tap Send me updates.&rsquo;</em></p>
-
-<p><img src="/images/swiftui-voicectrl.PNG" alt="Toggle control showing the Voice Control command to interact with it" /></p>
-
+<p><img src="/images/swiftui-grid.jpeg" alt="Toggle control overlayed by a numbered grid"></p>
+<p>With a properly named control, the only Voice Control command required to activate the switch is <em>&lsquo;tap Send me updates.'</em></p>
+<p><img src="/images/swiftui-voicectrl.PNG" alt="Toggle control showing the Voice Control command to interact with it"></p>
 <p>Some elements, <a href="https://rwapp.co.uk/2019/09/11/SwiftUI-Images/">like Images</a>, take a Text element as part of their view builder, but it is never displayed on screen. In some instances like Sliders only some platforms such as MacOS display the label. Or you can change the presentation style to include the label. Regardless of how SwiftUI presents your labels (or not), you should always provide a short descriptive label for every control you create. This ensures a better, frustration-free experience for your assistive technology users.</p>
-
-<hr />
-
+<hr>
 <p>Thanks for reading. This story is part of a series on SwiftUI Accessibility. Check out my other guides in this series:</p>
-
-<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><br/>
+<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><!-- raw HTML omitted -->
 <a href="https://mobilea11y.com/guides/swiftui/swiftui-semantic-views/">SwiftUI Accessibility: Semantic Views</a></p>
 
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -339,7 +354,8 @@
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -349,11 +365,6 @@
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -363,7 +374,6 @@
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -374,11 +384,28 @@
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

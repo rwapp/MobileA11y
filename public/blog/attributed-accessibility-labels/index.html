@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/blog/attributed-accessibility-labels/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/blog/attributed-accessibility-labels/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,21 +284,18 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>iOS Attributed Accessibility Labels</h1>
-    
-
-<p>Attributed accessibility labels are an incredible tool for making some next-level accessible experiences. They let you tell VoiceOver not just what to speak, but how to say it too.</p>
-
+    <p>Attributed accessibility labels are an incredible tool for making some next-level accessible experiences. They let you tell VoiceOver not just what to speak, but how to say it too.</p>
 <p>Using the <code>accessibilityAttributedLabel</code> property you can provide an <code>NSAttributedString</code> to VoiceOver, much the same way you would provide an <code>NSAttributedString</code> to a label&rsquo;s <code>attributedText</code> property to display a string with an underline or character colour for example. The difference here is that all of our attributes are instructions for VoiceOver.</p>
-
 <p>In the below example, we&rsquo;re adding a pitch change to the word &lsquo;best&rsquo; where in displayed text we might add a bold attribute to add emphasis. This means that your VoiceOver users will get a comparable experience to sighted users rather than a cut down one. This is the ultimate aim of digital accessibility. Create a comparable, inclusive interaction with your users, regardless of their abilities. Always ensure your text is localised and perform proper range calculations in your code, rather than hard coding everything as I am in this example.</p>
-
 <pre><code>let attributedString = NSMutableAttributedString(string: &quot;This is the best app on the App Store!&quot;)
 
 let range = attributedString.string.range(of: &quot;best&quot;)
@@ -284,26 +304,15 @@ attributedString.addAttributes([.accessibilitySpeechPitch: 1.5],
                                                in: attributedString.string))
 
 appDescription?.accessibilityAttributedLabel = attributedString
-</code></pre>
-
-<p>Much like visual <code>NSAttributedString</code>s, there are several attributes to pick from to get the effect you&rsquo;re aiming for.</p>
-
+</code></pre><p>Much like visual <code>NSAttributedString</code>s, there are several attributes to pick from to get the effect you&rsquo;re aiming for.</p>
 <h2 id="language">Language</h2>
-
 <p>This attribute allows you to be explicit about the language VoiceOver uses to read a string. This is useful if you have multiple languages in your app. The attribute takes an argument representing the language you want VoiceOver to use in the <a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP47 format</a> such as this example for Latin American Spanish <code>[.accessibilitySpeechLanguage: &quot;es-419&quot;]</code>.</p>
-
 <h2 id="spell-out">Spell Out</h2>
-
 <p>Spelling out the text is the ideal solution to the reference number problem we discussed in the <a href="/blog/writing-great-labels/#not-just-for-voiceover">previous post</a>. This attribute lets you keep a neat visual string of &lsquo;1234&rsquo;, but when marked with <code>[.accessibilitySpeechSpellOut: true]</code> this is read by VoiceOver as &lsquo;1 2 3 4&rsquo;.</p>
-
 <h2 id="phonetic-notation">Phonetic Notation</h2>
-
 <p>You can use phonetic Notation to give VoiceOver exact instructions about how it should pronounce a word. VoiceOver&rsquo;s pronunciation is not always perfect, and while this is usually still understandable by your customer, there are instances where you might want to be more prescriptive. Your brand name is a great example of this, as VoiceOver may not read this exactly as your brand expects.</p>
-
 <p>Words you use commonly in your app that have a specific domain meaning are another great use. For example, VoiceOver can&rsquo;t pronounce the word &lsquo;expiry&rsquo; correctly. In the UK this word is used on credit cards as &lsquo;expiration&rsquo; would be in the US. Meaning any app in the UK handling credit card data should probably use this technique to ensure customers understand what data they need to enter in a form.</p>
-
 <p>Homonyms are another good example. In the <a href="https://apps.apple.com/gb/app/bbc-sounds/id1380676511">BBC Sounds</a> app, users are offered the opportunity to listen to &lsquo;live radio&rsquo;. unfortunately, VoiceOver appears to be instructing the user to &lsquo;liv radio&rsquo;. This can be fixed using the <code>.accessibilitySpeechIPANotation</code> attribute and providing an IPA string, such as this example:</p>
-
 <pre><code>let attributedString = NSMutableAttributedString(string: &quot;Live radio&quot;)
 
 let range = attributedString.string.range(of: &quot;Live&quot;)
@@ -312,23 +321,15 @@ attributedString.addAttributes([.accessibilitySpeechIPANotation: &quot;līv&quot
                                                in: attributedString.string))
 
 liveRadio?.accessibilityAttributedLabel = attributedString
-</code></pre>
-
-<h2 id="punctuation">Punctuation</h2>
-
+</code></pre><h2 id="punctuation">Punctuation</h2>
 <p>This attribute allows us to tell VoiceOver to read all punctuation. This can be useful if your app features code or some other technical notation. Be sure to apply <code>[.accessibilitySpeechPunctuation: true]</code> only to the range that contains your code, otherwise listening to the result will take a while.</p>
-
 <h2 id="sources">Sources</h2>
-
 <ul>
 <li><a href="https://twitter.com/dadederk">Daniel Devesa</a> <a href="https://amzn.to/2WkLNkt">Developing Accessible iOS Apps: Support VoiceOver, Dynamic Type, and More</a></li>
 <li><a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a></li>
 </ul>
-
 <h2 id="next-up">Next up</h2>
-
-<p>This is the last article in the series of posts about iOS&rsquo; accessibility labels, so the next step is to go ahead and make some incredible accessible apps!</p>
-
+<p>This is the last article in the series of posts about iOS' accessibility labels, so the next step is to go ahead and make some incredible accessible apps!</p>
 <ul>
 <li><a href="/blog/ios-accessibility-labels/">iOS Accessibility Labels</a></li>
 <li><a href="/blog/when-to-use-accessibility-labels/">When to use Accessibility Labels</a></li>
@@ -338,13 +339,20 @@ liveRadio?.accessibilityAttributedLabel = attributedString
 
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -361,7 +369,8 @@ liveRadio?.accessibilityAttributedLabel = attributedString
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -371,11 +380,6 @@ liveRadio?.accessibilityAttributedLabel = attributedString
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -385,7 +389,6 @@ liveRadio?.accessibilityAttributedLabel = attributedString
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -396,11 +399,28 @@ liveRadio?.accessibilityAttributedLabel = attributedString
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

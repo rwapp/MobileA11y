@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/blog/a11yuitests/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/blog/a11yuitests/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,82 +284,65 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>A11yUITests: An XCUI Testing library for accessibility</h1>
-    
-
-<p><a href="https://github.com/rwapp/A11yUITests">A11yUITests</a> is an extension to XCTestCase that adds tests for common accessibility issues that can be run as part of an XCUITest suite. I&rsquo;ve written a detailed discussion of the <a href="https://mobilea11y.com/guides/xcui/">tests available</a> if you&rsquo;re interested in changing/implementing these tests yourself. Alternatively, follow this quick start guide.</p>
-
+    <p><a href="https://github.com/rwapp/A11yUITests">A11yUITests</a> is an extension to XCTestCase that adds tests for common accessibility issues that can be run as part of an XCUITest suite. I&rsquo;ve written a detailed discussion of the <a href="https://mobilea11y.com/guides/xcui/">tests available</a> if you&rsquo;re interested in changing/implementing these tests yourself. Alternatively, follow this quick start guide.</p>
 <h2 id="getting-started">Getting Started</h2>
-
 <h3 id="adding-a11yuitests">Adding A11yUITests</h3>
-
 <p>I&rsquo;m assuming you&rsquo;re already familiar with cocoapods, if not, <a href="https://cocoapods.org">cocoapods.org</a> has a good introduction. There is one minor difference here compared to most cocoapods, we&rsquo;re not including this pod in our app, but our app&rsquo;s test bundle. This means your podfile will look something like this.</p>
-
-<pre><code class="language-ruby">target 'MyAwesomeApp' do
-    target 'MyAwesomeApp_Tests' do
-        pod 'A11yUITests'
-    end
-end
-</code></pre>
-
-<h3 id="starting-a-new-test-suite">Starting a New Test Suite</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">target <span style="color:#e6db74">&#39;MyAwesomeApp&#39;</span> <span style="color:#66d9ef">do</span>
+    target <span style="color:#e6db74">&#39;MyAwesomeApp_Tests&#39;</span> <span style="color:#66d9ef">do</span>
+        pod <span style="color:#e6db74">&#39;A11yUITests&#39;</span>
+    <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><h3 id="starting-a-new-test-suite">Starting a New Test Suite</h3>
 <h4 id="setting-up-testing">Setting Up Testing</h4>
-
 <p>In Xcode, create a new suite of UI Tests from File &gt; New &gt; Target and choose UI Testing Bundle. On the next screen ensure the app you&rsquo;re looking to test is selected under &lsquo;Target to be Tested.&rsquo; Xcode will generate an example XCTestCase subclass for you, we&rsquo;ll use this in the &lsquo;your first test&rsquo; step.</p>
-
 <h4 id="your-first-test">Your First Test</h4>
-
 <p>Add <code>import A11yUITests</code> at the top of your XCTestCase subclass.</p>
-
 <p>Write a new test function beginning with the word test</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">A11yUITests</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">XCTest</span>
 
-<pre><code class="language-swift">import A11yUITests
-import XCTest
-
-class AwesomeTests: XCTestCase {
-    func testAccessibility() {   
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AwesomeTests</span>: XCTestCase {
+    <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">testAccessibility</span>() {   
 
     }
 }
-</code></pre>
-
-<p>Place your cursor inside the braces and press the record button in the bottom left of Xcode&rsquo;s editor window. This will launch the app and record your interactions. Navigate to the screen where you want to check accessibility, and Xcode will write the steps into your test in code.</p>
-
-<p><img src="/images/xcui-record.png" alt="Xcode's record button" /></p>
-
-<p>After this generated code, add <code>a11yCheckAllOnScreen()</code>. This command will then run A11yUITests&rsquo; full suite on your screen.</p>
-
+</code></pre></div><p>Place your cursor inside the braces and press the record button in the bottom left of Xcode&rsquo;s editor window. This will launch the app and record your interactions. Navigate to the screen where you want to check accessibility, and Xcode will write the steps into your test in code.</p>
+<p><img src="/images/xcui-record.png" alt="Xcode&rsquo;s record button"></p>
+<p>After this generated code, add <code>a11yCheckAllOnScreen()</code>. This command will then run A11yUITests' full suite on your screen.</p>
 <h3 id="existing-ui-test-suites">Existing UI Test Suites</h3>
-
 <p>Add <code>import A11yUITests</code> into the XCTestCase subclass where you want to add accessibility checks.</p>
-
 <p>Pepper <code>a11yCheckAllOnScreen()</code> calls around when you navigate to a new screen or make a major change to a screen.</p>
-
 <h2 id="customising-test-suites">Customising Test Suites</h2>
-
 <p>For more detail, see the <a href="https://github.com/rwapp/A11yUITests/blob/master/README.md">A11yUITests Readme</a>. There are 4 provided test suites, but you can build your own if you find some tests don&rsquo;t quite work for you.</p>
-
 <p>You can do this by creating an array of <code>A11yTests</code> enum values. Run your chosen suite by passing your array along with the elements you want to test to <code>a11y(tests: [A11yTests], on elements: [XCUIElement])</code>. You can get all elements on screen with the following.</p>
-
-<pre><code class="language-swift"> let elements = XCUIApplication().descendants(matching: .any).allElementsBoundByAccessibilityElement
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> elements = XCUIApplication().descendants(matching: .any).allElementsBoundByAccessibilityElement
+</code></pre></div>
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -353,7 +359,8 @@ class AwesomeTests: XCTestCase {
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -363,11 +370,6 @@ class AwesomeTests: XCTestCase {
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -377,7 +379,6 @@ class AwesomeTests: XCTestCase {
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -388,11 +389,28 @@ class AwesomeTests: XCTestCase {
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

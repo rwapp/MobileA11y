@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/guides/xcui/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/guides/xcui/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,226 +284,148 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>XCUITests for accessibility</h1>
-    
-
-<p>For a while now I’ve been looking at possibilities for automated accessibility testing on iOS. Unfortunately, I’ve not found any option so far that I’m happy with. I am a big fan of Apple’s XCUI Test framework. Although it has its limitations, I believe there’s scope for creating valid accessibility tests using this framework. Over the last few months I’ve been trying things out, and here’s what I’ve come up with.</p>
-
+    <p>For a while now I’ve been looking at possibilities for automated accessibility testing on iOS. Unfortunately, I’ve not found any option so far that I’m happy with. I am a big fan of Apple’s XCUI Test framework. Although it has its limitations, I believe there’s scope for creating valid accessibility tests using this framework. Over the last few months I’ve been trying things out, and here’s what I’ve come up with.</p>
 <p>These tests are all part of an open source library I created called <a href="https://mobilea11y.com/blog/a11yuitests/">A11yUITests</a>, available on <a href="https://github.com/rwapp/A11yUITests">GitHub</a>. You can pull this library in using Cocoapods and use these tests in a friendly way. I document them here to help you change and adapt them for your own use. And to spark discussion on how valid these tests are, and how we can improve upon them.</p>
-
 <p>In creating these tests I&rsquo;ve followed <a href="https://www.w3.org/TR/WCAG21/">WCAG</a> guidelines and <a href="https://developer.apple.com/accessibility/">Apple&rsquo;s recommendations on accessibility</a>. For inspiration, I&rsquo;ve researched Deque&rsquo;s commercial iOS Accessibility testing tool <a href="https://www.deque.com/tools/worldspace-attest-ios/">WorldSpace Attest</a> and Android&rsquo;s <a href="https://developer.android.com/training/testing/espresso/accessibility-checking">Espresso accessibility checks</a> library.</p>
-
 <h2 id="any-xcuitest-is-an-accessibility-test">Any XCUITest is an Accessibility Test</h2>
-
 <p>XCUITests uses your app&rsquo;s accessibility tree, this means any well-written XCUITest is an accessibility test. Many XCUITest suites I&rsquo;ve seen make one mistake though. When you&rsquo;re finding an element on screen, always use the element&rsquo;s label, not the accessibility identifier. The identifier is designed to help you with XCUITests, but it doesn&rsquo;t guarantee your content has been set to the element. By finding an element by its label, you&rsquo;re looking for exactly the same string that VoiceOver will read and Voice Control users will speak.</p>
-
-<pre><code class="language-swift">let button = XCUIApplication.buttons[&quot;My button&quot;]
-</code></pre>
-
-<h2 id="accessibility-tests">Accessibility Tests</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> button = XCUIApplication.buttons[<span style="color:#e6db74">&#34;My button&#34;</span>]
+</code></pre></div><h2 id="accessibility-tests">Accessibility Tests</h2>
 <p>I&rsquo;ve identified 12 accessibility issues I think it&rsquo;s possible to test for using XCUI. At the time of writing, 10 of these feature in <a href="http://mobilea11y.com/blog/a11yuitests/">A11yUITests</a>, but the others have branches and should be merged after some tweaks. There are a few other areas I&rsquo;d really love to test for, like accessibility traits, but as of writing, XCUI can&rsquo;t check these.</p>
-
 <h3 id="minimum-size">Minimum Size</h3>
-
 <p>This test is not based on anything other than a rough guess that any accessible element smaller than 18px square is probably too small. I&rsquo;ve seen some smaller text, like caption styles, fail for this, and I think you could argue either way whether that is a genuine failure or not.</p>
-
-<pre><code class="language-swift">XCTAssert(element.frame.size.height &gt;= 18)
-XCTAssert(element.frame.size.width &gt;= 18)
-</code></pre>
-
-<h3 id="valid-accessibility-label">Valid Accessibility Label</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">XCTAssert(element.frame.size.height <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span>)
+XCTAssert(element.frame.size.width <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">18</span>)
+</code></pre></div><h3 id="valid-accessibility-label">Valid Accessibility Label</h3>
 <p>I based this test on <a href="https://www.w3.org/TR/WCAG21/#text-alternatives">WCAG 2.1 Guideline 1.1 Text Alternatives</a>. This test is valid for any accessible element, whether that&rsquo;s a control, image, or text. I chose to check the accessibility label had a minimum of 2 characters, as 1 is most likely meaningless. Checking if the string is empty might work better for your app.</p>
-
-<pre><code class="language-swift">XCTAssert(element.label.count &gt; 2)
-</code></pre>
-
-<p>or</p>
-
-<pre><code class="language-swift">XCTAssertFalse(element.label.isEmpty)
-</code></pre>
-
-<h3 id="redundant-element-type">Redundant Element Type</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">XCTAssert(element.label.count <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">2</span>)
+</code></pre></div><p>or</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">XCTAssertFalse(element.label.isEmpty)
+</code></pre></div><h3 id="redundant-element-type">Redundant Element Type</h3>
 <p>Following <a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/iPhoneAccessibility/Making_Application_Accessible/Making_Application_Accessible.html#//apple_ref/doc/uid/TP40008785-CH102-SW6">Apple&rsquo;s guidance for writing accessibility labels</a>, elements shouldn&rsquo;t contain the type of control in their label. You should convey this information using accessibility traits. Unfortunately it&rsquo;s not possible to test for accessibility traits currently, but we can check the labels.</p>
-
 <p>The test I have included in A11yUITests only checks for the presence of &lsquo;button&rsquo; as this is the most common, but this test should ideally be expanded for other controls and other languages.</p>
-
-<pre><code class="language-swift">XCTAssertFalse(button.label.lowercased().contains(&quot;button&quot;))
-</code></pre>
-
-<h3 id="uppercase-button-labels">Uppercase Button Labels</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">XCTAssertFalse(button.label.lowercased().contains(<span style="color:#e6db74">&#34;button&#34;</span>))
+</code></pre></div><h3 id="uppercase-button-labels">Uppercase Button Labels</h3>
 <p>Following <a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/iPhoneAccessibility/Making_Application_Accessible/Making_Application_Accessible.html#//apple_ref/doc/uid/TP40008785-CH102-SW6">Apple&rsquo;s guidance for writing accessibility labels</a>, accessibility labels for any controls should begin with an uppercase letter. This affects the tone when read by VoiceOver, but also looks better when displayed by Switch Control or Voice Control.</p>
-
-<pre><code class="language-swift">XCTAssert(interactiveElement.label.first!.isUppercase)
-</code></pre>
-
-<h3 id="button-labels-are-not-sentences">Button Labels Are Not Sentences</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">XCTAssert(interactiveElement.label.first!.isUppercase)
+</code></pre></div><h3 id="button-labels-are-not-sentences">Button Labels Are Not Sentences</h3>
 <p>Apple recommends that button labels should not be written as full sentences and as such shouldn&rsquo;t finish with a period. It seems realistic to expect we could use buttons with exclamation or question marks, so I chose not to check for all punctuation here.</p>
-
-<pre><code class="language-swift">XCTAssert((interactiveElement.label.range(of: &quot;.&quot;) == nil))
-</code></pre>
-
-<h3 id="redundant-image-labels">Redundant Image Labels</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">XCTAssert((interactiveElement.label.range(of: <span style="color:#e6db74">&#34;.&#34;</span>) == <span style="color:#66d9ef">nil</span>))
+</code></pre></div><h3 id="redundant-image-labels">Redundant Image Labels</h3>
 <p><a href="https://developer.apple.com/videos/play/wwdc2019/254/">Apple recommends</a> not including the word &lsquo;image&rsquo; in accessibility labels for images, instead we should use the image accessibility trait. Using both is duplication and causes frustration for your user. We can&rsquo;t check that we&rsquo;ve used the right accessibility, but we can check the label. Ideally, this test should be localised, and extended to check for words like &lsquo;icon&rsquo;, &lsquo;picture&rsquo; etc.</p>
-
-<pre><code class="language-swift">XCTAssertFalse(image.label.lowercased().contains(&quot;image&quot;)
-</code></pre>
-
-<h3 id="image-file-names">Image File Names</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">XCTAssertFalse(image.label.lowercased().contains(<span style="color:#e6db74">&#34;image&#34;</span>)
+</code></pre></div><h3 id="image-file-names">Image File Names</h3>
 <p>It&rsquo;s easy to leave your images file name as the accessibility label, but this is meaningless when read by VoiceOver. We don&rsquo;t know at runtime what the image file name was, so we can&rsquo;t check this with 100% accuracy, but checking if there&rsquo;s an underscore is a good indicator. This test could be extended to check for file extensions. And potentially to check for long text with no spaces. This test should be localised.</p>
-
-<pre><code class="language-swift">XCTAssertFalse(image.label.contains(&quot;_&quot;))
-</code></pre>
-
-<h3 id="short-labels">Short Labels</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">XCTAssertFalse(image.label.contains(<span style="color:#e6db74">&#34;_&#34;</span>))
+</code></pre></div><h3 id="short-labels">Short Labels</h3>
 <p>Apple provides excellent guidance on writing meaningful accessibility labels in this <a href="https://developer.apple.com/videos/play/wwdc2019/254/">WWDC video</a>. In it, they suggest making accessibility labels meaningful without making them too long. Long labels can make your app a chore to navigate. In this test, I chose to check for labels longer than 40 characters, but this limit is arbitrary, and for most apps, 40 will probably be too long. This test doesn&rsquo;t apply to static text or text fields where we would expect text to commonly exceed 40 characters.</p>
-
-<pre><code class="language-swift">XCTAssertTrue(element.label.count &lt;= 40)
-</code></pre>
-
-<h3 id="tap-target-size">Tap Target Size</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">XCTAssertTrue(element.label.count <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">40</span>)
+</code></pre></div><h3 id="tap-target-size">Tap Target Size</h3>
 <p>This test follows  <a href="https://www.w3.org/TR/WCAG21/#target-size">WCAG 2.1 Sucess Criteria 2.5.5 Target Size Level AAA</a> in ensuring any interactive elements have a tap target of at least 44 pixels square. This is perhaps the simplest test in that if this doesn&rsquo;t produce failures, you know your app is compliant. However, many of Apple&rsquo;s own controls don&rsquo;t comply with this. Navigation bar buttons, tab bar buttons, sliders, switches and text fields are all smaller than 44px in one or more directions. This means to be fully compliant here you will have to subclass Apple&rsquo;s own controls and create your own view for presenting them. As soon as you stray from Apple&rsquo;s controls, you begin to introduce larger accessibility issues. So for now, sticking with Apple&rsquo;s standard controls is probably the best option. This test is valid for any element you user can interact with.</p>
-
-<pre><code class="language-swift">XCTAssert(element.frame.size.height &gt;= 44)
-XCTAssert(element.frame.size.width &gt;= 44)
-</code></pre>
-
-<h3 id="duplicated-labels">Duplicated Labels</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">XCTAssert(element.frame.size.height <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">44</span>)
+XCTAssert(element.frame.size.width <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">44</span>)
+</code></pre></div><h3 id="duplicated-labels">Duplicated Labels</h3>
 <p>If your screen is a list of items for sale each with a &lsquo;Buy&rsquo; button next to the listing, how will a VoiceOver user be sure what they are buying? You should aim to make the labels more meaningful by labelling them &lsquo;Buy {product}&rsquo;. For this test, we need to get all the objects on screen and loop through them. I&rsquo;d recommend excluding any elements you&rsquo;d expect not to have a label here, otherwise, you&rsquo;ll receive a large number of failures for &ldquo;&rdquo;.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> elements = XCUIApplication().descendants(matching: .any).allElementsBoundByAccessibilityElement
 
-<pre><code class="language-swift">let elements = XCUIApplication().descendants(matching: .any).allElementsBoundByAccessibilityElement
-
-for element1 in elements {
-    for element2 in elements {
+<span style="color:#66d9ef">for</span> element1 <span style="color:#66d9ef">in</span> elements {
+    <span style="color:#66d9ef">for</span> element2 <span style="color:#66d9ef">in</span> elements {
         XCTAssertNotEqual(element1.label, element2.label)
     }
 }
-</code></pre>
-
-<h3 id="overlapping-elements">Overlapping Elements</h3>
-
+</code></pre></div><h3 id="overlapping-elements">Overlapping Elements</h3>
 <p>Any elements with an accessible label shouldn&rsquo;t overlap their bounds. When using VoiceOver the view&rsquo;s bounds are highlighted so anything that overlaps will cause confusing and messy navigation. You&rsquo;ll want to exclude any elements that don&rsquo;t have an accessibility label here as we&rsquo;d expect non-accessible elements to intersect.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> elements = XCUIApplication().descendants(matching: .any).allElementsBoundByAccessibilityElement
 
-<pre><code class="language-swift">let elements = XCUIApplication().descendants(matching: .any).allElementsBoundByAccessibilityElement
-
-for element1 in elements {
-    for element2 in elements {
+<span style="color:#66d9ef">for</span> element1 <span style="color:#66d9ef">in</span> elements {
+    <span style="color:#66d9ef">for</span> element2 <span style="color:#66d9ef">in</span> elements {
         XCTAssertFalse(element1.frame.intersects(element2.frame)
     }
 }
-</code></pre>
-
-<h3 id="text-outside-a-scroll-view">Text Outside a Scroll View</h3>
-
+</code></pre></div><h3 id="text-outside-a-scroll-view">Text Outside a Scroll View</h3>
 <p>Unfortunately, currently, it&rsquo;s not possible to detect whether text supports dynamic type. But there is a common related accessibility issue that we can detect. If you&rsquo;re presenting any text that isn&rsquo;t in a scroll view then you&rsquo;re not supporting dynamic type. If your text isn&rsquo;t in a scroll view you can&rsquo;t guarantee your text will have room to grow as needed. This we can test with XCUI.</p>
-
-<pre><code class="language-swift">let scrollViews = XCUIApplication().descendants(matching: .scrollView).allElementsBoundByAccessibilityElement
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> scrollViews = XCUIApplication().descendants(matching: .scrollView).allElementsBoundByAccessibilityElement
 
 XCTAssertFalse(scrollViews.isEmpty)
 
-let staticTexts = XCUIApplication().descendants(matching: .staticText).allElementsBoundByAccessibilityElement
+<span style="color:#66d9ef">let</span> staticTexts = XCUIApplication().descendants(matching: .staticText).allElementsBoundByAccessibilityElement
 
-var fail = true
+<span style="color:#66d9ef">var</span> fail = <span style="color:#66d9ef">true</span>
 
-for element in staticTexts {
-    for scrollView in scrollViews {
-        let descendants = scrollView.descendants(matching: .staticText).allElementsBoundByIndex
-        for descendant in descendants {
-            if descendant.label == element.label {
-                fail = false
+<span style="color:#66d9ef">for</span> element <span style="color:#66d9ef">in</span> staticTexts {
+    <span style="color:#66d9ef">for</span> scrollView <span style="color:#66d9ef">in</span> scrollViews {
+        <span style="color:#66d9ef">let</span> descendants = scrollView.descendants(matching: .staticText).allElementsBoundByIndex
+        <span style="color:#66d9ef">for</span> descendant <span style="color:#66d9ef">in</span> descendants {
+            <span style="color:#66d9ef">if</span> descendant.label == element.label {
+                fail = <span style="color:#66d9ef">false</span>
             }
         }
     }
 
     XCTAssertFalse(fail)
-    fail = true
+    fail = <span style="color:#66d9ef">true</span>
 }
-</code></pre>
-
-<h2 id="limitations">Limitations</h2>
-
+</code></pre></div><h2 id="limitations">Limitations</h2>
 <h3 id="incomparable">Incomparable</h3>
-
 <p>An <code>XCUIElement</code> is not a concrete element, but more a query for an element on screen. This is because we&rsquo;d expect an element to change throughout it&rsquo;s lifecycle. The elements label, size, or location could all reasonably be expected to change. Any test that took an immutable snapshot of the screen to perform tests on would not be all that realistic. This does have a couple of drawbacks when it comes to the type of testing we&rsquo;re trying to achieve here.</p>
-
 <p>Firstly, we can&rsquo;t directly compare <code>XCUIElement</code>s. If we were to write <code>if element1 = element1 {</code> this would sometimes pass, and sometimes fail. If XCUI decides to take a snapshot of the element for the left hand side of this equation and not the right, we&rsquo;re good. If XCUI already has a snapshot when evaluating the LHS, but decides to refresh the snapshot when checking the RHS, this statement will return false.</p>
-
 <p>For this reason in the scroll view test above I&rsquo;m determining if elements are the same by comparing label strings. This is obviously not ideal or conclusive, but I believe this is the closest I can achieve right now.</p>
-
 <h3 id="speed">Speed</h3>
-
 <p>Our second issue with <code>XCUIElement</code> significantly slows down our tests. That&rsquo;s because XCUI takes regular snapshots of each element when we request a property. These snapshots are time consuming, and we request a lot of properties.</p>
-
 <p>I managed to speed up tests by creating a proxy object for <code>XCUIElement</code>s. This way I stored properties I knew I would need later, but only had to request each once resulting in a single snapshot for each element. I can also store a reference to the <code>XCUIElement</code> here so I can make further queries later if needed. Using this technique I was able to speed up a full suite test of the A11yUITests example app up from 1 minute to 10 seconds.</p>
-
-<pre><code class="language-swift">struct A11yElement {
-    let label: String
-    let frame: CGRect
-    let type: XCUIElement.ElementType
-    let underlyingElement: XCUIElement
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">A11yElement</span> {
+    <span style="color:#66d9ef">let</span> label: String
+    <span style="color:#66d9ef">let</span> frame: CGRect
+    <span style="color:#66d9ef">let</span> type: XCUIElement.ElementType
+    <span style="color:#66d9ef">let</span> underlyingElement: XCUIElement
 }
-</code></pre>
+</code></pre></div><p>I can then create one from each <code>XCUIElement</code> I use.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">
+<span style="color:#66d9ef">let</span> button = XCUIApplication().buttons[<span style="color:#e6db74">&#34;My button&#34;</span>]
 
-<p>I can then create one from each <code>XCUIElement</code> I use.</p>
-
-<pre><code class="language-swift">
-let button = XCUIApplication().buttons[&quot;My button&quot;]
-
-let a11yButton = A11yElement(label: button.label,
+<span style="color:#66d9ef">let</span> a11yButton = A11yElement(label: button.label,
                              frame: button.frame,
                              type: button.elementType,
                              underlyingElement: button)
 
-</code></pre>
-
-<p>I feel this is acceptable in these tests as we&rsquo;re not interacting with any element so we&rsquo;re not expecting anything to change. But I would not recommend this approach for standard UI testing.</p>
-
+</code></pre></div><p>I feel this is acceptable in these tests as we&rsquo;re not interacting with any element so we&rsquo;re not expecting anything to change. But I would not recommend this approach for standard UI testing.</p>
 <h2 id="where-to-go-from-here">Where To Go From Here</h2>
-
 <p>I have a few thoughts about how I&rsquo;d like to develop these tests to get the most value from them.</p>
-
-<h3 id="ci-cd">CI/CD</h3>
-
+<h3 id="cicd">CI/CD</h3>
 <p>For a few years now I&rsquo;ve been thinking about how to make accessibility part of a CI/CD pipeline. The purpose of any test as part of a CI/CD suite is as a source of truth, a guarantee that the code you&rsquo;re releasing at any given moment does what you expect. We would expect these tests to check our code functions as expected, our UI displays what we&rsquo;re looking for, and our app responds to interactions from the network and the user. So why wouldn&rsquo;t we expect accessibility to be a part of this? It&rsquo;s an integral component of any app we produce, and if it doesn&rsquo;t work right that&rsquo;s a functional issue with our app. Not all of our users will run into this issue, but it&rsquo;s still a defect. Having accessibility tests as part of a CI/CD suite guarantees a certain level of accessibility quality in our app.</p>
-
 <p>There&rsquo;s a bigger reason I think accessibility tests in CI/CD are important. Insisting on a set level of accessibility before merging or releasing makes accessibility a normal part of the development process. Not a &lsquo;nice to have&rsquo; or &lsquo;look at how great we are&rsquo;, just a normal, boring requirement of releasing software.</p>
-
 <p>There&rsquo;s a problem with this approach, however. Accessibility isn&rsquo;t about checking boxes. Accessibility is about how people experience your app. And this will be different by app and by user. I&rsquo;ve used a couple of commercial accessibility testing tools for iOS, and while they do find legitimate issues, they focus a little too much on compliance with <a href="https://www.w3.org/TR/WCAG21/">WCAG</a> for my liking. This is understandable. Firstly to be able to test, you need a benchmark to test against. Secondly, these are tools for enterprise, and enterprise cares about not being sued. So recording regulatory conformance is important. This means tests return a large number of what could be considered false-positives because elements don&rsquo;t follow the letter of the law. Even though, in reality, they&rsquo;re practically fine. There&rsquo;s also a large amount of practical accessibility experience that automated tests just can&rsquo;t determine.</p>
-
 <p>So there&rsquo;s an unanswered question here: How do we make an automated quality gate for accessibility while acknowledging tests are simultaneously over-prescriptive and incomplete?</p>
-
 <p>I think there&rsquo;s a parallel here with static analysis tools like <a href="https://www.sonarqube.org">SonarQube</a>. Static analysis isn&rsquo;t blocking, but a general indication of code health. You can tell from one merge to the next if the health of the codebase has improved, or otherwise. I&rsquo;d love to implement something that would mimic this for accessibility tests like these, but that&rsquo;s a project for another time.</p>
-
 <h3 id="linting">Linting</h3>
-
 <p>Automated accessibility testing is common on the web, but the downside on iOS is that we can&rsquo;t read the page&rsquo;s full code to validate it at the same time as running the app. I expect storyboard linting could work really well for catching accessibility issues in code before they&rsquo;re committed, but I haven&rsquo;t yet tried this.</p>
-
 <p>I anticipate that as SwiftUI becomes more prevalent, we could use a tool like SwiftLint to prevent common accessibility errors from ever making it into our code. I suspect this would be much faster and less painful than automated testing, and encourage better accessible coding.</p>
 
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -497,7 +442,8 @@ let a11yButton = A11yElement(label: button.label,
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -507,11 +453,6 @@ let a11yButton = A11yElement(label: button.label,
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -521,7 +462,6 @@ let a11yButton = A11yElement(label: button.label,
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -532,11 +472,28 @@ let a11yButton = A11yElement(label: button.label,
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

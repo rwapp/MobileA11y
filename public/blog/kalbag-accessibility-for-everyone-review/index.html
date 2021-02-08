@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/blog/kalbag-accessibility-for-everyone-review/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/blog/kalbag-accessibility-for-everyone-review/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,30 +284,36 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>Review: Accessibility for Everyone - Laura Kalbag</h1>
     <p>Laura&rsquo;s introduction to web accessibility jumped out to me because it&rsquo;s available as an audiobook. Being dyslexic I struggle to read, so prefer to listen to audiobooks where available. Unfortunately, most technical books aren&rsquo;t available as audiobooks for a couple of potentially obvious reasons. Hearing code or descriptions of diagrams and illustrations read aloud may not be the best experience for an audiobook. As such, this book choses to leave those out of the audio version. For this review, I also purchased the eBook version. Having illustrations available there did make it feel like I had lost out by reading the audiobook version. Screen readers do their best to convey information when greeted with diagrams and other non-text content, and I wonder if more could have been done here to convey this information in an audio format. That said, I am grateful Laura took the time to record an audio version, as in all honesty, I wouldn&rsquo;t have completed this book up otherwise. This is not an indictment of Laura or her book, simply that I struggle to read a full book.</p>
-
 <p>Laura&rsquo;s book is very much an introduction, at 160 pages there&rsquo;s no deep discussion of the topics raised. But this makes it an ideal book to pick up for any web developer looking to improve their accessibility skills without wanting the minute decisions behind every one of the several hundred (or more) WCAG success criteria. Instead, this book will guide you through the general principals of web accessibility. It also covers why web accessibility is important to your users, product and your business. Laura takes a pragmatic approach, understanding that the highest levels of accessibility are not always cost effective or appropriate for every product. Instead, the book sets benchmarks for the levels of accessibility we should be adding. The book concludes with a comprehensive resources section full of links to tools and articles that cover much of accessibility and disability. This gives you the option to jump in deeper when you&rsquo;re ready.</p>
-
 <p>Like most of the books available on digital accessibility, Accessibility for Everyone focuses on web accessibility. This does mean many of the specifics do not apply to mobile. But the general principals do. This book does provide some very useful advice for making accessible experiences in any technology stack. For example, I found sections on user testing, research, and feedback invaluable. Chapters on accessibility law and guidelines, and disabilities and impairments are general and educational.</p>
-
 <p>Accessibility for Everyone (2017) by <a href="https://twitter.com/laurakalbag">Laura Kalbag</a> is published by <a href="https://abookapart.com/products/accessibility-for-everyone">A Book Apart</a> and is available as an ebook or paperback directly from them. The audiobook version is available from <a href="https://www.amazon.co.uk/gp/product/B07G2ML7QN/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;tag=mobilea11y-21&amp;creative=6738&amp;linkCode=as2&amp;creativeASIN=B07G2ML7QN&amp;linkId=d494b29b044f9609f99d5199f4163867">Amazon £</a>.</p>
 
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -301,7 +330,8 @@
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -311,11 +341,6 @@
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -325,7 +350,6 @@
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -336,11 +360,28 @@
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

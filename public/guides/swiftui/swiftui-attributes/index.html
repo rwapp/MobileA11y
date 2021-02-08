@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/guides/swiftui/swiftui-attributes/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,91 +284,70 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>SwiftUI Accessibility: Attributes</h1>
-    
-
-<p>When a customer enables an assistive technology to navigate your app the interface that technology navigates isn&rsquo;t exactly the same as the one visible on the screen. They&rsquo;re navigating a modified version that iOS creates especially for assistive technology. This is known as the <a href="https://rwapp.co.uk/2019/10/09/SwiftUI-AUI/">accessibility tree or accessible user interface</a>.</p>
-
+    <p>When a customer enables an assistive technology to navigate your app the interface that technology navigates isn&rsquo;t exactly the same as the one visible on the screen. They&rsquo;re navigating a modified version that iOS creates especially for assistive technology. This is known as the <a href="https://rwapp.co.uk/2019/10/09/SwiftUI-AUI/">accessibility tree or accessible user interface</a>.</p>
 <p>iOS does an incredible job at creating the AUI for you from your SwiftUI code. We can help iOS in creating this by tweaking some element&rsquo;s accessibility attributes. Setting some accessibility attributes through modifiers is a simple way to add a little more meaning and context for your assistive technology users.</p>
-
 <h3 id="label">Label</h3>
-
 <p>An element&rsquo;s Accessibility Label is the first string read by VoiceOver when landing on an accessible element. It&rsquo;s also the string used to activate a control in Voice Control. You should think of this as the name of the element. Set an accessibility label on your SwiftUI element using the modifier <code>.accessibility(label: Text(&quot;Send&quot;))</code>.</p>
-
 <p>In general, the accessibility label is the same as your control&rsquo;s label or text value. So that&rsquo;s what iOS uses by default. This means for most of your elements, you won&rsquo;t ever need to set an accessibility label. There are a few times when you do need to set one: For example, if you haven&rsquo;t given your control a text representation. Although the better option here might be to set the <a href="https://rwapp.co.uk/2019/09/26/SwiftUI-Controls/">text value</a>. If your text value is longer than a couple of words you might want to use a shorter version, this helps with Voice Control. Or if the label might be ambiguous without a little more context.</p>
-
-<pre><code class="language-swift">Button(action: {}, label: { Text(&quot;➡️✉️&quot;) })
-            .accessibility(label: Text(&quot;Send&quot;))
-</code></pre>
-
-<p>A label should allow a VoiceOver user to quickly identify what that element is or does. Not what the content of that element is. Ideally, labels should convey meaning in one word, such as &ldquo;<em>Play</em>&rdquo; or &ldquo;<em>Like</em>&rdquo; for example. <a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/iPhoneAccessibility/Making_Application_Accessible/Making_Application_Accessible.html#//apple_ref/doc/uid/TP40008785-CH102-SW6">Apple advises</a> you should capitalise your accessibility label and don&rsquo;t end it with a full stop. Don&rsquo;t include the type of element as this is redundant and will add noise.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Button(action: {}, label: { Text(<span style="color:#e6db74">&#34;➡️✉️&#34;</span>) })
+            .accessibility(label: Text(<span style="color:#e6db74">&#34;Send&#34;</span>))
+</code></pre></div><p>A label should allow a VoiceOver user to quickly identify what that element is or does. Not what the content of that element is. Ideally, labels should convey meaning in one word, such as &ldquo;<em>Play</em>&rdquo; or &ldquo;<em>Like</em>&rdquo; for example. <a href="https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/iPhoneAccessibility/Making_Application_Accessible/Making_Application_Accessible.html#//apple_ref/doc/uid/TP40008785-CH102-SW6">Apple advises</a> you should capitalise your accessibility label and don&rsquo;t end it with a full stop. Don&rsquo;t include the type of element as this is redundant and will add noise.</p>
 <h3 id="value">Value</h3>
-
 <p>This should be the text representation of the value or content of a control. The current numerical value of a slider, or the current status of a switch for example. Typically your accessibility value is defined for you by your control. For example, a slider will always set the accessibility value to its current numerical value.</p>
-
-<p>There are times when you will need to set this value yourself. If you group subviews together into a semantic view, you will need to choose which of your subviews&rsquo; values you need to report. You can set a value using the modifier <code>.accessibility(value: Text(&quot;10 out of 10&quot;))</code>.</p>
-
+<p>There are times when you will need to set this value yourself. If you group subviews together into a semantic view, you will need to choose which of your subviews' values you need to report. You can set a value using the modifier <code>.accessibility(value: Text(&quot;10 out of 10&quot;))</code>.</p>
 <p>At times it may be suitable to set the accessibility value to something different from the value displayed in your visual user interface. Imagine your UI features a slider to adjust, say, the rating of a good dog out of 10. The accessibility value generated for you by the slider will be &ldquo;<em>100 percent</em>&rdquo;. It will give your user more meaning if you adjust your sliders accessibility value to read &ldquo;<em>10 out of 10</em>&rdquo;.</p>
-
-<pre><code class="language-swift">Slider(value: $sliderValue, in: minimumValue…maximumvalue)
-    .accessibility(value: Text(&quot;\(Int(sliderValue)) out of 10&quot;))
-</code></pre>
-
-<p>Don&rsquo;t get in your customer&rsquo;s way by adding redundant information. Remember, VoiceOver is not the only medium that uses this label, braille keyboards, for example, will display this value. If you feel you need to add further context for a customer to understand a control, the accessibility label or accessibility hint may be the more suitable attribute to set.</p>
-
-<p>Buttons don&rsquo;t have an accessibility value by default. But if your text is long, you may be better to set a short accessibility label and the rest of the text as a value. this will help Voice Control users. Imagine a Twitter client that allows users to select a tweet for more options. We would set the text of the tweet as the value, and set the accessibility label to &ldquo;<em>tweet from <a href="https://twitter.com/RobRWAPP">@RobRWAPP</a>.</em>&ldquo;</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Slider(value: <span style="color:#960050;background-color:#1e0010">$</span>sliderValue, <span style="color:#66d9ef">in</span>: minimumValue<span style="color:#960050;background-color:#1e0010">…</span>maximumvalue)
+    .accessibility(value: Text(<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">\(</span>Int<span style="color:#e6db74">(</span>sliderValue<span style="color:#e6db74">))</span><span style="color:#e6db74"> out of 10&#34;</span>))
+</code></pre></div><p>Don&rsquo;t get in your customer&rsquo;s way by adding redundant information. Remember, VoiceOver is not the only medium that uses this label, braille keyboards, for example, will display this value. If you feel you need to add further context for a customer to understand a control, the accessibility label or accessibility hint may be the more suitable attribute to set.</p>
+<p>Buttons don&rsquo;t have an accessibility value by default. But if your text is long, you may be better to set a short accessibility label and the rest of the text as a value. this will help Voice Control users. Imagine a Twitter client that allows users to select a tweet for more options. We would set the text of the tweet as the value, and set the accessibility label to &ldquo;<em>tweet from <a href="https://twitter.com/RobRWAPP">@RobRWAPP</a>.</em>&rdquo;</p>
 <h3 id="hint">Hint</h3>
-
 <p>VoiceOver reads an element&rsquo;s accessibility hint last after a short pause. Use the hint to give extra information on what the result of performing this element&rsquo;s action will be. But only if this consequence is not immediately obvious from the element&rsquo;s accessibility label. Many VoiceOver users disable or skip over hints and only use them if they find an element confusing at first. Because of this, you should use a hint to provide extra context, and not be a required part of your interface.</p>
-
 <p>The hint attribute is optional, and not set for you by iOS. Set an accessibility hint on an element using the modifier <code>.accessibility(hint: Text(&quot;Sends your message.&quot;))</code>.</p>
-
 <p>In their guidance on writing good accessibility hints, Apple suggests imagining describing the controls action to a friend. You might tell your friend &ldquo;tapping the send button sends your message&rdquo;. But assuming you set up your accessibility traits and label correctly, repeating the information that this element is a button and that it&rsquo;s called &ldquo;<em>send</em>&rdquo; is redundant. So, your hint would be &ldquo;<em>Sends your message.</em>&rdquo; Avoid &ldquo;<em>Send your message.</em>&rdquo; as this sounds like an instruction, rather than guidance. Hints should begin with a capital letter and end with a full stop.</p>
-
-<pre><code class="language-swift">Button(action: {}, label: { Text(&quot;➡️✉️&quot;) })
-    .accessibility(hint: Text(&quot;Sends your message.&quot;))
-</code></pre>
-
-<h3 id="identifier">Identifier</h3>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Button(action: {}, label: { Text(<span style="color:#e6db74">&#34;➡️✉️&#34;</span>) })
+    .accessibility(hint: Text(<span style="color:#e6db74">&#34;Sends your message.&#34;</span>))
+</code></pre></div><h3 id="identifier">Identifier</h3>
 <p>The connection to accessibility here is a little tenuous. The identifier is not presented to your customer in any way. It is a string you can use to identify your view to UI tests or internally in your app&rsquo;s code. Set it with the modifier <code>.accessibility(identifier: &quot;My unique identifier&quot;)</code>. Where the other attributes take a SwiftUI <code>Text()</code> value, this is not user facing, so takes a Swift <code>String</code>.</p>
-
-<pre><code class="language-swift">Button(action: {}, label: { Text(&quot;➡️✉️&quot;) })
-    .accessibility(identifier: &quot;sendMessageButton&quot;)
-</code></pre>
-
-<hr />
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Button(action: {}, label: { Text(<span style="color:#e6db74">&#34;➡️✉️&#34;</span>) })
+    .accessibility(identifier: <span style="color:#e6db74">&#34;sendMessageButton&#34;</span>)
+</code></pre></div><hr>
 <p>Thanks for reading. This story is part of a series on SwiftUI Accessibility. Check out my other guides in this series:</p>
-
-<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><br/>
-<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><br/>
+<p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-images/">SwiftUI Accessibility: Images</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/">SwiftUI Accessibility: Dynamic Type</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-aui/">SwiftUI Accessibility: Accessible User Interface</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/">SwiftUI Accessibility: Sort Priority</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-attributes/">SwiftUI Accessibility: Attributes</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-traits/">SwiftUI Accessibility: Traits</a><!-- raw HTML omitted -->
+<a href="https://mobilea11y.com/guides/swiftui/swiftui-settings/">SwiftUI Accessibility: User Settings</a><!-- raw HTML omitted -->
 <a href="https://mobilea11y.com/guides/swiftui/swiftui-semantic-views/">SwiftUI Accessibility: Semantic Views</a></p>
 
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -362,7 +364,8 @@
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -372,11 +375,6 @@
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -386,7 +384,6 @@
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -397,11 +394,28 @@
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

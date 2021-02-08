@@ -20,7 +20,7 @@ html {
     font-family: Arial, Helvetica Neue, sans-serif;
     line-height: 1.5;
     color: #111;
-    background-color: #fefefe;
+    background-color: #F9F5F4;
 }
 template {
   display: none !important;
@@ -155,7 +155,7 @@ code {
 }
 .cmd code {
     color: #fefefe;
-    white-space: nowrap;
+    white-space: pre-wrap;
 }
 .cmd code::before {
     content: '$';
@@ -361,6 +361,7 @@ caption {
 .patterns {
     overflow: auto;
     margin-top: 1.5rem;
+    min-width: max-content;
 }
 .patterns * {
     margin-top: 0;
@@ -376,7 +377,6 @@ caption {
     list-style: none;
 }
 .patterns li + li {
-    margin-top: 0.75rem;
 }
 .patterns ul ul {
     margin-left: 0.75rem;
@@ -388,6 +388,8 @@ caption {
     align-items: baseline;
     font-weight: bold;
     padding: 0 1rem;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 .pattern a:focus {
     outline: none;
@@ -401,8 +403,6 @@ caption {
   background-color: #111;
   clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%);
   color: #fefefe;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
 }
 
 /* Menu button */
@@ -1048,4 +1048,14 @@ h1 svg {
       border-left: 0.5rem solid;
       background: none;
   }
+}
+
+::-moz-selection { /* Code for Firefox */
+    background: rgba(0,0,0,.8);
+    color: #fefefe;
+}
+  
+::selection {
+  background: rgba(0,0,0,.8);
+  color: #fefefe;
 }

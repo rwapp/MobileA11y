@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/blog/custom-accessibility-content/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/blog/custom-accessibility-content/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,105 +284,83 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>iOS 14: Custom Accessibility Content</h1>
-    
-
-<p>Each year at WWDC Xcode Santa brings us exciting new APIs to play with, and this year our accessibility present is <a href="https://developer.apple.com/documentation/accessibility/customized_accessibility_content">Customized Accessibility Content</a>. This API flew under the radar a little, I’m told this is because it&rsquo;s so new there wasn’t even time for inclusion at WWDC. But this new feature helps to solve a difficult question when designing a VoiceOver interface - where is the balance between too much and too little content.</p>
-
+    <p>Each year at WWDC Xcode Santa brings us exciting new APIs to play with, and this year our accessibility present is <a href="https://developer.apple.com/documentation/accessibility/customized_accessibility_content">Customized Accessibility Content</a>. This API flew under the radar a little, I’m told this is because it&rsquo;s so new there wasn’t even time for inclusion at WWDC. But this new feature helps to solve a difficult question when designing a VoiceOver interface - where is the balance between too much and too little content.</p>
 <h2 id="voiceover-noise">VoiceOver Noise</h2>
-
 <p>Customize Accessibility Content solves a common issue with presenting complex data to VoiceOver. Present too much and you’ll add noise and make your app hard to navigate. Present too little and you’re only giving your customers half the experience. Both extremes are a frustrating experience, and finding the happy middle state here is arguably impossible because different users will want different information when using your app.</p>
-
 <p>Take the Files app as an example. Each entry has the file or folder name, a visual icon, the date it was last accessed, then either the size on disk or the number of items contained within. This is quite a lot of information crammed into a small area. Visually this works though, because the date and size have reduced prominence, and the icon provides a large amount of context. This means we can scan down the list to find the filename we’re looking for, then if we need more data we can look at the extra information to check we have the item we need.</p>
-
-<p><img src="/images/files-keynote.PNG" alt="iOS Files app displaying a Keynote folder" /></p>
-
+<p><img src="/images/files-keynote.PNG" alt="iOS Files app displaying a Keynote folder"></p>
 <p>With VoiceOver, however, everything has the same prominence. For the above folder, VoiceOver announces “Keynote. 16/04/2020. 1 item. Folder”. This gives all the same detail, but imagine navigating down a big list of these entries trying to find the file or folder you’re looking for - that&rsquo;s quite a task. And there’s a lot of superfluous information for that purpose. There are techniques for speeding this up. For example, setting the filename to have the <code>.header</code> accessibility trait will allow users to actively skip to the filenames only. But this is an active technique that your user has to opt in to, therefore it&rsquo;s not a comparable experience with visually navigating this list. Consider too if VoiceOver users would benefit from extra verbal detail that visual users wouldn&rsquo;t need, how would we present this?</p>
-
 <p>Customize Accessibility Content takes the opposite approach, by hiding extra detail we can make our interfaces faster, simpler, and more enjoyable to navigate for VoiceOver users while progressively disclosing extra detail for those who want it. This not only allows smoother VoiceOver navigation but also means we can add even more detail for VoiceOver users than for visual users. Apple uses this technique in the iOS Photos app.</p>
-
-<h2 id="apple-s-use">Apple&rsquo;s Use</h2>
-
+<h2 id="apples-use">Apple&rsquo;s Use</h2>
 <p>Apple has implemented this feature in Photos for iOS 14. and it provides a great case study for how Apple envisage we should use this feature. Navigate the collection of photos with VoiceOver enabled and you’ll hear the date each photo was taken. Take this example of me ecstatically meeting my hero, Eeyore.</p>
-
-<p><img src="/images/customcontent-photonav.PNG" alt="VoiceOver focusing on a photo" /></p>
-
+<p><img src="/images/customcontent-photonav.PNG" alt="VoiceOver focusing on a photo"></p>
 <p>But photos have a ton of metadata aside from the date alone that helps us discover if we have the image we’re looking for. This is where our custom content comes in. Using the VoiceOver rotor control I can switch to More Content.</p>
-
-<p><img src="/images/customcontent-rotor.jpeg" alt="VoiceOver rotor showing More Content" /></p>
-
+<p><img src="/images/customcontent-rotor.jpeg" alt="VoiceOver rotor showing More Content"></p>
 <p>When in this mode I can now perform a vertical swipe to read extra content. Firstly, the time the photo was taken, followed by the orientation of the photo.</p>
-
-<p><img src="/images/customcontent-time.PNG" alt="VoiceOver reading the time the photo was taken" /> <img src="/images/customcontent-orientation.PNG" alt="VoiceOver reading the photo orientation" /></p>
-
+<p><img src="/images/customcontent-time.PNG" alt="VoiceOver reading the time the photo was taken"> <img src="/images/customcontent-orientation.PNG" alt="VoiceOver reading the photo orientation"></p>
 <p>Adding all this information at the top level for every photo would be too much information. But when we want more detail it&rsquo;s easy to access. As such, custom accessibility content is a powerful technique for making rich accessible experiences.</p>
-
-<h2 id="improving-your-app-s-experience">Improving Your App&rsquo;s Experience</h2>
-
+<h2 id="improving-your-apps-experience">Improving Your App&rsquo;s Experience</h2>
 <p>Let&rsquo;s take a look at how we might use this to improve the Files example from above.</p>
-
 <p>To provide custom content your view class needs to implement the <code>AXCustomContentProvider</code> protocol. This protocol has a single requirement, that you provide an <code>accessibilityCustomContent</code> var with an array of <code>AXCustomContent</code> objects in the order you want VoiceOver to read them to your user.</p>
-
 <p><code>AXCustomContent</code> objects are a key-value pair of strings. In the above Photos example, ‘Landscape’ is the value, and ‘Orientation’ the key or label. Ideally, both labels and values should be single words and should both be capitalised with no period at the end. In Files we want to add the last modified date, so let&rsquo;s create an <code>AXCustomContent</code> as below.</p>
-
-<pre><code class="language-swift">let lastModified = AXCustomContent(label: &quot;Modified&quot;, value: &quot;16/04/2020&quot;)
-</code></pre>
-
-<p>Adding the extra information we need in Files, our implementation would look like this.</p>
-
-<pre><code class="language-swift">extension MyCustomView: AXCustomContentProvider {
-    var accessibilityCustomContent: [AXCustomContent]! {
-        get {
-            let lastModified = AXCustomContent(label: &quot;Modified&quot;, value: &quot;16/04/2020&quot;)
-            let items = AXCustomContent(label: &quot;Items&quot;, value: &quot;1&quot;)
-            let type = AXCustomContent(label: &quot;Type&quot;, value: &quot;Folder&quot;)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> lastModified = AXCustomContent(label: <span style="color:#e6db74">&#34;Modified&#34;</span>, value: <span style="color:#e6db74">&#34;16/04/2020&#34;</span>)
+</code></pre></div><p>Adding the extra information we need in Files, our implementation would look like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">extension</span> <span style="color:#a6e22e">MyCustomView</span>: AXCustomContentProvider {
+    <span style="color:#66d9ef">var</span> accessibilityCustomContent: [AXCustomContent]<span style="color:#f92672">!</span> {
+        <span style="color:#66d9ef">get</span> {
+            <span style="color:#66d9ef">let</span> lastModified = AXCustomContent(label: <span style="color:#e6db74">&#34;Modified&#34;</span>, value: <span style="color:#e6db74">&#34;16/04/2020&#34;</span>)
+            <span style="color:#66d9ef">let</span> items = AXCustomContent(label: <span style="color:#e6db74">&#34;Items&#34;</span>, value: <span style="color:#e6db74">&#34;1&#34;</span>)
+            <span style="color:#66d9ef">let</span> type = AXCustomContent(label: <span style="color:#e6db74">&#34;Type&#34;</span>, value: <span style="color:#e6db74">&#34;Folder&#34;</span>)
             
-            return [lastModified, items, type]
+            <span style="color:#66d9ef">return</span> [lastModified, items, type]
         }
-        set(accessibilityCustomContent) {}
+        <span style="color:#66d9ef">set</span>(accessibilityCustomContent) {}
     }
 }
-</code></pre>
-
-<p>One problem here though is that we might be hiding some information that is integral to navigating this screen. Personally, I think the item type is crucial to know if you have the right document. In this case, we can set the priority of the <code>type</code> content to be <code>.high</code>. Content with the <code>.high</code> priority is always read out when VoiceOver focuses on the element, without your user cycling through the additional content. Because of this, you should use it sparingly only when appropriate. I’d suggest adding no more than one <code>.high</code> value to each element, although there is no fast rule here. Because VoiceOver reads <code>.high</code> priority content by default, this should come at the start of the list. So our new code looks like this.</p>
-
-<pre><code class="language-swift">extension MyCustomView: AXCustomContentProvider {
-    var accessibilityCustomContent: [AXCustomContent]! {
-        get {
-            let lastModified = AXCustomContent(label: &quot;Modified&quot;, value: &quot;16/04/2020&quot;)
-            let items = AXCustomContent(label: &quot;Items&quot;, value: &quot;1&quot;)
-            let type = AXCustomContent(label: &quot;Type&quot;, value: &quot;Folder&quot;)
+</code></pre></div><p>One problem here though is that we might be hiding some information that is integral to navigating this screen. Personally, I think the item type is crucial to know if you have the right document. In this case, we can set the priority of the <code>type</code> content to be <code>.high</code>. Content with the <code>.high</code> priority is always read out when VoiceOver focuses on the element, without your user cycling through the additional content. Because of this, you should use it sparingly only when appropriate. I’d suggest adding no more than one <code>.high</code> value to each element, although there is no fast rule here. Because VoiceOver reads <code>.high</code> priority content by default, this should come at the start of the list. So our new code looks like this.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">extension</span> <span style="color:#a6e22e">MyCustomView</span>: AXCustomContentProvider {
+    <span style="color:#66d9ef">var</span> accessibilityCustomContent: [AXCustomContent]<span style="color:#f92672">!</span> {
+        <span style="color:#66d9ef">get</span> {
+            <span style="color:#66d9ef">let</span> lastModified = AXCustomContent(label: <span style="color:#e6db74">&#34;Modified&#34;</span>, value: <span style="color:#e6db74">&#34;16/04/2020&#34;</span>)
+            <span style="color:#66d9ef">let</span> items = AXCustomContent(label: <span style="color:#e6db74">&#34;Items&#34;</span>, value: <span style="color:#e6db74">&#34;1&#34;</span>)
+            <span style="color:#66d9ef">let</span> type = AXCustomContent(label: <span style="color:#e6db74">&#34;Type&#34;</span>, value: <span style="color:#e6db74">&#34;Folder&#34;</span>)
             
             type.importance = .high
             
-            return [type, lastModified, items]
+            <span style="color:#66d9ef">return</span> [type, lastModified, items]
         }
-        set(accessibilityCustomContent) {}
+        <span style="color:#66d9ef">set</span>(accessibilityCustomContent) {}
     }
 }
-</code></pre>
-
-<p>We can also use custom accessibility content to provide extra context to an item, and because our user is choosing to iterate through this, rather than it being read by default, there’s no worry about causing noise for our customer. As with Photos, we could even add more content for VoiceOver users than for visual users. For files we could add the creation date, enclosing items size for folders, or any tags for example.</p>
-
+</code></pre></div><p>We can also use custom accessibility content to provide extra context to an item, and because our user is choosing to iterate through this, rather than it being read by default, there’s no worry about causing noise for our customer. As with Photos, we could even add more content for VoiceOver users than for visual users. For files we could add the creation date, enclosing items size for folders, or any tags for example.</p>
 <p>Here I’ve given you two examples of usage for this new API: hiding extra content to VoiceOver such as my Files example and providing context for non-visual users in Apple’s own Photos example. You could also use this in your app to provide extra detail for graphs or other data visualisations, data tables, diagrams, illustrations or animations could be other candidates for improvement with this API.</p>
-
 <p>Many thanks to <a href="https://twitter.com/azzoor">Aaron Stephenson</a> for his assistance researching this new feature.</p>
 
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -376,7 +377,8 @@
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -386,11 +388,6 @@
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -400,7 +397,6 @@
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -411,11 +407,28 @@
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>

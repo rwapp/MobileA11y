@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <meta name="generator" content="Hugo 0.59.1" />
-  <link rel="canonical" href="https://mobilea11y.com/quick-wins/landscape/">
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="canonical" href="/quick-wins/landscape/">
 
   
 
@@ -19,11 +19,18 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-  <link rel="stylesheet" href="https://mobilea11y.com/css/prism.css" media="none" onload="this.media='all';">
+  <style>
+    body {
+      visibility: hidden;
+      opacity: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
 
   
   
-  <link rel="stylesheet" type="text/css" href="https://mobilea11y.com/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
   <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
 
@@ -33,6 +40,7 @@
     * { background-color: inherit }
     img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
   </style>
+  
 
   
   
@@ -41,6 +49,15 @@
 
   <body>
     <a href="#main">skip to content</a>
+    <noscript>
+  <style>
+    body {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</noscript>
+
     <svg style="display: none">
   <symbol id="bookmark" viewBox="0 0 40 50">
    <g transform="translate(2266 3206.2)">
@@ -138,13 +155,19 @@
         <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
       </a>
       <p class="library-desc">
-        
-          A blog about making mobile more accessible for all.
-  Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
-        
+         A blog about making mobile more accessible for all.
+Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
       </p>
     </div>
     <nav id="patterns-nav" class="patterns" role="navigation">
+
+  <div>
+    <label for="themer">
+      dark theme: <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span>
+    </label>
+</div>
+
   <h2 class="vh">Main navigation</h2>
   <button id="menu-button" aria-expanded="false">
     <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
@@ -261,41 +284,42 @@
   
   </ul>
 </nav>
+    
   </div>
 </header>
+
       <div class="main-and-footer">
         <div>
           
   <main id="main">
     <h1>Quick Win - Support Landscape</h1>
     <p>If you have a regulatory requirement to provide accessibility in your app (spoiler, you do) the chances are it will say you have a requirement to reach <a href="https://www.w3.org/TR/WCAG21/">WCAG AA</a>. While this is likely meaningless to anyone other an accessibility professionals, in short it means you are providing the minimum level of accessibility features required to make your app usable by the majority of people.</p>
-
 <p>This post is about one such requirement, the jazzily titled <a href="https://www.w3.org/WAI/WCAG21/Understanding/orientation.html">Success Criterion 1.3.4</a>. 1.3.4 is often overlooked, I&rsquo;ve see it forgotten by accessibility auditors, overlooked by testers, removed by engineers, and ignored by designers. Yet this feature is one that is already enabled by default in your app. One that you have to choose to disable. For both Android and iOS when you create a new app, the app supports landscape mode out of the box, and all you need to do to continue supporting it is to build robust interfaces, and not disable it. Yet often one of the first things developers do when creating a new app is to disable landscape modes.</p>
-
 <p>I get it, most apps probably do work and look best in portrait, and the majority of your users probably will never want to use landscape. But accessibility is about providing the flexibility for your customers to use your software the way that is most comfortable for them, not the way you&rsquo;re forcing them to because it makes your development work easier.</p>
-
 <p>Landscape allows more characters per line, ideal for larger text sizes. It makes on screen keyboards bigger meaning the keys are easier to see and easier to hit. Some users may have their device locked or secured in position, such as a wheelchair mount, or a stand for if the user can&rsquo;t easily hold or manually manipulate their device. All these categories of people will appreciate you leaving this default option available to them.</p>
-
 <p>So next time you start an app, don&rsquo;t disable landscape. And if you have already disabled it, consider re-enabling landscape orientations by checking these settings.</p>
-
 <p>In Android check your activities don&rsquo;t include the following property.
 <code>android:screenOrientation=&quot;portrait&quot;</code></p>
-
 <p>For iOS check your app target&rsquo;s general settings and ensure the landscape checkboxes are enabled.</p>
-
-<p><img src="/images/LandscapeCheckbox.png" alt="Xcode checkboxes for device orientation." /></p>
-
+<p><img src="/images/LandscapeCheckbox.png" alt="Xcode checkboxes for device orientation."></p>
 <p>If your app wasn&rsquo;t built with landscape in mind it&rsquo;s now worth checking your app&rsquo;s screens in a landscape orientation. If your interfaces were built in a robust manner using the correct constraints, stacks and layouts then your app should just work. But you might find some components that need a little updating so they know how to correctly display in this new orientation. Check for overlapping elements, or elements that haven&rsquo;t expanded as far as they should.</p>
 
     <div class="book-footer">
     <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
 
-            <a href="https://amzn.to/2KSDmaz" alt="Developing Inclusive Mobile Apps cover"><img src="/images/cover.png"/></a>
-        
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
         </div>
     <div class="book-details">
     <p>
-        My book <a href="https://amzn.to/2KSDmaz">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132">Apress</a> and <a href="https://amzn.to/2KSDmaz">Amazon</a>.
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
     </p>
     </div>
 </div>
@@ -312,7 +336,8 @@
   
   </div>
           </div>
-          <footer role="contentinfo">
+          
+            <footer role="contentinfo">
   
   <div class="social-footer">
     <div class="footer-social">
@@ -322,11 +347,6 @@
   
   
   </div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
-    </label>
-    
   </div>
   
   
@@ -336,7 +356,6 @@
   
     <p class="margin-top-none">
     <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-
 <p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
 
     </p>
@@ -347,11 +366,28 @@
     document.getElementById("copyright-year").innerHTML = year;
 </script>
 
+          
         </div>
       </div>
     </div>
-    <script src="https://mobilea11y.com/js/prism.js"></script>
-<script src="https://mobilea11y.com/js/dom-scripts.js"></script>
+    
+
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+
+
+
+<script src="/js/dom-scripts.js"></script>  
+
+<script src="/js/prism.js"></script>
+
+
+
+<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
+
+<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
+
+
+
+
   </body>
 </html>
