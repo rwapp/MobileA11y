@@ -11,7 +11,7 @@ tags:
 
 One big accessibility improvement in SwiftUI comes in the form of named controls. Nearly all controls and some non-interactive views ([see Images](https://rwapp.co.uk/2019/09/11/SwiftUI-Images/)) can take a Text view as part of their view builder. The purpose of this is to tie the meaning to the control.
 
-```swift
+```
 Toggle(isOn: $updates) {
     Text("Send me updates")
 }

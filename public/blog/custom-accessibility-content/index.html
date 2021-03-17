@@ -312,36 +312,36 @@ Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
 <p>Let&rsquo;s take a look at how we might use this to improve the Files example from above.</p>
 <p>To provide custom content your view class needs to implement the <code>AXCustomContentProvider</code> protocol. This protocol has a single requirement, that you provide an <code>accessibilityCustomContent</code> var with an array of <code>AXCustomContent</code> objects in the order you want VoiceOver to read them to your user.</p>
 <p><code>AXCustomContent</code> objects are a key-value pair of strings. In the above Photos example, ‘Landscape’ is the value, and ‘Orientation’ the key or label. Ideally, both labels and values should be single words and should both be capitalised with no period at the end. In Files we want to add the last modified date, so let&rsquo;s create an <code>AXCustomContent</code> as below.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> lastModified = AXCustomContent(label: <span style="color:#e6db74">&#34;Modified&#34;</span>, value: <span style="color:#e6db74">&#34;16/04/2020&#34;</span>)
-</code></pre></div><p>Adding the extra information we need in Files, our implementation would look like this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">extension</span> <span style="color:#a6e22e">MyCustomView</span>: AXCustomContentProvider {
-    <span style="color:#66d9ef">var</span> accessibilityCustomContent: [AXCustomContent]<span style="color:#f92672">!</span> {
-        <span style="color:#66d9ef">get</span> {
-            <span style="color:#66d9ef">let</span> lastModified = AXCustomContent(label: <span style="color:#e6db74">&#34;Modified&#34;</span>, value: <span style="color:#e6db74">&#34;16/04/2020&#34;</span>)
-            <span style="color:#66d9ef">let</span> items = AXCustomContent(label: <span style="color:#e6db74">&#34;Items&#34;</span>, value: <span style="color:#e6db74">&#34;1&#34;</span>)
-            <span style="color:#66d9ef">let</span> type = AXCustomContent(label: <span style="color:#e6db74">&#34;Type&#34;</span>, value: <span style="color:#e6db74">&#34;Folder&#34;</span>)
+<pre><code>let lastModified = AXCustomContent(label: &quot;Modified&quot;, value: &quot;16/04/2020&quot;)
+</code></pre><p>Adding the extra information we need in Files, our implementation would look like this.</p>
+<pre><code>extension MyCustomView: AXCustomContentProvider {
+    var accessibilityCustomContent: [AXCustomContent]! {
+        get {
+            let lastModified = AXCustomContent(label: &quot;Modified&quot;, value: &quot;16/04/2020&quot;)
+            let items = AXCustomContent(label: &quot;Items&quot;, value: &quot;1&quot;)
+            let type = AXCustomContent(label: &quot;Type&quot;, value: &quot;Folder&quot;)
             
-            <span style="color:#66d9ef">return</span> [lastModified, items, type]
+            return [lastModified, items, type]
         }
-        <span style="color:#66d9ef">set</span>(accessibilityCustomContent) {}
+        set(accessibilityCustomContent) {}
     }
 }
-</code></pre></div><p>One problem here though is that we might be hiding some information that is integral to navigating this screen. Personally, I think the item type is crucial to know if you have the right document. In this case, we can set the priority of the <code>type</code> content to be <code>.high</code>. Content with the <code>.high</code> priority is always read out when VoiceOver focuses on the element, without your user cycling through the additional content. Because of this, you should use it sparingly only when appropriate. I’d suggest adding no more than one <code>.high</code> value to each element, although there is no fast rule here. Because VoiceOver reads <code>.high</code> priority content by default, this should come at the start of the list. So our new code looks like this.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">extension</span> <span style="color:#a6e22e">MyCustomView</span>: AXCustomContentProvider {
-    <span style="color:#66d9ef">var</span> accessibilityCustomContent: [AXCustomContent]<span style="color:#f92672">!</span> {
-        <span style="color:#66d9ef">get</span> {
-            <span style="color:#66d9ef">let</span> lastModified = AXCustomContent(label: <span style="color:#e6db74">&#34;Modified&#34;</span>, value: <span style="color:#e6db74">&#34;16/04/2020&#34;</span>)
-            <span style="color:#66d9ef">let</span> items = AXCustomContent(label: <span style="color:#e6db74">&#34;Items&#34;</span>, value: <span style="color:#e6db74">&#34;1&#34;</span>)
-            <span style="color:#66d9ef">let</span> type = AXCustomContent(label: <span style="color:#e6db74">&#34;Type&#34;</span>, value: <span style="color:#e6db74">&#34;Folder&#34;</span>)
+</code></pre><p>One problem here though is that we might be hiding some information that is integral to navigating this screen. Personally, I think the item type is crucial to know if you have the right document. In this case, we can set the priority of the <code>type</code> content to be <code>.high</code>. Content with the <code>.high</code> priority is always read out when VoiceOver focuses on the element, without your user cycling through the additional content. Because of this, you should use it sparingly only when appropriate. I’d suggest adding no more than one <code>.high</code> value to each element, although there is no fast rule here. Because VoiceOver reads <code>.high</code> priority content by default, this should come at the start of the list. So our new code looks like this.</p>
+<pre><code>extension MyCustomView: AXCustomContentProvider {
+    var accessibilityCustomContent: [AXCustomContent]! {
+        get {
+            let lastModified = AXCustomContent(label: &quot;Modified&quot;, value: &quot;16/04/2020&quot;)
+            let items = AXCustomContent(label: &quot;Items&quot;, value: &quot;1&quot;)
+            let type = AXCustomContent(label: &quot;Type&quot;, value: &quot;Folder&quot;)
             
             type.importance = .high
             
-            <span style="color:#66d9ef">return</span> [type, lastModified, items]
+            return [type, lastModified, items]
         }
-        <span style="color:#66d9ef">set</span>(accessibilityCustomContent) {}
+        set(accessibilityCustomContent) {}
     }
 }
-</code></pre></div><p>We can also use custom accessibility content to provide extra context to an item, and because our user is choosing to iterate through this, rather than it being read by default, there’s no worry about causing noise for our customer. As with Photos, we could even add more content for VoiceOver users than for visual users. For files we could add the creation date, enclosing items size for folders, or any tags for example.</p>
+</code></pre><p>We can also use custom accessibility content to provide extra context to an item, and because our user is choosing to iterate through this, rather than it being read by default, there’s no worry about causing noise for our customer. As with Photos, we could even add more content for VoiceOver users than for visual users. For files we could add the creation date, enclosing items size for folders, or any tags for example.</p>
 <p>Here I’ve given you two examples of usage for this new API: hiding extra content to VoiceOver such as my Files example and providing context for non-visual users in Apple’s own Photos example. You could also use this in your app to provide extra detail for graphs or other data visualisations, data tables, diagrams, illustrations or animations could be other candidates for improvement with this API.</p>
 <p>Many thanks to <a href="https://twitter.com/azzoor">Aaron Stephenson</a> for his assistance researching this new feature.</p>
 

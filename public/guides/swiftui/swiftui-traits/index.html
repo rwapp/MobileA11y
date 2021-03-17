@@ -295,10 +295,10 @@ Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
     <h1>SwiftUI Accessibility: Traits</h1>
     <p>Accessibility traits are a group of attributes on a SwiftUI element. They inform assistive technologies how to interact with the element or present it to your customer. Each element has a selection of default traits, but you might need to change these as you create your UI.</p>
 <p>In SwiftUI there are two modifiers to use for traits, <code>.accessibility(addTraits: )</code> and <code>.accessibility(removeTraits: )</code> which add or remove traits respectively. Each modifier takes as its argument either a single accessibility trait or a set of traits.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Button(action: {}, label: { Text(<span style="color:#e6db74">&#34;Button&#34;</span>) })
+<pre><code>Button(action: {}, label: { Text(&quot;Button&quot;) })
     .accessibility(addTraits: [.isSelected, .playsSound])
     .accessibility(removeTraits: .isButton)
-</code></pre></div><h3 id="isbutton">isButton</h3>
+</code></pre><h3 id="isbutton">isButton</h3>
 <p>This element is a button that you customer can interact with. This causes VoiceOver to announce &lsquo;<em>button</em>&rsquo; after reading the items accessibility label. It also tells Switch Control and Voice Control that it&rsquo;s possible to interact with this control.</p>
 <h3 id="isheader">isHeader</h3>
 <p>Any large text header element that divides content. For example a navigation bar title, or a table section header. This causes VoiceOver to read &lsquo;<em>heading</em>&rsquo; after reading the accessibility label.</p>

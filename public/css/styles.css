@@ -163,6 +163,10 @@ code {
     padding-right: 0.25em;
 }
 
+::placeholder {
+    color: #595959;
+}
+
 /* Lists */
 main ul,
 main ol {

@@ -18,7 +18,7 @@ This happens because the buttons have no text value and are icons only. This mea
 
 This can be fixed with a single line of code by adding an accessibility label to each button, something like this:
 
-```Swift
+```
 button.accessibilityLabel = "Move 1 model to painted"
 ```
 

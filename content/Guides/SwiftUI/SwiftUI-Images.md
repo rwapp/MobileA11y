@@ -25,13 +25,13 @@ Because of this change, there are a couple of considerations you need to bear in
 
 Because your image is accessible, VoiceOver needs some content to announce. Most of the time the only readable content you provide is the file name of the image. 
 
-```swift
+```
 Image("shuttle")
 ```
 
 This is fine if you call your image image `Space shuttle`, but if your image is called `164234main_image_feature_713_ys_full` then what your customer hears is useless and frustrating. Image, like most SwiftUI elements, can take a Text value providing a friendlier string to read to your user.
 
-```swift
+```
 Image("164234main_image_feature_713_ys_full", label: Text("Shuttle"))
 ```
 
@@ -39,7 +39,7 @@ Image("164234main_image_feature_713_ys_full", label: Text("Shuttle"))
 
 Sometimes it’s not appropriate for an image to be accessible. For example, providing an error icon next to the text ‘error’. If this image was accessible your VoiceOver user would hear ‘Error’ (swipe) ‘Error’. This duplication adds time and effort in navigation for VoiceOver users. In this instance it’s better to use the Image initializer decorative, this will display your image the same as above, but it is now hidden to VoiceOver.
 
-```swift
+```
 Image(decorative: "Error")
 ```
 
@@ -51,7 +51,7 @@ Image(decorative: "Error")
 System images are a great new feature in iOS 13, Apple provides a suite of common system glyphs such as info circles and share icons that you can use as icons in your app. You can browse the full collection by downloading the SF Symbols app from the Apple Developer website.
 In my opinion, Apple has implemented the accessibility wrong for these images. Like all images in SwiftUI, these system glyphs are accessible by default. As these are system images they have names like ‘keyboard.chevron.compact.down’ and ‘questionmark.video.fill’. These are the names that VoiceOver will read and are meaningless to your customers. Apple should mark these images as not accessible by default, or at least have an initializer option to add a friendly name. Unless and until Apple makes a change like this, you will need to add the `.accessibility(hidden: true)` modifier to any system images you are using.
 
-```swift
+```
 Image(systemName: "exclamationmark.triangle.fill")
    .accessibility(hidden: true)
    ```

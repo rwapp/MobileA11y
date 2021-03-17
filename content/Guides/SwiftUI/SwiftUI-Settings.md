@@ -35,13 +35,13 @@ If your customer has chosen to enable reduce motion, that's because they get a b
 There are two ways of detecting settings, which one you can use depends on what setting you're looking for. I'm unclear why some use the SwiftUI environment and others don't. My best guess is that Apple will migrate others to the SwiftUI environment in future versions.
 Firstly, we can use the `@Environment` property wrapper, and provide the key path we want to observe. We then assign this to a var we can use in our view. For example, if we wanted to determine our users differentiate without colour setting, we'd ask SwiftUI to set this to a `differentiateWithoutColor` variable.
 
-```swift
+```
 @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
 ```
 
 In practical terms, we then would want to change the appearance of our UI based on our knowledge of our customer's setting. If we wanted to determine whether to use a transparent background, we can do something like this.
 
-```swift
+```
 struct ContentView: View {
    @Environment(\.accessibilityReduceTransparency) var reduceTransparency
    var body: some View {
@@ -91,13 +91,13 @@ An enum that returns `.increased` if your customer has Increase Contrast enable
 The second, less SwiftUI-like method is to query the UIAccessibility API. These values are set on the creation of your view and are not updated when your customer changes the setting or when the view is redrawn.
 If we wanted to know if our user has on/off labels enabled for their switches, we'd use the following.
 
-```swift
+```
 var onOffLabels = UIAccessibility.isOnOffSwitchLabelsEnabled
 ```
 
 Alternatively, if you query UIAccessibility in place. This makes your code a little less clean, but the value returned will always be the current status at the time your view is (re)drawn, even if this changes while your view is visible.
 
-```swift
+```
 Text("\(UIAccessibility.isVoiceOverRunning ? "Voice Over is running" : "Voice Over is not running")")
 ```
 

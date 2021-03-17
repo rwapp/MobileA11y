@@ -13,7 +13,7 @@ Accessibility traits are a group of attributes on a SwiftUI element. They inform
 
 In SwiftUI there are two modifiers to use for traits, `.accessibility(addTraits: )` and `.accessibility(removeTraits: )` which add or remove traits respectively. Each modifier takes as its argument either a single accessibility trait or a set of traits.
 
-```swift
+```
 Button(action: {}, label: { Text("Button") })
     .accessibility(addTraits: [.isSelected, .playsSound])
     .accessibility(removeTraits: .isButton)

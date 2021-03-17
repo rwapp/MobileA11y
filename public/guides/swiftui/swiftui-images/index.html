@@ -301,19 +301,19 @@ Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
 <p>Because of this change, there are a couple of considerations you need to bear in mind when coding images in SwiftUI.</p>
 <h3 id="image-names">Image names</h3>
 <p>Because your image is accessible, VoiceOver needs some content to announce. Most of the time the only readable content you provide is the file name of the image.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Image(<span style="color:#e6db74">&#34;shuttle&#34;</span>)
-</code></pre></div><p>This is fine if you call your image image <code>Space shuttle</code>, but if your image is called <code>164234main_image_feature_713_ys_full</code> then what your customer hears is useless and frustrating. Image, like most SwiftUI elements, can take a Text value providing a friendlier string to read to your user.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Image(<span style="color:#e6db74">&#34;164234main_image_feature_713_ys_full&#34;</span>, label: Text(<span style="color:#e6db74">&#34;Shuttle&#34;</span>))
-</code></pre></div><h3 id="decorative-images">Decorative images</h3>
+<pre><code>Image(&quot;shuttle&quot;)
+</code></pre><p>This is fine if you call your image image <code>Space shuttle</code>, but if your image is called <code>164234main_image_feature_713_ys_full</code> then what your customer hears is useless and frustrating. Image, like most SwiftUI elements, can take a Text value providing a friendlier string to read to your user.</p>
+<pre><code>Image(&quot;164234main_image_feature_713_ys_full&quot;, label: Text(&quot;Shuttle&quot;))
+</code></pre><h3 id="decorative-images">Decorative images</h3>
 <p>Sometimes it’s not appropriate for an image to be accessible. For example, providing an error icon next to the text ‘error’. If this image was accessible your VoiceOver user would hear ‘Error’ (swipe) ‘Error’. This duplication adds time and effort in navigation for VoiceOver users. In this instance it’s better to use the Image initializer decorative, this will display your image the same as above, but it is now hidden to VoiceOver.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Image(decorative: <span style="color:#e6db74">&#34;Error&#34;</span>)
-</code></pre></div><p><img src="/images/swiftui-error.png" alt="error message"></p>
+<pre><code>Image(decorative: &quot;Error&quot;)
+</code></pre><p><img src="/images/swiftui-error.png" alt="error message"></p>
 <h3 id="system-images">System Images</h3>
 <p>System images are a great new feature in iOS 13, Apple provides a suite of common system glyphs such as info circles and share icons that you can use as icons in your app. You can browse the full collection by downloading the SF Symbols app from the Apple Developer website.
 In my opinion, Apple has implemented the accessibility wrong for these images. Like all images in SwiftUI, these system glyphs are accessible by default. As these are system images they have names like ‘keyboard.chevron.compact.down’ and ‘questionmark.video.fill’. These are the names that VoiceOver will read and are meaningless to your customers. Apple should mark these images as not accessible by default, or at least have an initializer option to add a friendly name. Unless and until Apple makes a change like this, you will need to add the <code>.accessibility(hidden: true)</code> modifier to any system images you are using.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">Image(systemName: <span style="color:#e6db74">&#34;exclamationmark.triangle.fill&#34;</span>)
-   .accessibility(hidden: <span style="color:#66d9ef">true</span>)
-</code></pre></div><hr>
+<pre><code>Image(systemName: &quot;exclamationmark.triangle.fill&quot;)
+   .accessibility(hidden: true)
+</code></pre><hr>
 <p>Thanks for reading. This story is part of a series on SwiftUI Accessibility. Check out my other guides in this series:</p>
 <p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><!-- raw HTML omitted -->
 <a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><!-- raw HTML omitted -->

@@ -306,12 +306,12 @@ Like many accessibility features on iOS, Dynamic Type support has been greatly i
 <p>Apple’s built-in Dynamic Type text styles all use the default San Francisco font. SF is a great font for iOS, but to make your app stand out you need a custom font.
 Some devs have told me they don’t support Dynamic Type in their app because it doesn’t support custom fonts. This isn’t the case, <a href="https://twitter.com/kharrison">Keith Harrison</a> over at <a href="https://useyourloaf.com">Use Your Loaf</a> has a <a href="https://useyourloaf.com/blog/using-a-custom-font-with-dynamic-type/">great post on using custom fonts with Dynamic Type</a> in UIKit that I highly recommend.
 Unfortunately, these methods won’t work for us in SwiftUI. Custom font support for dynamic type in SwiftUI needs some improvement from the current version. There is however, a simple way we can leverage some of the built-in text style’s dynamic type support. By adding a helper method, we can get the current point size for our desired text style.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">textSize</span>(textStyle: UIFont.TextStyle) -&gt; CGFloat {
-    <span style="color:#66d9ef">return</span> UIFont.preferredFont(forTextStyle: textStyle).pointSize
+<pre><code> func textSize(textStyle: UIFont.TextStyle) -&gt; CGFloat {
+    return UIFont.preferredFont(forTextStyle: textStyle).pointSize
  }
-</code></pre></div><p>Then we can use the custom font modifier to apply this to our text.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"> .font(.custom(<span style="color:#e6db74">&#34;MyCustomFont&#34;</span>, size: textSize(textStyle: .headline)))
-</code></pre></div><p><img src="/images/CustomFont.png" alt="Custom font"></p>
+</code></pre><p>Then we can use the custom font modifier to apply this to our text.</p>
+<pre><code> .font(.custom(&quot;MyCustomFont&quot;, size: textSize(textStyle: .headline)))
+</code></pre><p><img src="/images/CustomFont.png" alt="Custom font"></p>
 <p>The downside of this approach is this fixes the text size until the screen is redrawn. So if your customer changes their dynamic type size your text won&rsquo;t change until this screen is recreated.</p>
 <h2 id="dont">Don&rsquo;t</h2>
 <h3 id="line-limit">Line Limit</h3>
@@ -321,10 +321,10 @@ Unfortunately, these methods won’t work for us in SwiftUI. Custom font support
 <p>There are two ways of fixing a font size. <code>.font(.system(size: 17))</code> or <code>.font(.custom(&quot;MyCustomFont&quot;, size: 17))</code>. please don’t be tempted to use these. If your customer has chosen to set their preferred text size, either for accessibility reasons, or because they like it that way, it’s pretty arrogant as an app developer to ignore this – at least, that’s how your customer will see it.</p>
 <p><img src="/images/FixedSize.png" alt="Fixed text size"></p>
 <p>As with the line limit, if you find your screen or control doesn’t work with larger fonts re-visit the design or how you&rsquo;ve built it. Sometimes it&rsquo;s not possible to support larger text sizes for certain controls. See iOS’ standard tab bar for example. In these situations, we can add a function that calls our dynamic size function above, and provides a maximum value. This allows your text to scale down, but limits how large it can become.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"> <span style="color:#66d9ef">func</span> <span style="color:#a6e22e">textSizeForThisOneSpecificUse</span>() -&gt; CGFloat {
-    <span style="color:#66d9ef">return</span> fmin(textSize(textStyle: .body), <span style="color:#ae81ff">28.0</span>)
+<pre><code> func textSizeForThisOneSpecificUse() -&gt; CGFloat {
+    return fmin(textSize(textStyle: .body), 28.0)
  }
-</code></pre></div><hr>
+</code></pre><hr>
 <p>Thanks for reading. This story is part of a series on SwiftUI Accessibility. Check out my other guides in this series:</p>
 <p><a href="https://mobilea11y.com/guides/swiftui/swiftui-accessibility/">SwiftUI Accessibility</a><!-- raw HTML omitted -->
 <a href="https://mobilea11y.com/guides/swiftui/swiftui-controls/">SwiftUI Accessibility: Named Controls</a><!-- raw HTML omitted -->
