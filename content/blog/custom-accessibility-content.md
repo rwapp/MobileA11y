@@ -45,13 +45,13 @@ To provide custom content your view class needs to implement the `AXCustomConten
 
 `AXCustomContent` objects are a key-value pair of strings. In the above Photos example, ‘Landscape’ is the value, and ‘Orientation’ the key or label. Ideally, both labels and values should be single words and should both be capitalised with no period at the end. In Files we want to add the last modified date, so let's create an `AXCustomContent` as below.
 
-```swift
+```
 let lastModified = AXCustomContent(label: "Modified", value: "16/04/2020")
 ```
 
 Adding the extra information we need in Files, our implementation would look like this.
 
-```swift
+```
 extension MyCustomView: AXCustomContentProvider {
     var accessibilityCustomContent: [AXCustomContent]! {
         get {
@@ -68,7 +68,7 @@ extension MyCustomView: AXCustomContentProvider {
 
 One problem here though is that we might be hiding some information that is integral to navigating this screen. Personally, I think the item type is crucial to know if you have the right document. In this case, we can set the priority of the `type` content to be `.high`. Content with the `.high` priority is always read out when VoiceOver focuses on the element, without your user cycling through the additional content. Because of this, you should use it sparingly only when appropriate. I’d suggest adding no more than one `.high` value to each element, although there is no fast rule here. Because VoiceOver reads `.high` priority content by default, this should come at the start of the list. So our new code looks like this.
 
-```swift
+```
 extension MyCustomView: AXCustomContentProvider {
     var accessibilityCustomContent: [AXCustomContent]! {
         get {

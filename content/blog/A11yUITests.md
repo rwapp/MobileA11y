@@ -38,7 +38,7 @@ Add `import A11yUITests` at the top of your XCTestCase subclass.
 
 Write a new test function beginning with the word test
 
-```swift
+```
 import A11yUITests
 import XCTest
 
@@ -68,6 +68,6 @@ For more detail, see the [A11yUITests Readme](https://github.com/rwapp/A11yUITes
 
 You can do this by creating an array of `A11yTests` enum values. Run your chosen suite by passing your array along with the elements you want to test to `a11y(tests: [A11yTests], on elements: [XCUIElement])`. You can get all elements on screen with the following.
 
- ```swift
+ ```
  let elements = XCUIApplication().descendants(matching: .any).allElementsBoundByAccessibilityElement
  ```

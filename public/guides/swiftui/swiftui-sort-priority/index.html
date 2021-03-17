@@ -295,57 +295,57 @@ Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
     <h1>SwiftUI Accessibility: Sort Priority</h1>
     <p>Assistive technology, such as VoiceOver, works in natural reading direction. In English, and most other languages, this means top left through to the bottom right. Mostly this is the right decision for assistive technology to make. This is the order anyone not using assistive technology would experience your app. Sometimes though, we make designs that don&rsquo;t read in this way.
 By using the <code>.accessibility(sortPriority: )</code> modifier we can set the order in which assistive technology accesses elements. To achieve this, you must group elements in a stack (<code>HStack</code>, <code>VStack</code> or <code>ZStack</code>). Then use the <code>.accessibilityElement(children: .contain)</code> modifier. The higher the number we give to <code>.accessibility(sortPriority: )</code>, the earlier VoiceOver will focus on the item. This means an element with a priority of 2 comes before priority 1, and so on.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">VStack {
+<pre><code>VStack {
 
-   Text(<span style="color:#e6db74">&#34;Read this last&#34;</span>)
-      .accessibility(sortPriority: <span style="color:#ae81ff">0</span>)
+   Text(&quot;Read this last&quot;)
+      .accessibility(sortPriority: 0)
       
-   Text(<span style="color:#e6db74">&#34;Read this first&#34;</span>)
-      .accessibility(sortPriority: <span style="color:#ae81ff">2</span>)
+   Text(&quot;Read this first&quot;)
+      .accessibility(sortPriority: 2)
       
-   Text(<span style="color:#e6db74">&#34;Read this second&#34;</span>)
-      .accessibility(sortPriority: <span style="color:#ae81ff">1</span>)
+   Text(&quot;Read this second&quot;)
+      .accessibility(sortPriority: 1)
       
 }
 .accessibilityElement(children: .contain)
-</code></pre></div><p><img src="/images/SwiftUI-textorder.png" alt=""></p>
+</code></pre><p><img src="/images/SwiftUI-textorder.png" alt=""></p>
 <p>One example of using this might be captioning a large image. In SwiftUI <a href="https://rwapp.co.uk/2019/09/11/SwiftUI-Images/">images are accessible by default</a>. This doesn&rsquo;t mean we should focus on the image as the first element - the title is usually more meaningful. Here, we&rsquo;d set the sort priority of the image to 0 so it receives focus after VoiceOver has read the title and caption.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">VStack {
-   Image(<span style="color:#e6db74">&#34;shuttle&#34;</span>)
-      .accessibility(sortPriority: <span style="color:#ae81ff">0</span>)
+<pre><code>VStack {
+   Image(&quot;shuttle&quot;)
+      .accessibility(sortPriority: 0)
       
-   Text(<span style="color:#e6db74">&#34;Shuttle&#34;</span>)
+   Text(&quot;Shuttle&quot;)
       .font(.largeTitle)
-      .accessibility(sortPriority: <span style="color:#ae81ff">2</span>)
+      .accessibility(sortPriority: 2)
       
-   Text(<span style="color:#e6db74">&#34;This is an image of a shuttle on the launch pad&#34;</span>)
-      .accessibility(sortPriority: <span style="color:#ae81ff">1</span>)
+   Text(&quot;This is an image of a shuttle on the launch pad&quot;)
+      .accessibility(sortPriority: 1)
       
 }
 .accessibilityElement(children: .contain)
-</code></pre></div><p><img src="/images/swiftui-largeshuttle.png" alt=""></p>
+</code></pre><p><img src="/images/swiftui-largeshuttle.png" alt=""></p>
 <p>Another use of this could be a custom stepper control. We&rsquo;d want VoiceOver to focus on the value first to orientate your user and inform them which value they&rsquo;re starting with. Then VoiceOver should follow with the decrease and increase buttons. We&rsquo;d achieve this like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift">HStack {
+<pre><code>HStack {
 
    Button(action: {
-      <span style="color:#66d9ef">self</span>.value <span style="color:#f92672">-=</span> <span style="color:#ae81ff">1</span>
+      self.value -= 1
    }) {
-      Text(<span style="color:#e6db74">&#34;Decrease&#34;</span>)
+      Text(&quot;Decrease&quot;)
    }
-   .accessibility(sortPriority: <span style="color:#ae81ff">1</span>)
+   .accessibility(sortPriority: 1)
    
    Text(String(value))
-      .accessibility(sortPriority: <span style="color:#ae81ff">2</span>)
+      .accessibility(sortPriority: 2)
       
    Button(action: {
-      <span style="color:#66d9ef">self</span>.value <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+      self.value += 1
    }) {
-      Text(<span style="color:#e6db74">&#34;Increase&#34;</span>)
+      Text(&quot;Increase&quot;)
    }
    
 }
 .accessibilityElement(children: .contain)
-</code></pre></div><p><img src="/images/SwiftUI-stepper.png" alt=""></p>
+</code></pre><p><img src="/images/SwiftUI-stepper.png" alt=""></p>
 <h3 id="contain">.Contain</h3>
 <p>As of October 2019, the sort priority only works for elements inside a stack where the stack has the modifier of <code>.accessibilityElement(children: .contain)</code>. I don&rsquo;t believe this is intentional, hopefully, future releases of SwiftUI will drop this requirement.</p>
 <hr>

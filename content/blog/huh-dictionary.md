@@ -26,7 +26,7 @@ A more immersive experience would be to use attributed strings to tell VoiceOver
 
 The code below sets the ‘Language’ button to the equivalent Portuguese word and tells VoiceOver to always read it as Portuguese, rather than attempting it in the user’s local language.
 
-```swift
+```
 let buttonTitle = NSAttributedString(string: "Idioma", attributes: [.accessibilitySpeechLanguage: "pt-PT"])
 button.setAttributedTitle(buttonTitle, for: .normal)
 ```

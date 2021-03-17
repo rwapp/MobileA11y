@@ -33,7 +33,7 @@ Apple’s built-in Dynamic Type text styles all use the default San Francisco fo
 Some devs have told me they don’t support Dynamic Type in their app because it doesn’t support custom fonts. This isn’t the case, [Keith Harrison](https://twitter.com/kharrison) over at [Use Your Loaf](https://useyourloaf.com) has a [great post on using custom fonts with Dynamic Type](https://useyourloaf.com/blog/using-a-custom-font-with-dynamic-type/) in UIKit that I highly recommend. 
 Unfortunately, these methods won’t work for us in SwiftUI. Custom font support for dynamic type in SwiftUI needs some improvement from the current version. There is however, a simple way we can leverage some of the built-in text style’s dynamic type support. By adding a helper method, we can get the current point size for our desired text style.
 
-```swift
+```
  func textSize(textStyle: UIFont.TextStyle) -> CGFloat {
     return UIFont.preferredFont(forTextStyle: textStyle).pointSize
  }
@@ -41,7 +41,7 @@ Unfortunately, these methods won’t work for us in SwiftUI. Custom font support
 
 Then we can use the custom font modifier to apply this to our text.
 
-```swift
+```
  .font(.custom("MyCustomFont", size: textSize(textStyle: .headline)))
  ```
  
@@ -65,7 +65,7 @@ There are two ways of fixing a font size. `.font(.system(size: 17))` or `.font(.
 
 As with the line limit, if you find your screen or control doesn’t work with larger fonts re-visit the design or how you've built it. Sometimes it's not possible to support larger text sizes for certain controls. See iOS’ standard tab bar for example. In these situations, we can add a function that calls our dynamic size function above, and provides a maximum value. This allows your text to scale down, but limits how large it can become.
 
-```swift
+```
  func textSizeForThisOneSpecificUse() -> CGFloat {
     return fmin(textSize(textStyle: .body), 28.0)
  }

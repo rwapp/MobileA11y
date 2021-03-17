@@ -19,7 +19,7 @@ An element's Accessibility Label is the first string read by VoiceOver when land
 
 In general, the accessibility label is the same as your control's label or text value. So that's what iOS uses by default. This means for most of your elements, you won't ever need to set an accessibility label. There are a few times when you do need to set one: For example, if you haven't given your control a text representation. Although the better option here might be to set the [text value](https://rwapp.co.uk/2019/09/26/SwiftUI-Controls/). If your text value is longer than a couple of words you might want to use a shorter version, this helps with Voice Control. Or if the label might be ambiguous without a little more context.
 
-```swift
+```
 Button(action: {}, label: { Text("➡️✉️") })
             .accessibility(label: Text("Send"))
 ```
@@ -34,7 +34,7 @@ There are times when you will need to set this value yourself. If you group subv
 
 At times it may be suitable to set the accessibility value to something different from the value displayed in your visual user interface. Imagine your UI features a slider to adjust, say, the rating of a good dog out of 10. The accessibility value generated for you by the slider will be "_100 percent_". It will give your user more meaning if you adjust your sliders accessibility value to read "_10 out of 10_".
 
-```swift
+```
 Slider(value: $sliderValue, in: minimumValue…maximumvalue)
     .accessibility(value: Text("\(Int(sliderValue)) out of 10"))
 ```
@@ -51,7 +51,7 @@ The hint attribute is optional, and not set for you by iOS. Set an accessibility
 
 In their guidance on writing good accessibility hints, Apple suggests imagining describing the controls action to a friend. You might tell your friend "tapping the send button sends your message". But assuming you set up your accessibility traits and label correctly, repeating the information that this element is a button and that it's called "_send_" is redundant. So, your hint would be "_Sends your message._" Avoid "_Send your message._" as this sounds like an instruction, rather than guidance. Hints should begin with a capital letter and end with a full stop.
 
-```swift
+```
 Button(action: {}, label: { Text("➡️✉️") })
     .accessibility(hint: Text("Sends your message."))
 ```
@@ -60,7 +60,7 @@ Button(action: {}, label: { Text("➡️✉️") })
 
 The connection to accessibility here is a little tenuous. The identifier is not presented to your customer in any way. It is a string you can use to identify your view to UI tests or internally in your app's code. Set it with the modifier `.accessibility(identifier: "My unique identifier")`. Where the other attributes take a SwiftUI `Text()` value, this is not user facing, so takes a Swift `String`.
 
-```swift
+```
 Button(action: {}, label: { Text("➡️✉️") })
     .accessibility(identifier: "sendMessageButton")
 ```

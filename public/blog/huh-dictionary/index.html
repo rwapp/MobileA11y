@@ -303,9 +303,9 @@ Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
 <h2 id="voiceover-attributes">VoiceOver Attributes</h2>
 <p>A more immersive experience would be to use attributed strings to tell VoiceOver which language to use. This means VoiceOver will use the appropriate languages pronunciation rules and voice when it reaches the button.</p>
 <p>The code below sets the ‘Language’ button to the equivalent Portuguese word and tells VoiceOver to always read it as Portuguese, rather than attempting it in the user’s local language.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> buttonTitle = NSAttributedString(string: <span style="color:#e6db74">&#34;Idioma&#34;</span>, attributes: [.accessibilitySpeechLanguage: <span style="color:#e6db74">&#34;pt-PT&#34;</span>])
-button.setAttributedTitle(buttonTitle, <span style="color:#66d9ef">for</span>: .normal)
-</code></pre></div><p>This code change is all about giving an equivalent experience. Any VoiceOver users will likely understand what the app means when it makes a local attempt at the word, but we’d rather learn a language from a native speaker than a tourist with half-remembered highschool language lessons. While making no change here would still be accessible, it’s not inclusive.</p>
+<pre><code>let buttonTitle = NSAttributedString(string: &quot;Idioma&quot;, attributes: [.accessibilitySpeechLanguage: &quot;pt-PT&quot;])
+button.setAttributedTitle(buttonTitle, for: .normal)
+</code></pre><p>This code change is all about giving an equivalent experience. Any VoiceOver users will likely understand what the app means when it makes a local attempt at the word, but we’d rather learn a language from a native speaker than a tourist with half-remembered highschool language lessons. While making no change here would still be accessible, it’s not inclusive.</p>
 
     <div class="book-footer">
     <div class="book-thumbnail">

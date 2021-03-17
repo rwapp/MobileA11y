@@ -27,7 +27,7 @@ For this example, we're going to use this stack. It contains a title, subtitle, 
 
 Here's the code used to create it.
 
-```swift
+```
 HStack {
    VStack (alignment: .leading, spacing: 10) {
 
@@ -70,7 +70,7 @@ The `.ignore` property tells assistive technology to ignore any accessibility e
 
 For the stack above we want to add the following modifiers.
 
-```swift
+```
 .accessibilityElement(children: .ignore)
 .accessibility(label: Text("Mars. The Red Planet. Like."))
 .accessibility(addTraits: .isButton)
@@ -84,7 +84,7 @@ This is not the same behaviour as using the modifier `.accessibility(hidden: tr
 
 There's one more thing we need to add. While our `.accessibilityElement(children: .combine / .ignore)` changes above are telling assistive technologies our stack is a button, the stack doesn't have an action when activated. For that, we need to tell our accessibility user interface that our stack has an accessibility action that can only be activated with assistive technology. We do this with the `.accessibilityAction` modifier. This modifier takes a trailing closure where we can call the same code as our button.
 
-```swift
+```
 .accessibilityAction { self.tappedLiked() }
 ```
 

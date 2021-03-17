@@ -82,7 +82,7 @@ In SwiftUI there are two modifiers to use for traits, .accessibility(addTraits:
       
       <guid>https://mobilea11y.com/guides/swiftui/swiftui-controls/</guid>
       <description>One big accessibility improvement in SwiftUI comes in the form of named controls. Nearly all controls and some non-interactive views (see Images) can take a Text view as part of their view builder. The purpose of this is to tie the meaning to the control.
-Toggle(isOn: $updates) { Text(&amp;#34;Send me updates&amp;#34;) } Imagine a UIKit layout with a UISwitch control. We&amp;rsquo;d most likely right align the switch, and provide a text label to the left.</description>
+Toggle(isOn: $updates) { Text(&amp;quot;Send me updates&amp;quot;) } Imagine a UIKit layout with a UISwitch control. We&amp;rsquo;d most likely right align the switch, and provide a text label to the left.</description>
     </item>
     
     <item>
