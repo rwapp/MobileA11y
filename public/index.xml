@@ -6,7 +6,17 @@
     <description>Recent content on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 03 Feb 2021 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Mar 2021 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How Do I Get My App an Accessibility Audit?</title>
+      <link>https://mobilea11y.com/blog/accessibility-professionals/</link>
+      <pubDate>Sun, 21 Mar 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/accessibility-professionals/</guid>
+      <description>This is a common question I get asked - how do I go about arranging an accessibility audit for my app so I know where I can make improvements? If you&amp;rsquo;re truly looking for an answer to that question then I have a few options for you below, but first, are you asking the right question?
+Accessibility Isn&amp;rsquo;t About Box Ticking You can&amp;rsquo;t make your app accessible by getting a report, fixing the findings, and accepting it as done.</description>
+    </item>
+    
     <item>
       <title>Quick Win - Start UI Testing</title>
       <link>https://mobilea11y.com/quick-wins/ui-testing/</link>
