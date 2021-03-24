@@ -1,7 +1,7 @@
 ---
 title: "Test Your App's Accessibility with Evinced"
 description: "Evinced releases a free accessibility scanner for your iOS apps."
-date: 2021-03-23T07:30:56Z
+date: 2021-03-24T07:30:56Z
 tags:
 - Mobile A11y Blog
 - Blog
