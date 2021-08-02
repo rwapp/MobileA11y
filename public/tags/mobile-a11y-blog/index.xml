@@ -6,7 +6,16 @@
     <description>Recent content in Mobile A11y Blog on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 21 Mar 2021 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/mobile-a11y-blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Aug 2021 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/mobile-a11y-blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iOS Custom Accessibility Actions</title>
+      <link>https://mobilea11y.com/blog/a11y-custom-actions/</link>
+      <pubDate>Sun, 01 Aug 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/a11y-custom-actions/</guid>
+      <description>When testing your app with VoiceOver or Switch Control, a common test is to ensure you can reach every interactive element on screen. If these assistive technologies can&amp;rsquo;t focus all of your buttons how will your customers be able to interact fully with your app? Except there are times when hiding buttons from your assistive technology users is the better choice. Consider an app with a table view that has many repeating interactive elements - this could be a social media app where &amp;lsquo;like, share, reply&amp;rsquo; etc is repeated for each post.</description>
+    </item>
+    
     <item>
       <title>How Do I Get My App an Accessibility Audit?</title>
       <link>https://mobilea11y.com/blog/accessibility-professionals/</link>
