@@ -6,11 +6,19 @@
     <description>Recent content in Tags on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
+<<<<<<< HEAD
+    <lastBuildDate>Wed, 24 Mar 2021 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blog</title>
+      <link>https://mobilea11y.com/tags/blog/</link>
+      <pubDate>Wed, 24 Mar 2021 07:30:56 +0000</pubDate>
+=======
     <lastBuildDate>Sun, 01 Aug 2021 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
       <link>https://mobilea11y.com/tags/blog/</link>
       <pubDate>Sun, 01 Aug 2021 07:30:56 +0000</pubDate>
+>>>>>>> master
       
       <guid>https://mobilea11y.com/tags/blog/</guid>
       <description></description>
@@ -28,7 +36,11 @@
     <item>
       <title>Mobile A11y Blog</title>
       <link>https://mobilea11y.com/tags/mobile-a11y-blog/</link>
+<<<<<<< HEAD
+      <pubDate>Wed, 24 Mar 2021 07:30:56 +0000</pubDate>
+=======
       <pubDate>Sun, 01 Aug 2021 07:30:56 +0000</pubDate>
+>>>>>>> master
       
       <guid>https://mobilea11y.com/tags/mobile-a11y-blog/</guid>
       <description></description>
@@ -37,7 +49,11 @@
     <item>
       <title>Resources</title>
       <link>https://mobilea11y.com/tags/resources/</link>
+<<<<<<< HEAD
+      <pubDate>Wed, 24 Mar 2021 07:30:56 +0000</pubDate>
+=======
       <pubDate>Sun, 01 Aug 2021 07:30:56 +0000</pubDate>
+>>>>>>> master
       
       <guid>https://mobilea11y.com/tags/resources/</guid>
       <description></description>
