@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Regulation on Mobile A11y</title>
-    <link>https://mobilea11y.com/tags/regulation/</link>
-    <description>Recent content in Regulation on Mobile A11y</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Mon, 24 Jun 2019 07:32:16 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/regulation/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>What The European Accessibility Act (Might) Mean for Mobile Development</title>
-      <link>https://mobilea11y.com/blog/european-accessibility-act/</link>
-      <pubDate>Mon, 24 Jun 2019 07:32:16 +0000</pubDate>
-      
-      <guid>https://mobilea11y.com/blog/european-accessibility-act/</guid>
-      <description>The European Accessibility Act, or EAA is due to become law in Europe later this year, and it defines some specific requirements for mobile. In fact, its the first accessibility legislation that I’m aware of, anywhere, that explicitly covers mobile apps.
- Since 2012 the European Union has been working on standardising accessibility legislation across Europe. The ultimate aim is to both improve the experience for those who need to use assistive technology, but also to simplify the rules business need to follow on accessibility.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Regulation on Mobile A11y</title><link>https://mobilea11y.com/tags/regulation/</link><description>Recent content in Regulation on Mobile A11y</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Mon, 24 Jun 2019 07:32:16 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/regulation/index.xml" rel="self" type="application/rss+xml"/><item><title>What The European Accessibility Act (Might) Mean for Mobile Development</title><link>https://mobilea11y.com/blog/european-accessibility-act/</link><pubDate>Mon, 24 Jun 2019 07:32:16 +0000</pubDate><guid>https://mobilea11y.com/blog/european-accessibility-act/</guid><description>The European Accessibility Act, or EAA is due to become law in Europe later this year, and it defines some specific requirements for mobile. In fact, its the first accessibility legislation that I’m aware of, anywhere, that explicitly covers mobile apps.
+Since 2012 the European Union has been working on standardising accessibility legislation across Europe. The ultimate aim is to both improve the experience for those who need to use assistive technology, but also to simplify the rules business need to follow on accessibility.</description></item></channel></rss>
