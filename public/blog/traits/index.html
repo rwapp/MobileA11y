@@ -4,8 +4,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=generator content="Hugo 0.87.0">
-<link rel=canonical href=/>
-<meta name=description content="A blog about making mobile more accessible for all.">
+<link rel=canonical href=/blog/traits/>
 <link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
 <link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
@@ -19,7 +18,7 @@
 <link rel=stylesheet type=text/css href=/css/styles.css>
 <link rel=stylesheet href=https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css>
 <style id=inverter media=none>html{filter:invert(100%)}*{background-color:inherit}img:not([src*=".svg"]),.colors,iframe,.demo-container{filter:invert(100%)}</style>
-<title>Mobile A11y</title>
+<title>iOS UIKit Accessibility traits | Mobile A11y</title>
 </head>
 <body>
 <a href=#main>skip to content</a>
@@ -97,79 +96,90 @@ Menu
 <div class=main-and-footer>
 <div>
 <main id=main>
-<h1>Mobile A11y</h1>
-<div>
-<p>Mobile A11y is a collection of blogs and resources about how we as mobile developers can improve accessibility on mobile devices.</p>
+<h1>iOS UIKit Accessibility traits</h1>
+<p>Accessibility traits on iOS is the system by which assistive technologies know how to present your interface to your users. The exact experience will vary between assistive technologies, in some cases they may change the intonation of what VoiceOver reads, or add additional options for navigation, sometimes they will disable that assistive technology from accessing the element, or change how the assistive tech functions. They are the &lsquo;Role&rsquo; part of the fundamental rule of making something accessible to screen readers - <a href=https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html>WCAG&rsquo;s 4.1.2: Name, Role, Value</a>.</p>
+<p>UIKit has sensible defaults set for standard controls so in many cases you won&rsquo;t need to make changes, but to make your app truly accessible you&rsquo;ll need to customise these. The key is knowing when to customise; as with most accessibility considerations, custom controls are a must, but also headings, elements that change their state, controls that play sound or other media, tabs, path-based interactions, and others need their traits customising to ensure your app is accessible and usable by assistive technology.</p>
+<h2 id=adding-and-removing-traits>Adding and Removing Traits</h2>
+<p>One of the most common accessibility mistakes I see is engineers assigning accessibility traits. Remember, UIKit components all have sensible accessibility traits added by default, for example, buttons all have the <code>button</code> trait. So if you do <code>myButton.accessibilityTraits = .selected</code> to indicate the option this button represents has been selected then your button will no longer be presented to your users as a button.</p>
+<p>Traits are a <a href=https://cocoacasts.com/how-to-work-with-bitmasks-in-swift/>bitmask or option set</a>. A bitmask, or Option Set as Swift calls them, are a way of representing multiple unique values from a finite set. For the specific use case where this fits they are far more efficient than an array or a set, or any other collection. They are represented in memory in binary of constant size, and adding or removing elements is a mathematical operation, making this constant time. This means, instead of assigning them we need to append or remove.</p>
+<pre><code>myButton.accessibilityTraits.insert(.selected)
+</code></pre><p>or to insert multiple traits:</p>
+<pre><code>myButton.accessibilityTraits.formUnion([.selected, .startsMediaSession])
+</code></pre><p>To remove traits</p>
+<pre><code>myButton.accessibilityTraits.remove(.startsMediaSession)
+</code></pre><p>Only if you are certain you want to remove all existing and potential future accessibility traits from a view should you assign traits.</p>
+<pre><code>myButton.accessibilityTraits = .selected
+</code></pre><p>Most importantly, remember traits change as your UI changes any of these traits could be added or removed throughout the lifespan of your view, but specifically take note of &lsquo;not enabled&rsquo; and &lsquo;selected&rsquo;.</p>
+<h2 id=traits>Traits</h2>
+<p>Traits inform assistive technologies of the type or function of the element, assistive tech then uses this data to determine how to present the element to your user. This sometimes means providing extra actions, additional utterances, changing sounds, or other feedback or behavioral changes. Here is, to the best of my knowledge, the changes these traits make, and most importantly, when you should be using them.</p>
+<h3 id=button>Button</h3>
+<p>VoiceOver announces &lsquo;button&rsquo; after reading the element&rsquo;s label. For elements that are not generally interactive, such as labels or views, this trait will also cause the <code>accessibilityRespondsToUserInteraction</code> to be set to true allowing Switch Control and Voice Control to access this element. Use this for any element that performs an action, including a table cell that pushes to another screen and any view that you have added a tap gesture recognizer to.</p>
+<p><img src=/images/button.jpeg alt="VoiceOver announcing a button"></p>
+<h3 id=link>Link</h3>
+<p>An link similar to what would appear in a web page, often but not exclusively inline. This will generally navigate to a web page or make a phone call. Using a link to navigate within an app is acceptable, but the convention is to use the &lsquo;button&rsquo; trait for this. A link should only navigate, not perform any actions such as submitting a form, if the control also performs an action, use &lsquo;button&rsquo;. The behavior of this trait is the same as for Button, except VoiceOver reads &lsquo;link&rsquo;.</p>
+<p><img src=/images/link.jpeg alt="VoiceOver announcing an inline link"></p>
+<h3 id=search-field>Search Field</h3>
+<p>A trait to be used on a text field that acts as a search field. VoiceOver announces this as a search field, allowing VoiceOver users to easily identify its purpose and hints that typing here will cause UI to be updated elsewhere.</p>
+<p><img src=/images/search.PNG alt="Apple Music&rsquo;s search field"></p>
+<h3 id=image>Image</h3>
+<p>Any image or other visual element such as a graphical element or animation that contains no text (aside from text hard coded in the image, although this is not recommended). Generally this should not be applied to an image button, but could be applied to an image that can be tapped to get a larger version. Only apply this trait to images that add to the experience, others should be hidden to accessibility. For more on adding image descriptions check out <a href=https://mobilea11y.com/blog/when-to-use-accessibility-labels/>When to use Accessibility Labels</a> and <a href=https://mobilea11y.com/blog/writing-great-labels/>Writing Great iOS Accessibility Labels</a>. Adds the word &lsquo;Image&rsquo; to the VoiceOver utterance and enables VoiceOvers image recognition features to create a ML description of the image, including identifying known people and text where possible.</p>
+<p><img src=/images/image.jpeg alt="VoiceOver announcing an image"></p>
+<h3 id=selected>Selected</h3>
+<p>Indicates that the element has been selected, such as a radio button, checkbox, switch, tab, or segment. Causes VoiceOver to read &lsquo;selected&rsquo; as part of the element&rsquo;s utterance.</p>
+<p><img src=/images/selected.PNG alt="Apple Music&rsquo;s Lyrics button selected"></p>
+<h3 id=plays-sound>Plays Sound</h3>
+<p>An element that triggers sound once activated. This tells VoiceOver that it does not need to play the regular sound used to provide feedback that this control has been activated. Use this if you provide your own auditory feedback when activating a button.</p>
+<h3 id=keyboard-key>Keyboard Key</h3>
+<p>Use this trait if you are implementing a custom keyboard. This changes the intonation VoiceOver uses to read the key&rsquo;s label, along with a phonetic hint added to the utterance. It also allows both regular VoiceOver swipe based navigation of keyboard keys and direct interaction with the keys, allowing VoiceOver users to type the way that suits.</p>
+<h3 id=static-text>Static Text</h3>
+<p>This trait is added by default to labels. It informs assistive tech that this text shouldn&rsquo;t change, or will rarely change, throughout the lifespan of the current screen. This means the assistive tech doesn&rsquo;t have to poll for updates. If this element does change occasionally thats ok, but you should post <code>UIAccessibility.post(notification: .layoutChanged, argument: nil)</code> when it does. If your text changes often you should remove this trait and instead add&mldr;</p>
+<h3 id=updates-frequently>Updates Frequently</h3>
+<p>Apply this trait to any element where the accessibility label or value changes regularly throughout the lifespan of the view. This tells your users assistive technology to poll this element regularly for updates. An example of use could be a timer or a scoreboard. Failing to add this trait where its needed means your users won&rsquo;t get your up to date interface, using it where its not needed will reduce device performance and battery life.</p>
+<h3 id=summary-element>Summary Element</h3>
+<p>Use this trait to characterise an area of your UI that provides and overview of the content of the screen. The perfect example for this is Apple&rsquo;s weather app where the top section provides a summary of the current conditions before diving in to more detail below, this top section has the summary element trait.</p>
+<p>This trait will cause VoiceOver to read this element to your customer once this screen appears regardless of the position of this element in the view hierarchy, focus order is not affected.</p>
+<p><img src=/images/weather.PNG alt="Apple Weather with VoiceOver focusing on the summary"></p>
+<p><img src=/images/summary.PNG alt="VoiceOver reading the second visual element marked with the Summary Element trait but focus remains on the first element"></p>
+<h3 id=not-enabled>Not Enabled</h3>
+<p>This item is disabled and nothing will happen if it is activated. VoiceOver will add &lsquo;dimmed&rsquo; to the element&rsquo;s utterance, Switch Control and Voice Control will ignore this element.</p>
+<p><img src=/images/disabled.PNG alt="Disabled Continue button"></p>
+<h3 id=starts-media-session>Starts Media Session</h3>
+<p>Informs assistive tech that activating this element will start playing or recording media. This prevents VoiceOver from repeating the element&rsquo;s label once activated thus it does not interrupt the media.</p>
+<h3 id=adjustable>Adjustable</h3>
+<p>This indicates that the user can change between a range of values in elements such as sliders or pickers. VoiceOver informs your user they can swipe vertically on this element to change the value. So it is essential that if you apply this trait you also implement the <code>accessibilityIncrement()</code> and <code>accessibilityDecrement()</code> functions on your view&rsquo;s subclass to allow this. These functions also add extra options into the Switch Control menu for this element.</p>
+<p><img src=/images/increment.PNG alt="Increment and Decrement buttons in the Switch Control menu"></p>
+<p><img src=/images/adjustable.PNG alt="Apple Music&rsquo;s volume control"></p>
+<h3 id=allows-direct-interaction>Allows Direct Interaction</h3>
+<p>This trait allows VoiceOver users to disable VoiceOver navigation for the element. You would use this in controls where direct path interaction is the only real way of control, for example a freehand drawing canvass. Apple use this trait in GarageBand in the virtual instruments. This means VoiceOver users can continue to use the path interaction without having to disable VoiceOver entirely.</p>
+<p><img src=/images/garageband.PNG alt="GarageBand displaying the VoiceOver rota control to enable direct touch for a musical keyboard interface"></p>
+<h3 id=causes-page-turn>Causes Page Turn</h3>
+<p>Use this trait to indicate the element represents a single page in a series of pages, for example a page in an e-book. This allows VoiceOver or the screen reader to read the content of this page, then automatically &lsquo;turn&rsquo; the page and continue reading. Your element must listen and respond to the <code>accessibilityScroll()</code> method which assistive tech will call when it reaches the end of the current content. Return false when the end of the content has been reached and assistive tech will stop reading. If there is more content, change the screen and return true to continue reading.</p>
+<h3 id=header>Header</h3>
+<p>Any visually distinct header text should have this trait applied. Headers can be visually distinct through visual positioning or different text styles - eg font weight, colour, or family. For visual users this allows them to skim content to find what is relevant. The header trait allows something similar for VoiceOver users. By swiping vertically on a screen we skip content and only read the next available header. &lsquo;Heading&rsquo; is also added to the element&rsquo;s utterance.</p>
+<p>Each screen in your app should have at least one header and a header should generally be the first element focussed by VoiceOver, allowing your users to orientate themselves. The number of headers your screen has will vary from app to app. Many will have a single header, news apps may have many. In general, try not too add too many as this adds to VoiceOver noise.</p>
+<p><img src=/images/heading.PNG alt="VoiceOver announcing a heading"></p>
+<h3 id=tab-bar>Tab Bar</h3>
+<p>Indicates that this view contains buttons that act as tabs. This view must return false for <code>isAccessibilityElement</code> but the child buttons must be accessible. This allows VoiceOver to add &lsquo;Tab, x of x&rsquo; to the tab&rsquo;s utterances.</p>
+<p><img src=/images/tabbar.PNG alt="Tab Bar with the second element selected"></p>
+<hr>
+<p>Traits are a powerful part of iOS&rsquo;s accessibility system, they allow assistive technology to determine developer intent, something that is not generally possible to do through automation, so its essential we provide the correct information. If you want to know more about the traits available in SwiftUI, check out my guide to <a href=https://mobilea11y.com/guides/swiftui/swiftui-traits/>SwiftUI Accessibility: Traits</a></p>
+<div class=book-footer>
+<div class=book-thumbnail>
+<img src=/images/logo.png>
 </div>
-<input id=search type=text placeholder="Filter page by title, description or tag" aria-label="Filter page by title, description or tag">
-<div class=blog-roll>
-<h2>Posts</h2>
-<ul class=patterns-list id=list>
-<li class=list-post>
-<h2 class=blog-roll-title>
-<a href=https://mobilea11y.com/blog/baking-digital-inclusion-into-your-mobile-apps/><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"><use xlink:href="#bookmark"/></svg>
-Baking Digital Inclusion Into Your Mobile Apps
-</a>
-</h2>
-<div class=blog-roll-meta-data>
-<i class="fa fa-calendar-o" aria-hidden=true></i>&nbsp;
-Jul 25, 2019
-<span>|</span>
-&nbsp;<i class="fa fa-clock-o"></i>&nbsp;1&nbsp;minutes
-<p class=blog-description>
+<div class=book-details>
+<p>Thanks for reading!<br>Did you find this resource valuable?<br>Please consider supporting Mobile A11y by sending a <a href=https://ko-fi.com/mobilea11y target=_blank>tip</a> or sharing this blog.</p>
+</div>
+</div>
+<div class=book-footer>
+<div class=book-thumbnail>
+<a href=https://amzn.to/2KSDmaz target=_blank><img src=/images/cover.png alt="Developing Inclusive Mobile Apps cover"></a>
+</div>
+<div class=book-details>
+<p>
+<a href=https://amzn.to/2KSDmaz target=_blank>Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href=https://www.apress.com/gp/book/9781484258132 target=_blank>Apress</a> and <a href=https://amzn.to/2KSDmaz target=_blank>Amazon</a>.
 </p>
-<div class=tags>
-<ul class=blog-roll-tags aria-label=tags>
-<li><svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false"><use xlink:href="#tag"/></svg>
-<a href=https://mobilea11y.com/tags/mobile>Mobile</a>
-</li>
-<li><svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false"><use xlink:href="#tag"/></svg>
-<a href=https://mobilea11y.com/tags/mobile-a11y-blog>Mobile A11y Blog</a>
-</li>
-<li><svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false"><use xlink:href="#tag"/></svg>
-<a href=https://mobilea11y.com/tags/blog>Blog</a>
-</li>
-</ul>
 </div>
-</div>
-</li>
-<li class=list-post>
-<h2 class=blog-roll-title>
-<a href=https://mobilea11y.com/blog/european-accessibility-act/><svg class="bookmark" aria-hidden="true" viewBox="0 0 40 50" focusable="false"><use xlink:href="#bookmark"/></svg>
-What The European Accessibility Act (Might) Mean for Mobile Development
-</a>
-</h2>
-<div class=blog-roll-meta-data>
-<i class="fa fa-calendar-o" aria-hidden=true></i>&nbsp;
-Jun 24, 2019
-<span>|</span>
-&nbsp;<i class="fa fa-clock-o"></i>&nbsp;7&nbsp;minutes
-<p class=blog-description>
-European Accessibility Act is the first accessibility legislation that I’m aware of, anywhere, that explicitly covers mobile apps.
-</p>
-<div class=tags>
-<ul class=blog-roll-tags aria-label=tags>
-<li><svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false"><use xlink:href="#tag"/></svg>
-<a href=https://mobilea11y.com/tags/regulation>Regulation</a>
-</li>
-<li><svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false"><use xlink:href="#tag"/></svg>
-<a href=https://mobilea11y.com/tags/mobile>Mobile</a>
-</li>
-<li><svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false"><use xlink:href="#tag"/></svg>
-<a href=https://mobilea11y.com/tags/blog>Blog</a>
-</li>
-<li><svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false"><use xlink:href="#tag"/></svg>
-<a href=https://mobilea11y.com/tags/mobile-a11y-blog>Mobile A11y Blog</a>
-</li>
-</ul>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div>
-<a href=/page/4>Previous</a> &bull;
-Page 5
 </div>
 </main>
 <div class=social-heading>
