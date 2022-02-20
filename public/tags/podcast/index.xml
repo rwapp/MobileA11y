@@ -1,2 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Podcast on Mobile A11y</title><link>https://mobilea11y.com/tags/podcast/</link><description>Recent content in Podcast on Mobile A11y</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 09 Oct 2019 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/podcast/index.xml" rel="self" type="application/rss+xml"/><item><title>Podcast: iPhreaks - iOS Accessibility</title><link>https://mobilea11y.com/blog/iphreaks-podcast/</link><pubDate>Wed, 09 Oct 2019 07:30:56 +0000</pubDate><guid>https://mobilea11y.com/blog/iphreaks-podcast/</guid><description>I was asked to guest on the iPhreaks podcast to discuss iOS accessibility. We talked about why accessibility is important, how you can improve it in your apps, and some of the changes iOS 13 and SwiftUI bring.
-unfortunatley iPhreaks don&amp;rsquo;t provide a transcript, but they do provide a comprehensive write-up on their site.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Podcast on Mobile A11y</title>
+    <link>https://mobilea11y.com/tags/podcast/</link>
+    <description>Recent content in Podcast on Mobile A11y</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 09 Oct 2019 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/podcast/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Podcast: iPhreaks - iOS Accessibility</title>
+      <link>https://mobilea11y.com/blog/iphreaks-podcast/</link>
+      <pubDate>Wed, 09 Oct 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/iphreaks-podcast/</guid>
+      <description>I was asked to guest on the iPhreaks podcast to discuss iOS accessibility. We talked about why accessibility is important, how you can improve it in your apps, and some of the changes iOS 13 and SwiftUI bring.
+unfortunatley iPhreaks don&amp;rsquo;t provide a transcript, but they do provide a comprehensive write-up on their site.</description>
+    </item>
+    
+  </channel>
+</rss>

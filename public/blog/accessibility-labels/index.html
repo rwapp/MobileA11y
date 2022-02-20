@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <meta name="generator" content="Hugo 0.91.2" />
-  <link rel="canonical" href="/tags/accessibility-review/">
+  <link rel="canonical" href="/blog/accessibility-labels/">
 
   
 
@@ -44,7 +44,7 @@
 
   
   
-  <title>Accessibility Review | Mobile A11y</title>
+  <title>Accessibility Label: Customise the accessibility experience on iOS | Mobile A11y</title>
 </head>
 
   <body>
@@ -248,7 +248,7 @@ Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
       
       
       
-      <a href="/tags/" aria-current="page">
+      <a href="/tags/" >
         <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
           <use xlink:href="#bookmark"></use>
         </svg>
@@ -291,144 +291,41 @@ Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a>
       <div class="main-and-footer">
         <div>
           
-<main id="main">
-  <h1>Accessibility Review</h1>
-  
-  
-  <input
-    id="search"
-    type="text"
-    placeholder="Filter page by title, description or tag"
-    aria-label="Filter page by title, description or tag"
-  />
-  
-  <ul class="patterns-list" id="list">
-    
-    <li class="list-post">
-      <h2 class="blog-roll-title">
-        <a href="/blog/huh-dictionary/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Accessibility Review: Huh? - International languages
-        </a>
-      </h2>
-      <div class="blog-roll-meta-data">
-          <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
-            
-            Jun 28, 2020
-          <span>|</span>
-          
-          &nbsp;<i class="fa fa-clock-o"></i>&nbsp;2&nbsp;minutes
-          
-          <p class="blog-description">
-            Huh? lets users look up words in dictionaries for various languages. Some additional hints for non-local languages would give a richer experience for VoiceOver users.
-          </p>
-                    
-            <div class="tags">
-              <ul class="blog-roll-tags" aria-label="tags">
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/accessibility-review">Accessibility Review</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-    </li>
-    
-    <li class="list-post">
-      <h2 class="blog-roll-title">
-        <a href="/blog/figure-case/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Accessibility Review: Figure Case - Button Labels
-        </a>
-      </h2>
-      <div class="blog-roll-meta-data">
-          <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
-            
-            Jun 21, 2020
-          <span>|</span>
-          
-          &nbsp;<i class="fa fa-clock-o"></i>&nbsp;2&nbsp;minutes
-          
-          <p class="blog-description">
-            Figure Case helps organising a table-top miniature collection. Some VoiceOver users might might be struggle to know what actions some buttons perform.
-          </p>
-                    
-            <div class="tags">
-              <ul class="blog-roll-tags" aria-label="tags">
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/accessibility-review">Accessibility Review</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-    </li>
-    
-    <li class="list-post">
-      <h2 class="blog-roll-title">
-        <a href="/blog/daily-dictionary/">
-          <svg
-            class="bookmark"
-            aria-hidden="true"
-            viewBox="0 0 40 50"
-            focusable="false"
-          >
-            <use xlink:href="#bookmark"></use>
-          </svg>
-          Accessibility Review: Daily Dictionary - Screen changes
-        </a>
-      </h2>
-      <div class="blog-roll-meta-data">
-          <i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;
-            
-            May 16, 2020
-          <span>|</span>
-          
-          &nbsp;<i class="fa fa-clock-o"></i>&nbsp;4&nbsp;minutes
-          
-          <p class="blog-description">
-            Daily Dictionary provides a new word every day with definitions and real-world uses. Some VoiceOver users might struggle to determine when screens on the app change.
-          </p>
-                    
-            <div class="tags">
-              <ul class="blog-roll-tags" aria-label="tags">
-                
-                  <li>
-                    <svg class="tag-icon" aria-hidden="true" viewBox="0 0 177.16535 177.16535" focusable="false">
-                      <use xlink:href="#tag"></use>
-                    </svg>
-                    <a href="https://mobilea11y.com/tags/accessibility-review">Accessibility Review</a>
-                  </li>
-                
-              </ul>
-            </div>
-          
-    </li>
-    
-  </ul>
-</main>
+  <main id="main">
+    <h1>Accessibility Label: Customise the accessibility experience on iOS</h1>
+    <p>Accessibility Labels are the fundamental tool for improving the accessibility experience on iOS and other Apple platforms. An Accessibility Label allows you to specify a string for iOS to present to an assistive technology user in a way that the user chooses, this string is not visible or otherwise presented to users who don&rsquo;t have an assistive technology enabled. You could use these to present text where there otherwise wouldn&rsquo;t be any, or to use some more appropreate text if the visual string needs clarification.</p>
+<h2 id="setting-an-accessibility-label">Setting an Accessibility Label</h2>
+<p>By default, your element&rsquo;s Accessibility Label is equal to the visual label, so if you have a visual label set, and you don&rsquo;t want it do be different for assistive technology users, you don&rsquo;t need to do anything. But if you do want to change the label, here&rsquo;s how.</p>
+<h3 id="swiftui">SwiftUI</h3>
+<p>Use the <code>accessibilityLabel</code> modifier.</p>
+<pre tabindex="0"><code>.accessibilityLabel(Text(&quot;My Accessibility Label&quot;))
+</code></pre><h3 id="interface-builder">Interface Builder</h3>
+<p>Open the Identity inspector, and under the Accessibility heading you can enter an Accessibility Label in the <code>Label</code> field.
+<img src="/images/IdentityInspector.png" alt="Xcode&rsquo;s Identity Inspector pane"></p>
+<h3 id="uikit">UIKit</h3>
+<p>Set the <code>accessibilityLabel</code> property.</p>
+<pre tabindex="0"><code>myLabel.accessibilityLabel = &quot;My Accessibility Label&quot;
+</code></pre>
+    <div class="book-footer">
+    <div class="book-thumbnail">
+        <img src="/images/logo.png"/>
+    </div>
+    <div class="book-details">
+        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
+        </div>
+</div>
+
+<div class="book-footer">
+    <div class="book-thumbnail">
+            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
+        </div>
+    <div class="book-details">
+    <p>
+        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
+    </p>
+    </div>
+</div>
+  </main>
 
           
           <div class="social-heading">

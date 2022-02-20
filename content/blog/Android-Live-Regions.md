@@ -27,7 +27,7 @@ If we make the score TextView element a Live Region, there's no need for this ex
 
 So how do we take advantage of this advanced technique? It must take a ton of coding to achieve this, right? Well, ready?
 
-```XML
+```
 <TextView
 	…
 android:accessibilityLiveRegion="polite" />
@@ -35,7 +35,7 @@ android:accessibilityLiveRegion="polite" />
 
 Or if you're setting it dynamically in Kotlin:
 
-```Kotlin
+```
 score.accessibilityLiveRegion = View.ACCESSIBILITY_LIVE_REGION_POLITE
 ```
 

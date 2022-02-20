@@ -1,5 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Accessibility Review on Mobile A11y</title><link>https://mobilea11y.com/tags/accessibility-review/</link><description>Recent content in Accessibility Review on Mobile A11y</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 28 Jun 2020 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/accessibility-review/index.xml" rel="self" type="application/rss+xml"/><item><title>Accessibility Review: Huh? - International languages</title><link>https://mobilea11y.com/blog/huh-dictionary/</link><pubDate>Sun, 28 Jun 2020 07:30:56 +0000</pubDate><guid>https://mobilea11y.com/blog/huh-dictionary/</guid><description>The Accessibility Review series uses real world apps to provide examples of common accessibility issues and provide tips on how to fix them. Each of the developers has kindly volunteered their app to be tested.
-Huh? is a dictionary and thesaurus app from Peter Yaacoub. Enter a word into the search bar then choose a dictionary service. Press search and the app will present your chosen service’s entry for the term you entered.</description></item><item><title>Accessibility Review: Figure Case - Button Labels</title><link>https://mobilea11y.com/blog/figure-case/</link><pubDate>Sun, 21 Jun 2020 07:30:56 +0000</pubDate><guid>https://mobilea11y.com/blog/figure-case/</guid><description>The Accessibility Review series uses real world apps to provide examples of common accessibility issues and provide tips on how to fix them. Each of the developers has kindly volunteered their app to be tested.
-Figure Case is an app to help organise a tabletop miniature collection created by Simon Nickel. The app helps to track miniatures you own, and what state they currently find themselves in - unassembled, assembled, or painted.</description></item><item><title>Accessibility Review: Daily Dictionary - Screen changes</title><link>https://mobilea11y.com/blog/daily-dictionary/</link><pubDate>Sat, 16 May 2020 07:30:56 +0000</pubDate><guid>https://mobilea11y.com/blog/daily-dictionary/</guid><description>The Accessibility Review series uses real world apps to provide examples of common accessibility issues and provide tips on how to fix them. Each of the developers has kindly volunteered their app to be tested.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Accessibility Review on Mobile A11y</title>
+    <link>https://mobilea11y.com/tags/accessibility-review/</link>
+    <description>Recent content in Accessibility Review on Mobile A11y</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 28 Jun 2020 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/accessibility-review/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accessibility Review: Huh? - International languages</title>
+      <link>https://mobilea11y.com/blog/huh-dictionary/</link>
+      <pubDate>Sun, 28 Jun 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/huh-dictionary/</guid>
+      <description>The Accessibility Review series uses real world apps to provide examples of common accessibility issues and provide tips on how to fix them. Each of the developers has kindly volunteered their app to be tested.
+Huh? is a dictionary and thesaurus app from Peter Yaacoub. Enter a word into the search bar then choose a dictionary service. Press search and the app will present your chosen service’s entry for the term you entered.</description>
+    </item>
+    
+    <item>
+      <title>Accessibility Review: Figure Case - Button Labels</title>
+      <link>https://mobilea11y.com/blog/figure-case/</link>
+      <pubDate>Sun, 21 Jun 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/figure-case/</guid>
+      <description>The Accessibility Review series uses real world apps to provide examples of common accessibility issues and provide tips on how to fix them. Each of the developers has kindly volunteered their app to be tested.
+Figure Case is an app to help organise a tabletop miniature collection created by Simon Nickel. The app helps to track miniatures you own, and what state they currently find themselves in - unassembled, assembled, or painted.</description>
+    </item>
+    
+    <item>
+      <title>Accessibility Review: Daily Dictionary - Screen changes</title>
+      <link>https://mobilea11y.com/blog/daily-dictionary/</link>
+      <pubDate>Sat, 16 May 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/daily-dictionary/</guid>
+      <description>The Accessibility Review series uses real world apps to provide examples of common accessibility issues and provide tips on how to fix them. Each of the developers has kindly volunteered their app to be tested.
 Daily Dictionary is an app from Benjamin Mayo providing a new word every day with definitions and real-world uses designed to help increase your vocabulary.
-Assessing the app, I noticed Benjamin has made a design decision around presenting the app’s settings.</description></item></channel></rss>
+Assessing the app, I noticed Benjamin has made a design decision around presenting the app’s settings.</description>
+    </item>
+    
+  </channel>
+</rss>

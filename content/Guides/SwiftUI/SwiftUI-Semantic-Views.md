@@ -57,7 +57,7 @@ The current behaviour for VoiceOver on this stack is to read "Mars." _Swipe_. "T
 
 ### .contain
 
-The `.contain` argument is the default behaviour. It tells the stack that all accessibility elements within the stack should be treated as individual elements for assistive technology. This produces the result "Mars." _Swipe_. "The Red Planet." _Swipe_. "Button. Image."
+The `.contain` argument is the behaviour we get when we don't add a modifier. It tells the stack that all accessibility elements within the stack should be treated as individual elements for assistive technology. This produces the result "Mars." _Swipe_. "The Red Planet." _Swipe_. "Button. Image."
 
 ### .combine
 
