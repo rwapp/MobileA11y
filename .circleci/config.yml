@@ -12,7 +12,7 @@ jobs:
       - restore_cache:
           keys: site-cache
       - aws-s3/sync:
-           from: ./public'
+           from: ./public
            to: 's3://a11ystaging'
            arguments: |
              --acl public-read \
@@ -87,11 +87,16 @@ workflows:
           requires:
             - build
 
-  prodDeploy:
-      jobs:
-        - prodDeploy:
-            filters:
-              branches:
-                only: master
+      - waitForApproval:
+          type: approval
+          branches:
+            only: master
+          requires:
+              - stagingDeploy
 
-               
+      - prodDeploy:
+          filters:
+            branches:
+              only: master
+          requires:
+            - waitForApproval
