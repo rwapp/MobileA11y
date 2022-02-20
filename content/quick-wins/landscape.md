@@ -21,7 +21,9 @@ Landscape allows more characters per line, ideal for larger text sizes. It makes
 So next time you start an app, don't disable landscape. And if you have already disabled it, consider re-enabling landscape orientations by checking these settings.
 
 In Android check your activities don't include the following property.
-```android:screenOrientation="portrait"```
+```
+android:screenOrientation="portrait"
+```
 
 For iOS check your app target's general settings and ensure the landscape checkboxes are enabled.
 
