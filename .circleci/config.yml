@@ -70,8 +70,7 @@ workflows:
     jobs:
       - build
 
-      - stagingDeploy:
-          filters:
+      - stagingDeploy
 
   prodDeploy:
       jobs:
