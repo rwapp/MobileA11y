@@ -43,24 +43,24 @@ jobs:
           source: .
 
   test:
-      parameters:
-        testResultsDir:
-          type: string
-          default: artefacts/testResults
-      docker:
-        - image: 'cibuilds/hugo:latest'
-      - hugo/html-proofer:
-          path: ./public
-          disable-external: false
-          check-html: true
-          check-img-http: true
-          empty-alt-ignore: false
-          enforce-https: true
-          log-level: :warn
-          storage-dir: << parameters.testResultsDir >>
+    parameters:
+      testResultsDir:
+        type: string
+        default: artefacts/testResults
+    docker:
+      - image: 'cibuilds/hugo:latest'
+    - hugo/html-proofer:
+        path: ./public
+        disable-external: false
+        check-html: true
+        check-img-http: true
+        empty-alt-ignore: false
+        enforce-https: true
+        log-level: :warn
+        storage-dir: << parameters.testResultsDir >>
           
-      - store_artifacts:
-          path: << parameters.testResultsDir >>
+    - store_artifacts:
+        path: << parameters.testResultsDir >>
 
 workflows:
   main:
