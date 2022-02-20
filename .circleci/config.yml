@@ -69,7 +69,7 @@ workflows:
             branches:
               only: master
             requires:
-            - hugo/hugo-build
+              - hugo/hugo-build
 
   prodDeploy:
       jobs:
