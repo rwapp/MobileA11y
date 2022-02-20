@@ -32,14 +32,8 @@ jobs:
              --cache-control "max-age=86400"
 
   build:
-    parameters:
-      testResultsDir:
-        type: string
-        default: artefacts/testResults
-
     docker:
       - image: 'cibuilds/hugo:latest'
-      
     steps: 
       - checkout
       - run: git submodule sync
@@ -55,6 +49,16 @@ jobs:
           paths: 
             - ./public
 
+  test:
+    parameters:
+      testResultsDir:
+        type: string
+        default: artefacts/testResults
+    docker:
+      - image: 'cibuilds/hugo:latest'
+    steps:
+      - restore_cache:
+          keys: site-cache
       - hugo/html-proofer:
           path: ./public
           disable-external: false
@@ -71,6 +75,10 @@ workflows:
   main:
     jobs:
       - build
+
+      - test
+        requires:
+          - build
 
       - stagingDeploy:
           filters:
