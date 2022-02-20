@@ -1,30 +1,33 @@
-
-parameters:
-  deployTo:
-    default: 's3://a11ystaging'
-    type: enum
-    description: 'Environment to deploy to'
-    enum: ['s3://a11ystaging', 's3://mobilea11y.com']
-
-
 jobs:
-  deploy:
+  stagingDeploy:
     docker:
       - image: 'circleci/python:latest'
     steps:
       - checkout
       - aws-s3/sync:
            from: ./public
-           to: '<< pipeline.parameters.deployTo >>'
+           to: 's3://a11ystaging''
            arguments: |
              --acl public-read \
              --cache-control "max-age=86400"
-           overwrite: true
+
+jobs:
+  prodDeploy:
+    docker:
+      - image: 'circleci/python:latest'
+    steps:
+      - checkout
+      - aws-s3/sync:
+           from: 's3://a11ystaging'
+           to: 's3://mobilea11y.com'
+           arguments: |
+             --acl public-read \
+             --cache-control "max-age=86400"
 
   
 orbs:
   hugo: circleci/hugo@1.2.2
-  aws-s3: circleci/aws-s3@1.0.15
+  aws-s3: circleci/aws-s3@3.0.0
 version: 2.1
 workflows:
   main:
@@ -33,10 +36,17 @@ workflows:
           hugo-extra-flags: '--minify'
           version: '0.91.2'
           destination: ./public
-      - deploy:
+      - stagingDeploy:
           filters:
             branches:
               only: master
           requires:
             - hugo/build
+  prodDeploy:
+      jobs:
+        - prodDeploy:
+            filters:
+              branches:
+                only: master
+
                
