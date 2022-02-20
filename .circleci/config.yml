@@ -30,7 +30,8 @@ jobs:
              --cache-control "max-age=86400"
 
   build:
-    executor: 'cibuilds/hugo:lates'
+    docker:
+      - image: 'cibuilds/hugo:latest'
     steps: 
       - hugo/build:
           hugo-extra-flags: '--minify'
