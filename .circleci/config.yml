@@ -30,6 +30,10 @@ jobs:
              --cache-control "max-age=86400"
 
   build:
+    parameters:
+      testResultsDir:
+        type: string
+        default: artefacts/testResults
     docker:
       - image: 'cibuilds/hugo:latest'
     steps: 
@@ -40,6 +44,13 @@ jobs:
       - hugo/html-proofer:
           path: ./public
           disable-external: false
+          check-html: true
+          check-img-http: true
+          empty-alt-ignore: false
+          enforce-https: true
+          storage-dir: << parameters.testResultsDir >>
+      - store_artifacts:
+        path: << parameters.testResultsDir >>
 
 workflows:
   main:
