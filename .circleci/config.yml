@@ -1,11 +1,14 @@
+
+parameters:
+  deployTo:
+    default: 's3://a11ystaging'
+    type: enum
+    description: 'Environment to deploy to'
+    enum: ['s3://a11ystaging', 's3://mobilea11y.com']
+
+
 jobs:
   deploy:
-    parameters:
-      to:
-        default: 's3://a11ystaging'
-        type: enum
-        description: 'Environment to deploy to'
-        enum: ['s3://a11ystaging', 's3://mobilea11y.com']
     docker:
       - image: 'circleci/python:latest'
     steps:
