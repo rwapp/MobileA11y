@@ -53,6 +53,7 @@ jobs:
           check-img-http: true
           empty-alt-ignore: false
           enforce-https: true
+          log-level: :warn
           storage-dir: << parameters.testResultsDir >>
           
       - store_artifacts:
@@ -67,6 +68,8 @@ workflows:
           filters:
             branches:
               only: master
+            requires:
+            - hugo/hugo-build
 
   prodDeploy:
       jobs:
