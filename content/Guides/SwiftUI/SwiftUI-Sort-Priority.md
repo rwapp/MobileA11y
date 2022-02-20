@@ -27,7 +27,7 @@ VStack {
 .accessibilityElement(children: .contain)
 ```
 
-![Text: "Read this last, read this first, read this second." VoiceOver highlighting 'Read this first".](/images/SwiftUI-textorder.png)
+![Text: Read this last, read this first, read this second. VoiceOver highlighting Read this first.](/images/SwiftUI-textorder.png)
 
 One example of using this might be captioning a large image. In SwiftUI [images are accessible by default](https://rwapp.co.uk/2019/09/11/SwiftUI-Images/). This doesn't mean we should focus on the image as the first element - the title is usually more meaningful. Here, we'd set the sort priority of the image to 0 so it receives focus after VoiceOver has read the title and caption.
 
