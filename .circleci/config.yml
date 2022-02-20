@@ -47,6 +47,13 @@ jobs:
           extra-flags: '--minify'
           destination: ./public
           source: .
+      - run:
+          name: Where am i?
+          command: |
+            pwd
+            ls
+            cd ./public
+            ls
       - hugo/html-proofer:
           path: ./public
           disable-external: false
@@ -65,8 +72,6 @@ workflows:
 
       - stagingDeploy:
           filters:
-            branches:
-              only: master
 
   prodDeploy:
       jobs:
