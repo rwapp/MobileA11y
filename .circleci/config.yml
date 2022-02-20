@@ -63,6 +63,7 @@ jobs:
           path: ./public
           check-html: true
           check-img-http: true
+          empty-alt-ignore: false
           storage-dir: << parameters.testResultsDir >>
           
       - store_artifacts:
