@@ -37,7 +37,7 @@ jobs:
     docker:
       - image: 'cibuilds/hugo:latest'
     steps: 
-      - checkout
+      - checkout:
           post:
             - git submodule sync --recursive
             - git submodule update --recursive --init
