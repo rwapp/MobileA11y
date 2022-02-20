@@ -10,7 +10,7 @@ jobs:
       - image: 'circleci/python:latest'
     steps:
       - restore_cache:
-          keys: site-cache
+          key: mobilea11y-{{ .Branch }}-{{ .Revision }}
       - aws-s3/sync:
            from: ./public
            to: 's3://a11ystaging'
@@ -23,7 +23,7 @@ jobs:
       - image: 'circleci/python:latest'
     steps:
       - restore_cache:
-          keys: site-cache
+          key: mobilea11y-{{ .Branch }}-{{ .Revision }}
       - aws-s3/sync:
            from: 's3://a11ystaging'
            to: 's3://mobilea11y.com'
@@ -45,7 +45,7 @@ jobs:
           source: .
 
       - save_cache:
-          key: site-cache
+          key: mobilea11y-{{ .Branch }}-{{ .Revision }}
           paths: 
             - ./public
 
@@ -58,7 +58,7 @@ jobs:
       - image: 'cibuilds/hugo:latest'
     steps:
       - restore_cache:
-          keys: site-cache
+          key: mobilea11y-{{ .Branch }}-{{ .Revision }}
       - hugo/html-proofer:
           path: ./public
           disable-external: false
