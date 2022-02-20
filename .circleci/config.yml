@@ -61,6 +61,7 @@ jobs:
           key: mobilea11y-{{ .Branch }}-{{ .Revision }}
       - hugo/html-proofer:
           path: ./public
+          check-html: true
           storage-dir: << parameters.testResultsDir >>
           
       - store_artifacts:
