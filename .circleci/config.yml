@@ -89,8 +89,10 @@ workflows:
 
       - waitForApproval:
           type: approval
+          branches:
+            only: master
           requires:
-              - build
+              - stagingDeploy
 
       - prodDeploy:
           filters:
