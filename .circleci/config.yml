@@ -62,6 +62,7 @@ jobs:
       - hugo/html-proofer:
           path: ./public
           check-html: true
+          check-img-http: true
           storage-dir: << parameters.testResultsDir >>
           
       - store_artifacts:
