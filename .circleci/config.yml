@@ -1,12 +1,18 @@
 jobs:
   deploy:
+  parameters:
+      to:
+        default: 's3://a11ystaging'
+        type: enum
+        description: 'Environment to deploy to'
+        enum: ['s3://a11ystaging', 's3://mobilea11y.com']
     docker:
       - image: 'circleci/python:latest'
     steps:
       - checkout
       - aws-s3/sync:
            from: ./public
-           to: 's3://a11ystaging'
+           to: '<<parameters.to>>'
            arguments: |
              --acl public-read \
              --cache-control "max-age=86400"
