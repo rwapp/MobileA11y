@@ -258,9 +258,6 @@ An incredible audio documentary from [Shelly Brisbin](https://twitter.com/shelly
 * **[AppleVis Podcast](https://www.applevis.com/podcasts)**<br/>
 An Apple-focussed tech podcast, much like any other, the only difference being the hosts have visual impairments
 
-* **[Accessible Podcast](https://www.accessible.fm)**<br>
-A podcast about accessibility in tech, focussing on Apple.
-
 ## Talks
 
 ### iOS
