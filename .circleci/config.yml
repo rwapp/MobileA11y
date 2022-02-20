@@ -45,9 +45,9 @@ jobs:
           source: .
 
       - save_cache:
-        key: site-cache
-        paths: 
-          - ./public
+          key: site-cache
+          paths: 
+            - ./public
 
   test:
     parameters:
