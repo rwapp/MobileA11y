@@ -38,14 +38,13 @@ jobs:
 workflows:
   main:
     jobs:
-      hugoBuild:
-        steps:
-          - hugo/build:
-              hugo-extra-flags: '--minify'
-              version: '0.91.2'
-              destination: ./public
-          - hugo/html-proofer:
-              disable-external: false
+      - hugo/build:
+          hugo-extra-flags: '--minify'
+          version: '0.91.2'
+          destination: ./public
+          steps:
+            hugo/html-proofer:
+                disable-external: false
 
       - stagingDeploy:
           filters:
