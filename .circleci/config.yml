@@ -50,7 +50,7 @@ jobs:
           enforce-https: true
           storage-dir: << parameters.testResultsDir >>
       - store_artifacts:
-        path: << parameters.testResultsDir >>
+          path: << parameters.testResultsDir >>
 
 workflows:
   main:
