@@ -44,9 +44,9 @@ jobs:
 
   test:
       parameters:
-      testResultsDir:
-        type: string
-        default: artefacts/testResults
+        testResultsDir:
+          type: string
+          default: artefacts/testResults
       docker:
         - image: 'cibuilds/hugo:latest'
       - hugo/html-proofer:
