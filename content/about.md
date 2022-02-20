@@ -11,7 +11,7 @@ tags:
 
 Mobile A11y is a collection of blogs and resources about how we as mobile developers can improve accessibility on mobile devices. From time to time the blog might also touch on related topics such as digital inclusion, and other topics around ethics in technology. The site is aimed at mobile developers and is written by a mobile developer. I hope this means other mobile developers will find the content relatable and engaging, and you’ll find learning about mobile accessibility along with me helpful.
  
-This site isn’t aimed at accessibility users, so you’re unlikely to find information on how to use tools like VoiceOver and TalkBack. For iOS users looking to know more about using accessibility tools, you might consider  [Shelly Brisbin's](https://twitter.com/shelly) [iOS Access for All](http://www.iosaccessbook.com).
+This site isn’t aimed at accessibility users, so you’re unlikely to find information on how to use tools like VoiceOver and TalkBack. For iOS users looking to know more about using accessibility tools, you might consider  [Shelly Brisbin's](https://twitter.com/shelly) [iOS Access for All](https://www.iosaccessbook.com).
 
 
 ## About Rob Whitaker

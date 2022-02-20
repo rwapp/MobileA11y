@@ -29,7 +29,7 @@ Much like visual `NSAttributedString`s, there are several attributes to pick fro
 
 ## Language
 
-This attribute allows you to be explicit about the language VoiceOver uses to read a string. This is useful if you have multiple languages in your app. The attribute takes an argument representing the language you want VoiceOver to use in the [BCP47 format](http://www.rfc-editor.org/rfc/bcp/bcp47.txt) such as this example for Latin American Spanish `[.accessibilitySpeechLanguage: "es-419"]`.
+This attribute allows you to be explicit about the language VoiceOver uses to read a string. This is useful if you have multiple languages in your app. The attribute takes an argument representing the language you want VoiceOver to use in the [BCP47 format](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) such as this example for Latin American Spanish `[.accessibilitySpeechLanguage: "es-419"]`.
 
 ## Spell Out
 
