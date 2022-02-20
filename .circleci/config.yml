@@ -36,6 +36,8 @@ workflows:
           hugo-extra-flags: '--minify'
           version: '0.91.2'
           destination: ./public
+      - hugo/html-proofer:
+          disable-external: false
       - stagingDeploy:
           filters:
             branches:
