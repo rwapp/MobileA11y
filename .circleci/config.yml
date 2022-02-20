@@ -33,7 +33,7 @@ jobs:
     docker:
       - image: 'cibuilds/hugo:latest'
     steps: 
-      - hugo/build:
+      - hugo/hugo-build:
           hugo-extra-flags: '--minify'
           version: '0.91.2'
           destination: ./public
