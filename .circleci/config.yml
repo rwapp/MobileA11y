@@ -68,8 +68,8 @@ workflows:
           filters:
             branches:
               only: master
-            requires:
-              - hugo/hugo-build
+          requires:
+            - hugo/hugo-build
 
   prodDeploy:
       jobs:
