@@ -65,6 +65,7 @@ jobs:
           check-img-http: true
           empty-alt-ignore: false
           http-status-ignore: 302, 999, 403
+          enforce-https: true
           storage-dir: << parameters.testResultsDir >>
           
       - store_artifacts:
