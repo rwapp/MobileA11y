@@ -18,7 +18,7 @@ Android's developer documentation for Accessibility, including design, building 
 * **[Android: Make apps more accessible](https://developer.android.com/guide/topics/ui/accessibility/apps)**<br/>
 Google's guide to improving accessibility on Android
 
-* **[Android Accessibility – The Missing Manual](http://www.last-child.com/android-a11y-missing-manual/)**<br/>
+* **[Android Accessibility – The Missing Manual](https://www.last-child.com/android-a11y-missing-manual/)**<br/>
 A detailed introduction to Android accessibility.
 
 * **[Android Accessibility Tutorial: Getting Started](https://www.raywenderlich.com/240-android-accessibility-tutorial-getting-started)**<br/>
@@ -62,10 +62,10 @@ Dynamic type is an essential for iOS apps, it allows your customers to scale the
 
 ### Cross Platform
 
-* **[React Native Accessibility Is Pretty Bad](http://www.takingnotes.co/blog/2018/11/09/react-native-accessibility/?utm_campaign=iOS%2BDev%2BWeekly&utm_medium=email&utm_source=iOS%2BDev%2BWeekly%2BIssue%2B381)**<br/>
+* **[React Native Accessibility Is Pretty Bad](https://www.takingnotes.co/blog/2018/11/09/react-native-accessibility/?utm_campaign=iOS%2BDev%2BWeekly&utm_medium=email&utm_source=iOS%2BDev%2BWeekly%2BIssue%2B381)**<br/>
 I have no experience with react native, so can't offer an opinion on if this is still the case. My instinct tells me that a UI designed for no particular idiom is likely not great on any platform.
 
-* **[iOS vs. Android Accessibility](http://www.pauljadam.com/iosvsandroida11y/)**<br>
+* **[iOS vs. Android Accessibility](https://www.pauljadam.com/iosvsandroida11y/)**<br>
 Now slightly out of date, [Paul J. Adam's](https://twitter.com/pauljadam) guide and comparison of iOS and Android accessibility features and how they work for developers is still a good reference.
 
 
@@ -82,7 +82,7 @@ An iOS storyboard linting tool from Lyft. I haven't been able to try this myself
 * **[Colour Contrast Analyser](https://developer.paciellogroup.com/resources/contrastanalyser/)**<br/>
 A PC and Mac application from [The Paciello Group](https://www.paciellogroup.com) to determine the contract ratio between colours, and their conformance with [WCAG](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
 
-* **[Hemmingway App](http://www.hemingwayapp.com)**<br/>
+* **[Hemmingway App](https://www.hemingwayapp.com)**<br/>
 Hemmingway is an online grammar checker that highlights difficult to understand sentences and provides a reading grade for your written content.
 
 * **[Open Dyslexic](https://opendyslexic.org)**<br/>
@@ -119,7 +119,7 @@ The mobile accessibility initiative at W3C.
 * **[Web Content Accessibility Guidelines 2.1](https://www.w3.org/TR/WCAG21/)**<br/>
 Wherever you are in the world, if you have some form of accessibility regulation governing what you build, the chances are its based around WCAG. WCAG are written for web, so need a little translation to make them work for mobile. They're also seemingly endless, and a dry read. But they are the backbone of everything we try to achieve in accessibility, so are worth a cursory glance at the least.
 
-* **[Plain English Campaign Guides](http://www.plainenglish.co.uk/free-guides.html)**<br/>
+* **[Plain English Campaign Guides](https://www.plainenglish.co.uk/free-guides.html)**<br/>
 The Plain English Campaign works to remove jargon from written language. They have a range of free guides on their website that provide tips on how to avoid jargon and unnecessary complexity while keeping your language engaging.
 
 * **[BBC Mobile Accessibility Guidelines](https://www.bbc.co.uk/guidelines/futuremedia/accessibility/mobile)**<br/>

@@ -61,10 +61,10 @@ jobs:
           key: mobilea11y-{{ .Branch }}-{{ .Revision }}
       - hugo/html-proofer:
           path: ./public
-          disable-external: false
           check-html: true
           check-img-http: true
           empty-alt-ignore: false
+          http-status-ignore: 302, 999, 403
           enforce-https: true
           storage-dir: << parameters.testResultsDir >>
           
