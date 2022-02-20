@@ -27,7 +27,7 @@ VStack {
 .accessibilityElement(children: .contain)
 ```
 
-![](/images/SwiftUI-textorder.png)
+![Text: "Read this last, read this first, read this second." VoiceOver highlighting 'Read this first".](/images/SwiftUI-textorder.png)
 
 One example of using this might be captioning a large image. In SwiftUI [images are accessible by default](https://rwapp.co.uk/2019/09/11/SwiftUI-Images/). This doesn't mean we should focus on the image as the first element - the title is usually more meaningful. Here, we'd set the sort priority of the image to 0 so it receives focus after VoiceOver has read the title and caption.
 
@@ -47,7 +47,7 @@ VStack {
 .accessibilityElement(children: .contain)
 ```
 
-![](/images/swiftui-largeshuttle.png)
+![A large image of a shuttle with VoiceOver focussing on the image title.](/images/swiftui-largeshuttle.png)
 
 Another use of this could be a custom stepper control. We'd want VoiceOver to focus on the value first to orientate your user and inform them which value they're starting with. Then VoiceOver should follow with the decrease and increase buttons. We'd achieve this like this:
 
@@ -73,7 +73,7 @@ HStack {
 }
 .accessibilityElement(children: .contain)
 ```
-![](/images/SwiftUI-stepper.png)
+![Stepper control. Decrease on left, Increase on right, and the value in the center.](/images/SwiftUI-stepper.png)
 
 ### .Contain
 As of October 2019, the sort priority only works for elements inside a stack where the stack has the modifier of `.accessibilityElement(children: .contain)`. I don't believe this is intentional, hopefully, future releases of SwiftUI will drop this requirement.
