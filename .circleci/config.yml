@@ -27,7 +27,7 @@ workflows:
   main:
     jobs:
       - hugo/build:
-          # hugo-extra-flags: '--minify'
+          hugo-extra-flags: '--minify'
           html-proofer: false
           version: '0.91.2'
           destination: ./public
