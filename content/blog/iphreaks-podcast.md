@@ -8,6 +8,6 @@ tags:
 - Podcast
 ---
 
-I was asked to guest on the [iPhreaks podcast](https://devchat.tv/iphreaks/ips-274-ios-accessibility-with-rob-whitaker/) to discuss iOS accessibility. We talked about why accessibility is important, how you can improve it in your apps, and some of the changes iOS 13 and SwiftUI bring.
+I was asked to guest on the [iPhreaks podcast](https://iphreaksshow.com/275) to discuss iOS accessibility. We talked about why accessibility is important, how you can improve it in your apps, and some of the changes iOS 13 and SwiftUI bring.
 
-unfortunatley iPhreaks don't provide a transcript, but they do provide a [comprehensive write-up](https://devchat.tv/iphreaks/ips-274-ios-accessibility-with-rob-whitaker/) on their site.
+unfortunatley iPhreaks don't provide a transcript, but they do provide a [comprehensive write-up](https://iphreaksshow.com/275) on their site.

@@ -21,9 +21,6 @@ Google's guide to improving accessibility on Android
 * **[Android Accessibility – The Missing Manual](http://www.last-child.com/android-a11y-missing-manual/)**<br/>
 A detailed introduction to Android accessibility.
 
-* **[Exposing hidden actions on Android](https://ataulm.com/2019/05/09/exposing-hidden-actions-on-android/)**<br>
-A tutorial on adding accessibility actions to Android views.
-
 * **[Android Accessibility Tutorial: Getting Started](https://www.raywenderlich.com/240-android-accessibility-tutorial-getting-started)**<br/>
 A great tutorial for any android developer looking to start their journey towards making their app more accessible. Ray Wenderlich tutorials are always incredible quality, and this one from [Victoria Gonda](https://twitter.com/TTGonda) is no exception.
 
@@ -50,9 +47,6 @@ I haven't actually tried this out, i'm always a little skeptical of real-time ca
 
 * **[Grouping elements for better accessibility on iOS](https://thoughtbot.com/blog/grouping-elements-for-better-accessibility-on-ios?utm_campaign=iOS%2BDev%2BWeekly&utm_medium=email&utm_source=iOS%2BDev%2BWeekly%2BIssue%2B395)**<br/>
 A quick tutorial on creating iOS semantic views.
-
-* **[Deaf Can Code](https://apps.apple.com/gb/app/deaf-can-code/id1485133152)**<br/>
-Video tutorials in American Sign Language for creating iOS apps.
 
 * **[Audiograph](https://github.com/Tantalum73/Audiograph)**<br/>
 Audiograph is an iOS library for adding audio representations to charts.
@@ -257,9 +251,6 @@ An incredible audio documentary from [Shelly Brisbin](https://twitter.com/shelly
 
 * **[AppleVis Podcast](https://www.applevis.com/podcasts)**<br/>
 An Apple-focussed tech podcast, much like any other, the only difference being the hosts have visual impairments
-
-* **[Accessible Podcast](https://www.accessible.fm)**<br>
-A podcast about accessibility in tech, focussing on Apple.
 
 ## Talks
 

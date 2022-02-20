@@ -1,42 +1,97 @@
+version: 2.1
 
-parameters:
-  deployTo:
-    default: 's3://a11ystaging'
-    type: enum
-    description: 'Environment to deploy to'
-    enum: ['s3://a11ystaging', 's3://mobilea11y.com']
-
+orbs:
+  hugo: circleci/hugo@1.2.2
+  aws-s3: circleci/aws-s3@3.0.0
 
 jobs:
-  deploy:
+  stagingDeploy:
     docker:
       - image: 'circleci/python:latest'
     steps:
-      - checkout
+      - restore_cache:
+          keys: site-cache
       - aws-s3/sync:
-           from: ./public
-           to: '<< pipeline.parameters.deployTo >>'
+           from: ./public'
+           to: 's3://a11ystaging'
            arguments: |
              --acl public-read \
              --cache-control "max-age=86400"
-           overwrite: true
 
-  
-orbs:
-  hugo: circleci/hugo@1.2.2
-  aws-s3: circleci/aws-s3@1.0.15
-version: 2.1
+  prodDeploy:
+    docker:
+      - image: 'circleci/python:latest'
+    steps:
+      - restore_cache:
+          keys: site-cache
+      - aws-s3/sync:
+           from: 's3://a11ystaging'
+           to: 's3://mobilea11y.com'
+           arguments: |
+             --acl public-read \
+             --cache-control "max-age=86400"
+
+  build:
+    docker:
+      - image: 'cibuilds/hugo:latest'
+    steps: 
+      - checkout
+      - run: git submodule sync
+      - run: git submodule update --init
+
+      - hugo/hugo-build:
+          extra-flags: '--minify'
+          destination: ./public
+          source: .
+
+      - save_cache:
+          key: site-cache
+          paths: 
+            - ./public
+
+  test:
+    parameters:
+      testResultsDir:
+        type: string
+        default: artefacts/testResults
+    docker:
+      - image: 'cibuilds/hugo:latest'
+    steps:
+      - restore_cache:
+          keys: site-cache
+      - hugo/html-proofer:
+          path: ./public
+          disable-external: false
+          check-html: true
+          check-img-http: true
+          empty-alt-ignore: false
+          enforce-https: true
+          storage-dir: << parameters.testResultsDir >>
+          
+      - store_artifacts:
+          path: << parameters.testResultsDir >>
+
 workflows:
   main:
     jobs:
-      - hugo/build:
-          hugo-extra-flags: '--minify'
-          version: '0.91.2'
-          destination: ./public
-      - deploy:
+      - build
+
+      - test:
+          requires:
+            - build
+
+      - stagingDeploy:
           filters:
             branches:
               only: master
           requires:
-            - hugo/build
+            - build
+
+  prodDeploy:
+      jobs:
+        - prodDeploy:
+            filters:
+              branches:
+                only: master
+
                

@@ -25,7 +25,7 @@ There are a few possible ways to fix this issue, but as this interaction strays 
 
 ## Announcement
 
-VoiceOver can announce to your customer if something on the screen has changed, this is a great way to ape Android’s [live region](http://localhost:1313/blog/android-live-regions/) feature for TalkBack. In this situation, the best way to do this is to tell VoiceOver the screen has changed, and provide it with a string to announce.
+VoiceOver can announce to your customer if something on the screen has changed, this is a great way to ape Android’s [live region](/blog/android-live-regions/) feature for TalkBack. In this situation, the best way to do this is to tell VoiceOver the screen has changed, and provide it with a string to announce.
 
 ```
 UIAccessibility.post(notification: .layoutChanged, argument: "Settings available above.")
