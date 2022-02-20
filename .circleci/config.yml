@@ -30,10 +30,6 @@ jobs:
              --cache-control "max-age=86400"
 
   build:
-    parameters:
-      testResultsDir:
-        type: string
-        default: artefacts/testResults
     docker:
       - image: 'cibuilds/hugo:latest'
     steps: 
@@ -71,6 +67,8 @@ workflows:
   main:
     jobs:
       - build
+
+      - test
 
       - stagingDeploy:
           filters:
