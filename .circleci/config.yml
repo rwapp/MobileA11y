@@ -33,17 +33,20 @@ jobs:
     docker:
       - image: 'cimg/base'
     steps:
-      - hugo/build:
-          hugo-extra-flags: '--minify'
-          version: '0.91.2'
-          destination: ./public
-      - hugo/html-proofer:
-              disable-external: false
+      
 
 workflows:
   main:
     jobs:
-      - build
+      hugoBuild:
+        steps:
+          - hugo/build:
+              hugo-extra-flags: '--minify'
+              version: '0.91.2'
+              destination: ./public
+          - hugo/html-proofer:
+              disable-external: false
+
       - stagingDeploy:
           filters:
             branches:
