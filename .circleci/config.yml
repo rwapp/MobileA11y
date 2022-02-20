@@ -66,7 +66,7 @@ jobs:
           check-img-http: true
           empty-alt-ignore: false
           enforce-https: true
-          log-level: :error
+          log-level: error
           storage-dir: << parameters.testResultsDir >>
           
       - store_artifacts:
