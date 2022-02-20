@@ -9,7 +9,8 @@ jobs:
     docker:
       - image: 'circleci/python:latest'
     steps:
-      - checkout
+      - restore_cache:
+          keys: site-cache
       - aws-s3/sync:
            from: ./public'
            to: 's3://a11ystaging'
@@ -21,7 +22,8 @@ jobs:
     docker:
       - image: 'circleci/python:latest'
     steps:
-      - checkout
+      - restore_cache:
+          keys: site-cache
       - aws-s3/sync:
            from: 's3://a11ystaging'
            to: 's3://mobilea11y.com'
@@ -41,6 +43,11 @@ jobs:
           extra-flags: '--minify'
           destination: ./public
           source: .
+
+      - save_cache:
+        key: site-cache
+        paths: 
+          - ./public
 
   test:
     parameters:
