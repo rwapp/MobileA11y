@@ -31,7 +31,7 @@ jobs:
 
   build:
     docker:
-      - image: 'circleci/python:latest'
+      - image: 'cimg/base'
     steps:
       - hugo/build:
           hugo-extra-flags: '--minify'
