@@ -57,6 +57,8 @@ jobs:
     docker:
       - image: 'cibuilds/hugo:latest'
     steps:
+      - restore_cache:
+          keys: site-cache
       - hugo/html-proofer:
           path: ./public
           disable-external: false
