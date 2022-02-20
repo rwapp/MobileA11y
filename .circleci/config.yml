@@ -37,6 +37,7 @@ jobs:
           extra-flags: '--minify'
           destination: ./public
       - hugo/html-proofer:
+          path: ./public
           disable-external: false
 
 workflows:
