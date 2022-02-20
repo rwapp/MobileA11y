@@ -1,6 +1,6 @@
 jobs:
   deploy:
-  parameters:
+    parameters:
       to:
         default: 's3://a11ystaging'
         type: enum
