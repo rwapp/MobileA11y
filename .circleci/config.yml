@@ -88,9 +88,9 @@ workflows:
             - build
 
       - waitForApproval:
-        type: approval
-        requires:
-            - build
+          type: approval
+          requires:
+              - build
 
       - prodDeploy:
           filters:
