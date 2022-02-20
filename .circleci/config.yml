@@ -47,6 +47,7 @@ jobs:
           extra-flags: '--minify'
           destination: ./public
           source: .
+          version: '0.91.2'
       - run:
           name: Where am i?
           command: |
@@ -70,7 +71,10 @@ workflows:
     jobs:
       - build
 
-      - stagingDeploy
+      - stagingDeploy:
+          filters:
+            branches:
+              only: master
 
   prodDeploy:
       jobs:
