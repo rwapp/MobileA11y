@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mobile A11y Blog on Mobile A11y</title>
+    <link>https://mobilea11y.com/tags/mobile-a11y-blog/</link>
+    <description>Recent content in Mobile A11y Blog on Mobile A11y</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 19 Jun 2022 10:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/mobile-a11y-blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>iOS Accessibility Values</title>
+      <link>https://mobilea11y.com/blog/accessibility-values/</link>
+      <pubDate>Sun, 19 Jun 2022 10:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/accessibility-values/</guid>
+      <description>For iOS, Accessibility values are one of the building blocks of how Accessibility works on the platform, along with traits, labels, hints, and showing/hiding elements. If you&amp;rsquo;re familiar with WCAG or web accessibility, accessibility values are the value part of WCAG 4.1.2: Name, Role, Value.
+Values Not every element in your view will have a value - in fact, most won&amp;rsquo;t. Any element that &amp;lsquo;contains&amp;rsquo; some data, data that is not included in the element&amp;rsquo;s label requires an accessibility value to be set.</description>
+    </item>
+    
+    <item>
+      <title>iOS UIKit Accessibility traits</title>
+      <link>https://mobilea11y.com/blog/traits/</link>
+      <pubDate>Fri, 13 Aug 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/traits/</guid>
+      <description>Accessibility traits on iOS is the system by which assistive technologies know how to present your interface to your users. The exact experience will vary between assistive technologies, in some cases they may change the intonation of what VoiceOver reads, or add additional options for navigation, sometimes they will disable that assistive technology from accessing the element, or change how the assistive tech functions. They are the &amp;lsquo;Role&amp;rsquo; part of the fundamental rule of making something accessible to screen readers - WCAG&amp;rsquo;s 4.</description>
+    </item>
+    
+    <item>
+      <title>iOS Custom Accessibility Actions</title>
+      <link>https://mobilea11y.com/blog/a11y-custom-actions/</link>
+      <pubDate>Sun, 01 Aug 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/a11y-custom-actions/</guid>
+      <description>When testing your app with VoiceOver or Switch Control, a common test is to ensure you can reach every interactive element on screen. If these assistive technologies can&amp;rsquo;t focus all of your buttons how will your customers be able to interact fully with your app? Except there are times when hiding buttons from your assistive technology users is the better choice. Consider an app with a table view that has many repeating interactive elements - this could be a social media app where &amp;rsquo;like, share, reply&amp;rsquo; etc is repeated for each post.</description>
+    </item>
+    
+    <item>
+      <title>Test Your App&#39;s Accessibility with Evinced</title>
+      <link>https://mobilea11y.com/blog/evinced-ios/</link>
+      <pubDate>Wed, 24 Mar 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/evinced-ios/</guid>
+      <description>Disclosure: Evinced has paid for my time in writing this blog, and I have provided them feedback on the version of their tool reviewed and an early beta. I agreed to this because I believe in the product they are offering.
+ Testing your app for accessibility is an essential part of making an accessible app, as with any part of the software you build, if you don’t test it, how can you be sure it works?</description>
+    </item>
+    
+    <item>
+      <title>How Do I Get My App an Accessibility Audit?</title>
+      <link>https://mobilea11y.com/blog/accessibility-professionals/</link>
+      <pubDate>Sun, 21 Mar 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/accessibility-professionals/</guid>
+      <description>This is a common question I get asked - how do I go about arranging an accessibility audit for my app so I know where I can make improvements? If you&amp;rsquo;re truly looking for an answer to that question then I have a few options for you below, but first, are you asking the right question?
+Accessibility Isn&amp;rsquo;t About Box Ticking You can&amp;rsquo;t make your app accessible by getting a report, fixing the findings, and accepting it as done.</description>
+    </item>
+    
+    <item>
+      <title>Quick Win - Start UI Testing</title>
+      <link>https://mobilea11y.com/quick-wins/ui-testing/</link>
+      <pubDate>Wed, 03 Feb 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/quick-wins/ui-testing/</guid>
+      <description>I&amp;rsquo;ll admit, adding UI testing to an app that currently doesn&amp;rsquo;t have it included is probably stretching the definition of quick win, but the aim here isn&amp;rsquo;t 100% coverage - not right away anyway. Start small and add to your test suite as you gain confidence. Even a small suite of crucial happy-path UI tests will help to ensure and persist accessibility in your app. And the more you get comfortable with UI tests the more accessible your apps will become, because an app that is easy to test is also great for accessibility.</description>
+    </item>
+    
+    <item>
+      <title>Quick Win - Support Dark Mode</title>
+      <link>https://mobilea11y.com/quick-wins/dark-mode/</link>
+      <pubDate>Thu, 28 Jan 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/quick-wins/dark-mode/</guid>
+      <description>Many people don&amp;rsquo;t realise dark mode is an accessibility feature. It&amp;rsquo;s often just considered a nice to have, a cool extra feature that power users will love. But dark mode is also a valuable accessibility feature. Some types of visual impairment can make it painful to look at bright colours, or large blocks of white might wash over the black text. Some people with dyslexia or Irlen&amp;rsquo;s Syndrome can struggle to read black text on a white background.</description>
+    </item>
+    
+    <item>
+      <title>Quick Win - Support Landscape</title>
+      <link>https://mobilea11y.com/quick-wins/landscape/</link>
+      <pubDate>Thu, 28 Jan 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/quick-wins/landscape/</guid>
+      <description>If you have a regulatory requirement to provide accessibility in your app (spoiler, you do) the chances are it will say you have a requirement to reach WCAG AA. While this is likely meaningless to anyone other an accessibility professionals, in short it means you are providing the minimum level of accessibility features required to make your app usable by the majority of people.
+This post is about one such requirement, the jazzily titled Success Criterion 1.</description>
+    </item>
+    
+    <item>
+      <title>Quick Win - Image Descriptions</title>
+      <link>https://mobilea11y.com/quick-wins/image-descriptions/</link>
+      <pubDate>Tue, 19 Jan 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/quick-wins/image-descriptions/</guid>
+      <description>Images are a major part of our apps. They add meaning and interest, they give your app character and context. The adage is that a picture is worth a thousand words. But if you can&amp;rsquo;t see the image clearly, how do you know what those words are?
+If you aren&amp;rsquo;t providing image descriptions in your app many of your users will be missing out on the experience you&amp;rsquo;ve crafted. The result can be an app thats missing that spark an character, or worse an app thats just meaningless and unusable.</description>
+    </item>
+    
+    <item>
+      <title>Quick Win - Text Contrast</title>
+      <link>https://mobilea11y.com/quick-wins/text-contrast/</link>
+      <pubDate>Tue, 19 Jan 2021 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/quick-wins/text-contrast/</guid>
+      <description>How many shades of grey do you use in your app? OK, maybe thats a bit cruel towards designers, grey is a great colour, but the problem with grey is that it can be deceptively difficult to distinguish from a background. And this problem is not just limited to greys - lighter colours too can blend into the background. This effect can be heightened too for people who have blurred or obscured vision, or one of many forms of colour blindness.</description>
+    </item>
+    
+    <item>
+      <title>iOS Attributed Accessibility Labels</title>
+      <link>https://mobilea11y.com/blog/attributed-accessibility-labels/</link>
+      <pubDate>Sun, 03 May 2020 10:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/attributed-accessibility-labels/</guid>
+      <description>Attributed accessibility labels are an incredible tool for making some next-level accessible experiences. They let you tell VoiceOver not just what to speak, but how to say it too.
+Using the accessibilityAttributedLabel property you can provide an NSAttributedString to VoiceOver, much the same way you would provide an NSAttributedString to a label&amp;rsquo;s attributedText property to display a string with an underline or character colour for example. The difference here is that all of our attributes are instructions for VoiceOver.</description>
+    </item>
+    
+    <item>
+      <title>Writing Great iOS Accessibility Labels</title>
+      <link>https://mobilea11y.com/blog/writing-great-labels/</link>
+      <pubDate>Sun, 03 May 2020 09:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/writing-great-labels/</guid>
+      <description>A good accessibility label lets your customer know exactly what a control does in as few words as possible, without having to rely on implied context.
+Don&amp;rsquo;t Add the Element Type iOS already knows your button is a button and your image is an image, it does this using an accessibility trait. If you label your button as &amp;lsquo;Play button&amp;rsquo; your VoiceOver customers will hear &amp;lsquo;Play button. Button.&amp;rsquo;
+Keep it Succinct Don&amp;rsquo;t frustrate your customer by adding too much information to your labels.</description>
+    </item>
+    
+    <item>
+      <title>When to use Accessibility Labels</title>
+      <link>https://mobilea11y.com/blog/when-to-use-accessibility-labels/</link>
+      <pubDate>Sun, 03 May 2020 08:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/when-to-use-accessibility-labels/</guid>
+      <description>There&amp;rsquo;s a few circumstances when you&amp;rsquo;ll want to set your own accessibility label, such as&amp;hellip;
+ An interactive element that you haven&amp;rsquo;t given a text value to, such as an image button. An interactive element with a long visual label. An interactive element with a short visual label that takes context from your design. A control or view you have created yourself or built by combining elements. Images of text.  Elements Without a text value Take the controls for a music player as an example.</description>
+    </item>
+    
+    <item>
+      <title>iOS Accessibility Labels</title>
+      <link>https://mobilea11y.com/blog/ios-accessibility-labels/</link>
+      <pubDate>Sun, 03 May 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/ios-accessibility-labels/</guid>
+      <description>This blog was inspired by Jeff Watkins&amp;rsquo; series of blogs on UIButton. UIButton is a fundamental part of building interfaces on iOS. So much so, that it probably doesn&amp;rsquo;t get the love it deserves. But it&amp;rsquo;s also really powerful and customisable when used correctly.
+Accessibility labels on iOS I feel are very similar. They&amp;rsquo;re fundamental to how accessibility works on iOS, yet I think they suffer from a few PR issues.</description>
+    </item>
+    
+    <item>
+      <title>A11y Box Android</title>
+      <link>https://mobilea11y.com/blog/a11y-box-android/</link>
+      <pubDate>Sun, 26 Apr 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/a11y-box-android/</guid>
+      <description>A few months ago I shared a project I&amp;rsquo;d been working on for iOS exploring the accessibility API available on that platform. The Android accessibility API is equally large and full featured, and really deserves the same treatment. So here&amp;rsquo;s A11y Box for Android.
+A11y Box for Android is an exploration of what is available on the Android accessibility api and how you can make use of it in your apps.</description>
+    </item>
+    
+    <item>
+      <title>A11y Box iOS</title>
+      <link>https://mobilea11y.com/blog/a11y-box-ios/</link>
+      <pubDate>Wed, 26 Feb 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/a11y-box-ios/</guid>
+      <description>iOS&amp;rsquo; UIAccessibility API is huge. I like to think I know it pretty well, but I&amp;rsquo;m always being surprised by discovering features I previously had no idea about. Like many things on iOS, the documentation for UIAccessibility is not always complete, even for parts of the API that have been around for years.
+In an attempt to help spread the knowledge of some of the awesome things UIAccessibility is capable of, I&amp;rsquo;ve created A11y Box for iOS.</description>
+    </item>
+    
+    <item>
+      <title>Android Live Regions</title>
+      <link>https://mobilea11y.com/blog/android-live-regions/</link>
+      <pubDate>Tue, 11 Feb 2020 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/android-live-regions/</guid>
+      <description>Live Regions are one of my favourite accessibility features on Android. They&amp;rsquo;re a super simple solution to a common accessibility problem that people with visual impairments can stumble across.
+Say you have a game app, really any type of game. Your user interacts with the play area, and as they do, their score increases or decreases depending on your customer&amp;rsquo;s actions. In this example, the score display is separate to the element your customer is interacting with.</description>
+    </item>
+    
+    <item>
+      <title>A11y is not accessible</title>
+      <link>https://mobilea11y.com/blog/inaccessible-a11y/</link>
+      <pubDate>Thu, 28 Nov 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/inaccessible-a11y/</guid>
+      <description>Accessibility is a long word. It&amp;rsquo;s not the simplest of words to read or to spell, so it seems like a word that would be a good candidate for abbreviation. The common abbreviation of accessibility is a11y. We take the A and Y from the beginning and end of accessibility, and 11 for the number of letters in between. This abbreviation also creates a pleasing homophone for ‘ally.’
+The irony of this abbreviation is that a11y isn’t accessible.</description>
+    </item>
+    
+    <item>
+      <title>Baking Digital Inclusion Into Your Mobile Apps</title>
+      <link>https://mobilea11y.com/blog/baking-digital-inclusion-into-your-mobile-apps/</link>
+      <pubDate>Thu, 25 Jul 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/baking-digital-inclusion-into-your-mobile-apps/</guid>
+      <description>I was asked by Capital One to contribute an accessibility piece to the Capital One Tech Medium. The blog, titled Baking Digital Inclusion Into Your Mobile Apps, briefly covers what we mean by disability and what we can do to make our mobile apps work better for everyone.</description>
+    </item>
+    
+    <item>
+      <title>What The European Accessibility Act (Might) Mean for Mobile Development</title>
+      <link>https://mobilea11y.com/blog/european-accessibility-act/</link>
+      <pubDate>Mon, 24 Jun 2019 07:32:16 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/european-accessibility-act/</guid>
+      <description>The European Accessibility Act, or EAA is due to become law in Europe later this year, and it defines some specific requirements for mobile. In fact, its the first accessibility legislation that I’m aware of, anywhere, that explicitly covers mobile apps.
+ Since 2012 the European Union has been working on standardising accessibility legislation across Europe. The ultimate aim is to both improve the experience for those who need to use assistive technology, but also to simplify the rules business need to follow on accessibility.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on Mobile A11y</title>
+    <link>https://mobilea11y.com/tags/web/</link>
+    <description>Recent content in Web on Mobile A11y</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 30 Nov 2019 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Review: Accessibility for Everyone - Laura Kalbag</title>
+      <link>https://mobilea11y.com/blog/kalbag-accessibility-for-everyone-review/</link>
+      <pubDate>Sat, 30 Nov 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/kalbag-accessibility-for-everyone-review/</guid>
+      <description>Laura&amp;rsquo;s introduction to web accessibility jumped out to me because it&amp;rsquo;s available as an audiobook. Being dyslexic I struggle to read, so prefer to listen to audiobooks where available. Unfortunately, most technical books aren&amp;rsquo;t available as audiobooks for a couple of potentially obvious reasons. Hearing code or descriptions of diagrams and illustrations read aloud may not be the best experience for an audiobook. As such, this book choses to leave those out of the audio version.</description>
+    </item>
+    
+  </channel>
+</rss>

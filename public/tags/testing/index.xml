@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Testing on Mobile A11y</title>
+    <link>https://mobilea11y.com/tags/testing/</link>
+    <description>Recent content in Testing on Mobile A11y</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 17 Dec 2019 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A11yUITests: An XCUI Testing library for accessibility</title>
+      <link>https://mobilea11y.com/blog/a11yuitests/</link>
+      <pubDate>Tue, 17 Dec 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/blog/a11yuitests/</guid>
+      <description>A11yUITests is an extension to XCTestCase that adds tests for common accessibility issues that can be run as part of an XCUITest suite. I&amp;rsquo;ve written a detailed discussion of the tests available if you&amp;rsquo;re interested in changing/implementing these tests yourself. Alternatively, follow this quick start guide.
+Getting Started Adding A11yUITests I&amp;rsquo;m assuming you&amp;rsquo;re already familiar with cocoapods, if not, cocoapods.org has a good introduction. There is one minor difference here compared to most cocoapods, we&amp;rsquo;re not including this pod in our app, but our app&amp;rsquo;s test bundle.</description>
+    </item>
+    
+    <item>
+      <title>XCUITests for accessibility</title>
+      <link>https://mobilea11y.com/guides/xcui/</link>
+      <pubDate>Mon, 16 Dec 2019 07:30:56 +0000</pubDate>
+      
+      <guid>https://mobilea11y.com/guides/xcui/</guid>
+      <description>For a while now I’ve been looking at possibilities for automated accessibility testing on iOS. Unfortunately, I’ve not found any option so far that I’m happy with. I am a big fan of Apple’s XCUI Test framework. Although it has its limitations, I believe there’s scope for creating valid accessibility tests using this framework. Over the last few months I’ve been trying things out, and here’s what I’ve come up with.</description>
+    </item>
+    
+  </channel>
+</rss>
