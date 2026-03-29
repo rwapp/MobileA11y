@@ -75,7 +75,7 @@
   {{ $isStale := .Lastmod.Before $twoYearsAgo }}
   {{ if or (and $isStale (ne .Params.outdated false)) (eq .Params.outdated true) }}
     <span class="absolute top-0 left-0 m-2">
-      {{ partial "badge.html" "Outdated" }}
+      {{ partial "badge.html" "Archive" }}
     </span>
   {{ end }}
   <div class="p-4">
