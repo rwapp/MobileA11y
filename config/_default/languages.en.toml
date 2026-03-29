@@ -5,10 +5,9 @@ weight = 1
 
 [params]
   description = """Mobile accessibility resources, guidance, and opinions for developers. Edited by Rob Whitaker"""
-  copyright = """Email: [a11y@mobilea11y.com](mailto:a11y@mobilea11y.com).
-  
-  Made with [Hugo](https://gohugo.io/). Themed by [Blowfish](https://blowfish.page/)."""
+  copyright = """Email: [a11y@mobilea11y.com](mailto:a11y@mobilea11y.com).<br><a href="https://mobilea11y.com">Mobile A11y</a> &copy; { year } by <a href="https://www.linkedin.com/in/rob-whitaker/">Rob Whitaker</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="license noopener noreferrer">CC BY-NC 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" class="cc-icon"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" class="cc-icon"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" class="cc-icon">"""
   dateFormat = "Jan 2, 2006"
 
   [params.author]
     name = "Mobile A11y"
+    email = "a11y@mobilea11y.com"

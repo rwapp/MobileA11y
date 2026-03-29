@@ -62,7 +62,7 @@ This attribute allows us to tell VoiceOver to read all punctuation. This can be 
 ## Sources
 
 * [Daniel Devesa](https://twitter.com/dadederk) [Developing Accessible iOS Apps: Support VoiceOver, Dynamic Type, and More](https://amzn.to/2WkLNkt)
-* [Rob Whitaker](https://twitter.com/RobRWAPP) [Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android](https://amzn.to/2KSDmaz)
+* [Rob Whitaker](https://www.linkedin.com/in/rob-whitaker/) [Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android](https://amzn.to/2KSDmaz)
 
 ## Next up
 

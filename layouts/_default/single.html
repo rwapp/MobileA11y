@@ -46,10 +46,11 @@
 
       <div class="min-w-0 min-h-0 max-w-fit">
         {{ partial "series/series.html" . }}
-        <div class="article-content max-w-prose mb-20">
-          {{ $twoYearsAgo := now.AddDate -2 0 0 }}
-          {{ $isStale := .Lastmod.Before $twoYearsAgo }}
-          {{ if or (and $isStale (ne .Params.outdated false)) (eq .Params.outdated true) }}
+        {{ $twoYearsAgo := now.AddDate -2 0 0 }}
+        {{ $isStale := .Lastmod.Before $twoYearsAgo }}
+        {{ $isOutdated := or (and $isStale (ne .Params.outdated false)) (eq .Params.outdated true) }}
+        <div class="article-content max-w-prose mb-20"{{ if $isOutdated }} data-proofer-ignore{{ end }}>
+          {{ if $isOutdated }}
             {{ partial "outdated-banner.html" . }}
           {{ end }}
           {{ .Content }}

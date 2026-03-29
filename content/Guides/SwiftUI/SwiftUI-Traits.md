@@ -78,7 +78,7 @@ Allows Direct Interaction tells VoiceOver there should be no deviation from the 
 
 Imagine you have created a music app that provides a piano keyboard for the user to play. Using the VoiceOver paradigm of swiping to key and double tapping would not produce much of a tune. `allowsDirectInteraction` disables this control allowing your user to play the keyboard by directly tapping the keys. This means your user doesn't have to disable VoiceOver for the rest of the UI. A game might be a good use for this trait. Inappropriate use of this trait will create a worse experience for your VoiceOver users.
 
-![Apple's Garage Band app displaying a piano keyboard](/images/SwiftUI-Keyboard.PNG)
+![Apple's Garage Band app displaying a piano keyboard](/images/SwiftUI-Keyboard.png)
 
 ### causesPageTurn
 

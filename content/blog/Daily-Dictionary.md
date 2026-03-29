@@ -12,11 +12,11 @@ The [Accessibility Review series](/tags/accessibility-review/) uses real world a
 
 Assessing the app, I noticed Benjamin has made a design decision around presenting the app’s settings. Settings are slid down from the top of the screen, similar to a card UI that you might find in the Apple Maps app. Except with Daily Dictionary, the card is presented from the top of the screen. The card slides down or up in response to the user activating the settings button on the navigation bar.
 
-![Daily Dictionary settings closed](/images/DictionaryClosed.PNG)
+![Daily Dictionary settings closed](/images/DictionaryClosed.png)
 
 The above image shows the main Daily Dictionary screen with the settings closed. In this state, the title of the settings button is “Open settings”.
 
-![Daily Dictionary settings open](/images/DictionaryOpen.PNG)
+![Daily Dictionary settings open](/images/DictionaryOpen.png)
 
 This image shows Daily Dictionary after a VoiceOver user has toggled the “Open Settings” button. The title changes to “Close settings”, this title is read by VoiceOver immediately after animating the settings onto the screen.
 

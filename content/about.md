@@ -16,7 +16,7 @@ This site isn’t aimed at accessibility users, so you’re unlikely to find inf
 
 ## About Rob Whitaker
 
-[Rob](https://twitter.com/RobRWAPP) is an iOS mobile developer currently working for Capital One in the UK. Rob is passionate about making great mobile experiences that work for everyone.
+[Rob](https://www.linkedin.com/in/rob-whitaker/) is an iOS mobile developer currently working for Capital One in the UK. Rob is passionate about making great mobile experiences that work for everyone.
 
 Rob lives in the middle of the UK where he enjoys views over a national park when the weather is bad, and getting out into the national park when the weather is good. Rob lives with his wife (human) and daughter (dog).
 

@@ -11,12 +11,12 @@ The [Accessibility Review series](/tags/accessibility-review/) uses real world a
 
 [Huh?](https://apps.apple.com/app/id1330097506) is a dictionary and thesaurus app from [Peter Yaacoub](https://twitter.com/yaapete). Enter a word into the search bar then choose a dictionary service. Press search and the app will present your chosen service’s entry for the term you entered.
 
-![Huh app](/images/huh-english.PNG)
+![Huh app](/images/huh-english.png)
 
 What makes this app stand out is its ability to look up words in various languages. The app features services for Arabic, Spanish, Italian and several others. Change the app’s search language and to immerse you in the experience, the app’s buttons also change.
 
-![Huh app in German](/images/huh-german.PNG)
-![Huh app in Italian](/images/huh-italian.PNG)
+![Huh app in German](/images/huh-german.png)
+![Huh app in Italian](/images/huh-italian.png)
 
 We have a visual clue to the language for these buttons by the flag displayed. But VoiceOver cannot pick up on this clue. Instead, VoiceOver will attempt at the pronunciation of the word using the user's local language. This has mixed results.
 

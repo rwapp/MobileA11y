@@ -12,4 +12,7 @@ pluralizelisttitles = "false"
 post = "/blog/:year/:month/:day/:slug/"
 
   [imaging]
-  quality = 99
+  quality = 80
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

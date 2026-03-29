@@ -69,3 +69,6 @@ hugo.tar.gz
 
 # Editor
 .vscode/
+
+# Claude Code
+.claude/
