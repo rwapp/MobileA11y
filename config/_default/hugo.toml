@@ -1,0 +1,15 @@
+baseURL = "https://mobilea11y.com"
+languageCode = "en"
+defaultContentLanguage = "en"
+title = "Mobile A11y"
+theme = "blowfish"
+pluralizelisttitles = "false"
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+post = "/blog/:year/:month/:day/:slug/"
+
+  [imaging]
+  quality = 99

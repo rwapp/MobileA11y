@@ -1,391 +1,1003 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <meta name="generator" content="Hugo 0.98.0" />
-  <link rel="canonical" href="/quick-wins/text-contrast/">
-
-  
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
-  <link rel="canonical" href="https://mobilea11y.com/index.xml" >
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
-
-  <style>
-    body {
-      visibility: visible;
-      opacity: 1;
-    }
-  </style>
-
-  <link rel="stylesheet" href="/css/prism.css" media="none" onload="this.media='all';">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
 
   
   
-  <link rel="stylesheet" type="text/css" href="/css/styles.css">
-
-  <link rel="stylesheet" href="https://mobilea11y.com/fonts/font-awesome/css/font-awesome.min.css">
-
-  
-  <style id="inverter" media="none">
-    html { filter: invert(100%) }
-    * { background-color: inherit }
-    img:not([src*=".svg"]), .colors, iframe, .demo-container { filter: invert(100%) }
-  </style>
+    <title>Quick Win - Text Contrast &middot; Mobile A11y</title>
+    <meta name="title" content="Quick Win - Text Contrast &middot; Mobile A11y">
   
 
   
   
-  <title>Quick Win - Text Contrast | Mobile A11y</title>
+    <meta name="description" content="Is the text in your app clear enough for everyone to read it?">
+  
+  
+    <meta name="keywords" content="iOS,Android,Mobile,Mobile A11y Blog,Blog,Quick Win,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/quick-wins/text-contrast/">
+  
+
+  
+  
+    <meta name="author" content="Mobile A11y">
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/quick-wins/text-contrast/">
+  <meta property="og:site_name" content="Mobile A11y">
+  <meta property="og:title" content="Quick Win - Text Contrast">
+  <meta property="og:description" content="Is the text in your app clear enough for everyone to read it?">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="quick-wins">
+    <meta property="article:published_time" content="2021-01-19T07:30:56+00:00">
+    <meta property="article:modified_time" content="2021-01-19T07:30:56+00:00">
+    <meta property="article:tag" content="IOS">
+    <meta property="article:tag" content="Android">
+    <meta property="article:tag" content="Mobile">
+    <meta property="article:tag" content="Mobile A11y Blog">
+    <meta property="article:tag" content="Blog">
+    <meta property="article:tag" content="Quick Win">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Quick Win - Text Contrast">
+  <meta name="twitter:description" content="Is the text in your app clear enough for everyone to read it?">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.7bdcd4b1ddf33994376c4f47921649cfbe007893d7cd1b76aa9d2132be7576f50a3cc07b9e64e0c626f003c87ff4879efc1a8743ceaa434e47360e4b4fb2e498.css"
+    integrity="sha512-e9zUsd3zOZQ3bE9HkhZJz74AeJPXzRt2qp0hMr51dvUKPMB7nmTgxibwA8h/9Iee/BqHQ86qQ05HNg5LT7LkmA==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.c41769a6d0a0f3c9fae21f229a8ff36dbf91ab46022c5e71ec6600b9be681f5f41e6148129be6881788a258ce35a23cb28fb4b739843d8ffc1efec4081c51313.js"
+      integrity="sha512-xBdpptCg88n64h8imo/zbb&#43;Rq0YCLF5x7GYAub5oH19B5hSBKb5ogXiKJYzjWiPLKPtLc5hD2P/B7&#43;xAgcUTEw=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Quick Wins",
+    "name": "Quick Win - Text Contrast",
+    "headline": "Quick Win - Text Contrast",
+    "description": "Is the text in your app clear enough for everyone to read it?",
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/quick-wins/text-contrast/",
+    "author" : {
+      "@type": "Person",
+      "name": "Mobile A11y"
+    },
+    "copyrightYear": "2021",
+    "dateCreated": "2021-01-19T07:30:56\u002b00:00",
+    "datePublished": "2021-01-19T07:30:56\u002b00:00",
+    
+    "dateModified": "2021-01-19T07:30:56\u002b00:00",
+    
+    "keywords": ["iOS","Android","Mobile","Mobile A11y Blog","Blog","Quick Win"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "410"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
 </head>
 
-  <body>
-    <a href="#main">skip to content</a>
-    <noscript>
-  <style>
-    body {
-      visibility: visible;
-      opacity: 1;
-    }
-  </style>
-</noscript>
 
-    <svg style="display: none">
-  <symbol id="bookmark" viewBox="0 0 40 50">
-   <g transform="translate(2266 3206.2)">
-    <path style="stroke:currentColor;stroke-width:3.2637;fill:none" d="m-2262.2-3203.4-.2331 42.195 16.319-16.318 16.318 16.318.2331-42.428z"/>
-   </g>
-  </symbol>
 
-  <symbol id="w3c" viewBox="0 0 127.09899 67.763">
-   <text font-size="83" style="font-size:83px;font-family:Trebuchet;letter-spacing:-12;fill-opacity:0" letter-spacing="-12" y="67.609352" x="-26.782778">W3C</text>
-   <text font-size="83" style="font-size:83px;font-weight:bold;font-family:Trebuchet;fill-opacity:0" y="67.609352" x="153.21722" font-weight="bold">SVG</text>
-   <path style="fill:currentColor;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m33.695.377 12.062 41.016 12.067-41.016h8.731l-19.968 67.386h-.831l-12.48-41.759-12.479 41.759h-.832l-19.965-67.386h8.736l12.061 41.016 8.154-27.618-3.993-13.397h8.737z"/>
-   <path style="fill:currentColor;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m91.355 46.132c0 6.104-1.624 11.234-4.862 15.394-3.248 4.158-7.45 6.237-12.607 6.237-3.882 0-7.263-1.238-10.148-3.702-2.885-2.47-5.02-5.812-6.406-10.022l6.82-2.829c1.001 2.552 2.317 4.562 3.953 6.028 1.636 1.469 3.56 2.207 5.781 2.207 2.329 0 4.3-1.306 5.909-3.911 1.609-2.606 2.411-5.738 2.411-9.401 0-4.049-.861-7.179-2.582-9.399-1.995-2.604-5.129-3.912-9.397-3.912h-3.327v-3.991l11.646-20.133h-14.062l-3.911 6.655h-2.493v-14.976h32.441v4.075l-12.31 21.217c4.324 1.385 7.596 3.911 9.815 7.571 2.22 3.659 3.329 7.953 3.329 12.892z"/>
-   <path style="fill:currentColor;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m125.21 0 1.414 8.6-5.008 9.583s-1.924-4.064-5.117-6.314c-2.693-1.899-4.447-2.309-7.186-1.746-3.527.73-7.516 4.938-9.258 10.13-2.084 6.21-2.104 9.218-2.178 11.978-.115 4.428.58 7.043.58 7.043s-3.04-5.626-3.011-13.866c.018-5.882.947-11.218 3.666-16.479 2.404-4.627 5.954-7.404 9.114-7.728 3.264-.343 5.848 1.229 7.841 2.938 2.089 1.788 4.213 5.698 4.213 5.698l4.94-9.837z"/>
-   <path style="fill:currentColor;image-rendering:optimizeQuality;shape-rendering:geometricPrecision" d="m125.82 48.674s-2.208 3.957-3.589 5.48c-1.379 1.524-3.849 4.209-6.896 5.555-3.049 1.343-4.646 1.598-7.661 1.306-3.01-.29-5.807-2.032-6.786-2.764-.979-.722-3.486-2.864-4.897-4.854-1.42-2-3.634-5.995-3.634-5.995s1.233 4.001 2.007 5.699c.442.977 1.81 3.965 3.749 6.572 1.805 2.425 5.315 6.604 10.652 7.545 5.336.945 9.002-1.449 9.907-2.031.907-.578 2.819-2.178 4.032-3.475 1.264-1.351 2.459-3.079 3.116-4.108.487-.758 1.276-2.286 1.276-2.286l-1.276-6.644z"/>
-  </symbol>
 
-  <symbol id="tag" viewBox="0 0 177.16535 177.16535">
-    <g transform="translate(0 -875.2)">
-     <path style="fill-rule:evenodd;stroke-width:0;fill:currentColor" d="m159.9 894.3-68.79 8.5872-75.42 77.336 61.931 60.397 75.429-76.565 6.8495-69.755zm-31.412 31.835a10.813 10.813 0 0 1 1.8443 2.247 10.813 10.813 0 0 1 -3.5174 14.872l-.0445.0275a10.813 10.813 0 0 1 -14.86 -3.5714 10.813 10.813 0 0 1 3.5563 -14.863 10.813 10.813 0 0 1 13.022 1.2884z"/>
-    </g>
-  </symbol>
 
-  <symbol id="balloon" viewBox="0 0 141.73228 177.16535">
-   <g transform="translate(0 -875.2)">
-    <g>
-     <path style="fill:currentColor" d="m68.156 882.83-.88753 1.4269c-4.9564 7.9666-6.3764 17.321-5.6731 37.378.36584 10.437 1.1246 23.51 1.6874 29.062.38895 3.8372 3.8278 32.454 4.6105 38.459 4.6694-.24176 9.2946.2879 14.377 1.481 1.2359-3.2937 5.2496-13.088 8.886-21.623 6.249-14.668 8.4128-21.264 10.253-31.252 1.2464-6.7626 1.6341-12.156 1.4204-19.764-.36325-12.93-2.1234-19.487-6.9377-25.843-2.0833-2.7507-6.9865-7.6112-7.9127-7.8436-.79716-.20019-6.6946-1.0922-6.7755-1.0248-.02213.0182-5.0006-.41858-7.5248-.22808l-2.149-.22808h-3.3738z"/>
-     <path style="fill:currentColor" d="m61.915 883.28-3.2484.4497c-1.7863.24724-3.5182.53481-3.8494.63994-2.4751.33811-4.7267.86957-6.7777 1.5696-.28598 0-1.0254.20146-2.3695.58589-5.0418 1.4418-6.6374 2.2604-8.2567 4.2364-6.281 7.6657-11.457 18.43-12.932 26.891-1.4667 8.4111.71353 22.583 5.0764 32.996 3.8064 9.0852 13.569 25.149 22.801 37.517 1.3741 1.841 2.1708 2.9286 2.4712 3.5792 3.5437-1.1699 6.8496-1.9336 10.082-2.3263-1.3569-5.7831-4.6968-21.86-6.8361-33.002-.92884-4.8368-2.4692-14.322-3.2452-19.991-.68557-5.0083-.77707-6.9534-.74159-15.791.04316-10.803.41822-16.162 1.5026-21.503 1.4593-5.9026 3.3494-11.077 6.3247-15.852z"/>
-     <path style="fill:currentColor" d="m94.499 885.78c-.10214-.0109-.13691 0-.0907.0409.16033.13489 1.329 1.0675 2.5976 2.0723 6.7003 5.307 11.273 14.568 12.658 25.638.52519 4.1949.24765 14.361-.5059 18.523-2.4775 13.684-9.7807 32.345-20.944 53.519l-3.0559 5.7971c2.8082.76579 5.7915 1.727 8.9926 2.8441 11.562-11.691 18.349-19.678 24.129-28.394 7.8992-11.913 11.132-20.234 12.24-31.518.98442-10.02-1.5579-20.876-6.7799-28.959-.2758-.4269-.57803-.86856-.89617-1.3166-3.247-6.13-9.752-12.053-21.264-16.131-2.3687-.86369-6.3657-2.0433-7.0802-2.1166z"/>
-     <path style="fill:currentColor" d="m32.52 892.22c-.20090-.13016-1.4606.81389-3.9132 2.7457-11.486 9.0476-17.632 24.186-16.078 39.61.79699 7.9138 2.4066 13.505 5.9184 20.562 5.8577 11.77 14.749 23.219 30.087 38.74.05838.059.12188.1244.18052.1838 1.3166-.5556 2.5965-1.0618 3.8429-1.5199-.66408-.32448-1.4608-1.3297-3.8116-4.4602-5.0951-6.785-8.7512-11.962-13.051-18.486-5.1379-7.7948-5.0097-7.5894-8.0586-13.054-6.2097-11.13-8.2674-17.725-8.6014-27.563-.21552-6.3494.13041-9.2733 1.775-14.987 2.1832-7.5849 3.9273-10.986 9.2693-18.07 1.7839-2.3656 2.6418-3.57 2.4409-3.7003z"/>
-     <path style="fill:currentColor" d="m69.133 992.37c-6.2405.0309-12.635.76718-19.554 2.5706 4.6956 4.7759 9.935 10.258 12.05 12.625l4.1272 4.6202h11.493l3.964-4.4516c2.0962-2.3541 7.4804-7.9845 12.201-12.768-8.378-1.4975-16.207-2.6353-24.281-2.5955z"/>
-     <rect style="stroke-width:0;fill:currentColor" ry="2.0328" height="27.746" width="22.766" y="1017.7" x="60.201"/>
-    </g>
-   </g>
-  </symbol>
 
-  <symbol id="info" viewBox="0 0 41.667 41.667">
-   <g transform="translate(-37.035 -1004.6)">
-    <path style="stroke-linejoin:round;stroke:currentColor;stroke-linecap:round;stroke-width:3.728;fill:none" d="m76.25 1030.2a18.968 18.968 0 0 1 -23.037 13.709 18.968 18.968 0 0 1 -13.738 -23.019 18.968 18.968 0 0 1 23.001 -13.768 18.968 18.968 0 0 1 13.798 22.984"/>
-    <g transform="matrix(1.1146 0 0 1.1146 -26.276 -124.92)">
-     <path style="stroke:currentColor;stroke-linecap:round;stroke-width:3.728;fill:none" d="m75.491 1039.5v-8.7472"/>
-     <path style="stroke-width:0;fill:currentColor" transform="scale(-1)" d="m-73.193-1024.5a2.3719 2.3719 0 0 1 -2.8807 1.7142 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
-    </g>
-   </g>
-  </symbol>
 
-  <symbol id="warning" viewBox="0 0 48.430474 41.646302">
-    <g transform="translate(-1.1273 -1010.2)">
-     <path style="stroke-linejoin:round;stroke:currentColor;stroke-linecap:round;stroke-width:4.151;fill:none" d="m25.343 1012.3-22.14 37.496h44.28z"/>
-     <path style="stroke:currentColor;stroke-linecap:round;stroke-width:4.1512;fill:none" d="m25.54 1027.7v8.7472"/>
-     <path style="stroke-width:0;fill:currentColor" d="m27.839 1042.8a2.3719 2.3719 0 0 1 -2.8807 1.7143 2.3719 2.3719 0 0 1 -1.718 -2.8785 2.3719 2.3719 0 0 1 2.8763 -1.7217 2.3719 2.3719 0 0 1 1.7254 2.8741"/>
-    </g>
-  </symbol>
 
-  <symbol id="menu" viewBox="0 0 50 50">
-     <rect style="stroke-width:0;fill:currentColor" height="10" width="50" y="0" x="0"/>
-     <rect style="stroke-width:0;fill:currentColor" height="10" width="50" y="20" x="0"/>
-     <rect style="stroke-width:0;fill:currentColor" height="10" width="50" y="40" x="0"/>
-   </symbol>
 
-   <symbol id="link" viewBox="0 0 50 50">
-    <g transform="translate(0 -1002.4)">
-     <g transform="matrix(.095670 0 0 .095670 2.3233 1004.9)">
-      <g>
-       <path style="stroke-width:0;fill:currentColor" d="m452.84 192.9-128.65 128.65c-35.535 35.54-93.108 35.54-128.65 0l-42.881-42.886 42.881-42.876 42.884 42.876c11.845 11.822 31.064 11.846 42.886 0l128.64-128.64c11.816-11.831 11.816-31.066 0-42.9l-42.881-42.881c-11.822-11.814-31.064-11.814-42.887 0l-45.928 45.936c-21.292-12.531-45.491-17.905-69.449-16.291l72.501-72.526c35.535-35.521 93.136-35.521 128.64 0l42.886 42.881c35.535 35.523 35.535 93.141-.001 128.66zm-254.28 168.51-45.903 45.9c-11.845 11.846-31.064 11.817-42.881 0l-42.884-42.881c-11.845-11.821-11.845-31.041 0-42.886l128.65-128.65c11.819-11.814 31.069-11.814 42.884 0l42.886 42.886 42.876-42.886-42.876-42.881c-35.54-35.521-93.113-35.521-128.65 0l-128.65 128.64c-35.538 35.545-35.538 93.146 0 128.65l42.883 42.882c35.51 35.54 93.11 35.54 128.65 0l72.496-72.499c-23.956 1.597-48.092-3.784-69.474-16.283z"/>
-      </g>
-     </g>
-    </g>
-  </symbol>
 
-  <symbol id="doc" viewBox="0 0 35 45">
-   <g transform="translate(-147.53 -539.83)">
-    <path style="stroke:currentColor;stroke-width:2.4501;fill:none" d="m149.38 542.67v39.194h31.354v-39.194z"/>
-    <g style="stroke-width:25" transform="matrix(.098003 0 0 .098003 133.69 525.96)">
-     <path d="m220 252.36h200" style="stroke:currentColor;stroke-width:25;fill:none"/>
-     <path style="stroke:currentColor;stroke-width:25;fill:none" d="m220 409.95h200"/>
-     <path d="m220 488.74h200" style="stroke:currentColor;stroke-width:25;fill:none"/>
-     <path d="m220 331.15h200" style="stroke:currentColor;stroke-width:25;fill:none"/>
-    </g>
-   </g>
- </symbol>
 
- <symbol id="tick" viewBox="0 0 177.16535 177.16535">
-  <g transform="translate(0 -875.2)">
-   <rect style="stroke-width:0;fill:currentColor" transform="rotate(30)" height="155" width="40" y="702.99" x="556.82"/>
-   <rect style="stroke-width:0;fill:currentColor" transform="rotate(30)" height="40" width="90.404" y="817.99" x="506.42"/>
-  </g>
- </symbol>
-</svg>
 
-    <div class="wrapper">
-      <header class="intro-and-nav" role="banner">
-  <div>
-    <div class="intro">
-      <a class="logo" href="/" aria-label="Mobile A11y home page">
-        <img src="https://mobilea11y.com/images/logo.svg" alt="Mobile Ally logo">
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
       </a>
-      <p class="library-desc">
-         A blog about making mobile more accessible for all.
-Edited by <a href="https://twitter.com/RobRWAPP">Rob Whitaker</a> 
-      </p>
     </div>
-    <nav id="patterns-nav" class="patterns" role="navigation">
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Mobile A11y
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
 
-  <div>
-    <label for="themer">
-      dark theme: <input type="checkbox" id="themer" class="vh">
-      <span aria-hidden="true"></span>
+    
+      
+  
+    <a
+      href="/blog/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/guides/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Guides"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Guides
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/quick-wins/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Quick Wins"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Quick Wins
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/resources/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Resources"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Resources
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/index.xml"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="RSS"
+      title="">
+      
+      
+        <span class="text-base font-medium break-normal">
+          RSS
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
     </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="Home"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Home
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/blog/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/guides/"
+        aria-label="Guides"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Guides
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/quick-wins/"
+        aria-label="Quick Wins"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Quick Wins
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/resources/"
+        aria-label="Resources"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Resources
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/about/"
+        aria-label="About"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          About
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/index.xml"
+        aria-label="RSS"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="" class="text-2xl font-bold tracking-tight">
+          RSS
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
 </div>
 
-  <h2 class="vh">Main navigation</h2>
-  <button id="menu-button" aria-expanded="false">
-    <svg viewBox="0 0 50 50" aria-hidden="true" focusable="false">
-      <use xlink:href="#menu"></use>
-    </svg>
-    Menu
-  </button>
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
   
-  <ul id="patterns-list">
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Quick Win - Text Contrast
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
   
-    <li class="pattern">
-      
-      
-      
-      
-      <a href="/" >
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use xlink:href="#bookmark"></use>
-        </svg>
-        <span class="text">Home</span>
-      </a>
-    </li>
   
-    <li class="pattern">
-      
-      
-      
-      
-      <a href="/blog/" >
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use xlink:href="#bookmark"></use>
-        </svg>
-        <span class="text">Blog</span>
-      </a>
-    </li>
+
+
+
   
-    <li class="pattern">
-      
-      
-      
-      
-      <a href="/guides/" >
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use xlink:href="#bookmark"></use>
-        </svg>
-        <span class="text">Guides</span>
-      </a>
-    </li>
+
   
-    <li class="pattern">
-      
-      
-      
-      
-      <a href="/quick-wins/" >
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use xlink:href="#bookmark"></use>
-        </svg>
-        <span class="text">Quick Wins</span>
-      </a>
-    </li>
   
-    <li class="pattern">
-      
-      
-      
-      
-      <a href="/resources/" >
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use xlink:href="#bookmark"></use>
-        </svg>
-        <span class="text">Resources</span>
-      </a>
-    </li>
   
-    <li class="pattern">
-      
-      
-      
-      
-      <a href="/tags/" >
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use xlink:href="#bookmark"></use>
-        </svg>
-        <span class="text">Tags</span>
-      </a>
-    </li>
+    
   
-    <li class="pattern">
-      
-      
-      
-      
-      <a href="/about-mobile-a11y/" >
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use xlink:href="#bookmark"></use>
-        </svg>
-        <span class="text">About</span>
-      </a>
-    </li>
+
   
-    <li class="pattern">
-      
-      
-      
-      
-      <a href="/index.xml" >
-        <svg class="bookmark-icon" aria-hidden="true" focusable="false" viewBox="0 0 40 50">
-          <use xlink:href="#bookmark"></use>
-        </svg>
-        <span class="text">RSS</span>
-      </a>
-    </li>
+
   
-  </ul>
-</nav>
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2021-01-19T07:30:56&#43;00:00">Jan 19, 2021</time><span class="px-2 text-primary-500">&middot;</span><span>410 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+    
+
+    
     
   </div>
-</header>
 
-      <div class="main-and-footer">
-        <div>
-          
-  <main id="main">
-    <h1>Quick Win - Text Contrast</h1>
-    <p>How many shades of grey do you use in your app? OK, maybe thats a bit cruel towards designers, grey is a great colour, but the problem with grey is that it can be deceptively difficult to distinguish from a background. And this problem is not just limited to greys - lighter colours too can blend into the background. This effect can be heightened too for people who have blurred or obscured vision, or one of many forms of colour blindness.</p>
-<p>The <a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines</a> is the guide that details what works and what doesn&rsquo;t for digital accessibility. Written by a range of experts and users with various abilities and based on loads of user testing and research, its your go-to guide for making accessible experiences. More than that, WCAG is also the basis of accessibility laws and regulations in many jurisdictions.</p>
-<p>The WCAG rule for text colour contrast is <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">4.5:1</a>. There are some exceptions to this rule, but this means any contrast greater or equal to 4.5:1 should be easy to read for all of your users. In grey terms, this means nothing lighter than #767676 for text presented on white. But ideally aim for higher than 4.5:1 if you can.</p>
-<p>To check your app&rsquo;s contrast take a look at your pallette and think about any combinations you use for text and backgrounds. The next step is to calculate the contrast between them, fortunately there are a ton of tools to do this for you. I suggest using the <a href="https://www.paciellogroup.com">Paciello Group&rsquo;s</a> <a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a>. Its a free cross-platform app that has a range of options for entering your colour combinations, including an eye-dropper tool if you don&rsquo;t have your pallette to hand. Always use the actual colour values if you can, its just more accurate.</p>
-<p><img src="/images/cca76.png" alt="Colour Contrast Analyser showing passing contrast"></p>
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Mobile A11y
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <p>How many shades of grey do you use in your app? OK, maybe thats a bit cruel towards designers, grey is a great colour, but the problem with grey is that it can be deceptively difficult to distinguish from a background. And this problem is not just limited to greys - lighter colours too can blend into the background. This effect can be heightened too for people who have blurred or obscured vision, or one of many forms of colour blindness.</p>
+<p>The <a href="https://www.w3.org/TR/WCAG21/"  target="_blank" rel="noreferrer">Web Content Accessibility Guidelines</a> is the guide that details what works and what doesn&rsquo;t for digital accessibility. Written by a range of experts and users with various abilities and based on loads of user testing and research, its your go-to guide for making accessible experiences. More than that, WCAG is also the basis of accessibility laws and regulations in many jurisdictions.</p>
+<p>The WCAG rule for text colour contrast is <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html"  target="_blank" rel="noreferrer">4.5:1</a>. There are some exceptions to this rule, but this means any contrast greater or equal to 4.5:1 should be easy to read for all of your users. In grey terms, this means nothing lighter than #767676 for text presented on white. But ideally aim for higher than 4.5:1 if you can.</p>
+<p>To check your app&rsquo;s contrast take a look at your pallette and think about any combinations you use for text and backgrounds. The next step is to calculate the contrast between them, fortunately there are a ton of tools to do this for you. I suggest using the <a href="https://www.paciellogroup.com"  target="_blank" rel="noreferrer">Paciello Group&rsquo;s</a> <a href="https://developer.paciellogroup.com/resources/contrastanalyser/"  target="_blank" rel="noreferrer">Colour Contrast Analyser</a>. Its a free cross-platform app that has a range of options for entering your colour combinations, including an eye-dropper tool if you don&rsquo;t have your pallette to hand. Always use the actual colour values if you can, its just more accurate.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Colour Contrast Analyser showing passing contrast"
+    src="/images/cca76.png"
+    ></figure>
+</p>
 <p>The app will tell you exactly where your combination can and can&rsquo;t be used. The big one is the first icon you see - &ldquo;1.46 Contrast (Minimum) (AA) - regular text&rdquo;. If this icon is red, you need to change your colours. If this is green and some others are red, you&rsquo;re kinda ok, but you might want to consider improvement.</p>
-<p><img src="/images/cca888.png" alt="Colour Contrast Analyser showing failing contrast"></p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Colour Contrast Analyser showing failing contrast"
+    src="/images/cca888.png"
+    ></figure>
+</p>
 <p>The fix here you&rsquo;ve probably already guessed. You need to change your background colour or the text colour - or both - to meet that 4.5:1 threshold. Making this change will not just help your customers with vision impairments, but will make your app easier to read at a glance for everyone.</p>
 
-    <div class="book-footer">
-    <div class="book-thumbnail">
-        <img src="/images/logo.png" alt="Mobile Ally"/>
-    </div>
-    <div class="book-details">
-        <p>Thanks for reading!<br/>Did you find this resource valuable?<br/>Please consider supporting Mobile A11y by sending a <a href="https://ko-fi.com/mobilea11y" target="_blank">tip</a> or sharing this blog.</p>
-        </div>
-</div>
-
-<div class="book-footer">
-    <div class="book-thumbnail">
-            <a href="https://amzn.to/2KSDmaz" target="_blank"><img src="/images/cover.png" alt="Developing Inclusive Mobile Apps cover"/></a>
-        </div>
-    <div class="book-details">
-    <p>
-        <a href="https://amzn.to/2KSDmaz" target="_blank">Developing Inclusive Mobile Apps: Building Accessible Apps for iOS and Android</a> is available now from <a href="https://www.apress.com/gp/book/9781484258132" target="_blank">Apress</a> and <a href="https://amzn.to/2KSDmaz" target="_blank">Amazon</a>.
-    </p>
-    </div>
-</div>
-  </main>
-
           
-          <div class="social-heading">
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/quick-wins/image-descriptions/">
+              <span class="leading-6">
+                Quick Win - Image Descriptions&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
             
-            <div class="footer-social">
-  
-  
-  
-  
-  
-  </div>
-          </div>
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2021-01-19T07:30:56&#43;00:00">Jan 19, 2021</time>
+              </span>
+            
           
-            <footer role="contentinfo">
-  
-  <div class="social-footer">
-    <div class="footer-social">
-  
-  
-  
-  
-  
-  </div>
-  </div>
-  
-  
-    <p class="margin-top-none">Copyright &copy; <span id="copyright-year"></span> - Rob Whitaker</p>
-  
-  
-  
-    <p class="margin-top-none">
-    <p>Twitter: <a href="https://twitter.com/MobileA11y">@MobileA11y</a>. Email: <a href="mailto:a11y@mobilea11y.com">a11y@mobilea11y.com</a>.</p>
-<p>Made with <a href="https://gohugo.io/">Hugo</a>. Themed by <a href="https://github.com/zwbetz-gh/cupper-hugo-theme">Cupper</a>.</p>
-
-    </p>
-  
-</footer>
-<script>
-    var year = new Date().getFullYear()
-    document.getElementById("copyright-year").innerHTML = year;
-</script>
-
-          
-        </div>
+        </span>
       </div>
     </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          <p>Email: <a href="mailto:a11y@mobilea11y.com" >a11y@mobilea11y.com</a>.</p>
+<p>Made with <a href="https://gohugo.io/"  target="_blank" rel="noreferrer">Hugo</a>. Themed by <a href="https://blowfish.page/"  target="_blank" rel="noreferrer">Blowfish</a>.</p>
+
+      </p>
     
 
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "dff1cf41af33422e9a94397e3ef8f8d8"}'></script>
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
 
-
-
-<script src="/js/dom-scripts.js"></script>  
-
-<script src="/js/prism.js"></script>
-
-
-
-<script src="/js/search.7aef046a0cc8b0c532f1d20087b920459bc868c936bb48a6ae221eceefca2d07.js"></script>
-
-<link rel="stylesheet" href="/css/search.fe0cd54a21628574bff49d721c827d1bb165ab56b0f22dd55ae78addbe61c309.css"></link>
-
-
-
-
+    </div>
   </body>
+  
 </html>

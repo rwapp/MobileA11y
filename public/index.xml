@@ -2,429 +2,443 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mobile A11y</title>
-    <link>https://mobilea11y.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Sun, 19 Jun 2022 10:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <copyright>Email: [a11y@mobilea11y.com](mailto:a11y@mobilea11y.com).
+  
+  Made with [Hugo](https://gohugo.io/). Themed by [Blowfish](https://blowfish.page/).</copyright>
+    <lastBuildDate>Sun, 19 Jun 2022 10:30:56 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>iOS Accessibility Values</title>
-      <link>https://mobilea11y.com/blog/accessibility-values/</link>
+      <link>http://localhost:1313/blog/accessibility-values/</link>
       <pubDate>Sun, 19 Jun 2022 10:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/accessibility-values/</guid>
-      <description>For iOS, Accessibility values are one of the building blocks of how Accessibility works on the platform, along with traits, labels, hints, and showing/hiding elements. If you&amp;rsquo;re familiar with WCAG or web accessibility, accessibility values are the value part of WCAG 4.1.2: Name, Role, Value.
-Values Not every element in your view will have a value - in fact, most won&amp;rsquo;t. Any element that &amp;lsquo;contains&amp;rsquo; some data, data that is not included in the element&amp;rsquo;s label requires an accessibility value to be set.</description>
+      <guid>http://localhost:1313/blog/accessibility-values/</guid>
+      <description>&lt;p&gt;For iOS, Accessibility values are one of the building blocks of how Accessibility works on the platform, along with &lt;a href=&#34;http://localhost:1313/blog/traits/&#34; &gt;traits&lt;/a&gt;, &lt;a href=&#34;https://mobilea11y.com/blog/ios-accessibility-labels/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;labels&lt;/a&gt;, hints, and showing/hiding elements. If you&amp;rsquo;re familiar with WCAG or web accessibility, accessibility values are the &lt;em&gt;value&lt;/em&gt; part of &lt;a href=&#34;https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;WCAG 4.1.2: Name, Role, Value&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Values&#xA;    &lt;div id=&#34;values&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#values&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Not every element in your view will have a value - in fact, most won&amp;rsquo;t. Any element that &amp;lsquo;contains&amp;rsquo; some data, data that is not included in the element&amp;rsquo;s label requires an accessibility value to be set. If you&amp;rsquo;re using standard controls provided by Apple, these values will be set for you. But if you make something custom you must add a value where necessary, and if you&amp;rsquo;re extending a standard control, testing with VoiceOver is essential.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>iOS UIKit Accessibility traits</title>
-      <link>https://mobilea11y.com/blog/traits/</link>
+      <link>http://localhost:1313/blog/traits/</link>
       <pubDate>Fri, 13 Aug 2021 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/traits/</guid>
-      <description>Accessibility traits on iOS is the system by which assistive technologies know how to present your interface to your users. The exact experience will vary between assistive technologies, in some cases they may change the intonation of what VoiceOver reads, or add additional options for navigation, sometimes they will disable that assistive technology from accessing the element, or change how the assistive tech functions. They are the &amp;lsquo;Role&amp;rsquo; part of the fundamental rule of making something accessible to screen readers - WCAG&amp;rsquo;s 4.</description>
+      <guid>http://localhost:1313/blog/traits/</guid>
+      <description>&lt;p&gt;Accessibility traits on iOS is the system by which assistive technologies know how to present your interface to your users. The exact experience will vary between assistive technologies, in some cases they may change the intonation of what VoiceOver reads, or add additional options for navigation, sometimes they will disable that assistive technology from accessing the element, or change how the assistive tech functions. They are the &amp;lsquo;Role&amp;rsquo; part of the fundamental rule of making something accessible to screen readers - &lt;a href=&#34;https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;WCAG&amp;rsquo;s 4.1.2: Name, Role, Value&lt;/a&gt;.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>iOS Custom Accessibility Actions</title>
-      <link>https://mobilea11y.com/blog/a11y-custom-actions/</link>
+      <link>http://localhost:1313/blog/a11y-custom-actions/</link>
       <pubDate>Sun, 01 Aug 2021 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/a11y-custom-actions/</guid>
-      <description>When testing your app with VoiceOver or Switch Control, a common test is to ensure you can reach every interactive element on screen. If these assistive technologies can&amp;rsquo;t focus all of your buttons how will your customers be able to interact fully with your app? Except there are times when hiding buttons from your assistive technology users is the better choice. Consider an app with a table view that has many repeating interactive elements - this could be a social media app where &amp;rsquo;like, share, reply&amp;rsquo; etc is repeated for each post.</description>
+      <guid>http://localhost:1313/blog/a11y-custom-actions/</guid>
+      <description>&lt;p&gt;When testing your app with VoiceOver or Switch Control, a common test is to ensure you can reach every interactive element on screen. If these assistive technologies can&amp;rsquo;t focus all of your buttons how will your customers be able to interact fully with your app? Except there are times when hiding buttons from your assistive technology users is the better choice. Consider an app with a table view that has many repeating interactive elements - this could be a social media app where &amp;rsquo;like, share, reply&amp;rsquo; etc is repeated for each post. Or perhaps an e-commerce app with &amp;lsquo;wishlist, buy now, add to basket&amp;rsquo; are repeated for each item. Visually these buttons won&amp;rsquo;t interrupt your users skimming the list of content, but for VoiceOver or Switch Control users, they will have to visit each one for every item on the screen. This is going to make navigating your app long and tedious, an means your users are more likely to drop out.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Test Your App&#39;s Accessibility with Evinced</title>
-      <link>https://mobilea11y.com/blog/evinced-ios/</link>
+      <link>http://localhost:1313/blog/evinced-ios/</link>
       <pubDate>Wed, 24 Mar 2021 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/evinced-ios/</guid>
-      <description>Disclosure: Evinced has paid for my time in writing this blog, and I have provided them feedback on the version of their tool reviewed and an early beta. I agreed to this because I believe in the product they are offering.
- Testing your app for accessibility is an essential part of making an accessible app, as with any part of the software you build, if you don’t test it, how can you be sure it works?</description>
+      <guid>http://localhost:1313/blog/evinced-ios/</guid>
+      <description>&lt;blockquote&gt;&lt;p&gt;Disclosure: Evinced has paid for my time in writing this blog, and I have provided them feedback on the version of their tool reviewed and an early beta. I agreed to this because I believe in the product they are offering.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;p&gt;Testing your app for accessibility is an essential part of making an accessible app, as with any part of the software you build, if you don’t test it, how can you be sure it works? Because accessibility is human, there are no true shortcuts to this, a through manual test will always be the most productive form of accessibility testing possible. But with some carefully designed automated checks, you can detect common accessibility issues quicker and earlier. This makes fixing them easier, the chance of these errors reaching your customers is reduced, and it saves you valuable time for resolving more complex issues. It&amp;rsquo;s not an easy problem to solve - I’ve tried with &lt;a href=&#34;https://github.com/rwapp/A11yUITests&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;A11yUITests&lt;/a&gt;, and Apple built their offering, &lt;a href=&#34;https://developer.apple.com/videos/play/wwdc2019/257/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Accessibility Inspector&lt;/a&gt;, right in to Xcode. Now a new tool has entered the arena from &lt;a href=&#34;https://evinced.com&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Evinced&lt;/a&gt;, the iOS Accessibility Debugger.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>How Do I Get My App an Accessibility Audit?</title>
-      <link>https://mobilea11y.com/blog/accessibility-professionals/</link>
+      <link>http://localhost:1313/blog/accessibility-professionals/</link>
       <pubDate>Sun, 21 Mar 2021 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/accessibility-professionals/</guid>
-      <description>This is a common question I get asked - how do I go about arranging an accessibility audit for my app so I know where I can make improvements? If you&amp;rsquo;re truly looking for an answer to that question then I have a few options for you below, but first, are you asking the right question?
-Accessibility Isn&amp;rsquo;t About Box Ticking You can&amp;rsquo;t make your app accessible by getting a report, fixing the findings, and accepting it as done.</description>
+      <guid>http://localhost:1313/blog/accessibility-professionals/</guid>
+      <description>&lt;p&gt;This is a common question I get asked - how do I go about arranging an accessibility audit for my app so I know where I can make improvements? If you&amp;rsquo;re truly looking for an answer to that question then I have a few &lt;a href=&#34;http://localhost:1313/blog/accessibility-professionals/#accessibility-professionals-who-can-help&#34; &gt;options for you&lt;/a&gt; below, but first, are you asking the right question?&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Accessibility Isn&amp;rsquo;t About Box Ticking&#xA;    &lt;div id=&#34;accessibility-isnt-about-box-ticking&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#accessibility-isnt-about-box-ticking&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;You can&amp;rsquo;t make your app accessible by getting a report, fixing the findings, and accepting it as done. Accessibility is a constant process of improvement to make sure your app works better for as many people as possible. This could mean adopting new accessibility APIs as they become available, or it could mean reacting to feedback you receive from your users. Disability happens when someone&amp;rsquo;s abilities don&amp;rsquo;t mesh with the tools we have provided, and as disability is such a wide spectrum there will always be someone disabled by your app. How that manifests will vary depending on your app, the people using it, and over time, so one assessors report is not enough to claim your app is 100% accessible, because there is no such thing. To claim this is both naive and a little offensive.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Quick Win - Start UI Testing</title>
-      <link>https://mobilea11y.com/quick-wins/ui-testing/</link>
+      <link>http://localhost:1313/quick-wins/ui-testing/</link>
       <pubDate>Wed, 03 Feb 2021 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/quick-wins/ui-testing/</guid>
-      <description>I&amp;rsquo;ll admit, adding UI testing to an app that currently doesn&amp;rsquo;t have it included is probably stretching the definition of quick win, but the aim here isn&amp;rsquo;t 100% coverage - not right away anyway. Start small and add to your test suite as you gain confidence. Even a small suite of crucial happy-path UI tests will help to ensure and persist accessibility in your app. And the more you get comfortable with UI tests the more accessible your apps will become, because an app that is easy to test is also great for accessibility.</description>
+      <guid>http://localhost:1313/quick-wins/ui-testing/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ll admit, adding UI testing to an app that currently doesn&amp;rsquo;t have it included is probably stretching the definition of quick win, but the aim here isn&amp;rsquo;t 100% coverage - not right away anyway. Start small and add to your test suite as you gain confidence. Even a small suite of crucial happy-path UI tests will help to ensure and persist accessibility in your app. And the more you get comfortable with UI tests the more accessible your apps will become, because an app that is easy to test is also great for accessibility.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Quick Win - Support Dark Mode</title>
-      <link>https://mobilea11y.com/quick-wins/dark-mode/</link>
+      <link>http://localhost:1313/quick-wins/dark-mode/</link>
       <pubDate>Thu, 28 Jan 2021 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/quick-wins/dark-mode/</guid>
-      <description>Many people don&amp;rsquo;t realise dark mode is an accessibility feature. It&amp;rsquo;s often just considered a nice to have, a cool extra feature that power users will love. But dark mode is also a valuable accessibility feature. Some types of visual impairment can make it painful to look at bright colours, or large blocks of white might wash over the black text. Some people with dyslexia or Irlen&amp;rsquo;s Syndrome can struggle to read black text on a white background.</description>
+      <guid>http://localhost:1313/quick-wins/dark-mode/</guid>
+      <description>&lt;p&gt;Many people don&amp;rsquo;t realise dark mode is an accessibility feature. It&amp;rsquo;s often just considered a nice to have, a cool extra feature that power users will love. But dark mode is also a valuable accessibility feature. Some types of visual impairment can make it painful to look at bright colours, or large blocks of white might wash over the black text. Some people with dyslexia or Irlen&amp;rsquo;s Syndrome can struggle to read black text on a white background. Like almost any accessibility feature, dark mode is about providing flexibility to your users so they can use your app in the way that is most comfortable to them.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Quick Win - Support Landscape</title>
-      <link>https://mobilea11y.com/quick-wins/landscape/</link>
+      <link>http://localhost:1313/quick-wins/landscape/</link>
       <pubDate>Thu, 28 Jan 2021 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/quick-wins/landscape/</guid>
-      <description>If you have a regulatory requirement to provide accessibility in your app (spoiler, you do) the chances are it will say you have a requirement to reach WCAG AA. While this is likely meaningless to anyone other an accessibility professionals, in short it means you are providing the minimum level of accessibility features required to make your app usable by the majority of people.
-This post is about one such requirement, the jazzily titled Success Criterion 1.</description>
+      <guid>http://localhost:1313/quick-wins/landscape/</guid>
+      <description>&lt;p&gt;If you have a regulatory requirement to provide accessibility in your app (spoiler, you do) the chances are it will say you have a requirement to reach &lt;a href=&#34;https://www.w3.org/TR/WCAG21/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;WCAG AA&lt;/a&gt;. While this is likely meaningless to anyone other an accessibility professionals, in short it means you are providing the minimum level of accessibility features required to make your app usable by the majority of people.&lt;/p&gt;&#xA;&lt;p&gt;This post is about one such requirement, the jazzily titled &lt;a href=&#34;https://www.w3.org/WAI/WCAG21/Understanding/orientation.html&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Success Criterion 1.3.4&lt;/a&gt;. 1.3.4 is often overlooked, I&amp;rsquo;ve see it forgotten by accessibility auditors, overlooked by testers, removed by engineers, and ignored by designers. Yet this feature is one that is already enabled by default in your app. One that you have to choose to disable. For both Android and iOS when you create a new app, the app supports landscape mode out of the box, and all you need to do to continue supporting it is to build robust interfaces, and not disable it. Yet often one of the first things developers do when creating a new app is to disable landscape modes.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Quick Win - Image Descriptions</title>
-      <link>https://mobilea11y.com/quick-wins/image-descriptions/</link>
+      <link>http://localhost:1313/quick-wins/image-descriptions/</link>
       <pubDate>Tue, 19 Jan 2021 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/quick-wins/image-descriptions/</guid>
-      <description>Images are a major part of our apps. They add meaning and interest, they give your app character and context. The adage is that a picture is worth a thousand words. But if you can&amp;rsquo;t see the image clearly, how do you know what those words are?
-If you aren&amp;rsquo;t providing image descriptions in your app many of your users will be missing out on the experience you&amp;rsquo;ve crafted. The result can be an app thats missing that spark an character, or worse an app thats just meaningless and unusable.</description>
+      <guid>http://localhost:1313/quick-wins/image-descriptions/</guid>
+      <description>&lt;p&gt;Images are a major part of our apps. They add meaning and interest, they give your app character and context. The adage is that a picture is worth a thousand words. But if you can&amp;rsquo;t see the image clearly, how do you know what those words are?&lt;/p&gt;&#xA;&lt;p&gt;If you aren&amp;rsquo;t providing image descriptions in your app many of your users will be missing out on the experience you&amp;rsquo;ve crafted. The result can be an app thats missing that spark an character, or worse an app thats just meaningless and unusable. Fortunately adding image descriptions is simple.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Quick Win - Text Contrast</title>
-      <link>https://mobilea11y.com/quick-wins/text-contrast/</link>
+      <link>http://localhost:1313/quick-wins/text-contrast/</link>
       <pubDate>Tue, 19 Jan 2021 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/quick-wins/text-contrast/</guid>
-      <description>How many shades of grey do you use in your app? OK, maybe thats a bit cruel towards designers, grey is a great colour, but the problem with grey is that it can be deceptively difficult to distinguish from a background. And this problem is not just limited to greys - lighter colours too can blend into the background. This effect can be heightened too for people who have blurred or obscured vision, or one of many forms of colour blindness.</description>
+      <guid>http://localhost:1313/quick-wins/text-contrast/</guid>
+      <description>&lt;p&gt;How many shades of grey do you use in your app? OK, maybe thats a bit cruel towards designers, grey is a great colour, but the problem with grey is that it can be deceptively difficult to distinguish from a background. And this problem is not just limited to greys - lighter colours too can blend into the background. This effect can be heightened too for people who have blurred or obscured vision, or one of many forms of colour blindness.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>iOS 14: Custom Accessibility Content</title>
-      <link>https://mobilea11y.com/blog/custom-accessibility-content/</link>
+      <link>http://localhost:1313/blog/custom-accessibility-content/</link>
       <pubDate>Mon, 29 Jun 2020 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/custom-accessibility-content/</guid>
-      <description>Each year at WWDC Xcode Santa brings us exciting new APIs to play with, and this year our accessibility present is Customized Accessibility Content. This API flew under the radar a little, I’m told this is because it&amp;rsquo;s so new there wasn’t even time for inclusion at WWDC. But this new feature helps to solve a difficult question when designing a VoiceOver interface - where is the balance between too much and too little content.</description>
+      <guid>http://localhost:1313/blog/custom-accessibility-content/</guid>
+      <description>&lt;p&gt;Each year at WWDC Xcode Santa brings us exciting new APIs to play with, and this year our accessibility present is &lt;a href=&#34;https://developer.apple.com/documentation/accessibility/customized_accessibility_content&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Customized Accessibility Content&lt;/a&gt;. This API flew under the radar a little, I’m told this is because it&amp;rsquo;s so new there wasn’t even time for inclusion at WWDC. But this new feature helps to solve a difficult question when designing a VoiceOver interface - where is the balance between too much and too little content.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Accessibility Review: Huh? - International languages</title>
-      <link>https://mobilea11y.com/blog/huh-dictionary/</link>
+      <link>http://localhost:1313/blog/huh-dictionary/</link>
       <pubDate>Sun, 28 Jun 2020 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/huh-dictionary/</guid>
-      <description>The Accessibility Review series uses real world apps to provide examples of common accessibility issues and provide tips on how to fix them. Each of the developers has kindly volunteered their app to be tested.
-Huh? is a dictionary and thesaurus app from Peter Yaacoub. Enter a word into the search bar then choose a dictionary service. Press search and the app will present your chosen service’s entry for the term you entered.</description>
+      <guid>http://localhost:1313/blog/huh-dictionary/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;http://localhost:1313/tags/accessibility-review/&#34; &gt;Accessibility Review series&lt;/a&gt; uses real world apps to provide examples of common accessibility issues and provide tips on how to fix them. Each of the developers has kindly volunteered their app to be tested.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://apps.apple.com/app/id1330097506&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Huh?&lt;/a&gt; is a dictionary and thesaurus app from &lt;a href=&#34;https://twitter.com/yaapete&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Peter Yaacoub&lt;/a&gt;. Enter a word into the search bar then choose a dictionary service. Press search and the app will present your chosen service’s entry for the term you entered.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Accessibility Review: Figure Case - Button Labels</title>
-      <link>https://mobilea11y.com/blog/figure-case/</link>
+      <link>http://localhost:1313/blog/figure-case/</link>
       <pubDate>Sun, 21 Jun 2020 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/figure-case/</guid>
-      <description>The Accessibility Review series uses real world apps to provide examples of common accessibility issues and provide tips on how to fix them. Each of the developers has kindly volunteered their app to be tested.
-Figure Case is an app to help organise a tabletop miniature collection created by Simon Nickel. The app helps to track miniatures you own, and what state they currently find themselves in - unassembled, assembled, or painted.</description>
+      <guid>http://localhost:1313/blog/figure-case/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;http://localhost:1313/tags/accessibility-review/&#34; &gt;Accessibility Review series&lt;/a&gt; uses real world apps to provide examples of common accessibility issues and provide tips on how to fix them. Each of the developers has kindly volunteered their app to be tested.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://apps.apple.com/us/app/figure-case/id1487460834&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Figure Case&lt;/a&gt; is an app to help organise a tabletop miniature collection created by &lt;a href=&#34;https://twitter.com/simonnickel&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Simon Nickel&lt;/a&gt;. The app helps to track miniatures you own, and what state they currently find themselves in - unassembled, assembled, or painted.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Accessibility Review: Daily Dictionary - Screen changes</title>
-      <link>https://mobilea11y.com/blog/daily-dictionary/</link>
+      <link>http://localhost:1313/blog/daily-dictionary/</link>
       <pubDate>Sat, 16 May 2020 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/daily-dictionary/</guid>
-      <description>The Accessibility Review series uses real world apps to provide examples of common accessibility issues and provide tips on how to fix them. Each of the developers has kindly volunteered their app to be tested.
-Daily Dictionary is an app from Benjamin Mayo providing a new word every day with definitions and real-world uses designed to help increase your vocabulary.
-Assessing the app, I noticed Benjamin has made a design decision around presenting the app’s settings.</description>
+      <guid>http://localhost:1313/blog/daily-dictionary/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;http://localhost:1313/tags/accessibility-review/&#34; &gt;Accessibility Review series&lt;/a&gt; uses real world apps to provide examples of common accessibility issues and provide tips on how to fix them. Each of the developers has kindly volunteered their app to be tested.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://apps.apple.com/us/app/daily-dictionary/id1421185864&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Daily Dictionary&lt;/a&gt; is an app from &lt;a href=&#34;https://9to5mac.com/author/benjaminmayo/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Benjamin Mayo&lt;/a&gt; providing a new word every day with definitions and real-world uses designed to help increase your vocabulary.&lt;/p&gt;&#xA;&lt;p&gt;Assessing the app, I noticed Benjamin has made a design decision around presenting the app’s settings. Settings are slid down from the top of the screen, similar to a card UI that you might find in the Apple Maps app. Except with Daily Dictionary, the card is presented from the top of the screen. The card slides down or up in response to the user activating the settings button on the navigation bar.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>iOS Attributed Accessibility Labels</title>
-      <link>https://mobilea11y.com/blog/attributed-accessibility-labels/</link>
+      <link>http://localhost:1313/blog/attributed-accessibility-labels/</link>
       <pubDate>Sun, 03 May 2020 10:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/attributed-accessibility-labels/</guid>
-      <description>Attributed accessibility labels are an incredible tool for making some next-level accessible experiences. They let you tell VoiceOver not just what to speak, but how to say it too.
-Using the accessibilityAttributedLabel property you can provide an NSAttributedString to VoiceOver, much the same way you would provide an NSAttributedString to a label&amp;rsquo;s attributedText property to display a string with an underline or character colour for example. The difference here is that all of our attributes are instructions for VoiceOver.</description>
+      <guid>http://localhost:1313/blog/attributed-accessibility-labels/</guid>
+      <description>&lt;p&gt;Attributed accessibility labels are an incredible tool for making some next-level accessible experiences. They let you tell VoiceOver not just what to speak, but how to say it too.&lt;/p&gt;&#xA;&lt;p&gt;Using the &lt;code&gt;accessibilityAttributedLabel&lt;/code&gt; property you can provide an &lt;code&gt;NSAttributedString&lt;/code&gt; to VoiceOver, much the same way you would provide an &lt;code&gt;NSAttributedString&lt;/code&gt; to a label&amp;rsquo;s &lt;code&gt;attributedText&lt;/code&gt; property to display a string with an underline or character colour for example. The difference here is that all of our attributes are instructions for VoiceOver.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Writing Great iOS Accessibility Labels</title>
-      <link>https://mobilea11y.com/blog/writing-great-labels/</link>
+      <link>http://localhost:1313/blog/writing-great-labels/</link>
       <pubDate>Sun, 03 May 2020 09:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/writing-great-labels/</guid>
-      <description>A good accessibility label lets your customer know exactly what a control does in as few words as possible, without having to rely on implied context.
-Don&amp;rsquo;t Add the Element Type iOS already knows your button is a button and your image is an image, it does this using an accessibility trait. If you label your button as &amp;lsquo;Play button&amp;rsquo; your VoiceOver customers will hear &amp;lsquo;Play button. Button.&amp;rsquo;
-Keep it Succinct Don&amp;rsquo;t frustrate your customer by adding too much information to your labels.</description>
+      <guid>http://localhost:1313/blog/writing-great-labels/</guid>
+      <description>&lt;p&gt;A good accessibility label lets your customer know exactly what a control does in as few words as possible, without having to rely on implied context.&lt;/p&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Don&amp;rsquo;t Add the Element Type&#xA;    &lt;div id=&#34;dont-add-the-element-type&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#dont-add-the-element-type&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;iOS already knows your button is a button and your image is an image, it does this using an accessibility trait. If you label your button as &amp;lsquo;Play button&amp;rsquo; your VoiceOver customers will hear &amp;lsquo;Play button. Button.&amp;rsquo;&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>When to use Accessibility Labels</title>
-      <link>https://mobilea11y.com/blog/when-to-use-accessibility-labels/</link>
+      <link>http://localhost:1313/blog/when-to-use-accessibility-labels/</link>
       <pubDate>Sun, 03 May 2020 08:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/when-to-use-accessibility-labels/</guid>
-      <description>There&amp;rsquo;s a few circumstances when you&amp;rsquo;ll want to set your own accessibility label, such as&amp;hellip;
- An interactive element that you haven&amp;rsquo;t given a text value to, such as an image button. An interactive element with a long visual label. An interactive element with a short visual label that takes context from your design. A control or view you have created yourself or built by combining elements. Images of text.  Elements Without a text value Take the controls for a music player as an example.</description>
+      <guid>http://localhost:1313/blog/when-to-use-accessibility-labels/</guid>
+      <description>&lt;p&gt;There&amp;rsquo;s a few circumstances when you&amp;rsquo;ll want to set your own accessibility label, such as&amp;hellip;&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;An interactive element that you haven&amp;rsquo;t given a &lt;code&gt;text&lt;/code&gt; value to, such as an image button.&lt;/li&gt;&#xA;&lt;li&gt;An interactive element with a long visual label.&lt;/li&gt;&#xA;&lt;li&gt;An interactive element with a short visual label that takes context from your design.&lt;/li&gt;&#xA;&lt;li&gt;A control or view you have created yourself or built by combining elements.&lt;/li&gt;&#xA;&lt;li&gt;Images of text.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Elements Without a text value&#xA;    &lt;div id=&#34;elements-without-a-text-value&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#elements-without-a-text-value&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;Take the controls for a music player as an example. Below is a screenshot of the controls for &lt;a href=&#34;https://apps.apple.com/gb/app/spotify-new-music-and-podcasts/id324684580&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Spotify&amp;rsquo;s&lt;/a&gt; music player, each icon is a button. They’re all visual, but not text. As they’re buttons they’re all available to assistive technology but without a text value, assistive technologies would not know how to present each button to your user. VoiceOver would likely read each as ‘button’ giving no indication what each button does. Voice Control users would have to refer to each button by a number based on the order it appears on the screen.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>iOS Accessibility Labels</title>
-      <link>https://mobilea11y.com/blog/ios-accessibility-labels/</link>
+      <link>http://localhost:1313/blog/ios-accessibility-labels/</link>
       <pubDate>Sun, 03 May 2020 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/ios-accessibility-labels/</guid>
-      <description>This blog was inspired by Jeff Watkins&amp;rsquo; series of blogs on UIButton. UIButton is a fundamental part of building interfaces on iOS. So much so, that it probably doesn&amp;rsquo;t get the love it deserves. But it&amp;rsquo;s also really powerful and customisable when used correctly.
-Accessibility labels on iOS I feel are very similar. They&amp;rsquo;re fundamental to how accessibility works on iOS, yet I think they suffer from a few PR issues.</description>
+      <guid>http://localhost:1313/blog/ios-accessibility-labels/</guid>
+      <description>&lt;p&gt;This blog was inspired by &lt;a href=&#34;https://twitter.com/jeffwatkins&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Jeff Watkins&amp;rsquo;&lt;/a&gt; &lt;a href=&#34;https://jeffwatkins.dev/articles/dressing-up-your-uibutton&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;series&lt;/a&gt; of &lt;a href=&#34;https://jeffwatkins.dev/articles/constraints-and-uibutton&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;blogs&lt;/a&gt; on &lt;a href=&#34;https://jeffwatkins.dev/articles/nobody-loves-uibutton&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;UIButton&lt;/a&gt;. UIButton is a fundamental part of building interfaces on iOS. So much so, that it probably doesn&amp;rsquo;t get the love it deserves. But it&amp;rsquo;s also really powerful and customisable when used correctly.&lt;/p&gt;&#xA;&lt;p&gt;Accessibility labels on iOS I feel are very similar. They&amp;rsquo;re fundamental to how accessibility works on iOS, yet I think they suffer from a few PR issues. Firstly, Apple has done such a good job with them that we often don&amp;rsquo;t give the humble accessibility label the consideration it deserves, instead relying on the Apple default behaviour. Secondly, they&amp;rsquo;re just some text, right? Who can get excited about just a boring old label? Well, I&amp;rsquo;m sure this won&amp;rsquo;t surprise you, but I can.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>A11y Box Android</title>
-      <link>https://mobilea11y.com/blog/a11y-box-android/</link>
+      <link>http://localhost:1313/blog/a11y-box-android/</link>
       <pubDate>Sun, 26 Apr 2020 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/a11y-box-android/</guid>
-      <description>A few months ago I shared a project I&amp;rsquo;d been working on for iOS exploring the accessibility API available on that platform. The Android accessibility API is equally large and full featured, and really deserves the same treatment. So here&amp;rsquo;s A11y Box for Android.
-A11y Box for Android is an exploration of what is available on the Android accessibility api and how you can make use of it in your apps.</description>
+      <guid>http://localhost:1313/blog/a11y-box-android/</guid>
+      <description>&lt;p&gt;A few months ago I &lt;a href=&#34;https://mobilea11y.com/blog/a11y-box-ios/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;shared&lt;/a&gt; a &lt;a href=&#34;https://github.com/rwapp/A11y-Box-iOS&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;project&lt;/a&gt; I&amp;rsquo;d been working on for iOS exploring the accessibility API available on that platform. The Android accessibility API is equally large and full featured, and really deserves the same treatment. So here&amp;rsquo;s &lt;a href=&#34;https://github.com/rwapp/A11y-Box-Android&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;A11y Box for Android&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;A11y Box for Android is an exploration of what is available on the Android accessibility api and how you can make use of it in your apps. It&amp;rsquo;s open source, and open for contributions. So please feel free to fork if there&amp;rsquo;s a feature I&amp;rsquo;ve missed or something that needs a little clarification.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Mobile A11y Talk: Accessibility in SwiftUI</title>
-      <link>https://mobilea11y.com/blog/swiftui-talk/</link>
+      <link>http://localhost:1313/blog/swiftui-talk/</link>
       <pubDate>Sun, 12 Apr 2020 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/swiftui-talk/</guid>
-      <description>I was supposed to be attending the 2020 CSUN Assistive Technology conference to present a couple of talks, unfortunately with COVID-19 starting to take hold at that time, I wasn&amp;rsquo;t able to attend. In lieu of attending I decided to record one of the talks I was scheduled to present on Accessibility in SwiftUI.
-SwiftUI is Apple&amp;rsquo;s new paradigm for creating user interfaces on Apple platforms, and it has a bunch of new approaches that really help create more accessible experiences.</description>
+      <guid>http://localhost:1313/blog/swiftui-talk/</guid>
+      <description>&lt;p&gt;I was supposed to be attending the 2020 &lt;a href=&#34;https://www.csun.edu/cod/conference&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;CSUN Assistive Technology conference&lt;/a&gt; to present a couple of talks, unfortunately with COVID-19 starting to take hold at that time, I wasn&amp;rsquo;t able to attend. In lieu of attending I decided to record one of the talks I was scheduled to present on Accessibility in SwiftUI.&lt;/p&gt;&#xA;&lt;p&gt;SwiftUI is Apple&amp;rsquo;s new paradigm for creating user interfaces on Apple platforms, and it has a bunch of new approaches that really help create more accessible experiences. The talk is based on the &lt;a href=&#34;https://mobilea11y.com/guides/swiftui/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;series of SwiftUI guides&lt;/a&gt; available on this site.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>A11y Box iOS</title>
-      <link>https://mobilea11y.com/blog/a11y-box-ios/</link>
+      <link>http://localhost:1313/blog/a11y-box-ios/</link>
       <pubDate>Wed, 26 Feb 2020 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/a11y-box-ios/</guid>
-      <description>iOS&amp;rsquo; UIAccessibility API is huge. I like to think I know it pretty well, but I&amp;rsquo;m always being surprised by discovering features I previously had no idea about. Like many things on iOS, the documentation for UIAccessibility is not always complete, even for parts of the API that have been around for years.
-In an attempt to help spread the knowledge of some of the awesome things UIAccessibility is capable of, I&amp;rsquo;ve created A11y Box for iOS.</description>
+      <guid>http://localhost:1313/blog/a11y-box-ios/</guid>
+      <description>&lt;p&gt;iOS&amp;rsquo; UIAccessibility API is huge. I like to think I know it pretty well, but I&amp;rsquo;m always being surprised by discovering features I previously had no idea about. Like many things on iOS, the documentation for UIAccessibility is not always complete, even for parts of the API that have been around for years.&lt;/p&gt;&#xA;&lt;p&gt;In an attempt to help spread the knowledge of some of the awesome things UIAccessibility is capable of, I&amp;rsquo;ve created &lt;a href=&#34;https://github.com/rwapp/A11y-Box-iOS&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;A11y Box&lt;/a&gt; for iOS. It&amp;rsquo;s an open source project that covers every feature I know about on the UIAccessibility API, and a little more too.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Android Live Regions</title>
-      <link>https://mobilea11y.com/blog/android-live-regions/</link>
+      <link>http://localhost:1313/blog/android-live-regions/</link>
       <pubDate>Tue, 11 Feb 2020 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/android-live-regions/</guid>
-      <description>Live Regions are one of my favourite accessibility features on Android. They&amp;rsquo;re a super simple solution to a common accessibility problem that people with visual impairments can stumble across.
-Say you have a game app, really any type of game. Your user interacts with the play area, and as they do, their score increases or decreases depending on your customer&amp;rsquo;s actions. In this example, the score display is separate to the element your customer is interacting with.</description>
+      <guid>http://localhost:1313/blog/android-live-regions/</guid>
+      <description>&lt;p&gt;Live Regions are one of my favourite accessibility features on Android. They&amp;rsquo;re a super simple solution to a common accessibility problem that people with visual impairments can stumble across.&lt;/p&gt;&#xA;&lt;p&gt;Say you have a game app, really any type of game. Your user interacts with the play area, and as they do, their score increases or decreases depending on your customer&amp;rsquo;s actions. In this example, the score display is separate to the element your customer is interacting with. For a blind or partially sighted user, how will they know their interaction has had a consequence against their score?&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>A11yUITests: An XCUI Testing library for accessibility</title>
-      <link>https://mobilea11y.com/blog/a11yuitests/</link>
+      <link>http://localhost:1313/blog/a11yuitests/</link>
       <pubDate>Tue, 17 Dec 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/a11yuitests/</guid>
-      <description>A11yUITests is an extension to XCTestCase that adds tests for common accessibility issues that can be run as part of an XCUITest suite. I&amp;rsquo;ve written a detailed discussion of the tests available if you&amp;rsquo;re interested in changing/implementing these tests yourself. Alternatively, follow this quick start guide.
-Getting Started Adding A11yUITests I&amp;rsquo;m assuming you&amp;rsquo;re already familiar with cocoapods, if not, cocoapods.org has a good introduction. There is one minor difference here compared to most cocoapods, we&amp;rsquo;re not including this pod in our app, but our app&amp;rsquo;s test bundle.</description>
+      <guid>http://localhost:1313/blog/a11yuitests/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rwapp/A11yUITests&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;A11yUITests&lt;/a&gt; is an extension to XCTestCase that adds tests for common accessibility issues that can be run as part of an XCUITest suite. I&amp;rsquo;ve written a detailed discussion of the &lt;a href=&#34;https://mobilea11y.com/guides/xcui/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;tests available&lt;/a&gt; if you&amp;rsquo;re interested in changing/implementing these tests yourself. Alternatively, follow this quick start guide.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Getting Started&#xA;    &lt;div id=&#34;getting-started&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#getting-started&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Adding A11yUITests&#xA;    &lt;div id=&#34;adding-a11yuitests&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#adding-a11yuitests&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;I&amp;rsquo;m assuming you&amp;rsquo;re already familiar with cocoapods, if not, &lt;a href=&#34;https://cocoapods.org&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;cocoapods.org&lt;/a&gt; has a good introduction. There is one minor difference here compared to most cocoapods, we&amp;rsquo;re not including this pod in our app, but our app&amp;rsquo;s test bundle. This means your podfile will look something like this.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>XCUITests for accessibility</title>
-      <link>https://mobilea11y.com/guides/xcui/</link>
+      <link>http://localhost:1313/guides/xcui/</link>
       <pubDate>Mon, 16 Dec 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/xcui/</guid>
-      <description>For a while now I’ve been looking at possibilities for automated accessibility testing on iOS. Unfortunately, I’ve not found any option so far that I’m happy with. I am a big fan of Apple’s XCUI Test framework. Although it has its limitations, I believe there’s scope for creating valid accessibility tests using this framework. Over the last few months I’ve been trying things out, and here’s what I’ve come up with.</description>
+      <guid>http://localhost:1313/guides/xcui/</guid>
+      <description>&lt;p&gt;For a while now I’ve been looking at possibilities for automated accessibility testing on iOS. Unfortunately, I’ve not found any option so far that I’m happy with. I am a big fan of Apple’s XCUI Test framework. Although it has its limitations, I believe there’s scope for creating valid accessibility tests using this framework. Over the last few months I’ve been trying things out, and here’s what I’ve come up with.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Resources</title>
-      <link>https://mobilea11y.com/resources/</link>
+      <link>http://localhost:1313/resources/</link>
       <pubDate>Sun, 01 Dec 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/resources/</guid>
-      <description>This is a personally curated list of resources I have used and think others may find helpful too. I&amp;rsquo;m always looking for new high quality mobile accessibility and inclusion resources to add here. Please share any you find with me via email or Twitter.
-Code Android   Android Developers: Build more accessible appsAndroid&amp;rsquo;s developer documentation for Accessibility, including design, building &amp;amp; testing. With videos, code samples, and documentation.
-  Android: Make apps more accessibleGoogle&amp;rsquo;s guide to improving accessibility on Android</description>
+      <guid>http://localhost:1313/resources/</guid>
+      <description>&lt;p&gt;This is a personally curated list of resources I have used and think others may find helpful too. I&amp;rsquo;m always looking for new high quality mobile accessibility and inclusion resources to add here. Please share any you find with me via &lt;a href=&#34;mailto:a11y@mobilea11y.com&#34; &gt;email&lt;/a&gt; or &lt;a href=&#34;https://twitter.com/MobileA11y&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Code&#xA;    &lt;div id=&#34;code&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#code&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Android&#xA;    &lt;div id=&#34;android&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#android&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://developer.android.com/guide/topics/ui/accessibility&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Android Developers: Build more accessible apps&lt;/a&gt;&lt;/strong&gt;&lt;br/&gt;&#xA;Android&amp;rsquo;s developer documentation for Accessibility, including design, building &amp;amp; testing. With videos, code samples, and documentation.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Review: Accessibility for Everyone - Laura Kalbag</title>
-      <link>https://mobilea11y.com/blog/kalbag-accessibility-for-everyone-review/</link>
+      <link>http://localhost:1313/blog/kalbag-accessibility-for-everyone-review/</link>
       <pubDate>Sat, 30 Nov 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/kalbag-accessibility-for-everyone-review/</guid>
-      <description>Laura&amp;rsquo;s introduction to web accessibility jumped out to me because it&amp;rsquo;s available as an audiobook. Being dyslexic I struggle to read, so prefer to listen to audiobooks where available. Unfortunately, most technical books aren&amp;rsquo;t available as audiobooks for a couple of potentially obvious reasons. Hearing code or descriptions of diagrams and illustrations read aloud may not be the best experience for an audiobook. As such, this book choses to leave those out of the audio version.</description>
+      <guid>http://localhost:1313/blog/kalbag-accessibility-for-everyone-review/</guid>
+      <description>&lt;p&gt;Laura&amp;rsquo;s introduction to web accessibility jumped out to me because it&amp;rsquo;s available as an audiobook. Being dyslexic I struggle to read, so prefer to listen to audiobooks where available. Unfortunately, most technical books aren&amp;rsquo;t available as audiobooks for a couple of potentially obvious reasons. Hearing code or descriptions of diagrams and illustrations read aloud may not be the best experience for an audiobook. As such, this book choses to leave those out of the audio version. For this review, I also purchased the eBook version. Having illustrations available there did make it feel like I had lost out by reading the audiobook version. Screen readers do their best to convey information when greeted with diagrams and other non-text content, and I wonder if more could have been done here to convey this information in an audio format. That said, I am grateful Laura took the time to record an audio version, as in all honesty, I wouldn&amp;rsquo;t have completed this book up otherwise. This is not an indictment of Laura or her book, simply that I struggle to read a full book.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>A11y is not accessible</title>
-      <link>https://mobilea11y.com/blog/inaccessible-a11y/</link>
+      <link>http://localhost:1313/blog/inaccessible-a11y/</link>
       <pubDate>Thu, 28 Nov 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/inaccessible-a11y/</guid>
-      <description>Accessibility is a long word. It&amp;rsquo;s not the simplest of words to read or to spell, so it seems like a word that would be a good candidate for abbreviation. The common abbreviation of accessibility is a11y. We take the A and Y from the beginning and end of accessibility, and 11 for the number of letters in between. This abbreviation also creates a pleasing homophone for ‘ally.’
-The irony of this abbreviation is that a11y isn’t accessible.</description>
+      <guid>http://localhost:1313/blog/inaccessible-a11y/</guid>
+      <description>&lt;p&gt;Accessibility is a long word. It&amp;rsquo;s not the simplest of words to read or to spell, so it seems like a word that would be a good candidate for abbreviation. The common abbreviation of accessibility is a11y. We take the A and Y from the beginning and end of accessibility, and 11 for the number of letters in between. This abbreviation also creates a pleasing homophone for ‘ally.’&lt;/p&gt;&#xA;&lt;p&gt;The irony of this abbreviation is that a11y isn’t accessible. Using jargon in this way can be a fail for &lt;a href=&#34;https://www.w3.org/WAI/GL/UNDERSTANDING-WCAG20/meaning-idioms.html&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;WCAG guideline 3.1.3&lt;/a&gt;. Some people with disabilities such as autism can struggle to understand non-literal language. Dyslexia can make some characters difficult to distinguish, and mixing letters and numbers in this way can exacerbate this. Screen readers often won’t understand how to pronounce non-common words and abbreviations, so the pronunciation of a11y can vary. When writing we should generally avoid domain-specific jargon where possible, especially where there there is a common alternative like accessibility.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>About Mobile A11y</title>
-      <link>https://mobilea11y.com/about-mobile-a11y/</link>
+      <link>http://localhost:1313/about-mobile-a11y/</link>
       <pubDate>Sat, 16 Nov 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/about-mobile-a11y/</guid>
-      <description>About Mobile A11y Mobile A11y is a collection of blogs and resources about how we as mobile developers can improve accessibility on mobile devices. From time to time the blog might also touch on related topics such as digital inclusion, and other topics around ethics in technology. The site is aimed at mobile developers and is written by a mobile developer. I hope this means other mobile developers will find the content relatable and engaging, and you’ll find learning about mobile accessibility along with me helpful.</description>
+      <guid>http://localhost:1313/about-mobile-a11y/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;About Mobile A11y&#xA;    &lt;div id=&#34;about-mobile-a11y&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#about-mobile-a11y&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Mobile A11y is a collection of blogs and resources about how we as mobile developers can improve accessibility on mobile devices. From time to time the blog might also touch on related topics such as digital inclusion, and other topics around ethics in technology. The site is aimed at mobile developers and is written by a mobile developer. I hope this means other mobile developers will find the content relatable and engaging, and you’ll find learning about mobile accessibility along with me helpful.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>SwiftUI Accessibility</title>
-      <link>https://mobilea11y.com/guides/swiftui/swiftui-accessibility/</link>
+      <link>http://localhost:1313/guides/swiftui/swiftui-accessibility/</link>
       <pubDate>Wed, 06 Nov 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/swiftui/swiftui-accessibility/</guid>
-      <description>Accessibility is important. We can take that as a given. But as iOS devs we&amp;rsquo;re not always sure how to make the most of the accessibility tools that Apple have provided us.
-We&amp;rsquo;re lucky as iOS developers that we work on such a forward-thinking accessibility platform. Many people consider Apple&amp;rsquo;s focus on accessibility for iOS as the driver for other technology vendors to include accessibility features as standard. To the point that we now consider accessibility an expected part of any digital platform.</description>
+      <guid>http://localhost:1313/guides/swiftui/swiftui-accessibility/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://medium.com/capital-one-tech/baking-digital-inclusion-accessibility-into-your-mobile-apps-f0f5d03d9f49&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Accessibility is important&lt;/a&gt;. We can take that as a given. But as iOS devs we&amp;rsquo;re not always sure how to make the most of the accessibility tools that Apple have provided us.&lt;/p&gt;&#xA;&lt;p&gt;We&amp;rsquo;re lucky as iOS developers that we work on such a forward-thinking accessibility platform. Many people consider Apple&amp;rsquo;s focus on accessibility for iOS as the driver for other technology vendors to include accessibility features as standard. To the point that we now consider accessibility an expected part of any digital platform. This was not the case before 2009.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>SwiftUI Accessibility: Semantic Views</title>
-      <link>https://mobilea11y.com/guides/swiftui/swiftui-semantic-views/</link>
+      <link>http://localhost:1313/guides/swiftui/swiftui-semantic-views/</link>
       <pubDate>Tue, 29 Oct 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/swiftui/swiftui-semantic-views/</guid>
-      <description>Semantic views are not new to SwiftUI, but changes in SwiftUI mean creating them is simple. Semantic views are not so much a language feature. They&amp;rsquo;re more a technique for manipulating the accessible user interface and improving the experience for assistive technology users.
-A what view? A semantic view is not one view, but a collection of views grouped together because they have meaning (or semantic) together. Take a look at this iOS table view cell from the files app.</description>
+      <guid>http://localhost:1313/guides/swiftui/swiftui-semantic-views/</guid>
+      <description>&lt;p&gt;Semantic views are not new to SwiftUI, but changes in SwiftUI mean creating them is simple. Semantic views are not so much a language feature. They&amp;rsquo;re more a technique for manipulating the &lt;a href=&#34;https://rwapp.co.uk/2019/10/09/SwiftUI-AUI/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;accessible user interface&lt;/a&gt; and improving the experience for assistive technology users.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;A what view?&#xA;    &lt;div id=&#34;a-whatview&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#a-whatview&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;A semantic view is not one view, but a collection of views grouped together because they have meaning (or semantic) together. Take a look at this iOS table view cell from the files app.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>SwiftUI Accessibility: User Settings</title>
-      <link>https://mobilea11y.com/guides/swiftui/swiftui-settings/</link>
+      <link>http://localhost:1313/guides/swiftui/swiftui-settings/</link>
       <pubDate>Sun, 27 Oct 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/swiftui/swiftui-settings/</guid>
-      <description>SwiftUI allows us to read environmental values that might affect how we want to present ­­our UI. Things like size classes and locale for example. We also get the ability to read some of the user&amp;rsquo;s chosen accessibility settings allowing us to make decisions that will best fit with your customer&amp;rsquo;s preference.
-Why? Before we cover what these options are and how to detect them I think it&amp;rsquo;s important to briefly cover why we need to detect them.</description>
+      <guid>http://localhost:1313/guides/swiftui/swiftui-settings/</guid>
+      <description>&lt;p&gt;SwiftUI allows us to read environmental values that might affect how we want to present ­­our UI. Things like size classes and locale for example. We also get the ability to read some of the user&amp;rsquo;s chosen accessibility settings allowing us to make decisions that will best fit with your customer&amp;rsquo;s preference.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Why?&#xA;    &lt;div id=&#34;why&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#why&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Before we cover what these options are and how to detect them I think it&amp;rsquo;s important to briefly cover why we need to detect them. There&amp;rsquo;s a few dos and don&amp;rsquo;ts worth consideration.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>SwiftUI Accessibility: Attributes</title>
-      <link>https://mobilea11y.com/guides/swiftui/swiftui-attributes/</link>
+      <link>http://localhost:1313/guides/swiftui/swiftui-attributes/</link>
       <pubDate>Fri, 18 Oct 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/swiftui/swiftui-attributes/</guid>
-      <description>When a customer enables an assistive technology to navigate your app the interface that technology navigates isn&amp;rsquo;t exactly the same as the one visible on the screen. They&amp;rsquo;re navigating a modified version that iOS creates especially for assistive technology. This is known as the accessibility tree or accessible user interface.
-iOS does an incredible job at creating the AUI for you from your SwiftUI code. We can help iOS in creating this by tweaking some element&amp;rsquo;s accessibility attributes.</description>
+      <guid>http://localhost:1313/guides/swiftui/swiftui-attributes/</guid>
+      <description>&lt;p&gt;When a customer enables an assistive technology to navigate your app the interface that technology navigates isn&amp;rsquo;t exactly the same as the one visible on the screen. They&amp;rsquo;re navigating a modified version that iOS creates especially for assistive technology. This is known as the &lt;a href=&#34;https://rwapp.co.uk/2019/10/09/SwiftUI-AUI/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;accessibility tree or accessible user interface&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;iOS does an incredible job at creating the AUI for you from your SwiftUI code. We can help iOS in creating this by tweaking some element&amp;rsquo;s accessibility attributes. Setting some accessibility attributes through modifiers is a simple way to add a little more meaning and context for your assistive technology users.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>SwiftUI Accessibility: Traits</title>
-      <link>https://mobilea11y.com/guides/swiftui/swiftui-traits/</link>
+      <link>http://localhost:1313/guides/swiftui/swiftui-traits/</link>
       <pubDate>Fri, 18 Oct 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/swiftui/swiftui-traits/</guid>
-      <description>Accessibility traits are a group of attributes on a SwiftUI element. They inform assistive technologies how to interact with the element or present it to your customer. Each element has a selection of default traits, but you might need to change these as you create your UI.
-In SwiftUI there are two modifiers to use for traits, .accessibility(addTraits: ) and .accessibility(removeTraits: ) which add or remove traits respectively. Each modifier takes as its argument either a single accessibility trait or a set of traits.</description>
+      <guid>http://localhost:1313/guides/swiftui/swiftui-traits/</guid>
+      <description>&lt;p&gt;Accessibility traits are a group of attributes on a SwiftUI element. They inform assistive technologies how to interact with the element or present it to your customer. Each element has a selection of default traits, but you might need to change these as you create your UI.&lt;/p&gt;&#xA;&lt;p&gt;In SwiftUI there are two modifiers to use for traits, &lt;code&gt;.accessibility(addTraits: )&lt;/code&gt; and &lt;code&gt;.accessibility(removeTraits: )&lt;/code&gt; which add or remove traits respectively. Each modifier takes as its argument either a single accessibility trait or a set of traits.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Review: Design Meets Disability - Graham Pullin</title>
-      <link>https://mobilea11y.com/blog/pullin-design-meets-disability/</link>
+      <link>http://localhost:1313/blog/pullin-design-meets-disability/</link>
       <pubDate>Sat, 12 Oct 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/pullin-design-meets-disability/</guid>
-      <description>Design Meets Disability was recommended to me by accessibility consultant Jon Gibbins while we were sharing a long train journey through mid-Wales. We were talking, amongst many things, about our love for Apple products and their design.
-I am a hearing aid wearer, my aid is two-tone grey. A sort of dark taupe grey above, and a darker, almost gun-metal grey below. There’s a clear tube into my ear. This is fine, I don’t hate it.</description>
+      <guid>http://localhost:1313/blog/pullin-design-meets-disability/</guid>
+      <description>&lt;p&gt;Design Meets Disability was recommended to me by accessibility consultant &lt;a href=&#34;https://twitter.com/dotjay&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Jon Gibbins&lt;/a&gt; while we were sharing a long train journey through mid-Wales. We were talking, amongst many things, about our love for Apple products and their design.&lt;/p&gt;&#xA;&lt;p&gt;I am a hearing aid wearer, my aid is two-tone grey. A sort of dark taupe grey above, and a darker, almost gun-metal grey below. There’s a clear tube into my ear. This is fine, I don’t hate it. It&amp;rsquo;s certainly better than the nowhere close to anyone’s actual skin colour weird pinky-taupe colour of older style aids. But, why is the tube clear? I didn’t make the design decision here, but I think we can safely assume it&amp;rsquo;s clear to hide the tube. But why would I want to hide it?&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Podcast: iPhreaks - iOS Accessibility</title>
-      <link>https://mobilea11y.com/blog/iphreaks-podcast/</link>
+      <link>http://localhost:1313/blog/iphreaks-podcast/</link>
       <pubDate>Wed, 09 Oct 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/iphreaks-podcast/</guid>
-      <description>I was asked to guest on the iPhreaks podcast to discuss iOS accessibility. We talked about why accessibility is important, how you can improve it in your apps, and some of the changes iOS 13 and SwiftUI bring.
-unfortunatley iPhreaks don&amp;rsquo;t provide a transcript, but they do provide a comprehensive write-up on their site.</description>
+      <guid>http://localhost:1313/blog/iphreaks-podcast/</guid>
+      <description>&lt;p&gt;I was asked to guest on the &lt;a href=&#34;https://iphreaksshow.com/275&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;iPhreaks podcast&lt;/a&gt; to discuss iOS accessibility. We talked about why accessibility is important, how you can improve it in your apps, and some of the changes iOS 13 and SwiftUI bring.&lt;/p&gt;&#xA;&lt;p&gt;unfortunatley iPhreaks don&amp;rsquo;t provide a transcript, but they do provide a &lt;a href=&#34;https://iphreaksshow.com/275&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;comprehensive write-up&lt;/a&gt; on their site.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>SwiftUI Accessibility: Accessible User Interface</title>
-      <link>https://mobilea11y.com/guides/swiftui/swiftui-aui/</link>
+      <link>http://localhost:1313/guides/swiftui/swiftui-aui/</link>
       <pubDate>Wed, 09 Oct 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/swiftui/swiftui-aui/</guid>
-      <description>Take a look at your app. Notice the collection of buttons, text, images, and other controls you can see and interact with that make up your app’s user interface. When one of your customers navigates your app with Voice Control, Switch Control, VoiceOver, or any other assistive technology, this isn’t the interface they’re using. Instead, iOS creates a version of your interface for assistive technology to use. This interface is generally known as the accessibility tree.</description>
+      <guid>http://localhost:1313/guides/swiftui/swiftui-aui/</guid>
+      <description>&lt;p&gt;Take a look at your app. Notice the collection of buttons, text, images, and other controls you can see and interact with that make up your app’s user interface. When one of your customers navigates your app with Voice Control, Switch Control, VoiceOver, or any other assistive technology, this isn’t the interface they’re using. Instead, iOS creates a version of your interface for assistive technology to use. This interface is generally known as the accessibility tree. Apple often refers to this as your app’s Accessible User Interface. For brevity and consistency in this article, I’ll refer to it as the AUI&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Mobile A11y Talk: Accessibility without the &#39;V&#39; Word</title>
-      <link>https://mobilea11y.com/blog/without-the-v-word/</link>
+      <link>http://localhost:1313/blog/without-the-v-word/</link>
       <pubDate>Tue, 08 Oct 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/without-the-v-word/</guid>
-      <description>I was honoured in 2019 to be able to give my first full conference talk at CodeMobile. I was then lucky enough to be able to repeat that talk at NSLondon, NSManchester, and SWMobile meetups.
-As an iOS developer, I know accessibility is important for a huge range of people. But at times I think I can treat it like an afterthought. Accessibility Without the ‘V’ Word covers a skill I think we as software engineers would benefit from developing - empathy towards our users.</description>
+      <guid>http://localhost:1313/blog/without-the-v-word/</guid>
+      <description>&lt;p&gt;I was honoured in 2019 to be able to give my first full conference talk at CodeMobile. I was then lucky enough to be able to repeat that talk at &lt;a href=&#34;https://www.meetup.com/NSLondon/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;NSLondon&lt;/a&gt;, &lt;a href=&#34;https://www.meetup.com/NSManchester/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;NSManchester&lt;/a&gt;, and &lt;a href=&#34;https://www.meetup.com/swmobile/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;SWMobile&lt;/a&gt; meetups.&lt;/p&gt;&#xA;&lt;p&gt;As an iOS developer, I know accessibility is important for a huge range of people. But at times I think I can treat it like an afterthought. Accessibility Without the ‘V’ Word covers a skill I think we as software engineers would benefit from developing - empathy towards our users. Remembering that everyone who uses our software is different, and have different abilities, experiences, and requirements. VoiceOver is an essential tool for many of our customers, but it&amp;rsquo;s not the only thing we should consider with accessibility.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>SwiftUI Accessibility: Sort Priority</title>
-      <link>https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/</link>
+      <link>http://localhost:1313/guides/swiftui/swiftui-sort-priority/</link>
       <pubDate>Wed, 02 Oct 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/</guid>
-      <description>Assistive technology, such as VoiceOver, works in natural reading direction. In English, and most other languages, this means top left through to the bottom right. Mostly this is the right decision for assistive technology to make. This is the order anyone not using assistive technology would experience your app. Sometimes though, we make designs that don&amp;rsquo;t read in this way. By using the .accessibility(sortPriority: ) modifier we can set the order in which assistive technology accesses elements.</description>
+      <guid>http://localhost:1313/guides/swiftui/swiftui-sort-priority/</guid>
+      <description>&lt;p&gt;Assistive technology, such as VoiceOver, works in natural reading direction. In English, and most other languages, this means top left through to the bottom right. Mostly this is the right decision for assistive technology to make. This is the order anyone not using assistive technology would experience your app. Sometimes though, we make designs that don&amp;rsquo;t read in this way.&#xA;By using the &lt;code&gt;.accessibility(sortPriority: )&lt;/code&gt; modifier we can set the order in which assistive technology accesses elements. To achieve this, you must group elements in a stack (&lt;code&gt;HStack&lt;/code&gt;, &lt;code&gt;VStack&lt;/code&gt; or &lt;code&gt;ZStack&lt;/code&gt;). Then use the &lt;code&gt;.accessibilityElement(children: .contain)&lt;/code&gt; modifier. The higher the number we give to &lt;code&gt;.accessibility(sortPriority: )&lt;/code&gt;, the earlier VoiceOver will focus on the item. This means an element with a priority of 2 comes before priority 1, and so on.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>SwiftUI Accessibility - Named Controls</title>
-      <link>https://mobilea11y.com/guides/swiftui/swiftui-controls/</link>
+      <link>http://localhost:1313/guides/swiftui/swiftui-controls/</link>
       <pubDate>Thu, 26 Sep 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/swiftui/swiftui-controls/</guid>
-      <description>One big accessibility improvement in SwiftUI comes in the form of named controls. Nearly all controls and some non-interactive views (see Images) can take a Text view as part of their view builder. The purpose of this is to tie the meaning to the control.
-Toggle(isOn: $updates) { Text(&amp;#34;Send me updates&amp;#34;) } Imagine a UIKit layout with a UISwitch control. We&amp;rsquo;d most likely right align the switch, and provide a text label to the left.</description>
+      <guid>http://localhost:1313/guides/swiftui/swiftui-controls/</guid>
+      <description>&lt;p&gt;One big accessibility improvement in SwiftUI comes in the form of named controls. Nearly all controls and some non-interactive views (&lt;a href=&#34;https://rwapp.co.uk/2019/09/11/SwiftUI-Images/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;see Images&lt;/a&gt;) can take a Text view as part of their view builder. The purpose of this is to tie the meaning to the control.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Toggle(isOn: $updates) {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(&amp;#34;Send me updates&amp;#34;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&lt;p&gt;Imagine a UIKit layout with a UISwitch control. We&amp;rsquo;d most likely right align the switch, and provide a text label to the left. Something like this.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>SwiftUI Accessibility: Dynamic Type</title>
-      <link>https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/</link>
+      <link>http://localhost:1313/guides/swiftui/swiftui-dynamic-type/</link>
       <pubDate>Wed, 18 Sep 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/swiftui/swiftui-dynamic-type/</guid>
-      <description>Like all accessibility features, Dynamic Type is about customisability. Many of your customers, and maybe even you, are using Dynamic Type without even considering it an accessibility feature. Dynamic type allows iOS users to set the text to a size that they find comfortable to read. This may mean making it a little larger so it’s easier to read for those of us who haven’t yet accepted we might need glasses.</description>
+      <guid>http://localhost:1313/guides/swiftui/swiftui-dynamic-type/</guid>
+      <description>&lt;p&gt;Like all accessibility features, Dynamic Type is about customisability. Many of your customers, and maybe even you, are using Dynamic Type without even considering it an accessibility feature. Dynamic type allows iOS users to set the text to a size that they find comfortable to read. This may mean making it a little larger so it’s easier to read for those of us who haven’t yet accepted we might need glasses. Or it could mean ramping it right up for people with low vision. Or taking the text size down for extra content and privacy.&#xA;Like many accessibility features on iOS, Dynamic Type support has been greatly improved in SwiftUI. There are a few things you should do (and not do) to make the most of it.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>SwiftUI Accessibility: Images</title>
-      <link>https://mobilea11y.com/guides/swiftui/swiftui-images/</link>
+      <link>http://localhost:1313/guides/swiftui/swiftui-images/</link>
       <pubDate>Wed, 11 Sep 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/swiftui/swiftui-images/</guid>
-      <description>Images in SwiftUI are accessible by default. This is the opposite of what we&amp;rsquo;d experience in UIKit, where images are not accessible unless you set isAccessibilityElement to true.
-Sometimes making images not accessible to VoiceOver is the right decision. Like when using a glyph as a redundant way of conveying meaning alongside text. An example of this would be displaying a warning triangle next to the text ‘Error’ or a tick next to ‘success’.</description>
+      <guid>http://localhost:1313/guides/swiftui/swiftui-images/</guid>
+      <description>&lt;p&gt;Images in SwiftUI are accessible by default. This is the opposite of what we&amp;rsquo;d experience in UIKit, where images are not accessible unless you set &lt;code&gt;isAccessibilityElement&lt;/code&gt; to true.&lt;/p&gt;&#xA;&lt;p&gt;Sometimes making images not accessible to VoiceOver is the right decision. Like when using a glyph as a redundant way of conveying meaning alongside text. An example of this would be displaying a warning triangle next to the text ‘Error’ or a tick next to ‘success’. If these images were accessible your VoiceOver users would hear the word ‘error’ twice and have to swipe between each one. This makes navigation longer and frustrating for your customer.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Baking Digital Inclusion Into Your Mobile Apps</title>
-      <link>https://mobilea11y.com/blog/baking-digital-inclusion-into-your-mobile-apps/</link>
+      <link>http://localhost:1313/blog/baking-digital-inclusion-into-your-mobile-apps/</link>
       <pubDate>Thu, 25 Jul 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/baking-digital-inclusion-into-your-mobile-apps/</guid>
-      <description>I was asked by Capital One to contribute an accessibility piece to the Capital One Tech Medium. The blog, titled Baking Digital Inclusion Into Your Mobile Apps, briefly covers what we mean by disability and what we can do to make our mobile apps work better for everyone.</description>
+      <guid>http://localhost:1313/blog/baking-digital-inclusion-into-your-mobile-apps/</guid>
+      <description>&lt;p&gt;I was asked by Capital One to contribute an accessibility piece to the &lt;a href=&#34;https://medium.com/capital-one-tech&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Capital One Tech Medium&lt;/a&gt;. The blog, titled &lt;a href=&#34;https://medium.com/capital-one-tech/baking-digital-inclusion-accessibility-into-your-mobile-apps-f0f5d03d9f49&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Baking Digital Inclusion Into Your Mobile Apps&lt;/a&gt;, briefly covers what we mean by disability and what we can do to make our mobile apps work better for everyone.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>What The European Accessibility Act (Might) Mean for Mobile Development</title>
-      <link>https://mobilea11y.com/blog/european-accessibility-act/</link>
+      <link>http://localhost:1313/blog/european-accessibility-act/</link>
       <pubDate>Mon, 24 Jun 2019 07:32:16 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/european-accessibility-act/</guid>
-      <description>The European Accessibility Act, or EAA is due to become law in Europe later this year, and it defines some specific requirements for mobile. In fact, its the first accessibility legislation that I’m aware of, anywhere, that explicitly covers mobile apps.
- Since 2012 the European Union has been working on standardising accessibility legislation across Europe. The ultimate aim is to both improve the experience for those who need to use assistive technology, but also to simplify the rules business need to follow on accessibility.</description>
+      <guid>http://localhost:1313/blog/european-accessibility-act/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://ec.europa.eu/social/main.jsp?catId=1202#navItem-1&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;European Accessibility Act&lt;/a&gt;, or EAA is due to become law in Europe later this year, and it defines some specific requirements for mobile. In fact, its the first accessibility legislation that I’m aware of, anywhere, that explicitly covers mobile apps.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Since 2012 the European Union has been working on standardising accessibility legislation across Europe. The ultimate aim is to both improve the experience for those who need to use assistive technology, but also to simplify the rules business need to follow on accessibility. The years of discussions and consultations has lead to the European Accessibility Act, written in 2018, which covers a range of requirements for, amongst other channels, mobile.&lt;/p&gt;</description>
+      
     </item>
     
   </channel>

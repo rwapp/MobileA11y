@@ -2,67 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Guide on Mobile A11y</title>
-    <link>https://mobilea11y.com/tags/guide/</link>
+    <link>http://localhost:1313/tags/guide/</link>
     <description>Recent content in Guide on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Fri, 18 Oct 2019 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/guide/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <copyright>Email: [a11y@mobilea11y.com](mailto:a11y@mobilea11y.com).
+  
+  Made with [Hugo](https://gohugo.io/). Themed by [Blowfish](https://blowfish.page/).</copyright>
+    <lastBuildDate>Fri, 18 Oct 2019 07:30:56 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/guide/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>SwiftUI Accessibility: Attributes</title>
-      <link>https://mobilea11y.com/guides/swiftui/swiftui-attributes/</link>
+      <link>http://localhost:1313/guides/swiftui/swiftui-attributes/</link>
       <pubDate>Fri, 18 Oct 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/swiftui/swiftui-attributes/</guid>
-      <description>When a customer enables an assistive technology to navigate your app the interface that technology navigates isn&amp;rsquo;t exactly the same as the one visible on the screen. They&amp;rsquo;re navigating a modified version that iOS creates especially for assistive technology. This is known as the accessibility tree or accessible user interface.
-iOS does an incredible job at creating the AUI for you from your SwiftUI code. We can help iOS in creating this by tweaking some element&amp;rsquo;s accessibility attributes.</description>
+      <guid>http://localhost:1313/guides/swiftui/swiftui-attributes/</guid>
+      <description>&lt;p&gt;When a customer enables an assistive technology to navigate your app the interface that technology navigates isn&amp;rsquo;t exactly the same as the one visible on the screen. They&amp;rsquo;re navigating a modified version that iOS creates especially for assistive technology. This is known as the &lt;a href=&#34;https://rwapp.co.uk/2019/10/09/SwiftUI-AUI/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;accessibility tree or accessible user interface&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;iOS does an incredible job at creating the AUI for you from your SwiftUI code. We can help iOS in creating this by tweaking some element&amp;rsquo;s accessibility attributes. Setting some accessibility attributes through modifiers is a simple way to add a little more meaning and context for your assistive technology users.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>SwiftUI Accessibility: Traits</title>
-      <link>https://mobilea11y.com/guides/swiftui/swiftui-traits/</link>
+      <link>http://localhost:1313/guides/swiftui/swiftui-traits/</link>
       <pubDate>Fri, 18 Oct 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/swiftui/swiftui-traits/</guid>
-      <description>Accessibility traits are a group of attributes on a SwiftUI element. They inform assistive technologies how to interact with the element or present it to your customer. Each element has a selection of default traits, but you might need to change these as you create your UI.
-In SwiftUI there are two modifiers to use for traits, .accessibility(addTraits: ) and .accessibility(removeTraits: ) which add or remove traits respectively. Each modifier takes as its argument either a single accessibility trait or a set of traits.</description>
+      <guid>http://localhost:1313/guides/swiftui/swiftui-traits/</guid>
+      <description>&lt;p&gt;Accessibility traits are a group of attributes on a SwiftUI element. They inform assistive technologies how to interact with the element or present it to your customer. Each element has a selection of default traits, but you might need to change these as you create your UI.&lt;/p&gt;&#xA;&lt;p&gt;In SwiftUI there are two modifiers to use for traits, &lt;code&gt;.accessibility(addTraits: )&lt;/code&gt; and &lt;code&gt;.accessibility(removeTraits: )&lt;/code&gt; which add or remove traits respectively. Each modifier takes as its argument either a single accessibility trait or a set of traits.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>SwiftUI Accessibility: Accessible User Interface</title>
-      <link>https://mobilea11y.com/guides/swiftui/swiftui-aui/</link>
+      <link>http://localhost:1313/guides/swiftui/swiftui-aui/</link>
       <pubDate>Wed, 09 Oct 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/swiftui/swiftui-aui/</guid>
-      <description>Take a look at your app. Notice the collection of buttons, text, images, and other controls you can see and interact with that make up your app’s user interface. When one of your customers navigates your app with Voice Control, Switch Control, VoiceOver, or any other assistive technology, this isn’t the interface they’re using. Instead, iOS creates a version of your interface for assistive technology to use. This interface is generally known as the accessibility tree.</description>
+      <guid>http://localhost:1313/guides/swiftui/swiftui-aui/</guid>
+      <description>&lt;p&gt;Take a look at your app. Notice the collection of buttons, text, images, and other controls you can see and interact with that make up your app’s user interface. When one of your customers navigates your app with Voice Control, Switch Control, VoiceOver, or any other assistive technology, this isn’t the interface they’re using. Instead, iOS creates a version of your interface for assistive technology to use. This interface is generally known as the accessibility tree. Apple often refers to this as your app’s Accessible User Interface. For brevity and consistency in this article, I’ll refer to it as the AUI&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>SwiftUI Accessibility: Sort Priority</title>
-      <link>https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/</link>
+      <link>http://localhost:1313/guides/swiftui/swiftui-sort-priority/</link>
       <pubDate>Wed, 02 Oct 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/swiftui/swiftui-sort-priority/</guid>
-      <description>Assistive technology, such as VoiceOver, works in natural reading direction. In English, and most other languages, this means top left through to the bottom right. Mostly this is the right decision for assistive technology to make. This is the order anyone not using assistive technology would experience your app. Sometimes though, we make designs that don&amp;rsquo;t read in this way. By using the .accessibility(sortPriority: ) modifier we can set the order in which assistive technology accesses elements.</description>
+      <guid>http://localhost:1313/guides/swiftui/swiftui-sort-priority/</guid>
+      <description>&lt;p&gt;Assistive technology, such as VoiceOver, works in natural reading direction. In English, and most other languages, this means top left through to the bottom right. Mostly this is the right decision for assistive technology to make. This is the order anyone not using assistive technology would experience your app. Sometimes though, we make designs that don&amp;rsquo;t read in this way.&#xA;By using the &lt;code&gt;.accessibility(sortPriority: )&lt;/code&gt; modifier we can set the order in which assistive technology accesses elements. To achieve this, you must group elements in a stack (&lt;code&gt;HStack&lt;/code&gt;, &lt;code&gt;VStack&lt;/code&gt; or &lt;code&gt;ZStack&lt;/code&gt;). Then use the &lt;code&gt;.accessibilityElement(children: .contain)&lt;/code&gt; modifier. The higher the number we give to &lt;code&gt;.accessibility(sortPriority: )&lt;/code&gt;, the earlier VoiceOver will focus on the item. This means an element with a priority of 2 comes before priority 1, and so on.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>SwiftUI Accessibility - Named Controls</title>
-      <link>https://mobilea11y.com/guides/swiftui/swiftui-controls/</link>
+      <link>http://localhost:1313/guides/swiftui/swiftui-controls/</link>
       <pubDate>Thu, 26 Sep 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/swiftui/swiftui-controls/</guid>
-      <description>One big accessibility improvement in SwiftUI comes in the form of named controls. Nearly all controls and some non-interactive views (see Images) can take a Text view as part of their view builder. The purpose of this is to tie the meaning to the control.
-Toggle(isOn: $updates) { Text(&amp;#34;Send me updates&amp;#34;) } Imagine a UIKit layout with a UISwitch control. We&amp;rsquo;d most likely right align the switch, and provide a text label to the left.</description>
+      <guid>http://localhost:1313/guides/swiftui/swiftui-controls/</guid>
+      <description>&lt;p&gt;One big accessibility improvement in SwiftUI comes in the form of named controls. Nearly all controls and some non-interactive views (&lt;a href=&#34;https://rwapp.co.uk/2019/09/11/SwiftUI-Images/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;see Images&lt;/a&gt;) can take a Text view as part of their view builder. The purpose of this is to tie the meaning to the control.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Toggle(isOn: $updates) {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    Text(&amp;#34;Send me updates&amp;#34;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&lt;p&gt;Imagine a UIKit layout with a UISwitch control. We&amp;rsquo;d most likely right align the switch, and provide a text label to the left. Something like this.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>SwiftUI Accessibility: Images</title>
-      <link>https://mobilea11y.com/guides/swiftui/swiftui-images/</link>
+      <link>http://localhost:1313/guides/swiftui/swiftui-images/</link>
       <pubDate>Wed, 11 Sep 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/swiftui/swiftui-images/</guid>
-      <description>Images in SwiftUI are accessible by default. This is the opposite of what we&amp;rsquo;d experience in UIKit, where images are not accessible unless you set isAccessibilityElement to true.
-Sometimes making images not accessible to VoiceOver is the right decision. Like when using a glyph as a redundant way of conveying meaning alongside text. An example of this would be displaying a warning triangle next to the text ‘Error’ or a tick next to ‘success’.</description>
+      <guid>http://localhost:1313/guides/swiftui/swiftui-images/</guid>
+      <description>&lt;p&gt;Images in SwiftUI are accessible by default. This is the opposite of what we&amp;rsquo;d experience in UIKit, where images are not accessible unless you set &lt;code&gt;isAccessibilityElement&lt;/code&gt; to true.&lt;/p&gt;&#xA;&lt;p&gt;Sometimes making images not accessible to VoiceOver is the right decision. Like when using a glyph as a redundant way of conveying meaning alongside text. An example of this would be displaying a warning triangle next to the text ‘Error’ or a tick next to ‘success’. If these images were accessible your VoiceOver users would hear the word ‘error’ twice and have to swipe between each one. This makes navigation longer and frustrating for your customer.&lt;/p&gt;</description>
+      
     </item>
     
   </channel>

@@ -2,28 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Testing on Mobile A11y</title>
-    <link>https://mobilea11y.com/tags/testing/</link>
+    <link>http://localhost:1313/tags/testing/</link>
     <description>Recent content in Testing on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Tue, 17 Dec 2019 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <copyright>Email: [a11y@mobilea11y.com](mailto:a11y@mobilea11y.com).
+  
+  Made with [Hugo](https://gohugo.io/). Themed by [Blowfish](https://blowfish.page/).</copyright>
+    <lastBuildDate>Tue, 17 Dec 2019 07:30:56 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>A11yUITests: An XCUI Testing library for accessibility</title>
-      <link>https://mobilea11y.com/blog/a11yuitests/</link>
+      <link>http://localhost:1313/blog/a11yuitests/</link>
       <pubDate>Tue, 17 Dec 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/a11yuitests/</guid>
-      <description>A11yUITests is an extension to XCTestCase that adds tests for common accessibility issues that can be run as part of an XCUITest suite. I&amp;rsquo;ve written a detailed discussion of the tests available if you&amp;rsquo;re interested in changing/implementing these tests yourself. Alternatively, follow this quick start guide.
-Getting Started Adding A11yUITests I&amp;rsquo;m assuming you&amp;rsquo;re already familiar with cocoapods, if not, cocoapods.org has a good introduction. There is one minor difference here compared to most cocoapods, we&amp;rsquo;re not including this pod in our app, but our app&amp;rsquo;s test bundle.</description>
+      <guid>http://localhost:1313/blog/a11yuitests/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rwapp/A11yUITests&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;A11yUITests&lt;/a&gt; is an extension to XCTestCase that adds tests for common accessibility issues that can be run as part of an XCUITest suite. I&amp;rsquo;ve written a detailed discussion of the &lt;a href=&#34;https://mobilea11y.com/guides/xcui/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;tests available&lt;/a&gt; if you&amp;rsquo;re interested in changing/implementing these tests yourself. Alternatively, follow this quick start guide.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Getting Started&#xA;    &lt;div id=&#34;getting-started&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#getting-started&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Adding A11yUITests&#xA;    &lt;div id=&#34;adding-a11yuitests&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#adding-a11yuitests&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;I&amp;rsquo;m assuming you&amp;rsquo;re already familiar with cocoapods, if not, &lt;a href=&#34;https://cocoapods.org&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;cocoapods.org&lt;/a&gt; has a good introduction. There is one minor difference here compared to most cocoapods, we&amp;rsquo;re not including this pod in our app, but our app&amp;rsquo;s test bundle. This means your podfile will look something like this.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>XCUITests for accessibility</title>
-      <link>https://mobilea11y.com/guides/xcui/</link>
+      <link>http://localhost:1313/guides/xcui/</link>
       <pubDate>Mon, 16 Dec 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/guides/xcui/</guid>
-      <description>For a while now I’ve been looking at possibilities for automated accessibility testing on iOS. Unfortunately, I’ve not found any option so far that I’m happy with. I am a big fan of Apple’s XCUI Test framework. Although it has its limitations, I believe there’s scope for creating valid accessibility tests using this framework. Over the last few months I’ve been trying things out, and here’s what I’ve come up with.</description>
+      <guid>http://localhost:1313/guides/xcui/</guid>
+      <description>&lt;p&gt;For a while now I’ve been looking at possibilities for automated accessibility testing on iOS. Unfortunately, I’ve not found any option so far that I’m happy with. I am a big fan of Apple’s XCUI Test framework. Although it has its limitations, I believe there’s scope for creating valid accessibility tests using this framework. Over the last few months I’ve been trying things out, and here’s what I’ve come up with.&lt;/p&gt;</description>
+      
     </item>
     
   </channel>

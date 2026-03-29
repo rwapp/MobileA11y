@@ -1,0 +1,14 @@
+languageCode = "en"
+languageName = "English"
+title = "Mobile A11y"
+weight = 1
+
+[params]
+  description = """Mobile accessibility resources, guidance, and opinions for developers. Edited by Rob Whitaker"""
+  copyright = """Email: [a11y@mobilea11y.com](mailto:a11y@mobilea11y.com).
+  
+  Made with [Hugo](https://gohugo.io/). Themed by [Blowfish](https://blowfish.page/)."""
+  dateFormat = "Jan 2, 2006"
+
+  [params.author]
+    name = "Mobile A11y"

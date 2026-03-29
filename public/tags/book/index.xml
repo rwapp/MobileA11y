@@ -2,28 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Book on Mobile A11y</title>
-    <link>https://mobilea11y.com/tags/book/</link>
+    <link>http://localhost:1313/tags/book/</link>
     <description>Recent content in Book on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Sat, 30 Nov 2019 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/book/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <copyright>Email: [a11y@mobilea11y.com](mailto:a11y@mobilea11y.com).
+  
+  Made with [Hugo](https://gohugo.io/). Themed by [Blowfish](https://blowfish.page/).</copyright>
+    <lastBuildDate>Sat, 30 Nov 2019 07:30:56 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/book/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>Review: Accessibility for Everyone - Laura Kalbag</title>
-      <link>https://mobilea11y.com/blog/kalbag-accessibility-for-everyone-review/</link>
+      <link>http://localhost:1313/blog/kalbag-accessibility-for-everyone-review/</link>
       <pubDate>Sat, 30 Nov 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/kalbag-accessibility-for-everyone-review/</guid>
-      <description>Laura&amp;rsquo;s introduction to web accessibility jumped out to me because it&amp;rsquo;s available as an audiobook. Being dyslexic I struggle to read, so prefer to listen to audiobooks where available. Unfortunately, most technical books aren&amp;rsquo;t available as audiobooks for a couple of potentially obvious reasons. Hearing code or descriptions of diagrams and illustrations read aloud may not be the best experience for an audiobook. As such, this book choses to leave those out of the audio version.</description>
+      <guid>http://localhost:1313/blog/kalbag-accessibility-for-everyone-review/</guid>
+      <description>&lt;p&gt;Laura&amp;rsquo;s introduction to web accessibility jumped out to me because it&amp;rsquo;s available as an audiobook. Being dyslexic I struggle to read, so prefer to listen to audiobooks where available. Unfortunately, most technical books aren&amp;rsquo;t available as audiobooks for a couple of potentially obvious reasons. Hearing code or descriptions of diagrams and illustrations read aloud may not be the best experience for an audiobook. As such, this book choses to leave those out of the audio version. For this review, I also purchased the eBook version. Having illustrations available there did make it feel like I had lost out by reading the audiobook version. Screen readers do their best to convey information when greeted with diagrams and other non-text content, and I wonder if more could have been done here to convey this information in an audio format. That said, I am grateful Laura took the time to record an audio version, as in all honesty, I wouldn&amp;rsquo;t have completed this book up otherwise. This is not an indictment of Laura or her book, simply that I struggle to read a full book.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Review: Design Meets Disability - Graham Pullin</title>
-      <link>https://mobilea11y.com/blog/pullin-design-meets-disability/</link>
+      <link>http://localhost:1313/blog/pullin-design-meets-disability/</link>
       <pubDate>Sat, 12 Oct 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/pullin-design-meets-disability/</guid>
-      <description>Design Meets Disability was recommended to me by accessibility consultant Jon Gibbins while we were sharing a long train journey through mid-Wales. We were talking, amongst many things, about our love for Apple products and their design.
-I am a hearing aid wearer, my aid is two-tone grey. A sort of dark taupe grey above, and a darker, almost gun-metal grey below. There’s a clear tube into my ear. This is fine, I don’t hate it.</description>
+      <guid>http://localhost:1313/blog/pullin-design-meets-disability/</guid>
+      <description>&lt;p&gt;Design Meets Disability was recommended to me by accessibility consultant &lt;a href=&#34;https://twitter.com/dotjay&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Jon Gibbins&lt;/a&gt; while we were sharing a long train journey through mid-Wales. We were talking, amongst many things, about our love for Apple products and their design.&lt;/p&gt;&#xA;&lt;p&gt;I am a hearing aid wearer, my aid is two-tone grey. A sort of dark taupe grey above, and a darker, almost gun-metal grey below. There’s a clear tube into my ear. This is fine, I don’t hate it. It&amp;rsquo;s certainly better than the nowhere close to anyone’s actual skin colour weird pinky-taupe colour of older style aids. But, why is the tube clear? I didn’t make the design decision here, but I think we can safely assume it&amp;rsquo;s clear to hide the tube. But why would I want to hide it?&lt;/p&gt;</description>
+      
     </item>
     
   </channel>

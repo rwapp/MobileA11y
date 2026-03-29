@@ -2,88 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Resources on Mobile A11y</title>
-    <link>https://mobilea11y.com/tags/resources/</link>
+    <link>http://localhost:1313/tags/resources/</link>
     <description>Recent content in Resources on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Fri, 13 Aug 2021 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/resources/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <copyright>Email: [a11y@mobilea11y.com](mailto:a11y@mobilea11y.com).
+  
+  Made with [Hugo](https://gohugo.io/). Themed by [Blowfish](https://blowfish.page/).</copyright>
+    <lastBuildDate>Fri, 13 Aug 2021 07:30:56 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/resources/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>iOS UIKit Accessibility traits</title>
-      <link>https://mobilea11y.com/blog/traits/</link>
+      <link>http://localhost:1313/blog/traits/</link>
       <pubDate>Fri, 13 Aug 2021 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/traits/</guid>
-      <description>Accessibility traits on iOS is the system by which assistive technologies know how to present your interface to your users. The exact experience will vary between assistive technologies, in some cases they may change the intonation of what VoiceOver reads, or add additional options for navigation, sometimes they will disable that assistive technology from accessing the element, or change how the assistive tech functions. They are the &amp;lsquo;Role&amp;rsquo; part of the fundamental rule of making something accessible to screen readers - WCAG&amp;rsquo;s 4.</description>
+      <guid>http://localhost:1313/blog/traits/</guid>
+      <description>&lt;p&gt;Accessibility traits on iOS is the system by which assistive technologies know how to present your interface to your users. The exact experience will vary between assistive technologies, in some cases they may change the intonation of what VoiceOver reads, or add additional options for navigation, sometimes they will disable that assistive technology from accessing the element, or change how the assistive tech functions. They are the &amp;lsquo;Role&amp;rsquo; part of the fundamental rule of making something accessible to screen readers - &lt;a href=&#34;https://www.w3.org/WAI/WCAG21/Understanding/name-role-value.html&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;WCAG&amp;rsquo;s 4.1.2: Name, Role, Value&lt;/a&gt;.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>iOS Custom Accessibility Actions</title>
-      <link>https://mobilea11y.com/blog/a11y-custom-actions/</link>
+      <link>http://localhost:1313/blog/a11y-custom-actions/</link>
       <pubDate>Sun, 01 Aug 2021 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/a11y-custom-actions/</guid>
-      <description>When testing your app with VoiceOver or Switch Control, a common test is to ensure you can reach every interactive element on screen. If these assistive technologies can&amp;rsquo;t focus all of your buttons how will your customers be able to interact fully with your app? Except there are times when hiding buttons from your assistive technology users is the better choice. Consider an app with a table view that has many repeating interactive elements - this could be a social media app where &amp;rsquo;like, share, reply&amp;rsquo; etc is repeated for each post.</description>
+      <guid>http://localhost:1313/blog/a11y-custom-actions/</guid>
+      <description>&lt;p&gt;When testing your app with VoiceOver or Switch Control, a common test is to ensure you can reach every interactive element on screen. If these assistive technologies can&amp;rsquo;t focus all of your buttons how will your customers be able to interact fully with your app? Except there are times when hiding buttons from your assistive technology users is the better choice. Consider an app with a table view that has many repeating interactive elements - this could be a social media app where &amp;rsquo;like, share, reply&amp;rsquo; etc is repeated for each post. Or perhaps an e-commerce app with &amp;lsquo;wishlist, buy now, add to basket&amp;rsquo; are repeated for each item. Visually these buttons won&amp;rsquo;t interrupt your users skimming the list of content, but for VoiceOver or Switch Control users, they will have to visit each one for every item on the screen. This is going to make navigating your app long and tedious, an means your users are more likely to drop out.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Test Your App&#39;s Accessibility with Evinced</title>
-      <link>https://mobilea11y.com/blog/evinced-ios/</link>
+      <link>http://localhost:1313/blog/evinced-ios/</link>
       <pubDate>Wed, 24 Mar 2021 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/evinced-ios/</guid>
-      <description>Disclosure: Evinced has paid for my time in writing this blog, and I have provided them feedback on the version of their tool reviewed and an early beta. I agreed to this because I believe in the product they are offering.
- Testing your app for accessibility is an essential part of making an accessible app, as with any part of the software you build, if you don’t test it, how can you be sure it works?</description>
+      <guid>http://localhost:1313/blog/evinced-ios/</guid>
+      <description>&lt;blockquote&gt;&lt;p&gt;Disclosure: Evinced has paid for my time in writing this blog, and I have provided them feedback on the version of their tool reviewed and an early beta. I agreed to this because I believe in the product they are offering.&lt;/p&gt;&#xA;&lt;/blockquote&gt;&lt;p&gt;Testing your app for accessibility is an essential part of making an accessible app, as with any part of the software you build, if you don’t test it, how can you be sure it works? Because accessibility is human, there are no true shortcuts to this, a through manual test will always be the most productive form of accessibility testing possible. But with some carefully designed automated checks, you can detect common accessibility issues quicker and earlier. This makes fixing them easier, the chance of these errors reaching your customers is reduced, and it saves you valuable time for resolving more complex issues. It&amp;rsquo;s not an easy problem to solve - I’ve tried with &lt;a href=&#34;https://github.com/rwapp/A11yUITests&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;A11yUITests&lt;/a&gt;, and Apple built their offering, &lt;a href=&#34;https://developer.apple.com/videos/play/wwdc2019/257/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Accessibility Inspector&lt;/a&gt;, right in to Xcode. Now a new tool has entered the arena from &lt;a href=&#34;https://evinced.com&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Evinced&lt;/a&gt;, the iOS Accessibility Debugger.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>How Do I Get My App an Accessibility Audit?</title>
-      <link>https://mobilea11y.com/blog/accessibility-professionals/</link>
+      <link>http://localhost:1313/blog/accessibility-professionals/</link>
       <pubDate>Sun, 21 Mar 2021 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/accessibility-professionals/</guid>
-      <description>This is a common question I get asked - how do I go about arranging an accessibility audit for my app so I know where I can make improvements? If you&amp;rsquo;re truly looking for an answer to that question then I have a few options for you below, but first, are you asking the right question?
-Accessibility Isn&amp;rsquo;t About Box Ticking You can&amp;rsquo;t make your app accessible by getting a report, fixing the findings, and accepting it as done.</description>
+      <guid>http://localhost:1313/blog/accessibility-professionals/</guid>
+      <description>&lt;p&gt;This is a common question I get asked - how do I go about arranging an accessibility audit for my app so I know where I can make improvements? If you&amp;rsquo;re truly looking for an answer to that question then I have a few &lt;a href=&#34;http://localhost:1313/blog/accessibility-professionals/#accessibility-professionals-who-can-help&#34; &gt;options for you&lt;/a&gt; below, but first, are you asking the right question?&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Accessibility Isn&amp;rsquo;t About Box Ticking&#xA;    &lt;div id=&#34;accessibility-isnt-about-box-ticking&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#accessibility-isnt-about-box-ticking&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;You can&amp;rsquo;t make your app accessible by getting a report, fixing the findings, and accepting it as done. Accessibility is a constant process of improvement to make sure your app works better for as many people as possible. This could mean adopting new accessibility APIs as they become available, or it could mean reacting to feedback you receive from your users. Disability happens when someone&amp;rsquo;s abilities don&amp;rsquo;t mesh with the tools we have provided, and as disability is such a wide spectrum there will always be someone disabled by your app. How that manifests will vary depending on your app, the people using it, and over time, so one assessors report is not enough to claim your app is 100% accessible, because there is no such thing. To claim this is both naive and a little offensive.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>A11y Box Android</title>
-      <link>https://mobilea11y.com/blog/a11y-box-android/</link>
+      <link>http://localhost:1313/blog/a11y-box-android/</link>
       <pubDate>Sun, 26 Apr 2020 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/a11y-box-android/</guid>
-      <description>A few months ago I shared a project I&amp;rsquo;d been working on for iOS exploring the accessibility API available on that platform. The Android accessibility API is equally large and full featured, and really deserves the same treatment. So here&amp;rsquo;s A11y Box for Android.
-A11y Box for Android is an exploration of what is available on the Android accessibility api and how you can make use of it in your apps.</description>
+      <guid>http://localhost:1313/blog/a11y-box-android/</guid>
+      <description>&lt;p&gt;A few months ago I &lt;a href=&#34;https://mobilea11y.com/blog/a11y-box-ios/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;shared&lt;/a&gt; a &lt;a href=&#34;https://github.com/rwapp/A11y-Box-iOS&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;project&lt;/a&gt; I&amp;rsquo;d been working on for iOS exploring the accessibility API available on that platform. The Android accessibility API is equally large and full featured, and really deserves the same treatment. So here&amp;rsquo;s &lt;a href=&#34;https://github.com/rwapp/A11y-Box-Android&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;A11y Box for Android&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;A11y Box for Android is an exploration of what is available on the Android accessibility api and how you can make use of it in your apps. It&amp;rsquo;s open source, and open for contributions. So please feel free to fork if there&amp;rsquo;s a feature I&amp;rsquo;ve missed or something that needs a little clarification.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>A11y Box iOS</title>
-      <link>https://mobilea11y.com/blog/a11y-box-ios/</link>
+      <link>http://localhost:1313/blog/a11y-box-ios/</link>
       <pubDate>Wed, 26 Feb 2020 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/a11y-box-ios/</guid>
-      <description>iOS&amp;rsquo; UIAccessibility API is huge. I like to think I know it pretty well, but I&amp;rsquo;m always being surprised by discovering features I previously had no idea about. Like many things on iOS, the documentation for UIAccessibility is not always complete, even for parts of the API that have been around for years.
-In an attempt to help spread the knowledge of some of the awesome things UIAccessibility is capable of, I&amp;rsquo;ve created A11y Box for iOS.</description>
+      <guid>http://localhost:1313/blog/a11y-box-ios/</guid>
+      <description>&lt;p&gt;iOS&amp;rsquo; UIAccessibility API is huge. I like to think I know it pretty well, but I&amp;rsquo;m always being surprised by discovering features I previously had no idea about. Like many things on iOS, the documentation for UIAccessibility is not always complete, even for parts of the API that have been around for years.&lt;/p&gt;&#xA;&lt;p&gt;In an attempt to help spread the knowledge of some of the awesome things UIAccessibility is capable of, I&amp;rsquo;ve created &lt;a href=&#34;https://github.com/rwapp/A11y-Box-iOS&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;A11y Box&lt;/a&gt; for iOS. It&amp;rsquo;s an open source project that covers every feature I know about on the UIAccessibility API, and a little more too.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>A11yUITests: An XCUI Testing library for accessibility</title>
-      <link>https://mobilea11y.com/blog/a11yuitests/</link>
+      <link>http://localhost:1313/blog/a11yuitests/</link>
       <pubDate>Tue, 17 Dec 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/a11yuitests/</guid>
-      <description>A11yUITests is an extension to XCTestCase that adds tests for common accessibility issues that can be run as part of an XCUITest suite. I&amp;rsquo;ve written a detailed discussion of the tests available if you&amp;rsquo;re interested in changing/implementing these tests yourself. Alternatively, follow this quick start guide.
-Getting Started Adding A11yUITests I&amp;rsquo;m assuming you&amp;rsquo;re already familiar with cocoapods, if not, cocoapods.org has a good introduction. There is one minor difference here compared to most cocoapods, we&amp;rsquo;re not including this pod in our app, but our app&amp;rsquo;s test bundle.</description>
+      <guid>http://localhost:1313/blog/a11yuitests/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/rwapp/A11yUITests&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;A11yUITests&lt;/a&gt; is an extension to XCTestCase that adds tests for common accessibility issues that can be run as part of an XCUITest suite. I&amp;rsquo;ve written a detailed discussion of the &lt;a href=&#34;https://mobilea11y.com/guides/xcui/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;tests available&lt;/a&gt; if you&amp;rsquo;re interested in changing/implementing these tests yourself. Alternatively, follow this quick start guide.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Getting Started&#xA;    &lt;div id=&#34;getting-started&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#getting-started&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Adding A11yUITests&#xA;    &lt;div id=&#34;adding-a11yuitests&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#adding-a11yuitests&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;I&amp;rsquo;m assuming you&amp;rsquo;re already familiar with cocoapods, if not, &lt;a href=&#34;https://cocoapods.org&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;cocoapods.org&lt;/a&gt; has a good introduction. There is one minor difference here compared to most cocoapods, we&amp;rsquo;re not including this pod in our app, but our app&amp;rsquo;s test bundle. This means your podfile will look something like this.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Resources</title>
-      <link>https://mobilea11y.com/resources/</link>
+      <link>http://localhost:1313/resources/</link>
       <pubDate>Sun, 01 Dec 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/resources/</guid>
-      <description>This is a personally curated list of resources I have used and think others may find helpful too. I&amp;rsquo;m always looking for new high quality mobile accessibility and inclusion resources to add here. Please share any you find with me via email or Twitter.
-Code Android   Android Developers: Build more accessible appsAndroid&amp;rsquo;s developer documentation for Accessibility, including design, building &amp;amp; testing. With videos, code samples, and documentation.
-  Android: Make apps more accessibleGoogle&amp;rsquo;s guide to improving accessibility on Android</description>
+      <guid>http://localhost:1313/resources/</guid>
+      <description>&lt;p&gt;This is a personally curated list of resources I have used and think others may find helpful too. I&amp;rsquo;m always looking for new high quality mobile accessibility and inclusion resources to add here. Please share any you find with me via &lt;a href=&#34;mailto:a11y@mobilea11y.com&#34; &gt;email&lt;/a&gt; or &lt;a href=&#34;https://twitter.com/MobileA11y&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Code&#xA;    &lt;div id=&#34;code&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#code&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Android&#xA;    &lt;div id=&#34;android&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#android&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://developer.android.com/guide/topics/ui/accessibility&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Android Developers: Build more accessible apps&lt;/a&gt;&lt;/strong&gt;&lt;br/&gt;&#xA;Android&amp;rsquo;s developer documentation for Accessibility, including design, building &amp;amp; testing. With videos, code samples, and documentation.&lt;/p&gt;</description>
+      
     </item>
     
   </channel>

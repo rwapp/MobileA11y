@@ -2,29 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Video on Mobile A11y</title>
-    <link>https://mobilea11y.com/tags/video/</link>
+    <link>http://localhost:1313/tags/video/</link>
     <description>Recent content in Video on Mobile A11y</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Sun, 12 Apr 2020 07:30:56 +0000</lastBuildDate><atom:link href="https://mobilea11y.com/tags/video/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <copyright>Email: [a11y@mobilea11y.com](mailto:a11y@mobilea11y.com).
+  
+  Made with [Hugo](https://gohugo.io/). Themed by [Blowfish](https://blowfish.page/).</copyright>
+    <lastBuildDate>Sun, 12 Apr 2020 07:30:56 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/video/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>Mobile A11y Talk: Accessibility in SwiftUI</title>
-      <link>https://mobilea11y.com/blog/swiftui-talk/</link>
+      <link>http://localhost:1313/blog/swiftui-talk/</link>
       <pubDate>Sun, 12 Apr 2020 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/swiftui-talk/</guid>
-      <description>I was supposed to be attending the 2020 CSUN Assistive Technology conference to present a couple of talks, unfortunately with COVID-19 starting to take hold at that time, I wasn&amp;rsquo;t able to attend. In lieu of attending I decided to record one of the talks I was scheduled to present on Accessibility in SwiftUI.
-SwiftUI is Apple&amp;rsquo;s new paradigm for creating user interfaces on Apple platforms, and it has a bunch of new approaches that really help create more accessible experiences.</description>
+      <guid>http://localhost:1313/blog/swiftui-talk/</guid>
+      <description>&lt;p&gt;I was supposed to be attending the 2020 &lt;a href=&#34;https://www.csun.edu/cod/conference&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;CSUN Assistive Technology conference&lt;/a&gt; to present a couple of talks, unfortunately with COVID-19 starting to take hold at that time, I wasn&amp;rsquo;t able to attend. In lieu of attending I decided to record one of the talks I was scheduled to present on Accessibility in SwiftUI.&lt;/p&gt;&#xA;&lt;p&gt;SwiftUI is Apple&amp;rsquo;s new paradigm for creating user interfaces on Apple platforms, and it has a bunch of new approaches that really help create more accessible experiences. The talk is based on the &lt;a href=&#34;https://mobilea11y.com/guides/swiftui/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;series of SwiftUI guides&lt;/a&gt; available on this site.&lt;/p&gt;</description>
+      
     </item>
     
     <item>
       <title>Mobile A11y Talk: Accessibility without the &#39;V&#39; Word</title>
-      <link>https://mobilea11y.com/blog/without-the-v-word/</link>
+      <link>http://localhost:1313/blog/without-the-v-word/</link>
       <pubDate>Tue, 08 Oct 2019 07:30:56 +0000</pubDate>
       
-      <guid>https://mobilea11y.com/blog/without-the-v-word/</guid>
-      <description>I was honoured in 2019 to be able to give my first full conference talk at CodeMobile. I was then lucky enough to be able to repeat that talk at NSLondon, NSManchester, and SWMobile meetups.
-As an iOS developer, I know accessibility is important for a huge range of people. But at times I think I can treat it like an afterthought. Accessibility Without the ‘V’ Word covers a skill I think we as software engineers would benefit from developing - empathy towards our users.</description>
+      <guid>http://localhost:1313/blog/without-the-v-word/</guid>
+      <description>&lt;p&gt;I was honoured in 2019 to be able to give my first full conference talk at CodeMobile. I was then lucky enough to be able to repeat that talk at &lt;a href=&#34;https://www.meetup.com/NSLondon/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;NSLondon&lt;/a&gt;, &lt;a href=&#34;https://www.meetup.com/NSManchester/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;NSManchester&lt;/a&gt;, and &lt;a href=&#34;https://www.meetup.com/swmobile/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;SWMobile&lt;/a&gt; meetups.&lt;/p&gt;&#xA;&lt;p&gt;As an iOS developer, I know accessibility is important for a huge range of people. But at times I think I can treat it like an afterthought. Accessibility Without the ‘V’ Word covers a skill I think we as software engineers would benefit from developing - empathy towards our users. Remembering that everyone who uses our software is different, and have different abilities, experiences, and requirements. VoiceOver is an essential tool for many of our customers, but it&amp;rsquo;s not the only thing we should consider with accessibility.&lt;/p&gt;</description>
+      
     </item>
     
   </channel>
