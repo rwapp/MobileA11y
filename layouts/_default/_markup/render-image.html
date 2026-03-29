@@ -1,0 +1,8 @@
+{{ $src := .Destination }}
+{{ if and (strings.HasPrefix $src "/") (not (strings.HasPrefix $src "//")) }}
+  {{ $basePath := (urls.Parse site.BaseURL).Path | strings.TrimSuffix "/" }}
+  {{ if and $basePath (ne $basePath "") }}
+    {{ $src = printf "%s%s" $basePath $src }}
+  {{ end }}
+{{ end }}
+<img src="{{ $src }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . }}"{{ end }}>
