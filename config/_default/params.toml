@@ -24,6 +24,7 @@ katex = true
 
 [article]
   showDate = true
+  showDateUpdated = true
   showAuthor = true
   showReadingTime = true
   showTableOfContents = false
