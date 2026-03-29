@@ -66,6 +66,13 @@ html.dark .badge-updated {
   margin-left: 0.2em;
 }
 
+/* Tighten prose line-height slightly on desktop (mobile default of 1.6 is fine) */
+@media (min-width: 640px) {
+  .prose :where(p, li, blockquote):not(:where([class~="not-prose"] *)) {
+    line-height: 1.5;
+  }
+}
+
 /* Outdated article banner */
 .outdated-banner {
   background-color: #fef3c7;
