@@ -116,7 +116,7 @@ jobs:
             --enforce-https \
             --checks "Links,Images,Scripts" \
             --root-dir ./public \
-            --url-swap "^/MobileA11y/:/" \
+            --swap-urls "^/MobileA11y/:/" \
             --ignore-status-codes "302,403,999" \
             --ignore-urls "/^https:\/\/rwapp\.github\.io\/MobileA11y\//,/^https:\/\/twitter\.com\//,/^https:\/\/x\.com\//,/^http:\/\/mirrors\.creativecommons\.org/"
         continue-on-error: false
