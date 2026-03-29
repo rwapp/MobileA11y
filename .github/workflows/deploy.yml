@@ -55,6 +55,7 @@ jobs:
         uses: actions/checkout@v5
         with:
           submodules: recursive
+          fetch-depth: 0
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
@@ -62,10 +63,44 @@ jobs:
           hugo-version: "0.158.0"
           extended: true
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
       - name: Build
         run: hugo --minify
         env:
           HUGO_ENVIRONMENT: production
+
+      - name: Verify Internal Link Destinations
+        run: node ./scripts/verify-internal-links.mjs --public ./public --site-prefix /MobileA11y/
+
+      - name: Compare Route Inventory With Baseline
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if git rev-parse --verify HEAD^ >/dev/null 2>&1; then
+            BASE_REF="HEAD^"
+          else
+            echo "No prior commit available for baseline route comparison; skipping."
+            exit 0
+          fi
+
+          BASELINE_DIR="$(mktemp -d)"
+          echo "Using baseline ref ${BASE_REF} in ${BASELINE_DIR}"
+
+          git worktree add --detach "${BASELINE_DIR}" "${BASE_REF}"
+          trap 'git worktree remove --force "${BASELINE_DIR}"' EXIT
+
+          (
+            cd "${BASELINE_DIR}"
+            git submodule update --init --recursive
+            HUGO_ENVIRONMENT=production hugo --minify
+          )
+
+          node ./scripts/compare-route-inventory.mjs --current ./public --baseline "${BASELINE_DIR}/public"
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -80,8 +115,10 @@ jobs:
           htmlproofer ./public \
             --enforce-https \
             --checks "Links,Images,Scripts" \
+            --root-dir ./public \
+            --url-swap "^/MobileA11y/:/" \
             --ignore-status-codes "302,403,999" \
-            --ignore-urls "/^https:\/\/twitter\.com\//,/^https:\/\/x\.com\//,/^http:\/\/mirrors\.creativecommons\.org/"
+            --ignore-urls "/^https:\/\/rwapp\.github\.io\/MobileA11y\//,/^https:\/\/twitter\.com\//,/^https:\/\/x\.com\//,/^http:\/\/mirrors\.creativecommons\.org/"
         continue-on-error: false
 
   deploy:
