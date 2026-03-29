@@ -283,10 +283,10 @@
     
     <item>
       <title>About Mobile A11y</title>
-      <link>http://localhost:1313/about-mobile-a11y/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Sat, 16 Nov 2019 07:30:56 +0000</pubDate>
       
-      <guid>http://localhost:1313/about-mobile-a11y/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;About Mobile A11y&#xA;    &lt;div id=&#34;about-mobile-a11y&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#about-mobile-a11y&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Mobile A11y is a collection of blogs and resources about how we as mobile developers can improve accessibility on mobile devices. From time to time the blog might also touch on related topics such as digital inclusion, and other topics around ethics in technology. The site is aimed at mobile developers and is written by a mobile developer. I hope this means other mobile developers will find the content relatable and engaging, and you’ll find learning about mobile accessibility along with me helpful.&lt;/p&gt;</description>
       
     </item>
