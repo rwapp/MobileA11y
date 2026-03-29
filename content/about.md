@@ -3,35 +3,35 @@ title: "About Mobile A11y"
 description: "What this site's aim is. Who I am and what I do."
 slug: "about"
 date: 2019-11-16T07:30:56Z
+lastmod: 2026-03-29T07:30:56Z
 tags:
 - Mobile A11y
 ---
 
 ## About Mobile A11y
 
-Mobile A11y is a collection of blogs and resources about how we as mobile developers can improve accessibility on mobile devices. From time to time the blog might also touch on related topics such as digital inclusion, and other topics around ethics in technology. The site is aimed at mobile developers and is written by a mobile developer. I hope this means other mobile developers will find the content relatable and engaging, and you’ll find learning about mobile accessibility along with me helpful.
- 
-This site isn’t aimed at accessibility users, so you’re unlikely to find information on how to use tools like VoiceOver and TalkBack. For iOS users looking to know more about using accessibility tools, you might consider  [Shelly Brisbin's](https://twitter.com/shelly) [iOS Access for All](https://www.iosaccessbook.com).
+Mobile A11y is a blog about building accessible mobile apps written by a mobile developer and accessibility expert. The site is intended to be practical, and mostly code-focused, but you might also find thoughts on testing and design for mobile accessibility too.
+
+The site is aimed at developers rather than accessibility users. If you're looking for guidance on using accessibility features on your device, the best places to start are [Apple's accessibility support pages](https://support.apple.com/accessibility) and [Android's accessibility documentation](https://support.google.com/accessibility/android).
 
 
 ## About Rob Whitaker
 
-[Rob](https://www.linkedin.com/in/rob-whitaker/) is an iOS mobile developer currently working for Capital One in the UK. Rob is passionate about making great mobile experiences that work for everyone.
+[Rob](https://www.linkedin.com/in/rob-whitaker/) is a Senior iOS Engineer and a mobile accessibility specialist with a background that includes time on the accessibility team at Apple. He's an invited expert on the WCAG Mobile Accessibility Task Force, a conference speaker, and the author of [Developing Inclusive Mobile Apps](https://www.apress.com/gp/book/9781484258132) (Apress) — a book for developers who believe that building for everyone isn't a nice-to-have.
 
-Rob lives in the middle of the UK where he enjoys views over a national park when the weather is bad, and getting out into the national park when the weather is good. Rob lives with his wife (human) and daughter (dog).
+He's spent his career at the intersection of clean Swift and inclusive design, which turns out to be a less crowded place than it should be. If you think Rob might be able to help with something, feel free to [get in touch](mailto:rw@rwapp.co.uk) — he's always happy to have a conversation.
+
+<img src="/images/rob.jpg" alt="Rob Whitaker wearing a mustard-yellow hood and a grey puffer jacket, photographed outdoors at night in a snowy landscape with the northern lights visible in the sky behind them." style="width: 50%; margin: 0 auto;">
+
 
 ## Paid Content
 
-I will not include any user tracking advertising on this site.
+This site will never include tracking-based advertising. If I do feature any sponsored content, it will always be clearly labelled as such, and I'll only work with sponsors I'd genuinely recommend. Referral links to third-party products or services are marked with a (£), with a non-referral alternative always provided.
 
-I may choose to include some paid for sponsored messages or posts if I feel the sponsor is suitable. If I do choose to do this I will always make it clear from the start that this element is paid for. I reserve the right to remove the sponsored content and repay any money if I later determine the sponsor has acted unethically. If you might be interested in sponsoring an element of the site drop me an [email](mailto:rw@rwapp.co.uk).
-
-I may include partner links to 3rd party paid products or services which provide me with a small referral. If I do choose to do this I will always mark these links with a (£), and provide a non-referral alternative.
-
-If you really appreciate the work I have done, you can always drop me a small amount of [pizza money 🍕](https://paypal.me/rwapp).
+If you've found the site useful and want to support it, you can buy me a coffee over on [Ko-fi ☕](https://ko-fi.com/mobilea11y).
 
 ## Privacy Policy
 
-I don’t currently keep any data from any visitors to this website. This includes no cookies, no user tracking, no anonymous stats, etc. I don’t have any plans to add this currently, but I may choose to add the minimum possible anonymous statistics in future. If I do choose to do this I’ll commit to doing this in the way that is most respectful of your privacy.
+I don't currently keep any data from any visitors to this website. This includes no cookies, no user tracking, no anonymous stats, etc. I don't have any plans to add this currently, but I may choose to add the minimum possible anonymous statistics in future. If I do choose to do this I'll commit to doing this in the way that is most respectful of your privacy.
 
-If you choose to contact me through [email](mailto:rw@rwapp.co.uk), [twitter](https://twitter.com/MobileA11y), or any other means, then I’ll keep andy details you send me for the purpose of replying to you.
+If you choose to contact me through [email](mailto:rw@rwapp.co.uk) or any other means, I'll keep any details you send me only for the purpose of replying to you.
