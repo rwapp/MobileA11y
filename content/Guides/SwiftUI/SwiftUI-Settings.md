@@ -2,6 +2,7 @@
 title: "SwiftUI Accessibility: User Settings"
 description: "SwiftUI allows us to read values that might affect how we want to present ­­our UI. Including our customer's accessibility choices."
 date: 2019-10-27T07:30:56Z
+lastmod: 2019-10-27T07:30:56Z
 tags:
 - Mobile
 - iOS

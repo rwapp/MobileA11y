@@ -2,6 +2,7 @@
 title: "iOS Custom Accessibility Actions"
 description: "Sometimes hiding interactive elements from your assistive technology users gives them a better experience. Here's how to do it wile keeping your app accessible."
 date: 2021-08-01T07:30:56Z
+lastmod: 2021-08-01T07:30:56Z
 tags:
 - iOS
 - Mobile A11y Blog

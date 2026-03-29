@@ -2,6 +2,7 @@
 title: "iOS Attributed Accessibility Labels"
 description: "Creating a next-level experience for your assistive technology customers with attributed accessibility labels"
 date: 2020-05-03T10:30:56Z
+lastmod: 2020-05-03T10:30:56Z
 tags:
 - iOS
 - Mobile A11y Blog

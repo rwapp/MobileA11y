@@ -2,6 +2,7 @@
 title: "iOS UIKit Accessibility traits"
 description: "How does assistive technology know how to interact with your UIKit elements? Using accessibility traits."
 date: 2021-08-13T07:30:56Z
+lastmod: 2021-08-13T07:30:56Z
 tags:
 - iOS
 - Mobile A11y Blog

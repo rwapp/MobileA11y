@@ -39,3 +39,33 @@ html.dark .relative.shadow-xl.rounded-2xl h1 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Updated badge (list items) */
+.badge-updated {
+  border-color: #4ade80;
+  color: #15803d;
+}
+
+html.dark .badge-updated {
+  border-color: #16a34a;
+  color: #4ade80;
+}
+
+/* Outdated article banner */
+.outdated-banner {
+  background-color: #fef3c7;
+  border-left: 4px solid #f59e0b;
+}
+
+.outdated-banner .outdated-banner__icon {
+  color: #f59e0b;
+}
+
+html.dark .outdated-banner {
+  background-color: rgba(251, 191, 36, 0.08);
+  border-left-color: #fbbf24;
+}
+
+html.dark .outdated-banner .outdated-banner__icon {
+  color: #fbbf24;
+}

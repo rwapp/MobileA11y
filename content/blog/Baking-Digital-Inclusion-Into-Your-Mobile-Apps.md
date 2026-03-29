@@ -2,6 +2,7 @@
 title: "Baking Digital Inclusion Into Your Mobile Apps"
 description: ""
 date: 2019-07-25T07:30:56Z
+lastmod: 2019-07-25T07:30:56Z
 tags:
 - Mobile
 - Mobile A11y Blog

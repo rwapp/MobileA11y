@@ -2,6 +2,7 @@
 title: "Android Live Regions"
 description: "A one line addition makes a massive difference to dynamic screens in Android."
 date: 2020-02-11T07:30:56Z
+lastmod: 2020-02-11T07:30:56Z
 tags:
 - Android
 - Blog

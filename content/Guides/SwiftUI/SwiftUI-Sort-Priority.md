@@ -2,6 +2,7 @@
 title: "SwiftUI Accessibility: Sort Priority"
 description: "Sometimes VoiceOver's natural order is not the one that makes the most sense for your app. SwiftUI lets you change that."
 date: 2019-10-02T07:30:56Z
+lastmod: 2019-10-02T07:30:56Z
 tags:
 - Mobile
 - iOS

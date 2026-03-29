@@ -2,6 +2,7 @@
 title: SwiftUI Accessibility - Named Controls
 description: "All controls in SwiftUI can take a Text element as part of their builder. This makes controlling your app with VoiceOver or VoiceControl way easier."
 date: 2019-09-26T07:30:56Z
+lastmod: 2019-09-26T07:30:56Z
 tags:
 - Mobile
 - iOS

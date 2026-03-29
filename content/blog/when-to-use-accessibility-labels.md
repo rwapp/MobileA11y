@@ -2,6 +2,7 @@
 title: "When to use Accessibility Labels"
 description: "When to, and when not to, set your own accessibility labels."
 date: 2020-05-03T08:30:56Z
+lastmod: 2020-05-03T08:30:56Z
 tags:
 - iOS
 - Mobile A11y Blog

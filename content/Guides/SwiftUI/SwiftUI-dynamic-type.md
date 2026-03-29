@@ -2,6 +2,7 @@
 title: "SwiftUI Accessibility: Dynamic Type"
 description: "SwiftUI makes some nice improvements on Dynamics Type- it’s supported by default. But we need to do a few things to support fully."
 date: 2019-09-18T07:30:56Z
+lastmod: 2019-09-18T07:30:56Z
 tags:
 - Mobile
 - iOS

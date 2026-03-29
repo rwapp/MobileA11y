@@ -2,6 +2,7 @@
 title: "iOS 14: Custom Accessibility Content"
 description: "A new accessibility feature for iOS 14 lets you provide all the information your customer could need while reducing noise."
 date: 2020-06-29T07:30:56Z
+lastmod: 2020-06-29T07:30:56Z
 tags:
 - iOS
 - Mobile

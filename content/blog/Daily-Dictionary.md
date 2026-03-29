@@ -2,6 +2,7 @@
 title: "Accessibility Review: Daily Dictionary - Screen changes"
 description: "Daily Dictionary provides a new word every day with definitions and real-world uses. Some VoiceOver users might struggle to determine when screens on the app change."
 date: 2020-05-16T07:30:56Z
+lastmod: 2020-05-16T07:30:56Z
 tags:
 - Accessibility Review
 ---

@@ -2,6 +2,7 @@
 title: "SwiftUI Accessibility: Traits"
 description: "Accessibility traits are incredibly powerful. They’re a group of attributes that tell assistive technology how to treat your UI. Get them wrong and you’ll make your interface frustrating"
 date: 2019-10-18T07:30:56Z
+lastmod: 2019-10-18T07:30:56Z
 tags:
 - Mobile
 - iOS

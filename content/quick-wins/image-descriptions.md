@@ -2,6 +2,7 @@
 title: "Quick Win - Image Descriptions"
 description: "If your images are missing descriptions those without vision won't be getting the full experience of your app."
 date: 2021-01-19T07:30:56Z
+lastmod: 2021-01-19T07:30:56Z
 tags:
 - iOS
 - Android

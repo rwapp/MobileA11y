@@ -2,6 +2,7 @@
 title: "SwiftUI Accessibility"
 description: "Accessibility is important, but why is it important to think about it now when SwiftUI is so new? And what are the innovations that make SwiftUI such a great improvement?"
 date: 2019-11-06T07:30:56Z
+lastmod: 2019-11-06T07:30:56Z
 tags:
 - iOS
 - SwiftUI

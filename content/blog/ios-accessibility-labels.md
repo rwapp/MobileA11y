@@ -2,6 +2,7 @@
 title: "iOS Accessibility Labels"
 description: "All you could ever want to know about accessibility labels on iOS"
 date: 2020-05-03T07:30:56Z
+lastmod: 2020-05-03T07:30:56Z
 tags:
 - iOS
 - Mobile A11y Blog

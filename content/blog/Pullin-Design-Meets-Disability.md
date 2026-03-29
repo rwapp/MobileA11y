@@ -2,6 +2,7 @@
 title: "Review: Design Meets Disability - Graham Pullin"
 description: "A manifesto for good design and accessibility, and why they shouldn't be mutually exclusive."
 date: 2019-10-12T07:30:56Z
+lastmod: 2019-10-12T07:30:56Z
 tags:
 - Book
 - Review

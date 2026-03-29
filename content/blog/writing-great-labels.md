@@ -2,6 +2,7 @@
 title: "Writing Great iOS Accessibility Labels"
 description: "Tips for writing the most effective accessibility labels."
 date: 2020-05-03T09:30:56Z
+lastmod: 2020-05-03T09:30:56Z
 tags:
 - iOS
 - Mobile A11y Blog

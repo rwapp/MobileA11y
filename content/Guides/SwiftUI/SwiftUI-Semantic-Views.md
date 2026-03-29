@@ -2,6 +2,7 @@
 title: "SwiftUI Accessibility: Semantic Views"
 description: "Semantic views are possibly the most powerful a11y tool a dev has, and SwiftUI makes them super simple."
 date: 2019-10-29T07:30:56Z
+lastmod: 2019-10-29T07:30:56Z
 tags:
 - Mobile
 - iOS

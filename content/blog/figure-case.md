@@ -2,6 +2,7 @@
 title: "Accessibility Review: Figure Case - Button Labels"
 description: "Figure Case helps organising a table-top miniature collection. Some VoiceOver users might might be struggle to know what actions some buttons perform."
 date: 2020-06-21T07:30:56Z
+lastmod: 2020-06-21T07:30:56Z
 tags:
 - Accessibility Review
 ---

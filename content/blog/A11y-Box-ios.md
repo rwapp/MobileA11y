@@ -2,6 +2,7 @@
 title: "A11y Box iOS"
 description: "An open-source example of iOS' Accessability API"
 date: 2020-02-26T07:30:56Z
+lastmod: 2020-02-26T07:30:56Z
 tags:
 - iOS
 - Mobile A11y Blog

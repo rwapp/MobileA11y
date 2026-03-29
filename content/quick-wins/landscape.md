@@ -2,6 +2,7 @@
 title: "Quick Win - Support Landscape"
 description: "Landscape orientation is enabled by default when you start a new app, so don't take this accessibility feature away from your users."
 date: 2021-01-28T07:30:56Z
+lastmod: 2021-01-28T07:30:56Z
 tags:
 - iOS
 - Android

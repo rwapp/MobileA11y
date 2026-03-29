@@ -11,7 +11,6 @@ katex = true
 
 [footer]
   showMenu = true
-  showCopyright = true
   showThemeAttribution = true
   showAppearanceSwitcher = true
   showScrollToTop = true

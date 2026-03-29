@@ -2,6 +2,7 @@
 title: "Quick Win - Start UI Testing"
 description: "Any well written Espresso or XCUI test can be an accessibility test."
 date: 2021-02-03T07:30:56Z
+lastmod: 2021-02-03T07:30:56Z
 tags:
 - iOS
 - Android

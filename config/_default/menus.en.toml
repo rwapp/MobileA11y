@@ -9,21 +9,6 @@
   weight = 2
 
 [[main]]
-  name = "Guides"
-  url = "/guides/"
-  weight = 3
-
-[[main]]
-  name = "Quick Wins"
-  url = "/quick-wins/"
-  weight = 4
-
-[[main]]
-  name = "Resources"
-  url = "/resources/"
-  weight = 5
-
-[[main]]
   name = "Tags"
   url = "/tags/"
   weight = 6

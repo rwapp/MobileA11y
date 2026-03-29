@@ -2,6 +2,7 @@
 title: "Accessibility Review: Huh? - International languages"
 description: "Huh? lets users look up words in dictionaries for various languages. Some additional hints for non-local languages would give a richer experience for VoiceOver users."
 date: 2020-06-28T07:30:56Z
+lastmod: 2020-06-28T07:30:56Z
 tags:
 - Accessibility Review
 ---

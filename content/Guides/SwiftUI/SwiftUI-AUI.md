@@ -2,6 +2,7 @@
 title: "SwiftUI Accessibility: Accessible User Interface"
 description: "The AUI or accessibility tree is how assistive technologies control your app. SwiftUI has some great improvements to this experience. It’s all free if you adopt SwiftUI."
 date: 2019-10-09T07:30:56Z
+lastmod: 2019-10-09T07:30:56Z
 tags:
 - Mobile
 - iOS
