@@ -83,7 +83,7 @@
       {{ $isStale := .Lastmod.Before $twoYearsAgo }}
       {{ $isRecent := .Lastmod.After $sixMonthsAgo }}
       {{ if or (and $isStale (ne .Params.outdated false)) (eq .Params.outdated true) }}
-        <span class="px-2 text-primary-500">&middot;</span>{{ partial "badge.html" "Outdated" }}
+        <span class="px-2 text-primary-500">&middot;</span>{{ partial "badge.html" "Archive" }}
       {{ else if $isRecent }}
         <span class="px-2 text-primary-500">&middot;</span><span class="flex cursor-pointer"><span class="badge-updated rounded-md border px-1 py-[1px] text-xs font-normal">Updated</span></span>
       {{ end }}
