@@ -2,6 +2,7 @@
 title: "A11yUITests: An XCUI Testing library for accessibility"
 description: "A open source library of accessibility tests for XCUI Testing."
 date: 2019-12-17T07:30:56Z
+lastmod: 2019-12-17T07:30:56Z
 tags:
 - Resources
 - iOS

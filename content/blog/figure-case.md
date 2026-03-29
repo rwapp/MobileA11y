@@ -2,6 +2,7 @@
 title: "Accessibility Review: Figure Case - Button Labels"
 description: "Figure Case helps organising a table-top miniature collection. Some VoiceOver users might might be struggle to know what actions some buttons perform."
 date: 2020-06-21T07:30:56Z
+lastmod: 2020-06-21T07:30:56Z
 tags:
 - Accessibility Review
 ---
@@ -14,7 +15,7 @@ The basic flow of this process is straightforward, tap a + button to add a new u
 
 This happens because the buttons have no text value and are icons only. This means that for anyone who can’t see the layout of the screen and imply what this button means from the visual clues, they won’t know what this button does.
 
-![Down button showing VoiceOver's caption 'chevron.down.circle.fill'](/images/figurecase-button.PNG)
+![Down button showing VoiceOver's caption 'chevron.down.circle.fill'](/images/figurecase-button.png)
 
 This can be fixed with a single line of code by adding an accessibility label to each button, something like this:
 

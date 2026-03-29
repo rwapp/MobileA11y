@@ -2,6 +2,7 @@
 title: "How Do I Get My App an Accessibility Audit?"
 description: "A question I am regularly asked is how to arrange an accessibility audit - here's the people to speak to, but more importantly, is it the right question?"
 date: 2021-03-21T07:30:56Z
+lastmod: 2021-03-21T07:30:56Z
 tags:
 - Mobile A11y Blog
 - Blog

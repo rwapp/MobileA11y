@@ -2,6 +2,7 @@
 title: "Review: Accessibility for Everyone - Laura Kalbag"
 description: "Laura's short intro to web accessibility is also available as an audio book"
 date: 2019-11-30T07:30:56Z
+lastmod: 2019-11-30T07:30:56Z
 tags:
 - Web
 - Book

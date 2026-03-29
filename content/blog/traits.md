@@ -2,6 +2,7 @@
 title: "iOS UIKit Accessibility traits"
 description: "How does assistive technology know how to interact with your UIKit elements? Using accessibility traits."
 date: 2021-08-13T07:30:56Z
+lastmod: 2021-08-13T07:30:56Z
 tags:
 - iOS
 - Mobile A11y Blog
@@ -63,7 +64,7 @@ An link similar to what would appear in a web page, often but not exclusively in
 
 A trait to be used on a text field that acts as a search field. VoiceOver announces this as a search field, allowing VoiceOver users to easily identify its purpose and hints that typing here will cause UI to be updated elsewhere.
 
-![Apple Music's search field](/images/search.PNG)
+![Apple Music's search field](/images/search.png)
 
 ### Image
 
@@ -75,7 +76,7 @@ Any image or other visual element such as a graphical element or animation that 
 
 Indicates that the element has been selected, such as a radio button, checkbox, switch, tab, or segment. Causes VoiceOver to read 'selected' as part of the element's utterance.
 
-![Apple Music's Lyrics button selected](/images/selected.PNG)
+![Apple Music's Lyrics button selected](/images/selected.png)
 
 ### Plays Sound
 
@@ -99,15 +100,15 @@ Use this trait to characterise an area of your UI that provides and overview of 
 
 This trait will cause VoiceOver to read this element to your customer once this screen appears regardless of the position of this element in the view hierarchy, focus order is not affected.
 
-![Apple Weather with VoiceOver focusing on the summary](/images/weather.PNG)
+![Apple Weather with VoiceOver focusing on the summary](/images/weather.png)
 
-![VoiceOver reading the second visual element marked with the Summary Element trait but focus remains on the first element](/images/summary.PNG)
+![VoiceOver reading the second visual element marked with the Summary Element trait but focus remains on the first element](/images/summary.png)
 
 ### Not Enabled
 
 This item is disabled and nothing will happen if it is activated. VoiceOver will add 'dimmed' to the element's utterance, Switch Control and Voice Control will ignore this element.
 
-![Disabled Continue button](/images/disabled.PNG)
+![Disabled Continue button](/images/disabled.png)
 
 ### Starts Media Session
 
@@ -117,15 +118,15 @@ Informs assistive tech that activating this element will start playing or record
 
 This indicates that the user can change between a range of values in elements such as sliders or pickers. VoiceOver informs your user they can swipe vertically on this element to change the value. So it is essential that if you apply this trait you also implement the `accessibilityIncrement()` and `accessibilityDecrement()` functions on your view's subclass to allow this. These functions also add extra options into the Switch Control menu for this element.
 
-![Increment and Decrement buttons in the Switch Control menu](/images/increment.PNG)
+![Increment and Decrement buttons in the Switch Control menu](/images/increment.png)
 
-![Apple Music's volume control](/images/adjustable.PNG)
+![Apple Music's volume control](/images/adjustable.png)
 
 ### Allows Direct Interaction
 
 This trait allows VoiceOver users to disable VoiceOver navigation for the element. You would use this in controls where direct path interaction is the only real way of control, for example a freehand drawing canvass. Apple use this trait in GarageBand in the virtual instruments. This means VoiceOver users can continue to use the path interaction without having to disable VoiceOver entirely.
 
-![GarageBand displaying the VoiceOver rota control to enable direct touch for a musical keyboard interface](/images/garageband.PNG)
+![GarageBand displaying the VoiceOver rota control to enable direct touch for a musical keyboard interface](/images/garageband.png)
 
 ### Causes Page Turn
 
@@ -137,13 +138,13 @@ Any visually distinct header text should have this trait applied. Headers can be
 
 Each screen in your app should have at least one header and a header should generally be the first element focussed by VoiceOver, allowing your users to orientate themselves. The number of headers your screen has will vary from app to app. Many will have a single header, news apps may have many. In general, try not too add too many as this adds to VoiceOver noise.
 
-![VoiceOver announcing a heading](/images/heading.PNG)
+![VoiceOver announcing a heading](/images/heading.png)
 
 ### Tab Bar
 
 Indicates that this view contains buttons that act as tabs. This view must return false for `isAccessibilityElement` but the child buttons must be accessible. This allows VoiceOver to add 'Tab, x of x' to the tab's utterances.
 
-![Tab Bar with the second element selected](/images/tabbar.PNG)
+![Tab Bar with the second element selected](/images/tabbar.png)
 
 ---
 

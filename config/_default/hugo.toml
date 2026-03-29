@@ -1,0 +1,18 @@
+baseURL = "https://rwapp.github.io/MobileA11y/"
+languageCode = "en"
+defaultContentLanguage = "en"
+title = "Mobile A11y"
+theme = "blowfish"
+pluralizelisttitles = "false"
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+post = "/blog/:year/:month/:day/:slug/"
+
+  [imaging]
+  quality = 80
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

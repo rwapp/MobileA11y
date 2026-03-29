@@ -2,6 +2,7 @@
 title: SwiftUI Accessibility - Named Controls
 description: "All controls in SwiftUI can take a Text element as part of their builder. This makes controlling your app with VoiceOver or VoiceControl way easier."
 date: 2019-09-26T07:30:56Z
+lastmod: 2019-09-26T07:30:56Z
 tags:
 - Mobile
 - iOS
@@ -37,7 +38,7 @@ These labels also double up as the friendly names used for Voice Control. Withou
 
 With a properly named control, the only Voice Control command required to activate the switch is *'tap Send me updates.'*
 
-![Toggle control showing the Voice Control command to interact with it](/images/swiftui-voicectrl.PNG)
+![Toggle control showing the Voice Control command to interact with it](/images/swiftui-voicectrl.png)
 
 Some elements, [like Images](https://rwapp.co.uk/2019/09/11/SwiftUI-Images/), take a Text element as part of their view builder, but it is never displayed on screen. In some instances like Sliders only some platforms such as MacOS display the label. Or you can change the presentation style to include the label. Regardless of how SwiftUI presents your labels (or not), you should always provide a short descriptive label for every control you create. This ensures a better, frustration-free experience for your assistive technology users.
 

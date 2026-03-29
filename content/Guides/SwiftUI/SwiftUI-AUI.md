@@ -2,6 +2,7 @@
 title: "SwiftUI Accessibility: Accessible User Interface"
 description: "The AUI or accessibility tree is how assistive technologies control your app. SwiftUI has some great improvements to this experience. It’s all free if you adopt SwiftUI."
 date: 2019-10-09T07:30:56Z
+lastmod: 2019-10-09T07:30:56Z
 tags:
 - Mobile
 - iOS
@@ -10,7 +11,7 @@ tags:
 ---
 Take a look at your app. Notice the collection of buttons, text, images, and other controls you can see and interact with that make up your app’s user interface. When one of your customers navigates your app with Voice Control, Switch Control, VoiceOver, or any other assistive technology, this isn’t the interface they’re using. Instead, iOS creates a version of your interface for assistive technology to use. This interface is generally known as the accessibility tree. Apple often refers to this as your app’s Accessible User Interface. For brevity and consistency in this article, I’ll refer to it as the AUI
 
-![Navigating the Weather app with switch control enabled highlights an hour's weather report](/images/swiftui-aui-weather.PNG)
+![Navigating the Weather app with switch control enabled highlights an hour's weather report](/images/swiftui-aui-weather.png)
 
 Your app’s AUI contains information about what elements are in your visual interface, what order they’re in, and how your users can interact with them. Your customer’s chosen assistive technology will then decide how to use this information. For example, Voice Control and Switch Control help people to interact with your app, so will only access interactive elements. Speak Screen is only concerned with reading content, so will only access elements that aren’t interactable.
 

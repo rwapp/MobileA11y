@@ -2,6 +2,7 @@
 title: "iOS Accessibility Values"
 description: "Representing a view's value to assistive technology."
 date: 2022-06-19T10:30:56Z
+lastmod: 2022-06-19T10:30:56Z
 tags:
 - iOS
 - Mobile A11y Blog

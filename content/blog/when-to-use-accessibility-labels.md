@@ -2,6 +2,7 @@
 title: "When to use Accessibility Labels"
 description: "When to, and when not to, set your own accessibility labels."
 date: 2020-05-03T08:30:56Z
+lastmod: 2020-05-03T08:30:56Z
 tags:
 - iOS
 - Mobile A11y Blog
@@ -30,11 +31,11 @@ Instead, Spotify add accessibility labels to each of these buttons, you can see 
 
 Sometimes your buttons, or other interactive elements, will have really long labels. Take this example from [Bear](https://apps.apple.com/gb/app/bear/id1016366447). This is a table cell which is fully tappable - see in this image VoiceOver highlights the whole cell.
 
-![Bear's notes list](/images/CellButton.PNG)
+![Bear's notes list](/images/CellButton.png)
 
 The cell features the note’s title and a couple of lines of the note’s content. That’s a lot of content to listen to VoiceOver read or to say to Voice Control. So instead of using the whole text on the cell, Bear set the cell’s accessibility label to just the title of the note. Additionally, the cell features the time elapsed since this note was edited, this is the first piece of text visually, but it's not the most important. So Bear have moved this information to the end of the accessibility label.
 
-![Bear's notes list showing accessibility labels](/images/CellLabel.PNG)
+![Bear's notes list showing accessibility labels](/images/CellLabel.png)
 
 
 This makes navigation simpler and faster, importantly without losing context. Use this technique thoughtfully, removing content can lead to a worse experience, so to make sure you get the best result, test this with regular VoiceOver users.
@@ -45,11 +46,11 @@ Take a shopping app as an example. Say the screen has a table of search results 
 
 Here's an example from the [BBC Sounds](https://apps.apple.com/gb/app/bbc-sounds/id1380676511) app. Each row in this table has a play button after it.
 
-![BBC Sounds Music Mixes list](/images/BBCSoundsMixes.PNG)
+![BBC Sounds Music Mixes list](/images/BBCSoundsMixes.png)
 
 To disambiguate what each play button does, the accessibility labels don't just say 'play' but 'play {name of mix}'.
 
-![BBC Sounds Music Mixes list showing accessibility labels](/images/BBCSoundsMixesLabels.PNG)
+![BBC Sounds Music Mixes list showing accessibility labels](/images/BBCSoundsMixesLabels.png)
 
 ### Your Custom Views
 

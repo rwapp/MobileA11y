@@ -2,6 +2,7 @@
 title: "Quick Win - Text Contrast"
 description: "Is the text in your app clear enough for everyone to read it?"
 date: 2021-01-19T07:30:56Z
+lastmod: 2021-01-19T07:30:56Z
 tags:
 - iOS
 - Android

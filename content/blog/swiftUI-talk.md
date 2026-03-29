@@ -2,6 +2,7 @@
 title: "Mobile A11y Talk: Accessibility in SwiftUI"
 description: "Watch the video and download the slides."
 date: 2020-04-12T07:30:56Z
+lastmod: 2020-04-12T07:30:56Z
 tags:
 - Talk
 - Mobile A11y Talk

@@ -2,6 +2,7 @@
 title: "Quick Win - Support Dark Mode"
 description: "You might think its a cool extra, but Dark Mode, like all accessibility features, is about flexibility for your users."
 date: 2021-01-28T07:30:56Z
+lastmod: 2021-01-28T07:30:56Z
 tags:
 - iOS
 - Android

@@ -2,6 +2,7 @@
 title: "XCUITests for accessibility"
 description: "Checking your iOS app's accessibility with automated tests."
 date: 2019-12-16T07:30:56Z
+lastmod: 2019-12-16T07:30:56Z
 tags:
 - iOS
 - Testing

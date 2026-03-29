@@ -2,6 +2,7 @@
 title: "A11y Box Android"
 description: "An open-source example of Android's Accessability API"
 date: 2020-04-26T07:30:56Z
+lastmod: 2020-04-26T07:30:56Z
 tags:
 - Android
 - Mobile A11y Blog

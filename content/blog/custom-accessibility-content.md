@@ -2,6 +2,7 @@
 title: "iOS 14: Custom Accessibility Content"
 description: "A new accessibility feature for iOS 14 lets you provide all the information your customer could need while reducing noise."
 date: 2020-06-29T07:30:56Z
+lastmod: 2020-06-29T07:30:56Z
 tags:
 - iOS
 - Mobile
@@ -15,7 +16,7 @@ Customize Accessibility Content solves a common issue with presenting complex da
 
 Take the Files app as an example. Each entry has the file or folder name, a visual icon, the date it was last accessed, then either the size on disk or the number of items contained within. This is quite a lot of information crammed into a small area. Visually this works though, because the date and size have reduced prominence, and the icon provides a large amount of context. This means we can scan down the list to find the filename we’re looking for, then if we need more data we can look at the extra information to check we have the item we need.
 
-![iOS Files app displaying a Keynote folder](/images/files-keynote.PNG)
+![iOS Files app displaying a Keynote folder](/images/files-keynote.png)
 
 With VoiceOver, however, everything has the same prominence. For the above folder, VoiceOver announces “Keynote. 16/04/2020. 1 item. Folder”. This gives all the same detail, but imagine navigating down a big list of these entries trying to find the file or folder you’re looking for - that's quite a task. And there’s a lot of superfluous information for that purpose. There are techniques for speeding this up. For example, setting the filename to have the `.header` accessibility trait will allow users to actively skip to the filenames only. But this is an active technique that your user has to opt in to, therefore it's not a comparable experience with visually navigating this list. Consider too if VoiceOver users would benefit from extra verbal detail that visual users wouldn't need, how would we present this?
 
@@ -25,7 +26,7 @@ Customize Accessibility Content takes the opposite approach, by hiding extra det
 
 Apple has implemented this feature in Photos for iOS 14. and it provides a great case study for how Apple envisage we should use this feature. Navigate the collection of photos with VoiceOver enabled and you’ll hear the date each photo was taken. Take this example of me ecstatically meeting my hero, Eeyore.
 
-![VoiceOver focusing on a photo](/images/customcontent-photonav.PNG)
+![VoiceOver focusing on a photo](/images/customcontent-photonav.png)
 
 But photos have a ton of metadata aside from the date alone that helps us discover if we have the image we’re looking for. This is where our custom content comes in. Using the VoiceOver rotor control I can switch to More Content.
 
@@ -33,7 +34,7 @@ But photos have a ton of metadata aside from the date alone that helps us discov
 
 When in this mode I can now perform a vertical swipe to read extra content. Firstly, the time the photo was taken, followed by the orientation of the photo.
 
-![VoiceOver reading the time the photo was taken](/images/customcontent-time.PNG) ![VoiceOver reading the photo orientation](/images/customcontent-orientation.PNG)
+![VoiceOver reading the time the photo was taken](/images/customcontent-time.png) ![VoiceOver reading the photo orientation](/images/customcontent-orientation.png)
 
 Adding all this information at the top level for every photo would be too much information. But when we want more detail it's easy to access. As such, custom accessibility content is a powerful technique for making rich accessible experiences.
 

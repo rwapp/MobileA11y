@@ -2,6 +2,7 @@
 title: "SwiftUI Accessibility: Images"
 description: "There’s some important changes to image accessibility in SwiftUI, if you’re not expecting them you could be making a bad experience for your VoiceOver customers."
 date: 2019-09-11T07:30:56Z
+lastmod: 2019-09-11T07:30:56Z
 tags:
 - Mobile
 - iOS

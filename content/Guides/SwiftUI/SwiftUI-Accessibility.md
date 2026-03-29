@@ -2,6 +2,7 @@
 title: "SwiftUI Accessibility"
 description: "Accessibility is important, but why is it important to think about it now when SwiftUI is so new? And what are the innovations that make SwiftUI such a great improvement?"
 date: 2019-11-06T07:30:56Z
+lastmod: 2019-11-06T07:30:56Z
 tags:
 - iOS
 - SwiftUI
@@ -30,7 +31,7 @@ Tweaking your accessible experience is still possible in areas where your UI doe
 
 Sometimes we make the mistake of thinking about accessibility as something for other people. But accessibility is all about customisation. We all like to make changes to our device to make it work better for us, like every developer's favourite: dark mode. So it's also essential to [listen to your customer's preferences](https://rwapp.co.uk/2019/10/27/SwiftUI-Settings/) for accessibility settings and decide how your app should respond. This will give all your customers the best possible experience.
 
-I can't wait to start using your accessible SwiftUI apps. If you're unsure of the best way to improve accessibility for your app, feel free to [reach out](https://twitter.com/RobRWAPP).
+I can't wait to start using your accessible SwiftUI apps. If you're unsure of the best way to improve accessibility for your app, feel free to [reach out](https://www.linkedin.com/in/rob-whitaker/).
 
 
 ***
