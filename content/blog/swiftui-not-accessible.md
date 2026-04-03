@@ -1,5 +1,6 @@
 ---
 title: No, SwiftUI is not “Accessible by default”
+date: 2026-04-03T12:41:50Z
 summary: \"SwiftUI is accessible by default\" is one of the most repeated misconceptions in iOS development. Here's why that's wrong and what you actually need to watch out for.
 
 tags:
