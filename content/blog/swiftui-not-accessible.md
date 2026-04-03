@@ -8,10 +8,6 @@ tags:
 - SwiftUI
 - Blog
 ---
-
-No, SwiftUI is not “Accessible by default”
-
-
 When speaking to fellow iOS engineers, I often hear variations of the phrase “SwiftUI is accessible by default”. I’ve seen this written in accessibility reports, I’ve seen people who should know better make the claim in conference talks and blogs, and I’ve heard candidates firmly state this in job interviews. I’ve even had a job interview of my own derailed because the interviewer asked me “Why do you need to be an expert in accessibility now that we have SwiftUI? It’s just accessible!” I’m still unsure if that was a personal broadside or unbelievable ignorance.
 
 The truth is, no UI paradigm is any more or less accessible than any other if you’re not holding it correctly. It’s just as easy to make inaccessible experiences in SwiftUI as in UIKit, or any other technology if you’re not following good coding practices.
