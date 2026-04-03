@@ -4,6 +4,10 @@ defaultContentLanguage = "en"
 title = "Mobile A11y"
 theme = "blowfish"
 pluralizelisttitles = "false"
+enableGitInfo = true
+
+[frontmatter]
+  lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
 
 [taxonomies]
   tag = "tags"
