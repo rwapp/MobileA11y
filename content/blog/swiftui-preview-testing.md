@@ -34,7 +34,7 @@ The `#Preview` macro allows us to specify a subset of traits for our previews, a
 For example, using the following we can create a preview with a landscape right orientation.
 
 ```swift
-#Preview("Landscape Right", trait's: .landscapeRight) {
+#Preview("Landscape Right", traits: .landscapeRight) {
     ContentView()
 }
 ```
