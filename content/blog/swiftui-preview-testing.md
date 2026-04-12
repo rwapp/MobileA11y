@@ -1,5 +1,6 @@
 ---
 title: Checking accessibility with SwiftUI Previews
+date: 2026-04-12T21:45:55Z
 summary: SwiftUI previews offer a fast, practical way to see the output of our view code. But did you know you can also use them to test accessibility-related UI changes including Dynamic Type, localisation, and system accessibility settings, all without needing a physical device.
 
 tags:
