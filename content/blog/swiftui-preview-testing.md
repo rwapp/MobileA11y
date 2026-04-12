@@ -15,15 +15,15 @@ There isn't yet a single way to set up all of these, the various options are spr
 
 The Xcode canvas provides some built-in variations for any SwiftUI preview, meaning you can enable these at any time without modifying your preview code. At the bottom left of the canvas pane in Xcode you'll find Variants and Device Settings buttons.
 
-{image}
+![Xcode preview settings hilighting Dynamic Type Variants](/images/preview-settings.png)
 
 Variants will show you a multi-up view of your view in either dark and light modes, orientations, or the full range of dynamic type sizes.
 
-{image}
+![Xcode previews showing orientation variants](/images/previews-orientation.png)
 
 The Canvas Device Settings button lets you to switch between the above options for any of your previews.
 
-{image}
+![Xcode preview canvas settings with Dark Appearance and Dynamic Type size enabled](/images/canvas-settings.png)
 
 The canvas settings are great for quick checks while you build, but what if you want something more persistent? For that we can define configurations in our preview code.
 
