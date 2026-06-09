@@ -1,10 +1,13 @@
 ---
-title: "Generating dynamic alt text in iOS 27 with Apple Intelligence"
-summary: ""
+title: "Generating image description alt text with Foundation Models on iOS 27"
+summary: "iOS 27 adds the ability to generate image descriptions on-device using Foundation Models. Here's how to use it as a fallback when alt text is missing."
 date: 2026-06-09T07:30:56Z
 tags:
 - ai
 - alt text
+- Apple Intelligence
+- Foundation Models
+- iOS 27
 ---
 
 > This blog is based on pre-release software, iOS 27 and Xcode 27 Beta 1. Be aware that the behaviour and APIs could change between now and release.
