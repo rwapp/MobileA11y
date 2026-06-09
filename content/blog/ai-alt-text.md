@@ -24,6 +24,8 @@ This isn't an anti-AI stance. The person who chose an image knows why they chose
 
 But relying on the person who chose the image to provide a description can unfortunately find itself at odds with reality. Many, if not most, apps are largely based around user-generated content such as social media, or a peer-to-peer shopping app like Vinted, or content provided by vendors such as Booking.com. Here we can encourage image descriptions, but all too often they are missed. Plus, can we really expect regular users to be experts in providing image descriptions?
 
+Additionally, this has some significant restrictions - it's only available from iOS 27, only on a selection of devices, and not available in all regions and languages. Even then, your user also needs to have Apple Intelligence enabled and downloaded. I haven't included it in the code samples below, but be sure to check all of these before attempting to start a model session.
+
 ## Generating image descriptions
 
 As with everything I've tried with Foundation models, generating an image description is surprisingly simple. The first part is perhaps the most complex: We need an image. While not directly part of generating the description, there is a little more to it than `Image(named: )`, so it's worth covering here.
