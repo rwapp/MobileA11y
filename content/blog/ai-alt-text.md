@@ -189,4 +189,4 @@ Here's the app in action having generated an image description of a DIY circuit 
 
 ---
 
-I am no less excited for the possibilities this unlocks for apps where image descriptions are currently patchy. If you add this into your app, please let me know so I can try out the results!
+I'm excited for the possibilities this unlocks for apps where image descriptions are currently patchy. If you add this into your app, please let me know so I can try out the results!
