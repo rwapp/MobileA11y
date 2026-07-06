@@ -38,9 +38,12 @@ def main():
             print(f"Skipping draft: {filename}")
             continue
 
-        # Skip if date is already set (non-empty)
-        date_match = re.search(r"^date:\s*(.+)$", frontmatter, re.MULTILINE)
-        if date_match and date_match.group(1).strip():
+        # Skip if date is already set (non-empty). Use [^\n]* rather than
+        # \s*(.+) because \s matches newlines, so a `date:` line with only
+        # trailing whitespace would greedily capture the *next* line and be
+        # mistaken for an already-set date.
+        date_match = re.search(r"^date:[^\n]*$", frontmatter, re.MULTILINE)
+        if date_match and date_match.group(0)[len("date:"):].strip():
             continue
 
         # Set the date

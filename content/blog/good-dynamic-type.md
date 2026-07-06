@@ -1,7 +1,7 @@
 ---
 title: "10 Tips for Building iOS Apps That Handle Dynamic Type Well"
 summary: "Supporting Dynamic Type isn't just about making text bigger. These 10 tips cover the layout, imagery, and edge cases your app needs to handle so text scaling actually works well in practice."
-date: 
+date:
 tags:
 - ios
 - dynamic type
