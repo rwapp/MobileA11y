@@ -1,0 +1,21 @@
+{{ $book := site.Params.bookPromo }}
+{{ if $book.enable }}
+  <aside class="book-banner not-prose flex gap-4 items-center px-4 py-4 rounded-md mb-8 print:hidden">
+    {{ with $book.image }}
+      <div class="book-banner__cover shrink-0">
+        <img class="nozoom" src="{{ . | relURL }}" alt="" width="110" height="151" loading="lazy" />
+      </div>
+    {{ end }}
+    <div class="book-banner__body">
+      <p class="book-banner__title font-bold mb-1">{{ $book.title }}</p>
+      <p class="book-banner__text mb-2">{{ $book.text | safeHTML }}</p>
+      <a
+        class="book-banner__link font-semibold"
+        href="{{ $book.link }}"
+        target="_blank"
+        rel="noopener">
+        {{ $book.linkText }}<span class="sr-only"> (opens in a new window)</span>
+      </a>
+    </div>
+  </aside>
+{{ end }}

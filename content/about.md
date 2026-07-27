@@ -17,7 +17,7 @@ The site is aimed at developers rather than accessibility users. If you're looki
 
 ## About Rob Whitaker
 
-[Rob](https://www.linkedin.com/in/rob-whitaker/) is a Senior iOS Engineer and a mobile accessibility specialist with a background that includes time on the accessibility team at Apple. He's an invited expert on the WCAG Mobile Accessibility Task Force, a conference speaker, and the author of [Developing Inclusive Mobile Apps](https://www.apress.com/gp/book/9781484258132) (Apress) — a book for developers who believe that building for everyone isn't a nice-to-have.
+[Rob](https://www.linkedin.com/in/rob-whitaker/) is a Senior iOS Engineer and a mobile accessibility specialist with a background that includes time on the accessibility team at Apple. He's an invited expert on the WCAG Mobile Accessibility Task Force, a conference speaker, and the author of [Developing Inclusive Mobile Apps](https://link.springer.com/book/10.1007/979-8-8688-2809-6) (Apress) — a book for developers who believe that building for everyone isn't a nice-to-have.
 
 He's spent his career at the intersection of clean Swift and inclusive design, which turns out to be a less crowded place than it should be. If you think Rob might be able to help with something, feel free to [get in touch](mailto:rw@rwapp.co.uk) — he's always happy to have a conversation.
 

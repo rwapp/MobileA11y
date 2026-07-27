@@ -91,3 +91,44 @@ html.dark .outdated-banner {
 html.dark .outdated-banner .outdated-banner__icon {
   color: #fbbf24;
 }
+
+/* Book promo banner */
+.book-banner {
+  background-color: #faf7f2;
+  border: 1px solid #e5e0d5;
+}
+
+.book-banner__cover img {
+  display: block;
+  width: 110px;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.2);
+}
+
+.book-banner__title {
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.book-banner__text {
+  font-size: 0.925rem;
+  line-height: 1.45;
+}
+
+.book-banner__link {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+html.dark .book-banner {
+  background-color: rgb(255 255 255 / 0.04);
+  border-color: rgb(255 255 255 / 0.12);
+}
+
+@media (max-width: 480px) {
+  .book-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
