@@ -54,6 +54,9 @@
             {{ partial "outdated-banner.html" . }}
           {{ end }}
           {{ .Content }}
+          {{ if ne .Params.showBookPromo false }}
+            {{ partial "book-banner.html" . }}
+          {{ end }}
           {{ $defaultReplyByEmail := site.Params.replyByEmail }}
           {{ $replyByEmail := default $defaultReplyByEmail .Params.replyByEmail }}
           {{ if $replyByEmail }}

@@ -32,3 +32,11 @@ katex = true
 [list]
   showSummary = true
   groupByYear = true
+
+[bookPromo]
+  enable = true
+  image = "/images/cover2ndEd.png"
+  title = "Developing Inclusive Mobile Apps, Second Edition"
+  text = "The second edition of my book on building accessible apps for iOS and Android is out now. Use code <strong>APAUT</strong> for 20% off."
+  link = "https://link.springer.com/book/10.1007/979-8-8688-2809-6"
+  linkText = "Get the book →"
